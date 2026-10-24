@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"jobs\":[{\"url\":\"https://jobs.example.org/1\",\"title\":\"Grants Manager\",\"company\":\"Example Trust\",\"location\":\"London\"},{\"url\":\"https://jobs.example.org/2\",\"title\":\"Software Engineer\",\"company\":\"Example\",\"location\":\"London\"}]}"
+      }
+    }
+  ]
+}

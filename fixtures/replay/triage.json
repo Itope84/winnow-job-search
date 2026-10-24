@@ -1,0 +1,6 @@
+{
+  "steps": [
+    { "event": { "type": "text", "text": "Reading input.json" } },
+    { "delay": 20, "writeFrom": { "path": "result.json", "template": "triage-keep-all" } }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"about\": {\"name\": \"Ada Lovelace\", \"phone\": \"\", \"city\": \"London\", \"country\": \"United Kingdom\", \"linkedin\": \"\", \"portfolio\": \"\"}, \"roles\": [{\"title\": \"Grants Manager\", \"fit\": \"dream\"}, {\"title\": \"Programme Manager\", \"fit\": \"good\"}], \"level\": \"Manager\", \"places\": [\"London, UK\"], \"workTypes\": [], \"currency\": \"GBP\"}"
+      }
+    }
+  ]
+}

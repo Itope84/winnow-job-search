@@ -1,0 +1,28 @@
+{
+  "name": "winnow",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.8.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "dev:server": "pnpm --filter @winnow/server dev",
+    "dev:app": "pnpm --filter @winnow/app web",
+    "build:web": "pnpm --filter @winnow/app build:web",
+    "start": "pnpm build:web && pnpm --filter @winnow/server start",
+    "users": "pnpm --filter @winnow/server exec tsx src/cli/users.ts",
+    "import:career-ops": "pnpm --filter @winnow/server exec tsx src/cli/import.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@playwright/test": "1.63.0",
+    "@types/node": "^26.6.4",
+    "playwright": "1.63.0",
+    "typescript": "~5.9.3"
+  }
+}

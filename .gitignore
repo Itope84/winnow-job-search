@@ -1,0 +1,23 @@
+# Each person's library (jobs, CVs, reports). Keep the skeleton only.
+library/*
+!library/.gitkeep
+
+node_modules/
+dist/
+build/
+.expo/
+web-build/
+*.tsbuildinfo
+coverage/
+
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+test-results/
+playwright-report/
+
+# A vendored provider (careerjet) keeps its seen-list relative to the server folder.
+apps/server/data/

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Activity — Yinkops Ledger</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Newsreader & Geist fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#FBFBFA",
+            surface: "#F3F2EE",
+            surfaceRaised: "#FFFFFF",
+            rule: "#E5E4DE",
+            ruleStrong: "#D6D4CC",
+            ink: "#1E1E1C",
+            lead: "#6F6E69",
+            faint: "#9A988F",
+            primary: "#1F6F78",
+            primaryInk: "#155259",
+            primarySoft: "rgba(31, 111, 120, 0.08)",
+            sage: "#4A6B5B",
+            sageSoft: "rgba(74, 107, 91, 0.12)",
+            amber: "#A36717",
+            amberSoft: "rgba(163, 103, 23, 0.12)",
+            danger: "#B83A3A",
+            dangerSoft: "rgba(184, 58, 58, 0.10)"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "sm": "0.25rem",
+            "md": "0.375rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            headline: ["Newsreader", "serif"],
+            display: ["Newsreader", "serif"],
+            body: ["Geist", "sans-serif"],
+            label: ["Geist", "sans-serif"],
+            mono: ["Geist Mono", "monospace"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #FBFBFA;
+      color: #1E1E1C;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+      line-height: 1;
+    }
+    /* Tabular figures for ledger precision */
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-canvas text-ink font-body antialiased min-h-full flex flex-col selection:bg-rule">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-canvas border-b border-rule docked full-width top-0 sticky z-40">
+<div class="flex justify-between items-center w-full px-4 h-14 max-w-2xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lead hover:text-ink cursor-pointer transition-colors duration-150">description</span>
+<span class="font-headline text-2xl font-normal text-ink tracking-tight">Ledger</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-faint tabular-nums tracking-wide">Sync 10:42</span>
+<button aria-label="Settings" class="p-1.5 text-lead hover:text-ink hover:bg-surface rounded transition-colors duration-150" type="button">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Live Strip (Design System requirement) -->
+<div class="bg-primarySoft px-4 py-1.5 border-t border-rule/50">
+<div class="max-w-2xl mx-auto flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-2 text-primary font-medium">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Worker active · 2 runs in flight</span>
+</div>
+<span class="text-lead text-[11px] tabular-nums">CPU 8% · Free</span>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="flex-1 max-w-2xl w-full mx-auto px-4 pt-6 pb-28">
+<!-- Title Section -->
+<div class="mb-6 pb-3 border-b border-rule flex items-baseline justify-between">
+<div>
+<h1 class="font-headline text-3xl font-normal text-ink tracking-tight">Activity</h1>
+<p class="font-body text-xs text-lead mt-1">Autonomous runs, queue triage, and evaluation history</p>
+</div>
+<span class="font-mono text-xs text-lead tabular-nums">4 active</span>
+</div>
+<div class="space-y-7">
+<!-- SECTION: RUNNING · 2 -->
+<section aria-labelledby="section-running">
+<div class="flex items-center justify-between mb-2.5">
+<h2 class="font-mono text-[11px] font-medium tracking-wider text-lead uppercase" id="section-running">Running · 2</h2>
+<span class="font-mono text-[11px] text-faint">Est. 1m 20s remaining</span>
+</div>
+<div class="space-y-3">
+<!-- Card 1: Portals scan -->
+<div class="bg-surface border border-rule rounded-lg p-3.5 space-y-2.5 transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-sm font-medium text-ink">Portals scan</span>
+<span class="block text-xs text-lead mt-0.5">Checking Greenhouse · stripe</span>
+</div>
+<button class="font-body text-xs text-lead hover:text-ink hover:underline transition-colors px-1 py-0.5" type="button">
+                Cancel
+              </button>
+</div>
+<!-- Progress & Track -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-baseline font-mono text-xs tabular-nums">
+<span class="text-ink font-medium">32 / 47 companies</span>
+<span class="text-lead">68%</span>
+</div>
+<div class="w-full h-1 bg-rule rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Meta line -->
+<div class="pt-1 border-t border-rule/70 flex justify-between items-center text-xs font-mono text-lead tabular-nums">
+<span>1m 40s · Free</span>
+<span class="text-[11px] text-faint">Batch #104</span>
+</div>
+</div>
+<!-- Card 2: Score Job -->
+<div class="bg-surface border border-rule rounded-lg p-3.5 space-y-2.5 transition-colors">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-sm font-medium text-ink">Score · Stripe, Program Manager</span>
+<span class="block text-xs text-lead mt-0.5">Reading the job description (3/7)</span>
+</div>
+<button class="font-body text-xs text-lead hover:text-ink hover:underline transition-colors px-1 py-0.5" type="button">
+                Cancel
+              </button>
+</div>
+<!-- Progress & Track -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between items-baseline font-mono text-xs tabular-nums">
+<span class="text-ink font-medium">Step 3 of 7</span>
+<span class="text-lead">42%</span>
+</div>
+<div class="w-full h-1 bg-rule rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-300" style="width: 42%;"></div>
+</div>
+</div>
+<!-- Meta line -->
+<div class="pt-1 border-t border-rule/70 flex justify-between items-center text-xs font-mono text-lead tabular-nums">
+<span>2m 05s · deepseek-flash · $0.03</span>
+<span class="text-[11px] text-faint">Evaluation run</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: NEEDS YOU · 1 -->
+<section aria-labelledby="section-needs-you">
+<div class="flex items-center justify-between mb-2">
+<h2 class="font-mono text-[11px] font-medium tracking-wider text-amber uppercase" id="section-needs-you">Needs you · 1</h2>
+<span class="font-mono text-[11px] text-amber">Action required</span>
+</div>
+<div class="bg-surface border border-rule border-l-4 border-l-amber rounded-lg p-3.5 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="text-sm font-medium text-ink">Score · Serpentine</h3>
+<span class="font-mono text-[11px] text-amber tabular-nums font-medium">Halted</span>
+</div>
+<p class="text-xs text-lead leading-relaxed">
+            Interrupted when the server restarted at 21:04. Partial progress kept.
+          </p>
+<div class="pt-2 flex items-center gap-2">
+<button class="bg-primary hover:bg-primaryInk text-canvas text-xs font-medium px-3 py-1.5 rounded transition-colors duration-150 inline-flex items-center gap-1 shadow-none" type="button">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+<span>Resume</span>
+</button>
+<button class="text-xs text-lead hover:text-ink px-2.5 py-1.5 font-medium transition-colors duration-150 rounded hover:bg-rule/40" type="button">
+              Discard
+            </button>
+<span class="ml-auto font-mono text-[11px] text-faint tabular-nums">1.2 KB cached</span>
+</div>
+</div>
+</section>
+<!-- SECTION: WAITING · 3 -->
+<section aria-labelledby="section-waiting">
+<div class="flex items-center justify-between mb-1.5">
+<h2 class="font-mono text-[11px] font-medium tracking-wider text-lead uppercase" id="section-waiting">Waiting · 3</h2>
+<span class="font-mono text-[11px] text-faint">Sequential queue</span>
+</div>
+<div class="border border-rule rounded-lg bg-surfaceRaised divide-y divide-rule overflow-hidden">
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<span class="text-ink font-normal truncate pr-2">Score · Affirm, Senior Program Manager I</span>
+<span class="font-mono text-[11px] text-faint shrink-0">Waiting</span>
+</div>
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<span class="text-ink font-normal truncate pr-2">Score · GitLab, Ecosystem Ops</span>
+<span class="font-mono text-[11px] text-faint shrink-0">Waiting</span>
+</div>
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<span class="text-ink font-normal truncate pr-2">Score · Maven Clinic</span>
+<span class="font-mono text-[11px] text-faint shrink-0">Waiting</span>
+</div>
+</div>
+</section>
+<!-- SECTION: DONE -->
+<section aria-labelledby="section-done">
+<div class="flex items-center justify-between mb-1.5">
+<h2 class="font-mono text-[11px] font-medium tracking-wider text-lead uppercase" id="section-done">Done</h2>
+<span class="font-mono text-[11px] text-faint">Today</span>
+</div>
+<div class="border border-rule rounded-lg bg-surfaceRaised divide-y divide-rule overflow-hidden">
+<!-- Row 1 -->
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<div class="flex flex-col">
+<span class="text-ink font-medium">Triage · 40 jobs</span>
+<span class="font-mono text-[11px] text-lead tabular-nums">26 kept · 14 archived</span>
+</div>
+<div class="text-right">
+<span class="font-mono text-xs text-faint tabular-nums">2h</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<div class="flex flex-col">
+<span class="text-ink font-medium">Score · 1Password</span>
+<div class="mt-0.5 inline-flex items-center gap-1.5">
+<span class="inline-flex items-center font-mono text-[11px] font-medium px-1.5 py-0.5 rounded bg-sageSoft text-sage tabular-nums">
+                  4.3 Apply
+                </span>
+<span class="font-mono text-[11px] text-faint">$0.02 · 1m 12s</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-mono text-xs text-faint tabular-nums">2h</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="px-3.5 py-2.5 flex items-center justify-between text-xs hover:bg-surface/50 transition-colors">
+<div class="flex flex-col">
+<span class="text-ink font-medium">Portals scan</span>
+<span class="font-mono text-[11px] text-lead tabular-nums">312 found · 41 new</span>
+</div>
+<div class="text-right">
+<span class="font-mono text-xs text-faint tabular-nums">2h</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: FAILED -->
+<section aria-labelledby="section-failed">
+<div class="flex items-center justify-between mb-1.5">
+<h2 class="font-mono text-[11px] font-medium tracking-wider text-danger uppercase" id="section-failed">Failed</h2>
+<span class="font-mono text-[11px] text-faint">Errors</span>
+</div>
+<div class="border border-rule rounded-lg bg-surfaceRaised overflow-hidden px-3.5 py-2.5 flex items-center justify-between text-xs">
+<div class="flex-1 pr-3">
+<span class="text-danger font-medium block">AI search — OpenCode stopped after 2 min</span>
+<span class="text-[11px] text-lead font-mono">Gateway timeout (504) on host pipeline</span>
+</div>
+<div class="flex items-center gap-2.5 shrink-0">
+<button class="text-xs text-ink underline font-medium hover:text-primary transition-colors" type="button">
+              Retry
+            </button>
+<span class="font-mono text-xs text-faint tabular-nums">3h</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<!-- Contextual Active: Activity is active (Index 2 in JSON) -->
+<nav aria-label="Main Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-16 max-w-2xl mx-auto border-t border-rule bg-canvas">
+<!-- 1: Jobs (Inactive) -->
+<a class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined mb-0.5">work</span>
+<span class="font-body text-xs font-medium tracking-tight">Jobs</span>
+</a>
+<!-- 2: Find (Inactive) -->
+<a class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined mb-0.5">travel_explore</span>
+<span class="font-body text-xs font-medium tracking-tight">Find</span>
+</a>
+<!-- 3: Activity (ACTIVE as strictly commanded) -->
+<a class="flex flex-col items-center justify-center text-primary font-medium py-1 active:opacity-75 relative" href="#">
+<span class="material-symbols-outlined mb-0.5" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-body text-xs font-medium tracking-tight">Activity</span>
+<!-- Calm minimal active dot indicator -->
+<span class="absolute bottom-0 w-1 h-1 rounded-full bg-primary"></span>
+</a>
+<!-- 4: You (Inactive) -->
+<a class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined mb-0.5">person</span>
+<span class="font-body text-xs font-medium tracking-tight">You</span>
+</a>
+</nav>
+</body></html>

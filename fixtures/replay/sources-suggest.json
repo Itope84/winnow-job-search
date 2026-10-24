@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"companies\": [{\"name\": \"Acumen\", \"careers_url\": \"https://boards.greenhouse.io/acumen\", \"notes\": \"Impact investor\"}, {\"name\": \"Nowhere Trust\", \"careers_url\": \"https://example.org/careers\", \"notes\": \"No scanner reads this\"}], \"boards\": [{\"name\": \"Adzuna: London grants\", \"provider\": \"adzuna\", \"country\": \"gb\", \"what_or\": \"grants\", \"where\": \"london\", \"enabled\": true}, {\"name\": \"Made up\", \"provider\": \"madeup\"}], \"queries\": [{\"name\": \"Lever grants\", \"query\": \"site:jobs.lever.co \\\"Grants Manager\\\" London\"}], \"titles\": {\"positive\": [\"Grants\", \"Programme\"], \"negative\": [\"Intern\"]}}"
+      }
+    }
+  ]
+}

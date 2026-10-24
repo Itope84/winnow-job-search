@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 112" role="img" aria-label="Winnow">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&amp;display=swap');</style>
+  <g transform="translate(8 8) scale(0.1875)">
+    <rect width="512" height="512" rx="112" fill="#5FB3BC"/>
+    <g stroke="#161614" stroke-width="40" stroke-linecap="round">
+      <line x1="116" y1="168" x2="396" y2="168"/>
+      <line x1="168" y1="244" x2="344" y2="244"/>
+      <line x1="220" y1="320" x2="292" y2="320"/>
+    </g>
+    <circle cx="256" cy="398" r="27" fill="#A36717"/>
+  </g>
+  <text x="124" y="76" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-weight="500" font-size="64" letter-spacing="-0.5" fill="#ECEAE4">winnow</text>
+</svg>

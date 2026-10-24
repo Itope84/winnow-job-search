@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"headline\": \"Grants manager who runs \\u00a32m programmes end to end\", \"story\": \"Ada runs grants programmes at Example Trust. She wants to lead a larger programme next.\", \"superpowers\": [\"Runs a \\u00a32m a year grants programme across 40 partners\"], \"proofPoints\": [{\"name\": \"Example Trust programme\", \"metric\": \"\\u00a32m a year across 40 partners\"}], \"roleNotes\": {\"Grants Manager\": \"Her current job, at the same scale.\"}, \"narrative\": \"## Who I am\\n\\nI run a grants programme of \\u00a32m a year across 40 partners at Example Trust, from call to final report.\\n\\n## North Star\\n\\n- Dream: Grants Manager\\n- Good fit: Programme Manager\\n\\n## Strengths and proof\\n\\n- Built the reporting the board uses every quarter.\\n\\n## What I want\\n\\nLondon, GBP.\\n\"}"
+      }
+    }
+  ]
+}

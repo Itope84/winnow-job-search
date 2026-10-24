@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jobs — Yinkops Ledger</title>
+<!-- Fonts: Newsreader (editorial serif), Geist UI, Geist Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&amp;family=Geist:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#FBFBFA",
+            surface: "#F3F2EE",
+            surfaceRaised: "#FFFFFF",
+            rule: "#E5E4DE",
+            ruleStrong: "#D6D4CC",
+            ink: "#1E1E1C",
+            lead: "#6F6E69",
+            faint: "#9A988F",
+            primary: "#1F6F78",
+            primaryInk: "#155259",
+            primarySoft: "rgba(31, 111, 120, 0.10)",
+            sage: "#4A6B5B",
+            sageSoft: "rgba(74, 107, 91, 0.12)",
+            amber: "#A36717",
+            amberSoft: "rgba(163, 103, 23, 0.12)",
+            danger: "#B83A3A",
+            dangerSoft: "rgba(184, 58, 58, 0.12)"
+          },
+          borderRadius: {
+            "DEFAULT": "4px",
+            "lg": "8px",
+            "xl": "12px",
+            "full": "9999px"
+          },
+          fontFamily: {
+            headline: ["Newsreader", "serif"],
+            display: ["Newsreader", "serif"],
+            body: ["Geist", "-apple-system", "sans-serif"],
+            label: ["Geist", "sans-serif"],
+            mono: ["'Geist Mono'", "monospace"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Hairline rendering, pure paper layout */
+    * {
+      border-color: #E5E4DE;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 20;
+      font-size: 20px;
+    }
+    .mono-num {
+      font-feature-settings: "tnum" 1, "cv01" 1;
+    }
+    /* Subtle scrollbar for paper desk feeling */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBFBFA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D4CC;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9A988F;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-ink font-body antialiased selection:bg-primarySoft selection:text-primaryInk h-screen overflow-hidden flex flex-col">
+<!-- Main Three-Column Desktop Workstation -->
+<div class="flex flex-1 h-screen w-full overflow-hidden">
+<!-- ======================================================== -->
+<!-- COLUMN 1: LEFT RAIL NAVIGATION (72px, fixed semantic shell) -->
+<!-- ======================================================== -->
+<aside class="fixed top-0 left-0 h-full w-[72px] flex flex-col justify-between items-center py-4 z-40 bg-canvas border-r border-rule select-none">
+<!-- Top Monogram & Desk Identity -->
+<div class="flex flex-col items-center w-full gap-5">
+<a class="group flex flex-col items-center focus:outline-none" href="#" title="Yinkops Ledger">
+<div class="w-10 h-10 rounded border border-ruleStrong bg-surfaceRaised flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="font-headline text-lg font-semibold tracking-tight text-ink">Y</span>
+</div>
+<span class="font-label text-[10px] tracking-tight text-faint mt-1">Desk</span>
+</a>
+<!-- Divider line -->
+<div class="w-8 h-[1px] bg-rule"></div>
+<!-- Navigation Cluster -->
+<nav aria-label="Main Navigation" class="flex flex-col items-center w-full gap-1">
+<!-- Jobs (Active tab as instructed) -->
+<a aria-current="page" class="w-full py-2.5 flex flex-col items-center gap-1 text-primary font-medium border-l-2 border-primary bg-primarySoft/20 transition-colors" href="#" title="Jobs">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+<span class="font-label text-[11px] tracking-tight">Jobs</span>
+</a>
+<!-- Find -->
+<a class="w-full py-2.5 flex flex-col items-center gap-1 text-lead hover:text-ink hover:bg-surface transition-colors duration-150 border-l-2 border-transparent" href="#" title="Find">
+<span class="material-symbols-outlined text-lead group-hover:text-ink" data-icon="search">search</span>
+<span class="font-label text-[11px] tracking-tight">Find</span>
+</a>
+<!-- Activity (With amber dot indicator) -->
+<a class="relative w-full py-2.5 flex flex-col items-center gap-1 text-lead hover:text-ink hover:bg-surface transition-colors duration-150 border-l-2 border-transparent" href="#" title="Activity">
+<div class="relative">
+<span class="material-symbols-outlined text-lead" data-icon="sync_alt">sync_alt</span>
+<span aria-label="1 unread update" class="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-amber ring-2 ring-canvas"></span>
+</div>
+<span class="font-label text-[11px] tracking-tight">Activity</span>
+</a>
+<!-- You -->
+<a class="w-full py-2.5 flex flex-col items-center gap-1 text-lead hover:text-ink hover:bg-surface transition-colors duration-150 border-l-2 border-transparent" href="#" title="You">
+<span class="material-symbols-outlined text-lead" data-icon="person">person</span>
+<span class="font-label text-[11px] tracking-tight">You</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Settings/System anchor -->
+<div class="flex flex-col items-center w-full gap-2">
+<div class="w-8 h-[1px] bg-rule mb-1"></div>
+<a class="w-full py-2 flex flex-col items-center gap-1 text-lead hover:text-ink hover:bg-surface transition-colors duration-150" href="#" title="Settings">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-[10px] tracking-tight">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Spacer to reserve Column 1 width in document flow -->
+<div class="w-[72px] shrink-0 h-full"></div>
+<!-- ======================================================== -->
+<!-- COLUMN 2: JOBS LIST (440px width, hairline rules, scrollable) -->
+<!-- ======================================================== -->
+<section aria-label="Jobs queue and triage" class="w-[440px] shrink-0 border-r border-rule bg-canvas flex flex-col h-screen overflow-hidden select-none">
+<!-- List Header & Search -->
+<div class="p-4 pb-0 flex flex-col gap-3 shrink-0 bg-canvas">
+<!-- Header row -->
+<div class="flex items-baseline justify-between pt-1">
+<h1 class="font-headline text-[28px] font-normal tracking-tight text-ink leading-tight">Jobs</h1>
+<span class="font-mono text-xs text-lead mono-num">569 total</span>
+</div>
+<!-- Integrated Search Input Field -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-faint pointer-events-none" data-icon="search" style="font-size: 18px;">search</span>
+<input class="w-full pl-9 pr-7 py-1.5 text-xs font-label bg-surfaceRaised border border-rule rounded text-ink placeholder:text-faint focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all" placeholder="Search role or company..." type="text"/>
+<kbd class="absolute right-2 font-mono text-[10px] text-faint px-1 rounded border border-rule bg-surface mono-num">⌘K</kbd>
+</div>
+<!-- Live Scanning Strip -->
+<div class="py-1.5 px-2.5 rounded bg-primarySoft/30 border border-primary/20 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-[11px] font-label text-primaryInk">
+<span class="flex items-center gap-1.5 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Scanning portals · 32/47
+            </span>
+<span class="font-mono text-[10px] text-primary mono-num">Free · seconds</span>
+</div>
+<!-- Thin progress bar (68%) -->
+<div class="w-full bg-white/70 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[68%] transition-all duration-300"></div>
+</div>
+</div>
+<!-- Segmented Status Tabs with Counts -->
+<div class="flex items-center gap-1 text-[11px] font-label overflow-x-auto pt-1 border-b border-rule pb-2 no-scrollbar">
+<button class="px-2 py-1 rounded hover:bg-surface text-lead shrink-0">Inbox <span class="font-mono text-[10px] mono-num">128</span></button>
+<button class="px-2 py-1 rounded hover:bg-surface text-lead shrink-0">Shortlist <span class="font-mono text-[10px] mono-num">9</span></button>
+<button class="px-2 py-1 rounded bg-surfaceRaised border border-ruleStrong text-ink font-medium shrink-0 shadow-none">Scored <span class="font-mono text-[10px] text-primary mono-num font-semibold">14</span></button>
+<button class="px-2 py-1 rounded hover:bg-surface text-lead shrink-0">Applied <span class="font-mono text-[10px] mono-num">6</span></button>
+<button class="px-2 py-1 rounded hover:bg-surface text-lead shrink-0">Archive <span class="font-mono text-[10px] mono-num">412</span></button>
+</div>
+<!-- Filter bar -->
+<div class="flex items-center justify-between py-2 text-xs font-label">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-2 py-1 rounded border border-rule bg-surfaceRaised text-ink hover:bg-surface text-[11px]">
+<span class="material-symbols-outlined text-[15px]" data-icon="tune">tune</span>
+              Filters
+            </button>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface border border-ruleStrong text-ink text-[11px] font-mono">
+              Score ≥ 4.0
+              <button class="text-lead hover:text-ink">×</button>
+</span>
+</div>
+<button class="text-lead hover:text-ink text-[11px] font-label flex items-center gap-0.5">
+            Sort: <span class="text-ink font-medium">Score ▾</span>
+</button>
+</div>
+</div>
+<!-- Scrollable List of 72px Job Rows -->
+<div class="flex-1 overflow-y-auto divide-y divide-rule border-t border-rule" tabindex="0">
+<!-- ROW 1: Affirm -->
+<div class="h-[72px] px-4 flex items-center justify-between hover:bg-surface/80 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- 40px company monogram tile -->
+<div class="w-10 h-10 rounded border border-rule bg-surface flex items-center justify-center shrink-0 font-mono text-sm font-medium text-lead">
+              Af
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Senior Program Manager I</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">Affirm · Remote US · <span class="font-mono text-[11px] text-faint">3d</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-sageSoft text-sage font-label text-xs font-medium border border-sage/20">
+<span class="font-mono mono-num font-semibold">4.6</span> Apply now
+            </span>
+</div>
+</div>
+<!-- ROW 2: 1Password (Selected Row: White surface, Teal left accent, crisp border) -->
+<div aria-selected="true" class="h-[72px] px-4 flex items-center justify-between bg-surfaceRaised border-l-2 border-primary relative cursor-pointer group shadow-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded border border-ruleStrong bg-canvas flex items-center justify-center shrink-0 font-mono text-sm font-semibold text-ink">
+              1P
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Staff Program Manager, CX Operations &amp; Programs</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">1Password · Remote US/CA · <span class="font-mono text-[11px] text-faint">2d</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-sageSoft text-sage font-label text-xs font-medium border border-sage/20">
+<span class="font-mono mono-num font-semibold">4.3</span> Apply
+            </span>
+</div>
+</div>
+<!-- ROW 3: Stripe -->
+<div class="h-[72px] px-4 flex items-center justify-between hover:bg-surface/80 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded border border-rule bg-surface flex items-center justify-center shrink-0 font-mono text-sm font-medium text-lead">
+              St
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Program Manager, Commercial Solutions</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">Stripe · US-Remote · <span class="font-mono text-[11px] text-faint">today</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-sageSoft text-sage font-label text-xs font-medium border border-sage/20">
+<span class="font-mono mono-num font-semibold">4.1</span> Apply
+            </span>
+</div>
+</div>
+<!-- ROW 4: GitLab -->
+<div class="h-[72px] px-4 flex items-center justify-between hover:bg-surface/80 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded border border-rule bg-surface flex items-center justify-center shrink-0 font-mono text-sm font-medium text-lead">
+              GL
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Senior Ecosystem Operations Specialist</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">GitLab · Remote · <span class="font-mono text-[11px] text-faint">1d</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amberSoft text-amber font-label text-xs font-medium border border-amber/20">
+<span class="font-mono mono-num font-semibold">3.8</span> Maybe
+            </span>
+</div>
+</div>
+<!-- ROW 5: Serpentine -->
+<div class="h-[72px] px-4 flex items-center justify-between hover:bg-surface/80 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded border border-rule bg-surface flex items-center justify-center shrink-0 font-mono text-sm font-medium text-lead">
+              Se
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Philanthropy Operations Lead</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">Serpentine · London · <span class="font-mono text-[11px] text-faint">5d</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amberSoft text-amber font-label text-xs font-medium border border-amber/20">
+<span class="font-mono mono-num font-semibold">3.4</span> Maybe
+            </span>
+</div>
+</div>
+<!-- ROW 6: Maven Clinic -->
+<div class="h-[72px] px-4 flex items-center justify-between hover:bg-surface/80 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded border border-rule bg-surface flex items-center justify-center shrink-0 font-mono text-sm font-medium text-lead">
+              MC
+            </div>
+<div class="min-w-0">
+<h2 class="font-body text-[14px] font-semibold text-ink truncate leading-snug">Network Operations Manager</h2>
+<p class="font-label text-xs text-lead truncate mt-0.5">Maven Clinic · New York · <span class="font-mono text-[11px] text-faint">1d</span></p>
+</div>
+</div>
+<!-- Status Chip -->
+<div class="shrink-0 flex items-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-dangerSoft text-danger font-label text-xs font-medium border border-danger/20">
+<span class="font-mono mono-num font-semibold">2.9</span> Skip
+            </span>
+</div>
+</div>
+</div>
+<!-- List Footer Pinned at Bottom -->
+<footer class="border-t border-rule bg-surface py-2 px-3 text-center shrink-0">
+<p class="font-mono text-[11px] text-faint tracking-wide mono-num">
+<span class="text-lead font-semibold">j/k</span> move · <span class="text-lead font-semibold">s</span> shortlist · <span class="text-lead font-semibold">a</span> archive · <span class="text-lead font-semibold">enter</span> open
+        </p>
+</footer>
+</section>
+<!-- ======================================================== -->
+<!-- COLUMN 3: DETAIL PANE (max-w-[720px] container, Newsreader) -->
+<!-- ======================================================== -->
+<main class="flex-1 h-screen overflow-y-auto bg-canvas px-10 py-8" tabindex="0">
+<article class="max-w-[720px] mx-auto pb-16">
+<!-- Header row: Company Monogram + Action Controls -->
+<header class="flex items-start justify-between pb-2">
+<!-- Monogram tile -->
+<div class="w-10 h-10 rounded border border-ruleStrong bg-surfaceRaised text-base font-mono font-semibold text-ink flex items-center justify-center shrink-0">
+            1P
+          </div>
+<!-- Actions Cluster -->
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 text-xs font-label font-medium bg-surfaceRaised border border-ruleStrong rounded text-ink hover:bg-surface hover:border-lead transition-colors">
+              Archive
+            </button>
+<button class="px-3.5 py-1.5 text-xs font-label font-medium bg-surfaceRaised border border-ruleStrong rounded text-ink hover:bg-surface hover:border-lead transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-lead" data-icon="refresh">refresh</span>
+              Rescore
+            </button>
+<button class="px-4 py-1.5 text-xs font-label font-medium bg-primary text-white rounded hover:bg-primaryInk transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]" data-icon="check">check</span>
+              Mark applied
+            </button>
+</div>
+</header>
+<!-- Role Title in Newsreader 28px -->
+<h1 class="font-headline text-[28px] font-normal tracking-tight text-ink mt-3 mb-2 leading-tight">
+          Staff Program Manager, CX Operations &amp; Programs
+        </h1>
+<!-- Meta Line & Tag Pills -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-label text-lead mb-2">
+<span class="text-ink font-medium">1Password</span>
+<span class="text-faint">·</span>
+<span>Remote (US / Canada)</span>
+<span class="text-faint">·</span>
+<span class="font-mono text-faint mono-num">Posted 2 days ago</span>
+<span class="text-faint">·</span>
+<a class="inline-flex items-center gap-0.5 text-primary hover:underline font-medium" href="#">
+            Open posting ↗
+          </a>
+</div>
+<!-- Tag Pills -->
+<div class="flex items-center gap-1.5 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface border border-rule text-[11px] font-label text-lead">Remote</span>
+<span class="px-2 py-0.5 rounded bg-surface border border-rule text-[11px] font-mono text-lead mono-num">$150–180k</span>
+<span class="px-2 py-0.5 rounded bg-surface border border-rule text-[11px] font-label text-lead">Ashby</span>
+<span class="px-2 py-0.5 rounded bg-surface border border-rule text-[11px] font-label text-lead">LinkedIn</span>
+</div>
+<!-- Status banner line -->
+<div class="text-[11px] font-label text-faint pb-5 border-b border-rule flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+<span>Scored · by Score run, <span class="font-mono mono-num">2h ago</span> · <span class="font-mono mono-num">Free · 4s</span></span>
+</div>
+<!-- ======================================================== -->
+<!-- SCORECARD BOX: Flat surface, 1px hairline rule, no shadow -->
+<!-- ======================================================== -->
+<section aria-label="CV Score calibration report" class="mt-6 mb-6 p-6 rounded-lg bg-surfaceRaised border border-rule">
+<!-- Top score row -->
+<div class="flex items-baseline justify-between pb-5 border-b border-rule">
+<div class="flex items-baseline gap-3">
+<span class="font-mono text-4xl font-light text-ink mono-num tracking-tight">4.3</span>
+<span class="px-2 py-0.5 rounded bg-sageSoft text-sage font-label text-xs font-semibold uppercase tracking-wider border border-sage/20">
+                Apply
+              </span>
+</div>
+<span class="font-label text-xs text-faint">
+              Calibrated against <span class="font-mono text-ink text-[11px]">Senior/Staff CV (v4)</span>
+</span>
+</div>
+<!-- Two-column grid inside scorecard -->
+<div class="grid grid-cols-2 gap-8 pt-5">
+<!-- Left Column: Dimensions & Progress -->
+<div class="space-y-3.5">
+<p class="font-label text-xs uppercase tracking-wider text-faint font-semibold">Evaluation Dimensions</p>
+<!-- Dim 1: CV match -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-ink">CV match</span>
+<span class="font-mono text-xs text-lead mono-num font-medium">4.5 <span class="text-faint font-normal">/ 5</span></span>
+</div>
+<div class="w-full bg-surface h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[90%]"></div>
+</div>
+</div>
+<!-- Dim 2: North Star fit -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-ink">North Star fit</span>
+<span class="font-mono text-xs text-lead mono-num font-medium">4.4 <span class="text-faint font-normal">/ 5</span></span>
+</div>
+<div class="w-full bg-surface h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[88%]"></div>
+</div>
+</div>
+<!-- Dim 3: Comp -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-ink">Comp band</span>
+<span class="font-mono text-xs text-lead mono-num font-medium">4.0 <span class="text-faint font-normal">/ 5</span></span>
+</div>
+<div class="w-full bg-surface h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[80%]"></div>
+</div>
+</div>
+<!-- Dim 4: Culture -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-ink">Culture / pacing</span>
+<span class="font-mono text-xs text-lead mono-num font-medium">4.2 <span class="text-faint font-normal">/ 5</span></span>
+</div>
+<div class="w-full bg-surface h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[84%]"></div>
+</div>
+</div>
+<!-- Dim 5: Red flags -->
+<div>
+<div class="flex justify-between text-xs font-label mb-1">
+<span class="text-ink">Red flags</span>
+<span class="font-mono text-xs text-lead mono-num font-medium">4.4 <span class="text-faint font-normal">/ 5</span></span>
+</div>
+<div class="w-full bg-surface h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[88%]"></div>
+</div>
+</div>
+<!-- Hard stops indicator -->
+<div class="pt-2 flex items-center justify-between text-xs font-label border-t border-rule/60">
+<span class="text-faint">Hard stops</span>
+<span class="font-mono text-[11px] text-sage font-medium">none detected</span>
+</div>
+</div>
+<!-- Right Column: Strengths & Gaps -->
+<div class="flex flex-col justify-between">
+<div class="space-y-4">
+<!-- Strengths -->
+<div>
+<h3 class="font-label text-xs uppercase tracking-wider text-sage font-semibold mb-1.5 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+                    Strengths
+                  </h3>
+<ul class="space-y-1.5 text-xs font-label text-ink">
+<li class="flex items-start gap-1.5">
+<span class="text-sage mt-0.5">•</span>
+<span>Strong program operations governance background</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-sage mt-0.5">•</span>
+<span>Direct alignment on scaling customer support workflows</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-sage mt-0.5">•</span>
+<span>Meets compensation band ($150–180k)</span>
+</li>
+</ul>
+</div>
+<!-- Gaps -->
+<div>
+<h3 class="font-label text-xs uppercase tracking-wider text-amber font-semibold mb-1.5 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber"></span>
+                    Gaps &amp; Unknowns
+                  </h3>
+<ul class="space-y-1.5 text-xs font-label text-ink">
+<li class="flex items-start gap-1.5">
+<span class="text-amber mt-0.5">•</span>
+<span>No formal CX tooling ownership explicitly cited in CV</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-amber mt-0.5">•</span>
+<span>Canada payroll unclear (contractor vs. entity)</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Next Step Callout Box -->
+<div class="mt-4 p-3 rounded bg-surface border border-rule">
+<p class="font-headline text-[13px] italic text-ink leading-snug">
+                  Next step: Tailor the CV around the 35% wait-time cut and apply this week.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Tabs: Report / Job description / Timeline / Notes -->
+<nav aria-label="Job Detail Sections" class="flex items-center gap-6 border-b border-rule mb-6 text-xs font-label">
+<button class="pb-2 text-primary font-medium border-b-2 border-primary -mb-px">Report</button>
+<button class="pb-2 text-lead hover:text-ink transition-colors">Job description</button>
+<button class="pb-2 text-lead hover:text-ink transition-colors">Timeline</button>
+<button class="pb-2 text-lead hover:text-ink transition-colors">Notes (0)</button>
+</nav>
+<!-- Tab Content Area -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-[20px] font-normal text-ink mb-3 leading-snug">
+              Role summary
+            </h2>
+<div class="font-headline text-[17px] leading-relaxed text-ink/90 space-y-4">
+<p>
+                1Password is seeking an experienced Staff Program Manager to orchestrate end-to-end customer experience initiatives across support, product operations, and partner tooling ecosystems. You will define the operational cadence, lead cross-functional delivery on latency reduction, and bridge front-line feedback into core platform engineering.
+              </p>
+<p>
+                Operating closely with customer success directors and product teams, this role establishes the operating framework that will support their next million active subscriptions without proportionally increasing triage headcount.
+              </p>
+</div>
+</div>
+<!-- Key responsibilities snippet -->
+<div class="pt-2 border-t border-rule">
+<h3 class="font-headline text-[18px] font-normal text-ink mb-3">
+              Alignment highlights
+            </h3>
+<div class="grid grid-cols-2 gap-4 text-xs font-label">
+<div class="p-3.5 rounded bg-surface border border-rule space-y-1">
+<span class="text-faint font-mono text-[10px] uppercase">Requirement</span>
+<p class="font-medium text-ink">5+ years leading complex cross-functional PMO initiatives</p>
+<p class="text-sage text-[11px]">✓ Matches: 7 years across FinTech and SaaS operations</p>
+</div>
+<div class="p-3.5 rounded bg-surface border border-rule space-y-1">
+<span class="text-faint font-mono text-[10px] uppercase">Requirement</span>
+<p class="font-medium text-ink">Demonstrated tooling automation (Zendesk / Jira / Retool)</p>
+<p class="text-amber text-[11px]">~ Partial: Jira and Linear explicit, Zendesk implicit</p>
+</div>
+</div>
+</div>
+<!-- Interview Strategy Note -->
+<div class="pt-2 border-t border-rule pb-6">
+<h3 class="font-headline text-[18px] font-normal text-ink mb-2">
+              Desk note
+            </h3>
+<p class="font-headline text-[16px] text-lead italic leading-relaxed">
+              "Their CX org was recently restructured after the Q3 enterprise push. Emphasize your resilience metrics and cross-timezone sync frameworks in the initial screen."
+            </p>
+</div>
+</section>
+</article>
+</main>
+</div>
+</body></html>

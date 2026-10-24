@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"brief\": [{\"field\": \"role_titles\", \"op\": \"set\", \"value\": [\"Grants Manager\", \"Head of Partnerships\"], \"why\": \"Your target roles in Winnow\"}, {\"field\": \"seniority_levels\", \"op\": \"set\", \"value\": [\"staff\", \"senior\"], \"why\": \"Your level\"}, {\"field\": \"pay\", \"op\": \"add\", \"value\": {\"currency\": \"GBP\", \"floor\": 45000, \"target\": 55000}, \"why\": \"Your pay in Winnow\"}, {\"field\": \"salary_floor\", \"op\": \"set\", \"value\": 45000, \"why\": \"Not a brief field\"}], \"profile\": [{\"field\": \"summary\", \"op\": \"set\", \"value\": \"I run grant programmes worth \\u00a32m a year.\", \"why\": \"Your story in Winnow\"}, {\"field\": \"experiences\", \"op\": \"update\", \"item_key\": \"exp1\", \"value\": {\"description\": \"- Ran \\u00a32m a year of grants\"}, \"why\": \"Your CV, Example Trust\"}, {\"field\": \"experiences\", \"op\": \"update\", \"item_key\": \"nope\", \"value\": {\"description\": \"- Made up\"}, \"why\": \"No such entry\"}, {\"field\": \"experiences\", \"op\": \"add\", \"value\": {\"title\": \"New job\"}, \"why\": \"Adding entries is not allowed\"}]}"
+      }
+    }
+  ]
+}

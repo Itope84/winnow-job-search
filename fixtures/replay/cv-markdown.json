@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"markdown\":\"# Ada Lovelace\\n\\nada@example.org · London\\n\\n## Experience\\n\\n### Grants Manager, Example Trust\\nLondon · 2021 – now\\n\\n- Ran a grants programme of £2m a year across 40 partners, from call to final report.\\n- Built the reporting that the board now uses every quarter.\\n\\n## Education\\n\\nBSc Mathematics, University of London\"}"
+      }
+    }
+  ]
+}

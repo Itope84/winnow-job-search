@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "event": { "type": "text", "text": "[winnow] 1/7 Reading the job and the CV" } },
+    { "delay": 20, "event": { "type": "text", "text": "[winnow] 5/7 Scoring" } },
+    { "writeFrom": { "path": "result.json", "template": "score" } }
+  ]
+}

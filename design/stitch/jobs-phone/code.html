@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#FBFBFA]" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jobs — Yinkops Ledger</title>
+<!-- Google Fonts: Newsreader (Headline/Display), Geist Sans & Geist Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#FBFBFA",
+            surface: "#F3F2EE",
+            surfaceRaised: "#FFFFFF",
+            rule: "#E5E4DE",
+            ruleStrong: "#D6D4CC",
+            ink: "#1E1E1C",
+            lead: "#6F6E69",
+            faint: "#9A988F",
+            primary: "#1F6F78",
+            primaryInk: "#155259",
+            primarySoft: "rgba(31, 111, 120, 0.10)",
+            sage: "#4A6B5B",
+            sageTint: "#EBF1ED",
+            sageText: "#2F5241",
+            amber: "#A36717",
+            amberTint: "#FAF2E6",
+            amberText: "#804E0B",
+            danger: "#B83A3A"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {},
+          fontFamily: {
+            headline: ["Newsreader", "serif"],
+            display: ["Newsreader", "serif"],
+            body: ["Geist", "sans-serif"],
+            label: ["Geist", "sans-serif"],
+            mono: ["Geist Mono", "monospace"]
+          },
+          fontSize: {}
+        },
+      },
+    }
+  </script>
+<style>
+    /* Strict hairline and paper ergonomics */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      border-color: #E5E4DE;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 20;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    /* Hide scrollbars cleanly for editorial rhythm */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-canvas text-ink font-body selection:bg-primarySoft selection:text-primary min-h-screen flex flex-col justify-between antialiased">
+<!-- Main Mobile Frame Container (centered on larger viewports with clean hairline borders) -->
+<div class="w-full max-w-md mx-auto min-h-screen bg-canvas flex flex-col relative pb-20 border-x border-rule">
+<!-- 1. Top Header -->
+<header class="w-full px-4 pt-5 pb-3 flex items-center justify-between border-b border-rule bg-canvas sticky top-0 z-40">
+<div class="flex items-baseline gap-2">
+<h1 class="font-headline text-[32px] font-normal leading-none tracking-tight text-ink">
+          Jobs
+        </h1>
+<span class="font-mono text-xs text-faint tracking-normal">v2.4</span>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-1">
+<button aria-label="Search jobs" class="w-9 h-9 rounded flex items-center justify-center text-lead hover:text-ink hover:bg-surface active:bg-rule transition-colors duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Tune filters and portal sources" class="w-9 h-9 rounded flex items-center justify-center text-lead hover:text-ink hover:bg-surface active:bg-rule transition-colors duration-150 relative" type="button">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</header>
+<!-- 2. Live Strip (Background scan status) -->
+<section aria-label="System status" class="w-full bg-[#1F6F78]/10 text-primary border-b border-rule overflow-hidden">
+<div class="px-4 py-2 flex items-center justify-between text-xs font-medium">
+<div class="flex items-center gap-2">
+<!-- Minimal hairline spinner -->
+<svg class="animate-spin h-3.5 w-3.5 text-primary stroke-current" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-30" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5"></circle>
+<path class="opacity-90" d="M12 3a9 9 0 0 1 9 9" stroke="currentColor" stroke-linecap="square" stroke-width="2.5"></path>
+</svg>
+<span class="tracking-tight text-primary">
+            Scanning portals · <span class="font-mono font-medium">32/47</span> companies
+          </span>
+</div>
+<span class="font-mono text-[11px] text-primary/80">68%</span>
+</div>
+<!-- Hairline progress line -->
+<div class="w-full bg-primary/15 h-[1.5px]">
+<div class="bg-primary h-[1.5px] w-[68%] transition-all duration-300"></div>
+</div>
+</section>
+<!-- 3. Segmented List Control with Counts -->
+<nav aria-label="Job workflow buckets" class="w-full border-b border-rule bg-canvas overflow-x-auto no-scrollbar flex items-center px-4">
+<div class="flex space-x-6 min-w-max text-sm">
+<!-- Tab: Inbox (Active) -->
+<button class="group relative py-3 font-medium text-primary flex items-center gap-1.5 focus:outline-none" type="button">
+<span>Inbox</span>
+<span class="font-mono text-xs font-normal opacity-85">128</span>
+<!-- 2px solid ink teal underline -->
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-primary"></span>
+</button>
+<!-- Tab: Shortlist -->
+<button class="group relative py-3 text-lead hover:text-ink transition-colors flex items-center gap-1.5 focus:outline-none" type="button">
+<span>Shortlist</span>
+<span class="font-mono text-xs text-faint group-hover:text-lead font-normal">9</span>
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent"></span>
+</button>
+<!-- Tab: Scored -->
+<button class="group relative py-3 text-lead hover:text-ink transition-colors flex items-center gap-1.5 focus:outline-none" type="button">
+<span>Scored</span>
+<span class="font-mono text-xs text-faint group-hover:text-lead font-normal">14</span>
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent"></span>
+</button>
+<!-- Tab: Applied -->
+<button class="group relative py-3 text-lead hover:text-ink transition-colors flex items-center gap-1.5 focus:outline-none" type="button">
+<span>Applied</span>
+<span class="font-mono text-xs text-faint group-hover:text-lead font-normal">6</span>
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent"></span>
+</button>
+<!-- Tab: Archive -->
+<button class="group relative py-3 text-lead hover:text-ink transition-colors flex items-center gap-1.5 focus:outline-none" type="button">
+<span>Archive</span>
+<span class="font-mono text-xs text-faint group-hover:text-lead font-normal">412</span>
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent"></span>
+</button>
+</div>
+</nav>
+<!-- 4. Filter Chips Row -->
+<div class="w-full py-2.5 px-4 overflow-x-auto no-scrollbar flex items-center gap-2 border-b border-rule bg-canvas">
+<!-- Filter: Kept (Selected) -->
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-medium bg-surface text-ink border border-primary/40 focus:outline-none active:bg-ruleStrong" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check">check</span>
+<span>Kept</span>
+</button>
+<!-- Filter: Unsure -->
+<button class="inline-flex items-center px-2.5 py-1 rounded text-xs font-normal bg-canvas text-lead border border-rule hover:text-ink hover:border-ruleStrong focus:outline-none transition-colors" type="button">
+<span>Unsure</span>
+</button>
+<!-- Filter: Not triaged -->
+<button class="inline-flex items-center px-2.5 py-1 rounded text-xs font-normal bg-canvas text-lead border border-rule hover:text-ink hover:border-ruleStrong focus:outline-none transition-colors" type="button">
+<span>Not triaged</span>
+</button>
+<!-- Filter: Posted · 7 days -->
+<button class="inline-flex items-center px-2.5 py-1 rounded text-xs font-normal bg-canvas text-lead border border-rule hover:text-ink hover:border-ruleStrong focus:outline-none transition-colors whitespace-nowrap" type="button">
+<span>Posted · <span class="font-mono text-xs">7</span> days</span>
+</button>
+<!-- Filter: Remote -->
+<button class="inline-flex items-center px-2.5 py-1 rounded text-xs font-normal bg-canvas text-lead border border-rule hover:text-ink hover:border-ruleStrong focus:outline-none transition-colors" type="button">
+<span>Remote</span>
+</button>
+</div>
+<!-- 5. Triage Review Notice Card -->
+<div class="px-4 pt-3 pb-1">
+<div class="bg-surface rounded-lg border border-rule p-3 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-lead/60"></span>
+<span class="text-ink">
+            Triage archived <span class="font-mono font-medium text-ink">14</span> of <span class="font-mono font-medium text-ink">40</span>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-primary hover:text-primaryInk font-medium transition-colors focus:outline-none" type="button">
+            Review
+          </button>
+<button aria-label="Dismiss notice" class="text-faint hover:text-lead transition-colors leading-none flex items-center justify-center p-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6. List of 72px Job Rows -->
+<main class="w-full flex-1 divide-y divide-rule mt-2">
+<!-- Job Row 1: Senior Program Manager I — Affirm -->
+<article class="h-[72px] px-4 flex items-center justify-between bg-canvas hover:bg-surface/50 transition-colors cursor-pointer select-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+            Af
+          </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Senior Program Manager I</h2>
+<p class="text-xs text-lead mt-1 truncate">
+              Affirm · Remote US · <span class="font-mono">3d</span>
+</p>
+</div>
+</div>
+<!-- Status Chip: Kept -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#EBF1ED] text-[#2F5241]">
+            Kept
+          </span>
+</div>
+</article>
+<!-- Job Row 2: Mid-swipe state revealing Shortlist action -->
+<div class="relative overflow-hidden h-[72px] bg-canvas">
+<!-- Revealed Action Underlay (Left Side Swipe Behind) -->
+<div class="absolute inset-y-0 left-0 w-24 bg-[#EBF1ED] flex items-center px-4 gap-1.5 text-[#2F5241] border-r border-[#D6E3D9]">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+<span class="text-xs font-medium tracking-tight">Shortlist</span>
+</div>
+<!-- Foreground Row (Translated 84px to simulate interactive gesture) -->
+<article class="h-full px-4 flex items-center justify-between bg-surfaceRaised border-l border-rule translate-x-[84px] shadow-none transition-transform cursor-pointer">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+              1P
+            </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Staff Program Manager, CX Operations</h2>
+<p class="text-xs text-lead mt-1 truncate">
+                1Password · Remote US/CA · <span class="font-mono">2d</span>
+</p>
+</div>
+</div>
+<!-- Status Chip: Kept -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#EBF1ED] text-[#2F5241]">
+              Kept
+            </span>
+</div>
+</article>
+</div>
+<!-- Job Row 3: Program Manager, Commercial Solutions — Stripe -->
+<article class="h-[72px] px-4 flex items-center justify-between bg-canvas hover:bg-surface/50 transition-colors cursor-pointer select-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+            St
+          </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Program Manager, Commercial Solutions</h2>
+<p class="text-xs text-lead mt-1 truncate">
+              Stripe · US-Remote · <span class="text-lead">today</span>
+</p>
+</div>
+</div>
+<!-- Status Chip: Unsure -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#FAF2E6] text-[#804E0B]">
+            Unsure
+          </span>
+</div>
+</article>
+<!-- Job Row 4: Senior Ecosystem Operations Manager — GitLab (Triaging state) -->
+<article class="h-[72px] px-4 flex items-center justify-between bg-canvas hover:bg-surface/50 transition-colors cursor-pointer select-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+            GL
+          </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Senior Ecosystem Operations Manager</h2>
+<p class="text-xs text-lead mt-1 truncate">
+              GitLab · Remote · <span class="font-mono">1d</span>
+</p>
+</div>
+</div>
+<!-- Status Chip: Triaging (Active neutral indicator) -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-surface text-lead border border-rule">
+<svg class="animate-spin h-2.5 w-2.5 text-lead" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-30" cx="12" cy="12" r="9" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-90" d="M12 3a9 9 0 0 1 9 9" stroke="currentColor" stroke-linecap="square" stroke-width="3"></path>
+</svg>
+<span>Triaging</span>
+</span>
+</div>
+</article>
+<!-- Job Row 5: Philanthropy Manager — Serpentine -->
+<article class="h-[72px] px-4 flex items-center justify-between bg-canvas hover:bg-surface/50 transition-colors cursor-pointer select-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+            Se
+          </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Philanthropy Manager</h2>
+<p class="text-xs text-lead mt-1 truncate">
+              Serpentine · London · <span class="font-mono">5d</span>
+</p>
+</div>
+</div>
+<!-- Status Chip: Kept -->
+<div class="flex-shrink-0">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#EBF1ED] text-[#2F5241]">
+            Kept
+          </span>
+</div>
+</article>
+<!-- Job Row 6: Network Operations Manager — Maven Clinic (Clean timestamp trailing) -->
+<article class="h-[72px] px-4 flex items-center justify-between bg-canvas hover:bg-surface/50 transition-colors cursor-pointer select-none">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<!-- Monogram -->
+<div class="w-10 h-10 rounded bg-surface border border-rule flex-shrink-0 flex items-center justify-center font-mono text-xs font-medium text-ink">
+            MC
+          </div>
+<!-- Role & Meta -->
+<div class="min-w-0">
+<h2 class="text-sm font-semibold text-ink truncate leading-tight">Network Operations Manager</h2>
+<p class="text-xs text-lead mt-1 truncate">
+              Maven Clinic · New York · <span class="font-mono">1d</span>
+</p>
+</div>
+</div>
+<!-- Trailing space / subtle age indication -->
+<div class="flex-shrink-0 text-right">
+<span class="font-mono text-xs text-faint">just now</span>
+</div>
+</article>
+</main>
+<!-- Bottom summary status note -->
+<div class="px-4 py-4 text-center">
+<span class="text-xs text-faint font-mono">End of active queue · 6 displayed</span>
+</div>
+<!-- 7. Bottom Navigation Bar (Fixed docked shell from Shared Components JSON) -->
+<nav aria-label="Primary navigation" class="fixed bottom-0 left-0 right-0 w-full z-50 bg-canvas border-t border-rule">
+<div class="max-w-md mx-auto h-16 px-4 flex justify-around items-center">
+<!-- Tab 1: Jobs (Active) -->
+<button class="flex flex-col items-center justify-center text-primary font-medium py-1 w-16 active:opacity-75 transition-opacity duration-150" type="button">
+<span class="material-symbols-outlined text-[22px] filled" data-icon="work" data-weight="fill">work</span>
+<span class="font-body text-xs font-medium tracking-tight mt-1">Jobs</span>
+</button>
+<!-- Tab 2: Find (Inactive) -->
+<button class="flex flex-col items-center justify-center text-lead py-1 w-16 hover:text-ink active:opacity-75 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="travel_explore">travel_explore</span>
+<span class="font-body text-xs font-medium tracking-tight mt-1">Find</span>
+</button>
+<!-- Tab 3: Activity (Inactive, with amber notification dot) -->
+<button class="flex flex-col items-center justify-center text-lead py-1 w-16 hover:text-ink active:opacity-75 transition-colors duration-150 relative" type="button">
+<div class="relative inline-flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]" data-icon="analytics">analytics</span>
+<!-- 6px amber badge indicating activity updates -->
+<span class="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-amber ring-2 ring-canvas"></span>
+</div>
+<span class="font-body text-xs font-medium tracking-tight mt-1">Activity</span>
+</button>
+<!-- Tab 4: You (Inactive) -->
+<button class="flex flex-col items-center justify-center text-lead py-1 w-16 hover:text-ink active:opacity-75 transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-body text-xs font-medium tracking-tight mt-1">You</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

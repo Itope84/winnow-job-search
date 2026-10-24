@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Winnow">
+  <rect width="512" height="512" fill="#1F6F78"/>
+  <g transform="translate(256 256) scale(0.8) translate(-256 -256)">
+    <g stroke="#FBFBFA" stroke-width="40" stroke-linecap="round">
+      <line x1="116" y1="168" x2="396" y2="168"/>
+      <line x1="168" y1="244" x2="344" y2="244"/>
+      <line x1="220" y1="320" x2="292" y2="320"/>
+    </g>
+    <circle cx="256" cy="398" r="27" fill="#E0A75E"/>
+  </g>
+</svg>

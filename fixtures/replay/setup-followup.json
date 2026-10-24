@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"followUp\": \"Roughly how big was the programme, and over how long?\"}"
+      }
+    }
+  ]
+}

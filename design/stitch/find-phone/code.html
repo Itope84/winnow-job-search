@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#FBFBFA]" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yinkops Ledger - Find</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Newsreader, Geist Sans, Geist Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#FBFBFA",
+            surface: "#F3F2EE",
+            surfaceRaised: "#FFFFFF",
+            rule: "#E5E4DE",
+            ruleStrong: "#D6D4CC",
+            ink: "#1E1E1C",
+            lead: "#6F6E69",
+            faint: "#9A988F",
+            primary: "#1F6F78",
+            primaryInk: "#155259",
+            sage: "#4A6B5B",
+            amber: "#A36717",
+            danger: "#B83A3A"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          fontFamily: {
+            headline: ["Newsreader", "serif"],
+            display: ["Newsreader", "serif"],
+            body: ["Geist", "sans-serif"],
+            label: ["Geist", "sans-serif"],
+            mono: ["Geist Mono", "monospace"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Hairline aesthetic rules */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 20;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    /* Hide scrollbars cleanly */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-canvas text-ink font-body min-h-full flex flex-col selection:bg-[#1F6F78]/15 selection:text-ink">
+<!-- Top App Bar (Shared Anchor Component) -->
+<header class="sticky top-0 z-40 bg-canvas border-b border-rule w-full">
+<div class="flex justify-between items-center w-full px-4 h-14 max-w-2xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-ink text-xl">description</span>
+<span class="font-headline text-2xl font-normal text-ink tracking-tight">Ledger</span>
+</div>
+<div class="flex items-center gap-3">
+<button aria-label="Settings and Filters" class="text-lead hover:text-ink transition-colors duration-150 p-1 rounded" type="button">
+<span class="material-symbols-outlined text-xl">tune</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Live Strip Component -->
+<div class="bg-[#1F6F78]/10 border-b border-rule w-full">
+<div class="max-w-2xl mx-auto px-4 py-1.5 flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-2 text-primaryInk">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Scanning portals · 32/47</span>
+</div>
+<span class="text-lead text-[11px]">Free · seconds</span>
+</div>
+</div>
+<!-- Main Canvas Container -->
+<main class="flex-1 w-full max-w-2xl mx-auto px-4 pt-5 pb-24 space-y-6">
+<!-- Page Title & Minimal Context Header -->
+<div class="flex items-baseline justify-between pt-1">
+<h1 class="font-headline text-3xl font-normal text-ink tracking-tight">Find</h1>
+<span class="font-mono text-xs text-lead tabular-nums">47 tracked · 3 rules</span>
+</div>
+<!-- SECTION 1: SCANS -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<h2 class="text-xs uppercase tracking-widest font-mono text-lead font-semibold">Scans</h2>
+<span class="text-[11px] font-mono text-faint">Automated sweeps</span>
+</div>
+<div class="space-y-3">
+<!-- Card 1: Portals (Running State) -->
+<div class="bg-surface border border-rule rounded-lg p-3.5 space-y-3">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-base font-semibold text-ink leading-tight">Portals</h3>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono bg-primary/10 text-primary uppercase font-medium">Running</span>
+</div>
+<p class="text-sm text-lead mt-0.5">Your 47 companies and job boards.</p>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded border border-rule bg-canvas text-lead font-mono text-xs">Free</span>
+<span class="px-1.5 py-0.5 rounded border border-rule bg-canvas text-lead font-mono text-xs">Seconds</span>
+</div>
+</div>
+<!-- Active scanning display & Progress bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-ink font-medium tabular-nums">32 / 47 companies</span>
+<button class="text-lead hover:text-ink text-sm font-medium transition-colors" type="button">Cancel</button>
+</div>
+<!-- Progress track hairline -->
+<div class="w-full bg-rule h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+<div class="pt-0.5 border-t border-rule/70 flex items-center justify-between text-xs font-mono text-lead">
+<span>Last run 2h ago · 41 new</span>
+<span class="text-[11px] text-faint">Next auto in 4h</span>
+</div>
+</div>
+<!-- Card 2: Full ATS -->
+<div class="bg-surface border border-rule rounded-lg p-3.5 space-y-3">
+<div class="flex items-start justify-between">
+<div class="pr-2">
+<h3 class="text-base font-semibold text-ink leading-tight">Full ATS</h3>
+<p class="text-sm text-lead mt-0.5">Every company on Greenhouse, Lever, Ashby and Workday, filtered by your rules.</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-1.5 py-0.5 rounded border border-rule bg-canvas text-lead font-mono text-xs">Free</span>
+<span class="px-1.5 py-0.5 rounded border border-rule bg-canvas text-lead font-mono text-xs">10–20 min</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-xs text-lead font-mono">Last run yesterday · 112 new</span>
+<button class="border border-ruleStrong bg-surfaceRaised text-ink text-sm font-medium px-3.5 py-1 rounded hover:bg-canvas active:bg-rule transition-colors" type="button">
+              Start
+            </button>
+</div>
+</div>
+<!-- Card 3: AI search -->
+<div class="bg-surface border border-rule rounded-lg p-3.5 space-y-3">
+<div class="flex items-start justify-between">
+<div class="pr-2">
+<h3 class="text-base font-semibold text-ink leading-tight">AI search</h3>
+<p class="text-sm text-lead mt-0.5">Your search queries, plus career sites no scanner covers.</p>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="px-1.5 py-0.5 rounded border border-amber/30 bg-amber/10 text-amber text-xs font-mono font-medium">Uses tokens</span>
+<span class="px-1.5 py-0.5 rounded border border-rule bg-canvas text-lead font-mono text-xs">About 5 min</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-xs text-lead font-mono">Last run 3 days ago · 9 new · $0.42</span>
+<button class="border border-ruleStrong bg-surfaceRaised text-ink text-sm font-medium px-3.5 py-1 rounded hover:bg-canvas active:bg-rule transition-colors" type="button">
+              Start
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TOGGLE ROW -->
+<section>
+<div class="bg-surface border border-rule rounded-lg p-3.5 flex items-center justify-between">
+<div class="space-y-0.5">
+<label class="text-sm font-medium text-ink cursor-pointer" for="triage-toggle">Triage new jobs after each scan</label>
+<p class="text-xs text-lead">Applies title, location and salary filters automatically</p>
+</div>
+<!-- Minimalist Teal Switch -->
+<button aria-checked="true" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out focus:outline-none" id="triage-toggle" role="switch">
+<span class="pointer-events-none translate-x-5 inline-block h-5 w-5 transform rounded-full bg-white shadow-none transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</section>
+<!-- SECTION 3: SOURCES -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<h2 class="text-xs uppercase tracking-widest font-mono text-lead font-semibold">Sources</h2>
+<button class="text-xs font-mono text-primary hover:underline" type="button">Add source +</button>
+</div>
+<div class="rounded-lg border border-rule bg-surface divide-y divide-rule overflow-hidden">
+<button class="w-full px-3.5 py-3 flex items-center justify-between text-left hover:bg-canvas/60 transition-colors" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-lead text-lg">apartment</span>
+<span class="text-sm font-medium text-ink">Companies <span class="text-lead font-mono text-xs">· 47</span></span>
+</div>
+<span class="material-symbols-outlined text-lead text-lg">chevron_right</span>
+</button>
+<button class="w-full px-3.5 py-3 flex items-center justify-between text-left hover:bg-canvas/60 transition-colors" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-lead text-lg">hub</span>
+<span class="text-sm font-medium text-ink">Job boards <span class="text-lead font-mono text-xs">· 12 on</span></span>
+</div>
+<span class="material-symbols-outlined text-lead text-lg">chevron_right</span>
+</button>
+<button class="w-full px-3.5 py-3 flex items-center justify-between text-left hover:bg-canvas/60 transition-colors" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-lead text-lg">search_spark</span>
+<span class="text-sm font-medium text-ink">AI search queries <span class="text-lead font-mono text-xs">· 6</span></span>
+</div>
+<span class="material-symbols-outlined text-lead text-lg">chevron_right</span>
+</button>
+<button class="w-full px-3.5 py-3 flex items-center justify-between text-left hover:bg-canvas/60 transition-colors" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-lead text-lg">tune</span>
+<span class="text-sm font-medium text-ink">Rules <span class="text-lead text-xs">· title, location, salary</span></span>
+</div>
+<span class="material-symbols-outlined text-lead text-lg">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- SECTION 4: HISTORY -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<h2 class="text-xs uppercase tracking-widest font-mono text-lead font-semibold">History</h2>
+<span class="text-xs font-mono text-lead">Last 7 days</span>
+</div>
+<div class="rounded-lg border border-rule bg-surface p-3 space-y-2.5">
+<!-- Row 1 -->
+<div class="text-xs font-mono leading-relaxed text-lead border-b border-rule/60 pb-2">
+<span class="text-ink font-semibold">Portals</span> · Oct 23, 09:12
+          <div class="text-lead mt-0.5">
+<span class="text-ink font-medium">312</span> found · 
+            <span class="text-sage font-medium">41</span> new · 
+            <span class="text-faint">18</span> duplicates · 
+            <span class="text-lead">253</span> filtered
+          </div>
+</div>
+<!-- Row 2 -->
+<div class="text-xs font-mono leading-relaxed text-lead">
+<span class="text-ink font-semibold">Full ATS</span> · Oct 22
+          <div class="text-lead mt-0.5">
+<span class="text-ink font-medium">4,208</span> found · 
+            <span class="text-sage font-medium">112</span> new
+          </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Shared Anchor Component) -->
+<nav aria-label="Primary Mobile Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-16 max-w-2xl mx-auto border-t border-rule bg-canvas">
+<!-- Item 1: Jobs (Inactive) -->
+<a aria-current="false" class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined text-[22px]">work</span>
+<span class="font-body text-xs font-medium tracking-tight mt-0.5">Jobs</span>
+</a>
+<!-- Item 2: Find (ACTIVE - Ink teal #1F6F78) -->
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary font-medium py-1 active:opacity-75" href="#">
+<span class="material-symbols-outlined text-[22px] fill-icon">travel_explore</span>
+<span class="font-body text-xs font-medium tracking-tight mt-0.5">Find</span>
+</a>
+<!-- Item 3: Activity (Inactive) -->
+<a aria-current="false" class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined text-[22px]">analytics</span>
+<span class="font-body text-xs font-medium tracking-tight mt-0.5">Activity</span>
+</a>
+<!-- Item 4: You (Inactive) -->
+<a aria-current="false" class="flex flex-col items-center justify-center text-lead py-1 hover:text-ink transition-colors duration-150 active:opacity-75" href="#">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="font-body text-xs font-medium tracking-tight mt-0.5">You</span>
+</a>
+</nav>
+<!-- Micro-interactions Javascript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle interaction for triage setting
+      const toggleBtn = document.getElementById('triage-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const isChecked = toggleBtn.getAttribute('aria-checked') === 'true';
+          const newState = !isChecked;
+          toggleBtn.setAttribute('aria-checked', String(newState));
+          
+          const thumb = toggleBtn.querySelector('span');
+          if (newState) {
+            toggleBtn.classList.remove('bg-ruleStrong');
+            toggleBtn.classList.add('bg-primary');
+            thumb.classList.remove('translate-x-0');
+            thumb.classList.add('translate-x-5');
+          } else {
+            toggleBtn.classList.remove('bg-primary');
+            toggleBtn.classList.add('bg-ruleStrong');
+            thumb.classList.remove('translate-x-5');
+            thumb.classList.add('translate-x-0');
+          }
+        });
+      }
+    });
+  </script>
+</body></html>

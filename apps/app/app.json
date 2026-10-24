@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Winnow",
+    "slug": "winnow",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "winnow",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1F6F78",
+        "foregroundImage": "./assets/images/icon.png"
+      },
+      "package": "me.ilesan.winnow"
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "name": "Winnow",
+      "shortName": "Winnow",
+      "themeColor": "#FBFBFA",
+      "backgroundColor": "#FBFBFA",
+      "display": "standalone"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FBFBFA",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": false
+    }
+  }
+}
