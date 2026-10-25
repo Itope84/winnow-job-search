@@ -349,7 +349,7 @@ export const RUN_COSTS: Record<RunKind, RunCost> = {
   setup_followup: { paid: true, estimate: 'About 15 s' },
   profile_draft: { paid: true, estimate: 'About 1 min' },
   sources_suggest: { paid: true, estimate: 'About 2 min' },
-  scan_jack: { paid: false, estimate: 'Under a minute' },
+  scan_jack: { paid: false, estimate: 'About 2 min' },
   jack_update: { paid: true, estimate: 'About 1 min' },
 };
 

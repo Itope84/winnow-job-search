@@ -135,7 +135,14 @@ describe('Jack scan', () => {
     let briefEmpty = true;
     const { space, runner, calls } = await connected({
       get_radar_roles: () => ({ status: 'ok', roles: [ROLE] }),
-      get_account_status: () => ({ search_brief: { is_empty: briefEmpty } }),
+      get_search_brief: () => ({
+        brief: {
+          role_titles: ['Grants Manager', 'Head of Grants'],
+          locations: ['London, United Kingdom'],
+          work_modes: ['hybrid', 'remote'],
+        },
+        completeness: { is_empty: briefEmpty },
+      }),
       search_jobs: () => ({ status: 'running', search_id: 's1' }),
       get_search_status: () => ({
         status: 'complete',
@@ -181,16 +188,19 @@ describe('Jack scan', () => {
     const [second] = runner.enqueue({ kind: 'scan_jack', options: { autoTriage: false } });
     const run2 = await finished(runner, second?.id ?? '');
     expect(run2.status).toBe('succeeded');
-    expect(calls.find((c) => c.tool === 'search_jobs')?.args).toEqual({
-      query: 'Search on the brief',
-    });
+    // A general pass, then one search per target role; the same results merge.
+    expect(calls.filter((c) => c.tool === 'search_jobs').map((c) => c.args.query)).toEqual([
+      'Search on the brief',
+      'Grants Manager roles in London, United Kingdom, or remote',
+      'Head of Grants roles in London, United Kingdom, or remote',
+    ]);
     expect(space.jobs.byUrl('https://jobs.ashbyhq.com/riveraid/1')).toMatchObject({
       company: 'River Aid',
       salary: 'est. £45,000 - £55,000',
       postedAt: '2026-10-23',
     });
     expect(space.jobs.byUrl('https://example.org/chef')).toBeNull();
-    expect(run2.result).toMatchObject({ radar: 1, searched: 2, filteredTitle: 1 });
+    expect(run2.result).toMatchObject({ radar: 1, searches: 3, searched: 6, filteredTitle: 1 });
     const riverAid = space.jobs.byUrl('https://jobs.ashbyhq.com/riveraid/1');
     expect(riverAid).toMatchObject({ list: 'archive', archiveReason: 'rules' });
   });

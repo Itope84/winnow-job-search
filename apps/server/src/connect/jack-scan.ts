@@ -2,7 +2,7 @@ import { getSources } from '../library.ts';
 import type { Executor, RunCtx } from '../runs/runner.ts';
 import { Intake, type Offer } from '../scan/intake.ts';
 import { finishScan } from '../scan/portals.ts';
-import { clip } from '../util.ts';
+import { clip, HttpError } from '../util.ts';
 import { type JackLink, structured } from './jack.ts';
 
 /** How long to keep collecting a running Jack search. */
@@ -77,9 +77,56 @@ export function searchOffer(job: SearchJob): Offer | null {
   };
 }
 
+/** Most searches one scan runs: the general pass plus one per target role. */
+const MAX_SEARCHES = 8;
+
 /**
- * Jack scan: the Jill roles on the person's radar, then Jack's public search on their saved brief. No AI
- * of ours; Jack does the matching. Jill roles skip every rule: Jill already matched them to the person.
+ * What to search for: a general pass on the brief, then one search per target role in it, so a scan
+ * sees more than one search's ten results. Jack adds the saved brief to every query.
+ */
+export function searchQueries(brief: {
+  role_titles?: unknown;
+  locations?: unknown;
+  work_modes?: unknown;
+}): string[] {
+  const list = (v: unknown) =>
+    Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && !!x.trim()) : [];
+  const places = list(brief.locations);
+  const remote = list(brief.work_modes).includes('remote');
+  const where = [places.join(' or '), remote ? 'remote' : ''].filter(Boolean).join(', or ');
+  const roles = [...new Set(list(brief.role_titles).map((t) => t.trim()))];
+  return [
+    'Search on the brief',
+    ...roles.map((t) => (where ? `${t} roles in ${where}` : `${t} roles`)),
+  ].slice(0, MAX_SEARCHES);
+}
+
+/** One Jack search, collected to the end (Jack runs one at a time per person). */
+async function runSearch(
+  jack: JackLink,
+  ctx: RunCtx,
+  query: string,
+): Promise<{ jobs: SearchJob[]; running: boolean }> {
+  const db = ctx.space.db;
+  let search = structured(await jack.call(db, 'search_jobs', { query }));
+  const started = Date.now();
+  while (
+    search.status === 'running' &&
+    typeof search.search_id === 'string' &&
+    !ctx.signal.aborted &&
+    Date.now() - started < SEARCH_WAIT_MS
+  )
+    search = structured(await jack.call(db, 'get_search_status', { search_id: search.search_id }));
+  return {
+    jobs: Array.isArray(search.jobs) ? (search.jobs as SearchJob[]) : [],
+    running: search.status === 'running',
+  };
+}
+
+/**
+ * Jack scan: the Jill roles on the person's radar, then Jack's public search on their saved brief, once in
+ * general and once per target role. No AI of ours; Jack does the matching. Jill roles skip every rule:
+ * Jill already matched them to the person.
  */
 export function jackScan(jack: JackLink): Executor {
   return async (ctx: RunCtx) => {
@@ -88,7 +135,7 @@ export function jackScan(jack: JackLink): Executor {
       throw new Error('Connect your Jack account first, in You › Jack & Jill.');
     const intake = new Intake(db, ctx.space.jobs, getSources(db).rules, ctx.run.id);
     const notes: string[] = [];
-    ctx.progress(0, 2, 'steps');
+    ctx.progress(0, 1, 'steps');
 
     ctx.step('Reading the Jill roles on your radar');
     let radar = structured(await jack.call(db, 'get_radar_roles'));
@@ -101,41 +148,44 @@ export function jackScan(jack: JackLink): Executor {
     if (radar.status === 'visibility_required')
       notes.push('Jill roles need you visible on Jack (Jack › Settings).');
     else if (radar.status === 'pending') notes.push('Jack was still checking Jill roles.');
-    ctx.progress(1, 2, 'steps');
 
     let searched = 0;
-    const account = structured(await jack.call(db, 'get_account_status'));
-    const brief = (account.search_brief ?? {}) as { is_empty?: boolean };
-    if (brief.is_empty) {
+    let searches = 0;
+    const briefRaw = structured(await jack.call(db, 'get_search_brief'));
+    const completeness = (briefRaw.completeness ?? {}) as { is_empty?: boolean };
+    const queries = completeness.is_empty
+      ? []
+      : searchQueries((briefRaw.brief ?? {}) as Record<string, unknown>);
+    if (!queries.length)
       notes.push(
         'Search skipped: your Jack search brief is empty. Send it from You › Jack & Jill.',
       );
-    } else if (!ctx.signal.aborted) {
-      ctx.step('Searching public jobs on your Jack brief');
-      let search = structured(await jack.call(db, 'search_jobs', { query: 'Search on the brief' }));
-      const started = Date.now();
-      while (
-        search.status === 'running' &&
-        typeof search.search_id === 'string' &&
-        !ctx.signal.aborted &&
-        Date.now() - started < SEARCH_WAIT_MS
-      )
-        search = structured(
-          await jack.call(db, 'get_search_status', { search_id: search.search_id }),
-        );
-      if (search.status === 'running')
-        notes.push('Jack’s search was still running; its results come next time.');
-      const jobs = Array.isArray(search.jobs) ? (search.jobs as SearchJob[]) : [];
-      for (const job of jobs) {
-        const offer = searchOffer(job);
-        if (offer) intake.add(offer, 'jack');
+    ctx.progress(1, 1 + queries.length, 'steps');
+    for (const [i, query] of queries.entries()) {
+      if (ctx.signal.aborted) break;
+      ctx.step(
+        i === 0 ? 'Searching public jobs on your Jack brief' : `Searching Jack: ${clip(query, 80)}`,
+      );
+      try {
+        const { jobs, running } = await runSearch(jack, ctx, query);
+        if (running) notes.push(`Jack’s search “${clip(query, 60)}” was still running.`);
+        for (const job of jobs) {
+          const offer = searchOffer(job);
+          if (offer) intake.add(offer, 'jack');
+        }
+        searched += jobs.length;
+        searches++;
+      } catch (e) {
+        if (e instanceof HttpError && e.code === 'jack_signed_out') throw e;
+        // One search failing (a limit, a timeout) doesn't lose the others.
+        ctx.log('stderr', `Search “${query}”: ${(e as Error).message}`);
+        notes.push(`A Jack search failed: ${clip((e as Error).message, 80)}`);
       }
-      searched = jobs.length;
+      ctx.progress(2 + i, 1 + queries.length, 'steps');
     }
     if (ctx.signal.aborted) throw new Error('Cancelled');
     for (const n of notes) ctx.log('info', n);
-    ctx.progress(2, 2, 'steps');
-    const out = await finishScan(ctx, intake, { radar: roles.length, searched, notes });
+    const out = await finishScan(ctx, intake, { radar: roles.length, searches, searched, notes });
     return notes.length ? { ...out, summary: `${out.summary} · ${clip(notes[0] ?? '', 90)}` } : out;
   };
 }
