@@ -26,6 +26,7 @@ export const DEFAULT_SETTINGS: Settings = {
   models: { default: null, scan: null, triage: null, score: null },
   aiConcurrency: 3,
   autoTriage: true,
+  jackAuto: false,
   bands: DEFAULT_BANDS,
   weights: {},
 };

@@ -4,6 +4,7 @@ import { Intake, type Offer } from '../scan/intake.ts';
 import { finishScan } from '../scan/portals.ts';
 import { clip, HttpError } from '../util.ts';
 import { type JackLink, structured } from './jack.ts';
+import { markSearched } from './jack-auto.ts';
 
 /** How long to keep collecting a running Jack search. */
 const SEARCH_WAIT_MS = 6 * 60_000;
@@ -151,15 +152,19 @@ export function jackScan(jack: JackLink): Executor {
 
     let searched = 0;
     let searches = 0;
-    const briefRaw = structured(await jack.call(db, 'get_search_brief'));
+    // The automatic check reads only the radar; searches run on their own, slower cadence.
+    const radarOnly = ctx.runs.params(ctx.run.id).radarOnly === true;
+    const briefRaw = radarOnly ? {} : structured(await jack.call(db, 'get_search_brief'));
     const completeness = (briefRaw.completeness ?? {}) as { is_empty?: boolean };
-    const queries = completeness.is_empty
-      ? []
-      : searchQueries((briefRaw.brief ?? {}) as Record<string, unknown>);
-    if (!queries.length)
+    const queries =
+      radarOnly || completeness.is_empty
+        ? []
+        : searchQueries((briefRaw.brief ?? {}) as Record<string, unknown>);
+    if (!radarOnly && !queries.length)
       notes.push(
         'Search skipped: your Jack search brief is empty. Send it from You › Jack & Jill.',
       );
+    if (queries.length) markSearched(db);
     ctx.progress(1, 1 + queries.length, 'steps');
     for (const [i, query] of queries.entries()) {
       if (ctx.signal.aborted) break;

@@ -17,6 +17,7 @@ import { triage } from './ai/triage.ts';
 import { type SpaceEnv, spaceRoutes } from './app.ts';
 import { type ServerConfig, VERSION } from './config.ts';
 import { JackLink } from './connect/jack.ts';
+import { jackAutoTick } from './connect/jack-auto.ts';
 import { jackScan } from './connect/jack-scan.ts';
 import { jackDraft } from './connect/jack-sync.ts';
 import { openDb } from './db.ts';
@@ -103,6 +104,16 @@ export function createServer(config: ServerConfig) {
 
   // Start every person's runner so queued and interrupted runs show up straight away.
   for (const u of users.list()) if (!u.disabled) spaceFor(u.id);
+
+  // Checking Jack for people who turned it on. Each person's own schedule lives in their database.
+  const jackTimer = setInterval(() => {
+    for (const u of users.list()) {
+      if (u.disabled) continue;
+      const { space, runner } = spaceFor(u.id);
+      void jackAutoTick(space, runner, jack);
+    }
+  }, 60_000);
+  jackTimer.unref();
 
   const api = new Hono<SpaceEnv & { Variables: { user: UserRow } }>();
 
@@ -246,6 +257,7 @@ export function createServer(config: ServerConfig) {
     users,
     slots,
     async close() {
+      clearInterval(jackTimer);
       for (const { runner, space } of spaces.values()) {
         runner.close();
         space.db.close();

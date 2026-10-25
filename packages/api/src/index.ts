@@ -323,7 +323,8 @@ export interface StartRunRequest {
   jobIds?: string[];
   /** Triage: the whole untriaged inbox when no ids are given. */
   scope?: 'untriaged';
-  options?: { autoTriage?: boolean };
+  /** `radarOnly`: a Jack scan that reads Jill roles without searching. `auto`: started by the server. */
+  options?: { autoTriage?: boolean; radarOnly?: boolean; auto?: boolean };
   /** CV import: an uploaded file's name in `profile/uploads/` (the server sets this, not the app). */
   upload?: string;
   /** Setup follow-up: which question, and the answer as it stood (the server sets these). */
@@ -405,6 +406,8 @@ export interface Settings {
   };
   aiConcurrency: number;
   autoTriage: boolean;
+  /** Check Jack every 10 minutes for new Jill roles, and run Jack's searches every 6 hours. */
+  jackAuto: boolean;
   bands: ScoreBands;
   weights: Record<string, number>;
   /** Whether this person may change `cli` and `models` (admins only; they apply to everyone). */

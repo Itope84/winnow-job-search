@@ -346,6 +346,7 @@ export function spaceRoutes(
     }
     const patch: Partial<Settings> = {};
     if (typeof body.autoTriage === 'boolean') patch.autoTriage = body.autoTriage;
+    if (typeof body.jackAuto === 'boolean') patch.jackAuto = body.jackAuto;
     if (Number.isInteger(body.aiConcurrency))
       patch.aiConcurrency = Math.min(Math.max(body.aiConcurrency as number, 1), 8);
     if (body.bands) patch.bands = { ...getSettings(c.var.space.db).bands, ...body.bands };

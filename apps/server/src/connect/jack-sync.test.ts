@@ -11,6 +11,7 @@ import { type Executor, Runner } from '../runs/runner.ts';
 import { Slots } from '../runs/slots.ts';
 import { tempSpace } from '../test-helpers.ts';
 import { JACK, JackLink } from './jack.ts';
+import { jackAutoTick } from './jack-auto.ts';
 import { jackDate, jackScan, radarOffer } from './jack-scan.ts';
 import { applyDraft, editDraft, getDraft, jackDraft, overview } from './jack-sync.ts';
 
@@ -342,5 +343,55 @@ describe('Update Jack', () => {
       /only takes/,
     );
     expect(() => editDraft(space.db, { part: 'brief', index: 5, text: 'x' })).toThrow(/no longer/);
+  });
+});
+
+describe('Checking Jack automatically', () => {
+  it('stays off until turned on, then searches every 6 hours and reads the radar every 10 minutes', async () => {
+    let roles = [ROLE];
+    let fail = false;
+    const { space, link, runner, calls } = await connected({
+      get_radar_roles: () => {
+        if (fail) throw new Error('down');
+        return { status: 'ok', roles };
+      },
+      get_search_brief: () => ({ brief: { role_titles: ['Grants Manager'] }, completeness: {} }),
+      search_jobs: () => ({ status: 'complete', jobs: [] }),
+    });
+    const t0 = Date.parse('2026-10-25T09:00:00Z');
+    expect(await jackAutoTick(space, runner, link, t0)).toBeNull();
+
+    setSettings(space.db, { jackAuto: true });
+    // Never searched: a full scan.
+    expect(await jackAutoTick(space, runner, link, t0)).toBe('full');
+    const full = runner.store.list({ limit: 5 })[0];
+    expect(full?.subtitle).toBe('Automatic');
+    await finished(runner, full?.id ?? '');
+    expect(space.jobs.byUrl(ROLE.jack_url)).toBeTruthy();
+
+    // Within 10 minutes: nothing. After: a radar read, and no run while nothing is new.
+    expect(await jackAutoTick(space, runner, link, t0 + 5 * 60_000)).toBeNull();
+    const radarReads = () => calls.filter((c) => c.tool === 'get_radar_roles').length;
+    const before = radarReads();
+    expect(await jackAutoTick(space, runner, link, t0 + 11 * 60_000)).toBeNull();
+    expect(radarReads()).toBe(before + 1);
+
+    // A new Jill role: a radar-only scan, which doesn't search.
+    roles = [ROLE, { ...ROLE, title: 'Staff Engineer', jack_url: `${ROLE.jack_url}-2` }];
+    const searches = calls.filter((c) => c.tool === 'search_jobs').length;
+    expect(await jackAutoTick(space, runner, link, t0 + 22 * 60_000)).toBe('radar');
+    const quick = runner.store.list({ limit: 5 })[0];
+    expect(quick?.subtitle).toBe('Automatic · new Jill roles');
+    await finished(runner, quick?.id ?? '');
+    expect(space.jobs.byUrl(`${ROLE.jack_url}-2`)).toBeTruthy();
+    expect(calls.filter((c) => c.tool === 'search_jobs').length).toBe(searches);
+
+    // A failed check waits an hour.
+    fail = true;
+    expect(await jackAutoTick(space, runner, link, t0 + 33 * 60_000)).toBeNull();
+    fail = false;
+    const reads = radarReads();
+    expect(await jackAutoTick(space, runner, link, t0 + 50 * 60_000)).toBeNull();
+    expect(radarReads()).toBe(reads);
   });
 });

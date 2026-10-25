@@ -3,7 +3,7 @@ import type { JackDraft, JackEdit, JackOverview } from '@winnow/api';
 import { RUN_COSTS } from '@winnow/api';
 import * as Clipboard from 'expo-clipboard';
 import { useEffect, useRef, useState } from 'react';
-import { Linking, Platform, View } from 'react-native';
+import { Linking, Platform, Switch, View } from 'react-native';
 import { Check, Input } from '@/components/inputs';
 import { RunCard } from '@/components/runs';
 import { Button, Header, Loading, Notice, Screen, SectionTitle, T } from '@/components/ui';
@@ -406,6 +406,36 @@ function Draft({
   );
 }
 
+/** The automatic Jack check: radar every 10 minutes, Jack's searches every 6 hours. */
+function AutoCheck() {
+  const { c } = useTheme();
+  const settings = useSettings().data;
+  const on = settings?.jackAuto ?? false;
+  const set = async (v: boolean) => {
+    queryClient.setQueryData(keys.settings, { ...settings, jackAuto: v });
+    await api.saveSettings({ jackAuto: v }).catch((e) => toast.show((e as Error).message));
+    void queryClient.invalidateQueries({ queryKey: keys.settings });
+  };
+  return (
+    <View
+      style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, marginTop: space.md }}
+    >
+      <View style={{ flex: 1 }}>
+        <T variant="label">Check Jack every 10 minutes</T>
+        <T variant="meta" tone="lead">
+          New Jill roles reach your Inbox within 10 minutes. Jack refreshes its own matches daily,
+          so its searches run every 6 hours. Free.
+        </T>
+      </View>
+      <Switch
+        value={on}
+        onValueChange={(v) => void set(v)}
+        trackColor={{ true: c.primary, false: c.ruleStrong }}
+      />
+    </View>
+  );
+}
+
 function Connected({
   connectedAt,
   problem,
@@ -531,6 +561,7 @@ function Connected({
         A Jack scan adds the Jill roles on your radar, and Jack’s search on your brief, to your
         Inbox. It’s also in Find › Scans.
       </T>
+      <AutoCheck />
       {scanning ? (
         <RunCard run={scanning} compact />
       ) : (

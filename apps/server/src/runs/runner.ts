@@ -164,8 +164,14 @@ export class Runner {
           this.store.create({
             kind: req.kind,
             title: RUN_LABELS[req.kind],
+            subtitle: req.options?.auto
+              ? req.options.radarOnly
+                ? 'Automatic · new Jill roles'
+                : 'Automatic'
+              : null,
             params: {
               autoTriage: req.options?.autoTriage ?? getSettings(this.space.db).autoTriage,
+              ...(req.options?.radarOnly ? { radarOnly: true } : {}),
             },
           }),
         );
@@ -210,7 +216,10 @@ export class Runner {
         question: String(params.question ?? ''),
         answer: String(params.answer ?? ''),
       });
-    return this.enqueue({ kind: run.kind, options: { autoTriage: params.autoTriage !== false } });
+    return this.enqueue({
+      kind: run.kind,
+      options: { autoTriage: params.autoTriage !== false, radarOnly: params.radarOnly === true },
+    });
   }
 
   /** Put an interrupted run back in the queue; it picks up from its checkpoint. */
