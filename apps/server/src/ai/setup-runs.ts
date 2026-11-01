@@ -18,6 +18,7 @@ export const SUGGESTABLE_BOARDS = [
   'adzuna',
   'careerjet',
   'linkedin',
+  'freehire',
   'remotive',
   'remoteok',
   'himalayas',

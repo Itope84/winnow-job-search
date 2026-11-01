@@ -44,7 +44,8 @@ and the provider's fields:
 | --- | --- | --- |
 | `adzuna` | Keyword search in GB, US, CA, AU, DE, FR, NL, IN, and others (not Ireland) | `country` (2-letter, lower case), `what_or` (space-separated words, any match), `what_exclude`, `where` (a city), `distance` (km), `category` (Adzuna slug, e.g. `charity-voluntary-jobs`, `it-jobs`), `max_days_old`, `max_pages` (1–3), `results_per_page` (50) |
 | `careerjet` | Keyword search, including Ireland | `locale_code` (e.g. `en_IE`, `en_GB`), `keywords`, `location` |
-| `linkedin` | The biggest board, one page of results per search | `keywords`, `location`, `posted_within_days` |
+| `linkedin` | The biggest board, up to 100 results per search | `keywords`, `location`, `posted_within_days` |
+| `freehire` | Postings from about 50 job systems (Greenhouse, Ashby, Workday and others) in one search, with full text; tech roles are its strength | `keywords` (`OR` between alternatives, at most 5; `title:` to match titles only, e.g. `title:product designer OR title:ux designer`), `countries` (ISO codes, lower case, e.g. `gb`), `cities`, `seniority` (`junior`, `middle`, `senior`, `staff`, `principal`, `lead`), `work_mode` (`remote`, `hybrid`, `onsite`), `posted_within_days`, `max_pages` (1–5, 100 jobs each) |
 | `remotive`, `remoteok`, `himalayas`, `weworkremotely`, `jobicy`, `workingnomads` | Remote jobs, mostly tech, product, marketing and operations | none |
 | `themuse`, `arbeitnow`, `4dayweek` | General feeds (US-heavy, EU-heavy, four-day weeks) | none |
 

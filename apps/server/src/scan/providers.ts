@@ -1,6 +1,8 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import type { SourceEntry } from '@winnow/api';
+import { freehire } from './boards/freehire.ts';
+import { deeperLinkedIn, type LinkedInModule } from './boards/linkedin.ts';
 import type { Offer } from './intake.ts';
 
 /** The career-ops provider plugins, vendored unchanged under `vendor/career-ops/providers`. */
@@ -9,10 +11,19 @@ export const PROVIDERS_DIR = join(
   '../../vendor/career-ops/providers',
 );
 
+/** A source's postings, with a note for the scan summary when it stopped early. */
+export type BoardOffers = Offer[] & { note?: string };
+
 export interface Provider {
   id: string;
   detect?(entry: SourceEntry): { url: string } | null;
-  fetch(entry: SourceEntry, ctx: unknown): Promise<Offer[]>;
+  fetch(entry: SourceEntry, ctx: unknown): Promise<BoardOffers>;
+}
+
+/** The career-ops `_http.mjs` context every provider gets. */
+export interface HttpCtx {
+  fetchJson(url: string, opts?: Record<string, unknown>): Promise<unknown>;
+  fetchText(url: string, opts?: Record<string, unknown>): Promise<string>;
 }
 
 type Registry = {
@@ -37,8 +48,15 @@ export function loadProviders() {
     )) as Registry;
     const http = (await import(pathToFileURL(join(PROVIDERS_DIR, '_http.mjs')).href)) as {
       makeHttpCtx: () => unknown;
+      BROWSER_LIKE_USER_AGENT: string;
     };
     const providers = await registry.loadProviders(PROVIDERS_DIR);
+    // Winnow's own: freehire, and LinkedIn read past its first page.
+    const linkedin = (await import(
+      pathToFileURL(join(PROVIDERS_DIR, 'linkedin.mjs')).href
+    )) as LinkedInModule;
+    providers.set('linkedin', deeperLinkedIn(linkedin, http.BROWSER_LIKE_USER_AGENT));
+    providers.set('freehire', freehire);
     return { providers, registry, makeHttpCtx: http.makeHttpCtx };
   })();
   return cache;

@@ -26,8 +26,9 @@ export default function Boards() {
               title={b.name}
               subtitle={[
                 b.provider,
-                typeof b.what_or === 'string' ? b.what_or : null,
-                typeof b.where === 'string' ? b.where : null,
+                ...[b.what_or, b.keywords, b.where, b.location, b.countries].map((v) =>
+                  typeof v === 'string' ? v : Array.isArray(v) ? v.join(', ') : null,
+                ),
               ]
                 .filter(Boolean)
                 .join(' · ')}

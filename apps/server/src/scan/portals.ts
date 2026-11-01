@@ -23,6 +23,7 @@ export async function scanPortals(ctx: RunCtx): Promise<RunOutput> {
   const intake = new Intake(ctx.space.db, ctx.space.jobs, sources.rules, ctx.run.id);
   const errors: { name: string; error: string }[] = [];
   const unsupported: string[] = [];
+  const notes: string[] = [];
   let done = 0;
   ctx.progress(0, entries.length, entries.length === 1 ? 'source' : 'sources');
 
@@ -42,6 +43,10 @@ export async function scanPortals(ctx: RunCtx): Promise<RunOutput> {
           const offers = await resolved.provider.fetch(entry, makeHttpCtx());
           for (const offer of Array.isArray(offers) ? offers : [])
             intake.add(offer, resolved.provider.id, next.board ? '' : entry.name);
+          if (offers?.note) {
+            notes.push(`${entry.name}: ${offers.note}`);
+            ctx.log('info', `${entry.name}: ${offers.note}`);
+          }
         } catch (e) {
           errors.push({ name: entry.name, error: clip((e as Error).message, 200) });
           ctx.log('stderr', `${entry.name}: ${(e as Error).message}`);
@@ -53,7 +58,8 @@ export async function scanPortals(ctx: RunCtx): Promise<RunOutput> {
   await Promise.all(Array.from({ length: Math.min(CONCURRENCY, entries.length) }, worker));
   if (ctx.signal.aborted) throw new Error('Cancelled');
 
-  return finishScan(ctx, intake, { errors, unsupported });
+  const out = await finishScan(ctx, intake, { errors, unsupported, notes });
+  return notes.length ? { ...out, summary: `${out.summary} · ${clip(notes[0] ?? '', 90)}` } : out;
 }
 
 /** Shared tail of every scan: read the new postings, then queue triage for them. */
