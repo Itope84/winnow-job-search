@@ -446,6 +446,8 @@ export interface ProfileDoc {
   narrative: string;
   /** Targets and deal-breakers in career-ops `profile.yml` form, as YAML text. */
   profileYaml: string;
+  /** Experience that isn't on the CV but is true: used only when a job asks for it. Free Markdown. */
+  extras: string;
 }
 
 export interface Settings {

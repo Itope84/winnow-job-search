@@ -107,6 +107,9 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
         cv: join(ctx.space.library, 'profile/cv.md'),
         narrative: join(ctx.space.library, 'profile/narrative.md'),
         profile: join(ctx.space.library, 'profile/profile.yml'),
+        extras: ctx.space.profile.get().extras.trim()
+          ? join(ctx.space.library, 'profile/extras.md')
+          : null,
       },
       weights: ctx.settings.weights,
       today: nowIso().slice(0, 10),

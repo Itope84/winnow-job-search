@@ -13,17 +13,30 @@ interface Verdict {
   reason: string;
 }
 
-/** What triage knows about the person: profile.yml, the narrative and the start of the CV. */
+/**
+ * What triage and AI search know about the person: profile.yml, the narrative, the start of the CV and
+ * "Not on your CV". The texts go in files of their own: OpenCode's read tool cuts long lines, and a JSON
+ * string is one line.
+ */
 export function candidateBrief(ctx: RunCtx) {
   const doc = ctx.space.profile.get();
   const sources = getSources(ctx.space.db);
   return {
-    profileYaml: clip(doc.profileYaml, 8000),
-    narrative: clip(doc.narrative, 4000),
-    cv: clip(doc.cv, 7000),
-    excludedTitles: sources.rules.title.negative,
-    locations: sources.rules.location,
-    salaryFloor: sources.rules.salary,
+    brief: {
+      profileYaml: 'profile.yml',
+      narrative: 'narrative.md',
+      cv: 'cv.md',
+      extras: doc.extras.trim() ? 'extras.md' : null,
+      excludedTitles: sources.rules.title.negative,
+      locations: sources.rules.location,
+      salaryFloor: sources.rules.salary,
+    },
+    files: {
+      'profile.yml': clip(doc.profileYaml, 8000),
+      'narrative.md': clip(doc.narrative, 6000),
+      'cv.md': clip(doc.cv, 7000),
+      ...(doc.extras.trim() ? { 'extras.md': clip(doc.extras, 4000) } : {}),
+    },
   };
 }
 
@@ -58,7 +71,7 @@ export async function triage(ctx: RunCtx): Promise<RunOutput> {
     const v = jobs.get(id)?.triage?.verdict;
     if (v) counts[v]++;
   }
-  const brief = candidateBrief(ctx);
+  const candidate = candidateBrief(ctx);
   const total = ctx.run.jobIds.length;
   ctx.progress(done.size, total, 'jobs');
 
@@ -88,7 +101,8 @@ export async function triage(ctx: RunCtx): Promise<RunOutput> {
     const { value } = await runSkill(ctx, {
       skill: 'triage',
       folder: `${ctx.run.id}/batch-${b + 1}`,
-      input: { candidate: brief, jobs: items },
+      input: { candidate: candidate.brief, jobs: items },
+      files: candidate.files,
       task: `Judge all ${items.length} jobs in input.json.`,
       model: ctx.settings.models.triage ?? ctx.settings.models.default,
       timeoutMs: 6 * 60_000,

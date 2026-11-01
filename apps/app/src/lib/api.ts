@@ -176,6 +176,11 @@ export const api = {
   scans: () => request<Run[]>('/scans'),
 
   profile: () => request<ProfileDoc & { ready: { cv: boolean; profile: boolean } }>('/profile'),
+  addExtra: (text: string) =>
+    request<ProfileDoc & { ready: { cv: boolean; profile: boolean } }>('/profile/extras', {
+      method: 'POST',
+      body: { text },
+    }),
   saveProfile: (p: Partial<ProfileDoc>) =>
     request<ProfileDoc & { ready: { cv: boolean; profile: boolean } }>('/profile', {
       method: 'PUT',

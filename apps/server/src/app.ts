@@ -287,6 +287,18 @@ export function spaceRoutes(
     return c.json({ ...c.var.space.profile.get(), ready: c.var.space.profile.ready() });
   });
 
+  // One line for "Not on your CV", added from a gap on a job.
+  app.post('/profile/extras', async (c) => {
+    const { text } = (await c.req.json()) as { text?: unknown };
+    if (typeof text !== 'string' || text.length > 1000) throw badRequest('Send one line of text.');
+    try {
+      c.var.space.profile.addExtra(text);
+    } catch (e) {
+      throw badRequest((e as Error).message);
+    }
+    return c.json({ ...c.var.space.profile.get(), ready: c.var.space.profile.ready() });
+  });
+
   // A CV as a PDF: kept, its text checked here, then a Read CV run turns it into the Markdown CV.
   app.post('/profile/cv/pdf', async (c) => {
     const name = decodeURIComponent(c.req.header('x-file-name') ?? 'cv.pdf');

@@ -103,6 +103,7 @@ export async function tailor(ctx: RunCtx): Promise<RunOutput> {
       cv: join(library, 'profile/cv.md'),
       narrative: join(library, 'profile/narrative.md'),
       profile: join(library, 'profile/profile.yml'),
+      extras: ctx.space.profile.get().extras.trim() ? join(library, 'profile/extras.md') : null,
     },
     score: job.score
       ? { summary: job.score.summary, strengths: job.score.strengths, gaps: job.score.gaps }

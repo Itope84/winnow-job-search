@@ -10,11 +10,14 @@ mismatches from reaching the expensive scoring step, without throwing away anyth
 
 ## Input
 
-`input.json` in the run folder has:
+`input.json` in the run folder has `candidate` and `jobs`. The candidate's texts are files in the run
+folder; `candidate` names them:
 
 - `candidate.profileYaml`: targets, levels, locations, pay floor, visa status, languages (career-ops `profile.yml`).
 - `candidate.narrative`: who they are and what they want (their North Star).
 - `candidate.cv`: the start of their CV.
+- `candidate.extras`: experience that is true but left off the CV ("Not on your CV"), or `null`. Count it
+  as theirs: a job that asks for something listed there is not a gap.
 - `candidate.excludedTitles`, `candidate.locations`, `candidate.salaryFloor`: their scan rules.
 - `jobs`: a list of `{ id, company, role, location, salary, posted, deadline, warnings, description }`.
   `description` is the start of the posting, or `null` when it could not be read. `deadline` is the closing

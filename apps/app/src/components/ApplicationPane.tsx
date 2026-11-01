@@ -1,10 +1,14 @@
 import type { Application, Job, Requirement } from '@winnow/api';
 import { RUN_COSTS } from '@winnow/api';
+import { useState } from 'react';
 import { Linking, Pressable, Text, View } from 'react-native';
-import { applicationUrl } from '@/lib/api';
+import { api, applicationUrl } from '@/lib/api';
 import { timeAgo } from '@/lib/format';
 import { useStartRun } from '@/lib/hooks';
+import { keys, queryClient } from '@/lib/query';
+import { toast } from '@/lib/toast';
 import { fonts, space, type, useTheme } from '@/theme';
+import { Input } from './inputs';
 import { Button, Icon, type IconName, Notice, T } from './ui';
 
 /** "just now", "3h ago", or a date for older ones. */
@@ -144,6 +148,7 @@ function Written({
                       ? r.where || s.label
                       : `${s.label}${r.where ? `: ${r.where}` : ''}`}
                   </T>
+                  {r.status === 'shown' ? null : <HaveThis requirement={r.text} />}
                 </View>
               </View>
             );
@@ -188,6 +193,56 @@ function Written({
         <T variant="meta" tone="faint">
           Replaces these files · uses tokens · {RUN_COSTS.tailor.estimate}
         </T>
+      </View>
+    </View>
+  );
+}
+
+/** A gap the person does have: one line into "Not on your CV", used the next time the CV is written. */
+function HaveThis({ requirement }: { requirement: string }) {
+  const [open, setOpen] = useState(false);
+  const [text, setText] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [added, setAdded] = useState(false);
+  if (added)
+    return (
+      <T variant="meta" tone="faint">
+        Added to Not on your CV. Write again to use it.
+      </T>
+    );
+  if (!open)
+    return (
+      <Pressable onPress={() => setOpen(true)} accessibilityRole="button" style={{ paddingTop: 2 }}>
+        <T variant="label" tone="primary">
+          I have this
+        </T>
+      </Pressable>
+    );
+  const save = async () => {
+    setSaving(true);
+    try {
+      queryClient.setQueryData(keys.profile, await api.addExtra(text));
+      setAdded(true);
+    } catch (e) {
+      toast.show((e as Error).message);
+    } finally {
+      setSaving(false);
+    }
+  };
+  return (
+    <View style={{ gap: 6, paddingTop: 4 }}>
+      <Input
+        area
+        multiline
+        autoFocus
+        value={text}
+        onChangeText={setText}
+        placeholder={`What you've done: ${requirement}`}
+        style={{ minHeight: 64 }}
+      />
+      <View style={{ flexDirection: 'row', gap: space.sm }}>
+        <Button label="Add" busy={saving} disabled={!text.trim()} onPress={() => void save()} />
+        <Button kind="ghost" label="Cancel" onPress={() => setOpen(false)} />
       </View>
     </View>
   );

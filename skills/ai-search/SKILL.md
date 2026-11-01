@@ -19,7 +19,9 @@ Print a progress line per query, exactly in this form:
 
 `input.json` in the run folder has:
 
-- `candidate`: profile, narrative, CV extract and scan rules (what fits and what doesn't).
+- `candidate`: scan rules (what fits and what doesn't) and the names of the candidate's files in the run
+  folder: `profile.yml`, `narrative.md`, a CV extract, and `extras.md` (experience left off the CV) when
+  there is one.
 - `queries`: `{ name, query }` search queries. Run each one.
 - `careerSites`: companies whose career pages have no scanner. Open each page and list matching roles.
 - `maxJobs`: stop once you have this many good postings.

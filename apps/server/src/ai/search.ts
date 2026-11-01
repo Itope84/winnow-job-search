@@ -42,10 +42,12 @@ export async function aiSearch(ctx: RunCtx): Promise<RunOutput> {
   }
   const intake = new Intake(ctx.space.db, ctx.space.jobs, sources.rules, ctx.run.id);
   ctx.progress(0, queries.length, 'queries');
+  const candidate = candidateBrief(ctx);
   const { value } = await runSkill(ctx, {
     skill: 'ai-search',
+    files: candidate.files,
     input: {
-      candidate: candidateBrief(ctx),
+      candidate: candidate.brief,
       queries,
       careerSites: unsupported.slice(0, 20).map((c) => ({ name: c.name, url: c.careers_url })),
       knownCount: ctx.space.jobs.counts(),

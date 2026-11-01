@@ -9,7 +9,7 @@ import { Input, Segmented } from './inputs';
 import { Markdown } from './Markdown';
 import { Button, Loading, T } from './ui';
 
-type Field = 'cv' | 'narrative' | 'profileYaml';
+type Field = 'cv' | 'narrative' | 'profileYaml' | 'extras';
 
 /** View or edit one profile document. Markdown shows rendered; YAML stays as text. */
 export function DocEditor({

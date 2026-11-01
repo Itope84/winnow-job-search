@@ -40,6 +40,7 @@ export function libraryPaths(library: string) {
     cv: join(profileDir, 'cv.md'),
     narrative: join(profileDir, 'narrative.md'),
     profileYaml: join(profileDir, 'profile.yml'),
+    extras: join(profileDir, 'extras.md'),
     runsDir: join(library, 'runs'),
   };
 }
@@ -68,6 +69,7 @@ export class Profile {
       cv: read(this.p.cv),
       narrative: read(this.p.narrative),
       profileYaml: read(this.p.profileYaml),
+      extras: read(this.p.extras),
     };
   }
 
@@ -82,7 +84,16 @@ export class Profile {
     }
     if (doc.cv !== undefined) writeFileAtomic(this.p.cv, doc.cv);
     if (doc.narrative !== undefined) writeFileAtomic(this.p.narrative, doc.narrative);
+    if (doc.extras !== undefined) writeFileAtomic(this.p.extras, doc.extras);
     this.events?.emit('profile.changed', {});
+  }
+
+  /** Add one line to "Not on your CV", as a bullet. */
+  addExtra(text: string) {
+    const line = text.trim().replace(/\s*\n\s*/g, ' ');
+    if (!line) throw Object.assign(new Error('Write what you have.'), { status: 400 });
+    const now = read(this.p.extras).trimEnd();
+    this.set({ extras: `${now ? `${now}\n` : ''}- ${line}\n` });
   }
 
   /** profile.yml parsed, or an empty object. */

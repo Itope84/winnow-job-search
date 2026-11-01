@@ -6,7 +6,7 @@ import { Header, Screen } from '@/components/ui';
 import { space } from '@/theme';
 
 export default function Profile() {
-  const [tab, setTab] = useState<'narrative' | 'targets'>('narrative');
+  const [tab, setTab] = useState<'narrative' | 'extras' | 'targets'>('narrative');
   return (
     <Screen header={<Header title="Profile and targets" />}>
       <View style={{ paddingTop: space.md }}>
@@ -14,6 +14,7 @@ export default function Profile() {
           value={tab}
           options={[
             { value: 'narrative', label: 'Who you are' },
+            { value: 'extras', label: 'Not on your CV' },
             { value: 'targets', label: 'Targets' },
           ]}
           onChange={(v) => setTab(v as typeof tab)}
@@ -23,6 +24,11 @@ export default function Profile() {
         <DocEditor
           field="narrative"
           hint="Who you are in a few lines, your North Star (the kind of role you want next), and your strongest proof points. Scoring uses this to judge fit."
+        />
+      ) : tab === 'extras' ? (
+        <DocEditor
+          field="extras"
+          hint="True experience you leave off your CV because it doesn't belong on every one: on-call, a side project, a tool you used once. One line each. Scoring counts it, and a tailored CV uses a line only when the job asks for it."
         />
       ) : (
         <DocEditor
