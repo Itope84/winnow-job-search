@@ -1,7 +1,7 @@
 import type { AddJobRequest, AddJobResult } from '@winnow/api';
 import { sourceFromUrl } from './import/parse.ts';
 import type { Runner } from './runs/runner.ts';
-import { captureJd } from './scan/capture.ts';
+import { captureJd, cleanPosting } from './scan/capture.ts';
 import type { Space } from './space.ts';
 import { badRequest, nowIso, sha1 } from './util.ts';
 
@@ -28,6 +28,9 @@ export async function addJob(
   let location = req.location?.trim() ?? '';
   let salary: string | null = null;
   let jd = text ?? null;
+  let warnings: string[] = [];
+  let deadline: string | null = null;
+  if (text) ({ text: jd, warnings } = cleanPosting(text));
 
   if (url && !text) {
     let got = null;
@@ -58,6 +61,8 @@ export async function addJob(
       role ||= cleanTitle(got.title ?? '', company);
       location ||= got.location ?? '';
       salary = got.salary ?? null;
+      warnings = got.warnings ?? [];
+      deadline = got.deadline ?? null;
     }
   }
   if (!role) role = firstLine(jd) ?? 'Untitled role';
@@ -81,6 +86,7 @@ export async function addJob(
     addedBy: 'you',
     jd,
   });
+  if (warnings.length || deadline) space.jobs.setPosting(job.id, { warnings, deadline });
   let runId: string | null = null;
   // Scoring refuses until there is a CV and profile; the job is still added.
   if (req.then === 'score')

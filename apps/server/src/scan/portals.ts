@@ -1,7 +1,8 @@
 import type { SourceEntry } from '@winnow/api';
+import type { JobStore } from '../jobs.ts';
 import { getSources } from '../library.ts';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
-import { clip } from '../util.ts';
+import { clip, today } from '../util.ts';
 import { captureMany } from './capture.ts';
 import { Intake } from './intake.ts';
 import { loadProviders, resolveEntry } from './providers.ts';
@@ -62,21 +63,26 @@ export async function scanPortals(ctx: RunCtx): Promise<RunOutput> {
   return notes.length ? { ...out, summary: `${out.summary} · ${clip(notes[0] ?? '', 90)}` } : out;
 }
 
-/** Shared tail of every scan: read the new postings, then queue triage for them. */
+/** Shared tail of every scan: read the new postings, retire closed ones, then queue triage for the rest. */
 export async function finishScan(
   ctx: RunCtx,
   intake: Intake,
   extra: Record<string, unknown> = {},
 ): Promise<RunOutput> {
-  const added = intake.stats.added;
-  ctx.space.jobs.changed();
-  if (added.length) {
-    ctx.step(`Reading ${added.length} new job description${added.length === 1 ? '' : 's'}`);
+  const jobs = ctx.space.jobs;
+  jobs.changed();
+  if (intake.stats.added.length) {
+    ctx.step(
+      `Reading ${intake.stats.added.length} new job description${intake.stats.added.length === 1 ? '' : 's'}`,
+    );
     await captureMany(
       ctx,
-      added.filter((id) => !ctx.space.jobs.get(id)?.hasJd),
+      intake.stats.added.filter((id) => !jobs.get(id)?.hasJd),
     );
   }
+  const closed = closePastDeadlines(jobs, ctx.run.id);
+  // A posting found closed while being read is archived already; triage only what's still open.
+  const added = intake.stats.added.filter((id) => jobs.get(id)?.list === 'inbox');
   const params = ctx.runs.params(ctx.run.id);
   let triageRun: string | null = null;
   if (added.length && params.autoTriage !== false) {
@@ -88,7 +94,34 @@ export async function finishScan(
   }
   const errors = (extra.errors as unknown[] | undefined)?.length ?? 0;
   return {
-    summary: intake.summary() + (errors ? ` · ${errors} failed` : ''),
-    result: { ...intake.stats, added: added.length, addedIds: added, triageRun, ...extra },
+    summary:
+      intake.summary() +
+      (errors ? ` · ${errors} failed` : '') +
+      (closed ? ` · ${closed} closed` : ''),
+    result: {
+      ...intake.stats,
+      added: intake.stats.added.length,
+      addedIds: intake.stats.added,
+      closed,
+      triageRun,
+      ...extra,
+    },
   };
+}
+
+/** Archive open jobs whose stated deadline has passed. Applied jobs stay where they are. */
+export function closePastDeadlines(jobs: JobStore, runId: string | null): number {
+  const ids = jobs.ids(
+    "list IN ('inbox', 'shortlist', 'scored') AND json_extract(posting, '$.deadline') < ?",
+    today(),
+  );
+  for (const id of ids) {
+    const deadline = jobs.get(id)?.posting?.deadline;
+    jobs.move(
+      { ids: [id], to: 'archive', reason: 'closed', detail: `Deadline passed (${deadline})` },
+      'server',
+      runId,
+    );
+  }
+  return ids.length;
 }

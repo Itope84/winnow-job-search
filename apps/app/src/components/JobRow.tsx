@@ -1,7 +1,7 @@
 import type { Job } from '@winnow/api';
 import { memo, useRef, useState } from 'react';
 import { Animated, PanResponder, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
-import { companyLabel, jobAge, monogram } from '@/lib/format';
+import { companyLabel, deadline, isStale, jobAge, monogram } from '@/lib/format';
 import { fonts, radius, space, type, useTheme } from '@/theme';
 import { JobStatusChip } from './chips';
 import { Icon, IconButton } from './ui';
@@ -113,7 +113,16 @@ export const JobRow = memo(function JobRow({
     }),
   ).current;
 
-  const meta = [companyLabel(job.company), job.location, jobAge(job)].filter(Boolean).join(' · ');
+  const due = deadline(job);
+  const meta = [
+    job.posting?.warnings.length ? '⚠ Check posting' : null,
+    due?.soon ? `🔥 ${due.label}` : null,
+    companyLabel(job.company),
+    job.location,
+    isStale(job) ? `⚠ ${jobAge(job)}` : jobAge(job),
+  ]
+    .filter(Boolean)
+    .join(' · ');
 
   return (
     <View

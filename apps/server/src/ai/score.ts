@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { ScoreDimension, ScoreResult } from '@winnow/api';
 import { verdictFor } from '@winnow/api';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
-import { captureJd } from '../scan/capture.ts';
+import { captureFailed, captureJd, saveCapture } from '../scan/capture.ts';
 import { clip, nowIso } from '../util.ts';
 import { runSkill } from './run-skill.ts';
 
@@ -62,11 +62,14 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
     try {
       const got = await captureJd(job.url);
       if (got && got.text.length >= 120) {
-        jobs.writeJd(id, got.text);
+        saveCapture(jobs, id, got);
         jd = got.text;
       }
     } catch (e) {
       ctx.log('stderr', `Could not read the posting: ${(e as Error).message}`);
+      captureFailed(jobs, id, e, ctx.run.id);
+      if (jobs.get(id)?.list === 'archive')
+        throw new Error(`The posting is closed: ${(e as Error).message}`);
     }
   }
 
@@ -83,6 +86,8 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
         posted: job.postedAt,
         sources: job.sources.map((s) => s.source),
         triage: job.triage,
+        deadline: job.posting?.deadline ?? null,
+        warnings: job.posting?.warnings ?? [],
       },
       description: jd ?? null,
       profileFiles: {

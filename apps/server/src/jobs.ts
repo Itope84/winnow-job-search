@@ -12,6 +12,7 @@ import type {
   ListCounts,
   MoveRequest,
   Mover,
+  PostingCheck,
   ScoreResult,
   Stage,
   TimelineEntry,
@@ -457,6 +458,22 @@ export class JobStore {
     );
   }
 
+  /** Record what reading the posting found. Fields left out keep their value. */
+  setPosting(id: string, patch: Partial<Omit<PostingCheck, 'checkedAt'>>) {
+    const cur = this.require(id).posting;
+    const next: PostingCheck = {
+      warnings: patch.warnings ?? cur?.warnings ?? [],
+      deadline: patch.deadline !== undefined ? patch.deadline : (cur?.deadline ?? null),
+      unreachable: patch.unreachable !== undefined ? patch.unreachable : (cur?.unreachable ?? null),
+      checkedAt: nowIso(),
+    };
+    this.db
+      .prepare('UPDATE jobs SET posting = ?, updated_at = ? WHERE id = ?')
+      .run(JSON.stringify(next), nowIso(), id);
+    if (patch.warnings?.length && !cur?.warnings.length)
+      this.log(id, 'posting', `Posting check: ${patch.warnings[0]}`);
+  }
+
   writeJd(id: string, text: string) {
     writeFileAtomic(join(this.jdDir, `${id}.md`), text);
     this.db.prepare('UPDATE jobs SET has_jd = 1 WHERE id = ?').run(id);
@@ -507,6 +524,7 @@ export class JobStore {
       hasReport: Boolean(r.has_report),
       notes: r.notes as string,
       activity: this.activity.get(id) ?? null,
+      posting: parseJson<PostingCheck | null>(r.posting as string | null, null),
     };
   }
 }

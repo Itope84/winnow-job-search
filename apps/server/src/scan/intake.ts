@@ -2,6 +2,7 @@ import type { Rules } from '@winnow/api';
 import type { Db } from '../db.ts';
 import type { JobStore } from '../jobs.ts';
 import { canonicalUrl, nowIso, today } from '../util.ts';
+import { cleanPosting } from './capture.ts';
 import { compileRules, type SalaryInfo } from './rules.ts';
 
 /** A posting as a provider returns it (career-ops `Job` shape). */
@@ -143,7 +144,9 @@ export class Intake {
       typeof offer.postedAt === 'number' && Number.isFinite(offer.postedAt)
         ? new Date(offer.postedAt).toISOString().slice(0, 10)
         : null;
-    const description = offer.description?.trim() ?? '';
+    // The posting check runs here too: some sources carry the whole posting.
+    const checked = offer.description?.trim() ? cleanPosting(offer.description.trim()) : null;
+    const description = checked?.text ?? '';
     const job = this.jobs.insert(
       {
         url: offer.url,
@@ -164,6 +167,8 @@ export class Intake {
       },
       this.runId,
     );
+    if (checked?.warnings.length && description.length > 300)
+      this.jobs.setPosting(job.id, { warnings: checked.warnings });
     this.remember(offer.url, broken ? 'rules' : 'added');
     if (broken) {
       this.stats.filteredRules++;

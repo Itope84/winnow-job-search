@@ -3,7 +3,7 @@ import { ARCHIVE_REASON_LABELS, LIST_LABELS, RUN_COSTS, STAGE_LABELS, STAGES } f
 import { useEffect, useState } from 'react';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { api } from '@/lib/api';
-import { companyLabel, dateLabel, timeAgo } from '@/lib/format';
+import { companyLabel, dateLabel, deadline, isStale, timeAgo } from '@/lib/format';
 import { useActiveRuns, useMove, useRestore, useStartRun } from '@/lib/hooks';
 import { refreshJobs } from '@/lib/query';
 import { toast } from '@/lib/toast';
@@ -233,6 +233,47 @@ export function ArchiveSheet({
   );
 }
 
+/** What reading the posting found: a deadline, text that tried to steer the AI, a failed read. */
+function PostingNotes({ job }: { job: Job }) {
+  const { c } = useTheme();
+  const p = job.posting;
+  const due = deadline(job);
+  if (!p || (!p.warnings.length && !due && !p.unreachable)) return null;
+  return (
+    <View style={{ gap: space.sm }}>
+      {p.warnings.length ? (
+        <View style={[styles.status, { backgroundColor: c.amberSoft, alignItems: 'flex-start' }]}>
+          <Icon name="warning-amber" size={16} color={c.amberText} />
+          <View style={{ flex: 1, gap: 4 }}>
+            <Text style={[type.bodySmall, { color: c.ink }]}>
+              This posting has text aimed at AI tools or hidden from readers. Winnow removed what
+              was hidden and told triage and scoring not to follow it. Read it yourself before
+              applying.
+            </Text>
+            {p.warnings.map((w) => (
+              <Text key={w} style={[type.meta, { color: c.lead }]}>
+                {w}
+              </Text>
+            ))}
+          </View>
+        </View>
+      ) : null}
+      {due ? (
+        <T variant="bodySmall" tone={due.soon ? 'primary' : 'lead'}>
+          {due.soon ? '🔥 ' : ''}
+          {due.label}
+        </T>
+      ) : null}
+      {p.unreachable ? (
+        <T variant="bodySmall" tone="lead">
+          Winnow couldn’t read the posting last time ({p.unreachable}). It stays here and is read
+          again next time.
+        </T>
+      ) : null}
+    </View>
+  );
+}
+
 type Tab = 'report' | 'description' | 'timeline' | 'notes';
 
 /** Everything about one job. Used by the phone page and the desktop detail pane. */
@@ -268,7 +309,7 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
             companyLabel(job.company),
             job.location,
             job.postedAt
-              ? `Posted ${timeAgo(job.postedAt)} ago`
+              ? `Posted ${timeAgo(job.postedAt)} ago${isStale(job) ? ', may be stale' : ''}`
               : `Found ${timeAgo(job.firstSeen)} ago`,
           ]
             .filter(Boolean)
@@ -297,6 +338,7 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
         <Icon name={job.list === 'archive' ? 'archive' : 'info-outline'} size={16} tone="lead" />
         <Text style={[type.bodySmall, { color: c.ink, flex: 1 }]}>{statusLine(job)}</Text>
       </View>
+      <PostingNotes job={job} />
       {job.triage && job.list !== 'archive' ? (
         <T variant="bodySmall" tone="lead">
           Triage:{' '}

@@ -79,6 +79,8 @@ export async function triage(ctx: RunCtx): Promise<RunOutput> {
         location: job.location,
         salary: job.salary,
         posted: job.postedAt,
+        deadline: job.posting?.deadline ?? null,
+        warnings: job.posting?.warnings.length ? job.posting.warnings : undefined,
         description: jd ? clip(jd, JD_CHARS) : null,
       };
     });

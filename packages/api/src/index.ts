@@ -160,6 +160,18 @@ export interface Job {
   hasReport: boolean;
   notes: string;
   activity: JobActivity | null;
+  posting: PostingCheck | null;
+}
+
+/** What reading the posting found, apart from its text. */
+export interface PostingCheck {
+  /** Lines that read like instructions to an AI, or text hidden from a reader. Shown, never a reason to drop. */
+  warnings: string[];
+  /** The posting's closing date (YYYY-MM-DD), when it states one. */
+  deadline: string | null;
+  /** Why the last attempt to read it failed (404, 403, timeout), when it did. The job stays; it's tried again. */
+  unreachable: string | null;
+  checkedAt: string;
 }
 
 export interface TimelineEntry {
@@ -439,6 +451,8 @@ export interface SetupAbout {
   portfolio: string;
   /** Right to work or visa, in the person's words. */
   workRight: string;
+  /** Languages they speak, with levels: "English (native), French (B1)". */
+  languages: string;
 }
 
 /** Career-ops' primary, secondary and adjacent. */

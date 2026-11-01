@@ -99,7 +99,15 @@ export function openDb(dir: string, file = 'winnow.db'): Db {
       outcome TEXT NOT NULL
     );
   `);
+  addColumn(db, 'jobs', 'posting', 'TEXT');
   return db;
+}
+
+/** Columns added after a table first shipped; existing databases get them on open. */
+function addColumn(db: Db, table: string, column: string, type: string) {
+  const cols = db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[];
+  if (!cols.some((c) => c.name === column))
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
 }
 
 export function kvGet<T>(db: Db, key: string, fallback: T): T {
