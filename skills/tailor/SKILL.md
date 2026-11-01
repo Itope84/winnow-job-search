@@ -87,7 +87,7 @@ so an applicant tracking system reads it in order.
 ## The cover letter
 
 Start from `cover-reference.tex` and its class `cover.cls`, which matches the CV's fonts (the class and fonts
-are copied next to your file before compiling; keep `\documentclass[a4paper]{cover}`). One page: 250 to 350 words of body text.
+are copied next to your file before compiling; keep `\documentclass[a4paper]{cover}`). One page: 220 to 300 words of body text.
 
 - Address a named person when the posting names one, otherwise "Dear {Company} team,".
 - Open with the role and the single strongest reason they should read on.

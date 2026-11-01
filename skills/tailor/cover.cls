@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=2.3cm, vmargin=2.3cm]{geometry}
+\usepackage[hmargin=2.3cm, vmargin=1.8cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{titlesec}
@@ -33,6 +33,8 @@
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
 \setsansfont{OpenSans}[Path = fonts/opensans/, Extension = .ttf,
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
+% Line height half again the default, as on the CV.
+\linespread{1.5}
 \newfontfamily\bodyfont{OpenSans}[Path = fonts/opensans/, Extension = .ttf,
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
 \newfontfamily\headingfont{Montserrat}[Path = fonts/montserrat/, Extension = .ttf,
