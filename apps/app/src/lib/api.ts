@@ -1,6 +1,7 @@
 import type {
   AddJobRequest,
   AddJobResult,
+  ApplicationFile,
   Health,
   JackApplyRequest,
   JackApplyResult,
@@ -104,6 +105,10 @@ const qs = (params: Record<string, string | number | undefined | null>) => {
   const out = s.toString();
   return out ? `?${out}` : '';
 };
+
+/** A tailored CV or letter file. `at` keeps the browser from showing an earlier version. */
+export const applicationUrl = (jobId: string, file: ApplicationFile, at: string) =>
+  `${BASE}/jobs/${encodeURIComponent(jobId)}/application/${file}${qs({ v: at })}`;
 
 export const api = {
   health: () => request<Health>('/health'),

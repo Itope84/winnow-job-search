@@ -26,7 +26,8 @@ export interface SkillRun<T> {
     | 'setup-followup'
     | 'profile-draft'
     | 'sources-suggest'
-    | 'jack-update';
+    | 'jack-update'
+    | 'tailor';
   /** Folder name under `runs/`; defaults to the run id. */
   folder?: string;
   input: unknown;

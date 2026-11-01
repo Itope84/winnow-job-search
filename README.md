@@ -12,6 +12,10 @@ pnpm build:web                       # build the app the server serves
 pnpm --filter @winnow/server start   # http://localhost:8820 (and on your LAN)
 ```
 
+Tailored CVs and cover letters need Tectonic and Poppler on the server's PATH (`brew install tectonic
+poppler`). Tectonic downloads LaTeX packages the first time a document uses them, so the first one takes a few
+minutes.
+
 On this Mac it runs as a login item: `scripts/install-launchd.sh` (`--uninstall` removes it). Restart with
 `launchctl kickstart -k gui/$(id -u)/com.winnow.server`; logs in `library/_winnow/server.log`.
 

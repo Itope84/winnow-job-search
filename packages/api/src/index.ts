@@ -161,7 +161,44 @@ export interface Job {
   notes: string;
   activity: JobActivity | null;
   posting: PostingCheck | null;
+  /** The tailored CV and cover letter, when one has been written. */
+  application: Application | null;
 }
+
+/** One requirement from the posting, and where the application answers it. */
+export interface Requirement {
+  text: string;
+  need: 'must' | 'nice';
+  /** `bridged`: a gap the letter answers honestly. */
+  status: 'shown' | 'bridged' | 'gap';
+  where: string;
+}
+
+/** What Winnow found in one compiled document. */
+export interface DocCheck {
+  ok: boolean;
+  error: string | null;
+  pages: number | null;
+  problems: string[];
+}
+
+/** A CV and cover letter written for one job (files in `applications/<job id>/`). */
+export interface Application {
+  summary: string;
+  requirements: Requirement[];
+  /** Lines that only just pass the interview test: check them before sending. */
+  stretches: string[];
+  /** The review's verdict, as a hiring manager reading it cold. */
+  verdict: string | null;
+  cv: DocCheck;
+  cover: DocCheck;
+  at: string;
+  runId: string | null;
+}
+
+/** Files of an application the app can open or download. */
+export const APPLICATION_FILES = ['cv.pdf', 'cover.pdf', 'cv.tex', 'cover.tex'] as const;
+export type ApplicationFile = (typeof APPLICATION_FILES)[number];
 
 /** What reading the posting found, apart from its text. */
 export interface PostingCheck {
@@ -263,6 +300,7 @@ export const RUN_KINDS = [
   'sources_suggest',
   'scan_jack',
   'jack_update',
+  'tailor',
 ] as const;
 export type RunKind = (typeof RUN_KINDS)[number];
 
@@ -280,6 +318,7 @@ export const RUN_LABELS: Record<RunKind, string> = {
   sources_suggest: 'Suggest sources',
   scan_jack: 'Jack scan',
   jack_update: 'Draft Jack update',
+  tailor: 'CV and letter',
 };
 
 export type RunStatus =
@@ -364,6 +403,7 @@ export const RUN_COSTS: Record<RunKind, RunCost> = {
   sources_suggest: { paid: true, estimate: 'About 2 min' },
   scan_jack: { paid: false, estimate: 'About 2 min' },
   jack_update: { paid: true, estimate: 'About 1 min' },
+  tailor: { paid: true, estimate: 'About 5 min' },
 };
 
 // ── Sources, profile, settings ───────────────────────────────────────────────

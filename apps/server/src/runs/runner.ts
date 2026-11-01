@@ -42,6 +42,9 @@ export class Cancelled extends Error {
   }
 }
 
+/** Runs that work on particular jobs, shown on those jobs while they go. */
+const JOB_KINDS: RunKind[] = ['score', 'triage', 'capture', 'tailor'];
+
 /** One person's runner. Scans and AI work queue in two lanes; the server-wide Slots cap how many run at once. */
 export class Runner {
   readonly store: RunStore;
@@ -72,7 +75,7 @@ export class Runner {
   enqueue(req: StartRunRequest): Run[] {
     const jobs = this.space.jobs;
     const created: Run[] = [];
-    if (req.kind === 'triage' || req.kind === 'score') {
+    if (req.kind === 'triage' || req.kind === 'score' || req.kind === 'tailor') {
       const ready = this.space.profile.ready();
       if (!ready.cv || !ready.profile)
         throw badRequest(
@@ -80,16 +83,17 @@ export class Runner {
         );
     }
     switch (req.kind) {
-      case 'score': {
+      case 'score':
+      case 'tailor': {
         const ids = req.jobIds ?? [];
-        if (!ids.length) throw badRequest('Pick at least one job to score.');
+        if (!ids.length) throw badRequest('Pick at least one job.');
         for (const id of ids) {
           const job = jobs.require(id);
-          if (this.activeFor(id, 'score')) continue;
+          if (this.activeFor(id, req.kind)) continue;
           created.push(
             this.store.create({
-              kind: 'score',
-              title: `Score · ${job.company && job.company !== '?' ? job.company : 'Job'}`,
+              kind: req.kind,
+              title: `${RUN_LABELS[req.kind]} · ${job.company && job.company !== '?' ? job.company : 'Job'}`,
               subtitle: clip(job.role, 80),
               jobIds: [id],
             }),
@@ -206,8 +210,7 @@ export class Runner {
     const run = this.store.require(id);
     if (ACTIVE.includes(run.status)) throw conflict('That run is still going.');
     const params = this.store.params(id);
-    if (run.kind === 'score' || run.kind === 'triage' || run.kind === 'capture')
-      return this.enqueue({ kind: run.kind, jobIds: run.jobIds });
+    if (JOB_KINDS.includes(run.kind)) return this.enqueue({ kind: run.kind, jobIds: run.jobIds });
     if (run.kind === 'cv_import')
       return this.enqueue({ kind: run.kind, upload: String(params.upload ?? '') });
     if (run.kind === 'setup_followup')
@@ -252,7 +255,7 @@ export class Runner {
   }
 
   private markActivity(run: Run) {
-    if (run.kind !== 'score' && run.kind !== 'triage' && run.kind !== 'capture') return;
+    if (!JOB_KINDS.includes(run.kind)) return;
     for (const id of run.jobIds)
       this.space.jobs.activity.set(id, { runId: run.id, kind: run.kind, status: run.status });
   }

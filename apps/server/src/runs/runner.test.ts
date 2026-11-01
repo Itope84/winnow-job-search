@@ -62,6 +62,7 @@ function setup(
       sources_suggest: sourcesSuggest,
       scan_jack: never,
       jack_update: never,
+      tailor: never,
       ...executors,
     },
     () => replayAdapter(replay),

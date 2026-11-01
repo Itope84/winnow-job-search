@@ -184,4 +184,32 @@ describe('Intake', () => {
     again.add({ url: 'https://a.org/x', title: 'Grants Intern', company: 'A' }, 'greenhouse');
     expect(again.stats.seenBefore).toBe(1);
   });
+
+  it('keeps a tailored application on the job and logs it', () => {
+    const { jobs } = tempSpace();
+    const job = jobs.insert({
+      url: 'https://x.org/9',
+      company: 'Acme',
+      role: 'Grants Manager',
+      source: 'test',
+      list: 'scored',
+      movedBy: 'score',
+      addedBy: 'scan',
+    });
+    const doc = { ok: true, error: null, pages: 2, problems: [] };
+    jobs.setApplication(job.id, {
+      summary: 'Leads with the £2m grants programme.',
+      requirements: [
+        { text: 'Grant writing', need: 'must', status: 'shown', where: 'Example Trust' },
+      ],
+      stretches: [],
+      verdict: 'Yes, you would get an interview.',
+      cv: doc,
+      cover: { ...doc, pages: 1 },
+      at: '2026-11-01T12:00:00.000Z',
+      runId: 'run_1',
+    });
+    expect(jobs.get(job.id)?.application).toMatchObject({ cv: { pages: 2 }, cover: { pages: 1 } });
+    expect(jobs.detail(job.id).timeline.at(-1)?.text).toBe('CV and cover letter written');
+  });
 });

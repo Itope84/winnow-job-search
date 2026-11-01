@@ -100,6 +100,7 @@ export function openDb(dir: string, file = 'winnow.db'): Db {
     );
   `);
   addColumn(db, 'jobs', 'posting', 'TEXT');
+  addColumn(db, 'jobs', 'application', 'TEXT');
   return db;
 }
 

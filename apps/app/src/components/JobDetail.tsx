@@ -8,6 +8,7 @@ import { useActiveRuns, useMove, useRestore, useStartRun } from '@/lib/hooks';
 import { refreshJobs } from '@/lib/query';
 import { toast } from '@/lib/toast';
 import { fonts, radius, space, type, useTheme } from '@/theme';
+import { ApplicationPane } from './ApplicationPane';
 import { Chip, ScoreChip } from './chips';
 import { Input } from './inputs';
 import { CompanyTile } from './JobRow';
@@ -274,7 +275,7 @@ function PostingNotes({ job }: { job: Job }) {
   );
 }
 
-type Tab = 'report' | 'description' | 'timeline' | 'notes';
+type Tab = 'report' | 'application' | 'description' | 'timeline' | 'notes';
 
 /** Everything about one job. Used by the phone page and the desktop detail pane. */
 export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () => void }) {
@@ -453,6 +454,7 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
         {(
           [
             ['report', 'Report'],
+            ['application', 'CV & letter'],
             ['description', 'Description'],
             ['timeline', 'Timeline'],
             ['notes', 'Notes'],
@@ -492,6 +494,8 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
             }
           />
         )
+      ) : tab === 'application' ? (
+        <ApplicationPane job={job} />
       ) : tab === 'description' ? (
         job.jd ? (
           <Markdown text={job.jd} />
