@@ -403,7 +403,7 @@ export const RUN_COSTS: Record<RunKind, RunCost> = {
   sources_suggest: { paid: true, estimate: 'About 2 min' },
   scan_jack: { paid: false, estimate: 'About 2 min' },
   jack_update: { paid: true, estimate: 'About 1 min' },
-  tailor: { paid: true, estimate: 'About 5 min' },
+  tailor: { paid: true, estimate: '5–10 min' },
 };
 
 // ── Sources, profile, settings ───────────────────────────────────────────────

@@ -135,9 +135,9 @@ export async function tailor(ctx: RunCtx): Promise<RunOutput> {
 
   const check = async (): Promise<Checks> => {
     ctx.step('Compiling and checking');
-    // The letter's class and fonts sit next to it, as the reference expects.
-    cpSync(join(skillDir, 'cover.cls'), join(folder, 'cover.cls'));
-    cpSync(join(skillDir, 'OpenFonts'), join(folder, 'OpenFonts'), { recursive: true });
+    // The CV's style, the letter's class and their fonts sit next to the files, as the references expect.
+    for (const f of ['winnow-cv.sty', 'cover.cls', 'fonts'])
+      cpSync(join(skillDir, f), join(folder, f), { recursive: true });
     const out = {
       cv: await compileTex(folder, 'cv.tex', {
         mustContain: email ? [email] : [],

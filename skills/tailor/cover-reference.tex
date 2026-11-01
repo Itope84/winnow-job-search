@@ -3,7 +3,7 @@
 %
 % Reference letter layout, from ai-job-search (MIT, see LICENSE-ai-job-search).
 % The list sits OUTSIDE \lettercontent{} (its trailing \\ errors on \end{itemize})
-% and is wrapped in Raleway-Medium so the bullet font matches the body.
+% and is wrapped in \bodyfont so the bullet font matches the body.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper]{cover}
@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR NAME]}}{  \href{mailto:your.email@example.com}{your.email@example.com} | [+XX XXXXXXXXXX] |  \urlstyle{same}\href{https://www.linkedin.com/in/yourprofile}{LinkedIn}
+\namesection{[First]}{[Last]}{  \href{mailto:your.email@example.com}{your.email@example.com} | [+XX XXXXXXXXXX] |  \urlstyle{same}\href{https://www.linkedin.com/in/yourprofile}{LinkedIn}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,7 +34,7 @@
 
 \lettercontent{[Body paragraph: your most relevant experience, framed toward the tasks in the posting. Follow with 3--5 concrete bullets:]}
 
-{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+{\raggedright\bodyfont\fontsize{11pt}{13pt}\selectfont
 \begin{itemize}
     \item \textbf{[Achievement 1]:} [concrete result with a number where possible]
     \item \textbf{[Achievement 2]:} [skill or project mapped to a posting requirement]

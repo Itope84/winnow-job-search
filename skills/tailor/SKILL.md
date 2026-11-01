@@ -65,9 +65,11 @@ say it in general terms or leave it out.
 ## The CV
 
 Start from `cv-reference.tex` (moderncv, banking style). It is a starting point, not a form: choose the
-section order, headings, bullets and emphasis that make the case for this job. You may change colour,
-spacing and sections, and use any CTAN package. Keep it one column, so an applicant tracking system reads it
-in order.
+section order, headings, bullets and emphasis that make the case for this job, and use any CTAN package you
+need. Keep `\usepackage{winnow-cv}` right after `\moderncvcolor`: it sets the candidate's look (Montserrat
+headings, Open Sans body, margins, spacing between sections and entries), so don't set fonts, margins or
+spacing yourself. Put each `\cventry` straight under its `\section`, not inside a list. Keep it one column,
+so an applicant tracking system reads it in order.
 
 - **Length:** as long as it needs to be, and two pages at most is the aim. One page is fine for a short
   career; never pad. If keeping something this job needs would take a third page, keep it and say why in
@@ -84,8 +86,8 @@ in order.
 
 ## The cover letter
 
-Start from `cover-reference.tex` and its class `cover.cls` (both fonts and class are copied next to your
-file before compiling; keep `\documentclass[a4paper]{cover}`). One page: 250 to 350 words of body text.
+Start from `cover-reference.tex` and its class `cover.cls`, which matches the CV's fonts (the class and fonts
+are copied next to your file before compiling; keep `\documentclass[a4paper]{cover}`). One page: 250 to 350 words of body text.
 
 - Address a named person when the posting names one, otherwise "Dear {Company} team,".
 - Open with the role and the single strongest reason they should read on.
