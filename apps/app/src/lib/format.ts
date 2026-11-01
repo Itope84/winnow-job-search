@@ -28,6 +28,29 @@ export function jobAge(job: Job): string {
   return timeAgo(job.postedAt ?? job.firstSeen);
 }
 
+const dayMs = 86_400_000;
+const days = (ymd: string) =>
+  Math.floor((Date.now() - new Date(`${ymd}T00:00:00`).getTime()) / dayMs);
+
+/** Posted more than 30 days ago: shown with a warning, never hidden. */
+export function isStale(job: Job): boolean {
+  return !!job.postedAt && job.postedAt.length >= 10 && days(job.postedAt.slice(0, 10)) > 30;
+}
+
+/** The posting's deadline, and whether it's within 7 days. */
+export function deadline(job: Job): { label: string; soon: boolean } | null {
+  const d = job.posting?.deadline;
+  if (!d) return null;
+  const left = -days(d);
+  const date = new Date(`${d}T00:00:00`).toLocaleDateString(undefined, {
+    day: 'numeric',
+    month: 'short',
+  });
+  if (left < 0) return { label: `Closed ${date}`, soon: false };
+  const when = left === 0 ? 'today' : left === 1 ? 'tomorrow' : `in ${left} days`;
+  return { label: `Closes ${date} (${when})`, soon: left <= 7 };
+}
+
 export function dateLabel(iso: string | null | undefined): string {
   if (!iso) return '';
   const d = new Date(iso);

@@ -7,7 +7,8 @@ the product brief (Claude Docs, "Yinkops rebuild: product brief") for product ru
 
 - **The server owns the data and the work.** The app only shows state and sends decisions. Every job lives in
   the person's `winnow.db` (`library/users/<id>/`), with captured descriptions in `jd/`, reports in `reports/`,
-  AI run folders in `runs/`, and the CV and profile in `profile/`.
+  tailored CVs and letters in `applications/<job id>/`, AI run folders in `runs/`, and the CV and profile in
+  `profile/`.
 - **Every move has a reason.** A job is in exactly one list (inbox, shortlist, scored, applied, archive). Moving
   it records who moved it; archiving needs a reason. Keep it that way in any new code path.
 - **All work is a run.** Runs are stored (`runs` table), queued in a scan lane and an AI lane, report progress,

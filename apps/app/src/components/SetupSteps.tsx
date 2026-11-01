@@ -247,6 +247,12 @@ const ABOUT: { key: keyof SetupAbout; label: string; hint?: string; placeholder?
     hint: 'Where you can work without sponsorship, or the visa you hold.',
     placeholder: 'For example: UK citizen, no sponsorship needed',
   },
+  {
+    key: 'languages',
+    label: 'Languages you speak',
+    hint: 'With your level. Triage drops jobs that need a language you don’t list.',
+    placeholder: 'For example: English (native), French (B1)',
+  },
 ];
 
 /**

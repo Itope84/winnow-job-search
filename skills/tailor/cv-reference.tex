@@ -1,0 +1,61 @@
+%% Reference CV layout. Started from ai-job-search's moderncv example (MIT, see LICENSE-ai-job-search).
+%% A starting point, not a form: write each CV for its job. Keep \usepackage{winnow-cv}: it sets the fonts
+%% (Montserrat headings, Open Sans body), margins and spacing, and keeps contact icons out of the text layer.
+%% Winnow compiles with Tectonic (XeTeX); winnow-cv.sty and fonts/ are copied next to the file first.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage{winnow-cv}
+\usepackage{needspace}
+
+\AtEndPreamble{\hypersetup{pdftitle={[First] [Last] - CV}}}
+
+% Personal data. Leave out any line you have nothing for (an empty \address{}{}{} fails to compile).
+\name{[First]}{[Last]}
+\phone[mobile]{[+XX XXXXXXXXXX]}
+\email{[your.email@example.com]}
+\extrainfo{[City, Country] \,|\, \href{[https://linkedin.com/in/you]}{[linkedin.com/in/you]} \,|\, \href{[https://github.com/you]}{[github.com/you]}}
+
+\begin{document}
+
+\makecvtitle
+
+% Profile: three to five lines on why you fit this job, strongest match first.
+[Profile statement.]
+
+\section{Skills}
+\begin{itemize}
+\item \textbf{[Group 1]}: [Specific skills, tools, frameworks.]
+\item \textbf{[Group 2]}: [Specific skills, tools, frameworks.]
+\item \textbf{[Group 3]}: [Domain expertise, methods.]
+\end{itemize}
+
+\section{Experience}
+
+% \cventry{dates}{title}{employer}{place}{}{details}. Dates use a single ASCII hyphen.
+\cventry{[Mon YYYY - Present]}{[Job Title]}{[Company]}{[City, Country]}{}{%
+\begin{itemize}
+\item {[Achievement, with a number where the files have one.]}
+\item {[Achievement.]}
+\item {[Achievement.]}
+\end{itemize}}
+
+\cventry{[Mon YYYY - Mon YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{%
+\begin{itemize}
+\item {[Achievement.]}
+\item {[Achievement.]}
+\end{itemize}}
+
+% An older role can be a single line.
+\cventry{[Mon YYYY - Mon YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{}
+
+\section{Education}
+
+\cventry{[YYYY - YYYY]}{[Degree], [Field]}{[Institution]}{[City, Country]}{}{[Relevant modules or thesis.]}
+
+% Optional sections, when they help this job: Languages, Publications, Projects, Awards.
+\section{Languages}
+\cvitem{}{[Language] (native), [Language] (fluent).}
+
+\end{document}

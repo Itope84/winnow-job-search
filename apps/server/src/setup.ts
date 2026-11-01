@@ -76,6 +76,7 @@ const ABOUT_KEYS: (keyof SetupAbout)[] = [
   'linkedin',
   'portfolio',
   'workRight',
+  'languages',
 ];
 
 export function cleanAbout(v: unknown): Partial<SetupAbout> {
@@ -196,6 +197,9 @@ export function fromProfile(p: Record<string, unknown>): {
       linkedin: cand.linkedin,
       portfolio: cand.portfolio_url,
       workRight: loc.visa_status,
+      languages: Array.isArray(obj(p.language).spoken)
+        ? (obj(p.language).spoken as unknown[]).map(String).join(', ')
+        : '',
     }),
     want: cleanWant({
       roles: list,
@@ -208,6 +212,15 @@ export function fromProfile(p: Record<string, unknown>): {
       dealBreakers: p.deal_breakers ?? [],
     }),
   };
+}
+
+/** "English (native), French (B1)" as a list, one language each. */
+export function spokenLanguages(text: string): string[] {
+  return text
+    .split(/[,;\n]| and /)
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .slice(0, 12);
 }
 
 const FIT_TO_CAREER_OPS = { dream: 'primary', good: 'secondary', stretch: 'adjacent' } as const;
@@ -258,7 +271,10 @@ export function composeProfileYaml(state: SetupState, d: SetupDraft, email: stri
     },
     work_preferences: { level: w.level ?? '', work_types: w.workTypes ?? [] },
     deal_breakers: w.dealBreakers ?? [],
-    language: { output: 'en' },
+    language: {
+      output: 'en',
+      ...(a.languages?.trim() ? { spoken: spokenLanguages(a.languages) } : {}),
+    },
   };
   return `# Winnow profile, written by setup on ${nowIso().slice(0, 10)}. Edit it in You › Profile and targets.\n\n${stringify(doc, { lineWidth: 100 })}`;
 }

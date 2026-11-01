@@ -1,0 +1,58 @@
+% Winnow's CV look on top of moderncv (banking): Montserrat headings, Open Sans body, roomier spacing.
+% Load it after \moderncvstyle and \moderncvcolor. Fonts sit in fonts/ next to the CV (both SIL OFL 1.1).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{winnow-cv}[2026/11/01 Winnow CV look]
+
+\RequirePackage{fontspec}
+\RequirePackage{etoolbox}
+\RequirePackage{ragged2e}
+\RequirePackage[a4paper, hmargin=17mm, top=15mm, bottom=17mm]{geometry}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{OpenSans}[
+  Path = fonts/opensans/, Extension = .ttf,
+  UprightFont = *-Regular, BoldFont = *-SemiBold,
+  ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
+\setsansfont{OpenSans}[
+  Path = fonts/opensans/, Extension = .ttf,
+  UprightFont = *-Regular, BoldFont = *-SemiBold,
+  ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
+\newfontfamily\headingfont{Montserrat}[
+  Path = fonts/montserrat/, Extension = .ttf,
+  UprightFont = *-SemiBold, BoldFont = *-Bold]
+
+% Name and section headings in Montserrat, in the accent colour.
+\renewcommand*{\namefont}{\headingfont\fontsize{30}{34}\selectfont}
+\colorlet{firstnamecolor}{color1}
+\colorlet{lastnamecolor}{color1}
+\colorlet{namecolor}{color1}
+\renewcommand*{\sectionfont}{\headingfont\fontsize{14}{18}\selectfont}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+% A strut under the name pushes the contact lines down; the contact lines get a little more leading.
+\renewcommand*{\namestyle}[1]{{\namefont\textcolor{namecolor}{#1}\rule[-9pt]{0pt}{9pt}}}
+\renewcommand*{\addressfont}{\normalfont\fontsize{10}{15}\selectfont}
+
+% Room to breathe: under the name and contact lines, before each section, between entries.
+\apptocmd{\makecvtitle}{\vspace{10pt}}{}{}
+\pretocmd{\section}{\addvspace{12pt}}{}{}
+\pretocmd{\cventry}{\addvspace{7pt}}{}{}
+
+% No icons before the contact details: they reach the text layer as stray characters.
+\renewcommand*{\mobilephonesymbol}{}
+\renewcommand*{\fixedphonesymbol}{}
+\renewcommand*{\faxphonesymbol}{}
+\renewcommand*{\emailsymbol}{}
+\renewcommand*{\homepagesymbol}{}
+\renewcommand*{\linkedinsocialsymbol}{}
+\renewcommand*{\githubsocialsymbol}{}
+
+% Line height half again the default (Open Sans 11pt: about 13.6pt to 20pt).
+\linespread{1.5}
+
+% Ragged right: a justified line with no hyphenation leaves wide gaps between words.
+\AtBeginDocument{\RaggedRight}
+
+% Links in the accent colour; the email and links still print as text.
+\AtEndPreamble{\hypersetup{colorlinks=true, linkcolor=color1, urlcolor=color1, pdfpagemode=UseNone}}
+
+\endinput

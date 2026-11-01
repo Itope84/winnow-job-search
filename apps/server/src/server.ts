@@ -13,6 +13,7 @@ import { installSkills } from './ai/run-skill.ts';
 import { score } from './ai/score.ts';
 import { aiSearch } from './ai/search.ts';
 import { profileDraft, profilePrefill, setupFollowup, sourcesSuggest } from './ai/setup-runs.ts';
+import { tailor } from './ai/tailor.ts';
 import { triage } from './ai/triage.ts';
 import { type SpaceEnv, spaceRoutes } from './app.ts';
 import { type ServerConfig, VERSION } from './config.ts';
@@ -70,6 +71,7 @@ export function createServer(config: ServerConfig) {
     sources_suggest: sourcesSuggest,
     scan_jack: jackScan(jack),
     jack_update: jackDraft(jack),
+    tailor,
     capture: async (ctx) => {
       await captureMany(ctx, ctx.run.jobIds);
       const read = ctx.run.jobIds.filter((id) => ctx.space.jobs.get(id)?.hasJd).length;

@@ -34,6 +34,8 @@ Read only `input.json` and `cv.md`. Do not browse the web. Do not open other fil
 5. **workTypes**: only `"remote"`, `"hybrid"` or `"onsite"`, and only when the CV says so; otherwise `[]`.
 6. **currency**: the ISO code for the country they are based in (GBP for the UK, USD for the US, EUR for the
    euro area), or `""` if the CV gives no country.
+7. **languages** (in `about`): the languages the CV lists, each with the level it gives, written like
+   "English (native), French (B1)". Leave `""` when the CV lists none; don't infer one from where they live.
 
 ## Output
 
@@ -47,7 +49,8 @@ Write `result.json` in the run folder:
     "city": "London",
     "country": "United Kingdom",
     "linkedin": "https://www.linkedin.com/in/ada",
-    "portfolio": ""
+    "portfolio": "",
+    "languages": "English (native), French (B1)"
   },
   "roles": [
     { "title": "Grants Manager", "fit": "dream" },

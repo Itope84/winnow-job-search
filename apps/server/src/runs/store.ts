@@ -19,6 +19,7 @@ export const LANE_FOR: Record<RunKind, RunLane> = {
   sources_suggest: 'ai',
   scan_jack: 'scan',
   jack_update: 'ai',
+  tailor: 'ai',
 };
 
 /** Runs that jump the queue: triage, and setup's runs, which someone is waiting on screen for. */

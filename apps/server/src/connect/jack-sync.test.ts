@@ -90,6 +90,7 @@ async function connected(tools: Parameters<typeof fakeJack>[0]) {
       sources_suggest: never,
       scan_jack: jackScan(link),
       jack_update: jackDraft(link),
+      tailor: never,
     },
     () => replayAdapter(join(REPO_ROOT, 'fixtures/replay')),
     join(REPO_ROOT, 'skills'),

@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { ScoreDimension, ScoreResult } from '@winnow/api';
 import { verdictFor } from '@winnow/api';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
-import { captureJd } from '../scan/capture.ts';
+import { captureFailed, captureJd, saveCapture } from '../scan/capture.ts';
 import { clip, nowIso } from '../util.ts';
 import { runSkill } from './run-skill.ts';
 
@@ -48,6 +48,32 @@ function validate(value: unknown): Omit<ScoreResult, 'verdict' | 'at' | 'runId'>
   };
 }
 
+/**
+ * The job's saved description, or read the posting now. A closed posting archives the job and stops the run;
+ * any other failure leaves the description null for the skill to work around.
+ */
+export async function readPosting(ctx: RunCtx, id: string): Promise<string | null> {
+  const jobs = ctx.space.jobs;
+  const job = jobs.require(id);
+  let jd = jobs.readJd(id);
+  if (!jd) {
+    ctx.step('Reading the posting');
+    try {
+      const got = await captureJd(job.url);
+      if (got && got.text.length >= 120) {
+        saveCapture(jobs, id, got);
+        jd = got.text;
+      }
+    } catch (e) {
+      ctx.log('stderr', `Could not read the posting: ${(e as Error).message}`);
+      captureFailed(jobs, id, e, ctx.run.id);
+      if (jobs.get(id)?.list === 'archive')
+        throw new Error(`The posting is closed: ${(e as Error).message}`);
+    }
+  }
+  return jd;
+}
+
 /** Score one job against the CV and profile: 1–5, five dimensions, a verdict, and a full report. */
 export async function score(ctx: RunCtx): Promise<RunOutput> {
   const id = ctx.run.jobIds[0];
@@ -56,20 +82,9 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
   const job = jobs.require(id);
   ctx.progress(0, 7, 'steps');
 
-  let jd = jobs.readJd(id);
-  if (!jd) {
-    ctx.step('Reading the posting');
-    try {
-      const got = await captureJd(job.url);
-      if (got && got.text.length >= 120) {
-        jobs.writeJd(id, got.text);
-        jd = got.text;
-      }
-    } catch (e) {
-      ctx.log('stderr', `Could not read the posting: ${(e as Error).message}`);
-    }
-  }
+  const jd = await readPosting(ctx, id);
 
+  const runFolder = join(ctx.space.library, 'runs', ctx.run.id);
   const { value, folder } = await runSkill(ctx, {
     skill: 'score',
     input: {
@@ -83,8 +98,11 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
         posted: job.postedAt,
         sources: job.sources.map((s) => s.source),
         triage: job.triage,
+        deadline: job.posting?.deadline ?? null,
+        warnings: job.posting?.warnings ?? [],
       },
-      description: jd ?? null,
+      // In its own file: OpenCode's read tool cuts long lines, and a JSON string is one line.
+      description: jd ? join(runFolder, 'posting.md') : null,
       profileFiles: {
         cv: join(ctx.space.library, 'profile/cv.md'),
         narrative: join(ctx.space.library, 'profile/narrative.md'),
@@ -93,8 +111,9 @@ export async function score(ctx: RunCtx): Promise<RunOutput> {
       weights: ctx.settings.weights,
       today: nowIso().slice(0, 10),
     },
+    files: jd ? { 'posting.md': jd } : undefined,
     task: jd
-      ? 'Score this job. The full description is in input.json.'
+      ? 'Score this job. The full description is in posting.md in the run folder.'
       : 'Score this job. No description was captured: open the posting URL to read it, and say so in the report if you cannot.',
     model: ctx.settings.models.score ?? ctx.settings.models.default,
     timeoutMs: 20 * 60_000,

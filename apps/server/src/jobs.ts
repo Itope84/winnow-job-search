@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type {
+  Application,
   ArchiveReason,
   Job,
   JobActivity,
@@ -12,6 +13,7 @@ import type {
   ListCounts,
   MoveRequest,
   Mover,
+  PostingCheck,
   ScoreResult,
   Stage,
   TimelineEntry,
@@ -57,6 +59,8 @@ export interface NewJob {
 export class JobStore {
   readonly jdDir: string;
   readonly reportDir: string;
+  /** Tailored CVs and letters, a folder per job. */
+  readonly applicationDir: string;
   /** Runs working on a job right now, kept by the runner. */
   activity = new Map<string, JobActivity>();
 
@@ -67,6 +71,7 @@ export class JobStore {
   ) {
     this.jdDir = join(library, 'jd');
     this.reportDir = join(library, 'reports');
+    this.applicationDir = join(library, 'applications');
     mkdirSync(this.jdDir, { recursive: true });
     mkdirSync(this.reportDir, { recursive: true });
   }
@@ -457,6 +462,30 @@ export class JobStore {
     );
   }
 
+  /** Record what reading the posting found. Fields left out keep their value. */
+  setPosting(id: string, patch: Partial<Omit<PostingCheck, 'checkedAt'>>) {
+    const cur = this.require(id).posting;
+    const next: PostingCheck = {
+      warnings: patch.warnings ?? cur?.warnings ?? [],
+      deadline: patch.deadline !== undefined ? patch.deadline : (cur?.deadline ?? null),
+      unreachable: patch.unreachable !== undefined ? patch.unreachable : (cur?.unreachable ?? null),
+      checkedAt: nowIso(),
+    };
+    this.db
+      .prepare('UPDATE jobs SET posting = ?, updated_at = ? WHERE id = ?')
+      .run(JSON.stringify(next), nowIso(), id);
+    if (patch.warnings?.length && !cur?.warnings.length)
+      this.log(id, 'posting', `Posting check: ${patch.warnings[0]}`);
+  }
+
+  setApplication(id: string, application: Application) {
+    this.db
+      .prepare('UPDATE jobs SET application = ?, updated_at = ? WHERE id = ?')
+      .run(JSON.stringify(application), nowIso(), id);
+    this.log(id, 'application', 'CV and cover letter written', application.runId);
+    this.changed([id]);
+  }
+
   writeJd(id: string, text: string) {
     writeFileAtomic(join(this.jdDir, `${id}.md`), text);
     this.db.prepare('UPDATE jobs SET has_jd = 1 WHERE id = ?').run(id);
@@ -507,6 +536,8 @@ export class JobStore {
       hasReport: Boolean(r.has_report),
       notes: r.notes as string,
       activity: this.activity.get(id) ?? null,
+      posting: parseJson<PostingCheck | null>(r.posting as string | null, null),
+      application: parseJson<Application | null>(r.application as string | null, null),
     };
   }
 }

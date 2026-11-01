@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import type {
   AddJobRequest,
   ArchiveReason,
@@ -14,7 +16,15 @@ import type {
   StartRunRequest,
   TriageVerdict,
 } from '@winnow/api';
-import { ARCHIVE_REASONS, JOB_SORTS, LISTS, RUN_KINDS, STAGES } from '@winnow/api';
+import {
+  APPLICATION_FILES,
+  type ApplicationFile,
+  ARCHIVE_REASONS,
+  JOB_SORTS,
+  LISTS,
+  RUN_KINDS,
+  STAGES,
+} from '@winnow/api';
 import { Hono } from 'hono';
 import { streamSSE } from 'hono/streaming';
 import { addJob } from './add-job.ts';
@@ -41,7 +51,7 @@ import {
   updateSetup,
 } from './setup.ts';
 import type { Space } from './space.ts';
-import { badRequest, HttpError, nowIso } from './util.ts';
+import { badRequest, HttpError, notFound, nowIso } from './util.ts';
 
 const forbidden = (message: string) => new HttpError(403, 'forbidden', message);
 
@@ -125,6 +135,25 @@ export function spaceRoutes(
   });
 
   app.get('/jobs/:id', (c) => c.json(c.var.space.jobs.detail(c.req.param('id'))));
+
+  /** The tailored CV and letter: PDFs open in the browser, LaTeX sources download. */
+  app.get('/jobs/:id/application/:file', (c) => {
+    const jobs = c.var.space.jobs;
+    const job = jobs.require(c.req.param('id'));
+    const file = c.req.param('file') as ApplicationFile;
+    const path = join(jobs.applicationDir, job.id, file);
+    if (!APPLICATION_FILES.includes(file) || !job.application || !existsSync(path))
+      throw notFound('That file');
+    const name = `${file.startsWith('cv') ? 'CV' : 'Cover letter'} - ${job.company}`
+      .replace(/[^\w .,&()-]+/g, '')
+      .trim();
+    const pdf = file.endsWith('.pdf');
+    return c.body(readFileSync(path), 200, {
+      'content-type': pdf ? 'application/pdf' : 'application/x-tex; charset=utf-8',
+      'content-disposition': `${pdf ? 'inline' : 'attachment'}; filename="${name}.${pdf ? 'pdf' : 'tex'}"`,
+      'cache-control': 'no-store',
+    });
+  });
 
   app.patch('/jobs/:id', async (c) => {
     const body = (await c.req.json()) as { notes?: string; stage?: Stage };
