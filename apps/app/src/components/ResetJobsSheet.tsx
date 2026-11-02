@@ -12,7 +12,7 @@ import { Sheet } from './Sheet';
 import { Button, T } from './ui';
 
 const NOTES: Partial<Record<JobList, string>> = {
-  scored: 'Their scores and reports go too',
+  scored: 'Their scores, reports, CVs and letters go too',
   applied: 'Their stages, notes, CVs and letters go too',
   archive: 'Archived jobs still posted can come back',
 };
