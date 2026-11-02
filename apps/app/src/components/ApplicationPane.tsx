@@ -148,7 +148,9 @@ function Written({
                       ? r.where || s.label
                       : `${s.label}${r.where ? `: ${r.where}` : ''}`}
                   </T>
-                  {r.status === 'shown' ? null : <HaveThis requirement={r.text} />}
+                  {r.status === 'shown' ? null : (
+                    <HaveThis requirement={r.text} again="Write again to use it." />
+                  )}
                 </View>
               </View>
             );
@@ -199,7 +201,7 @@ function Written({
 }
 
 /** A gap the person does have: one line into "Not on your CV", used the next time the CV is written. */
-function HaveThis({ requirement }: { requirement: string }) {
+export function HaveThis({ requirement, again }: { requirement: string; again: string }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [saving, setSaving] = useState(false);
@@ -207,7 +209,7 @@ function HaveThis({ requirement }: { requirement: string }) {
   if (added)
     return (
       <T variant="meta" tone="faint">
-        Added to Not on your CV. Write again to use it.
+        Added to Not on your CV. {again}
       </T>
     );
   if (!open)
@@ -237,7 +239,11 @@ function HaveThis({ requirement }: { requirement: string }) {
         autoFocus
         value={text}
         onChangeText={setText}
-        placeholder={`What you've done: ${requirement}`}
+        placeholder={
+          requirement.length < 60
+            ? `What you've done: ${requirement}`
+            : 'What you’ve done, in one line'
+        }
         style={{ minHeight: 64 }}
       />
       <View style={{ flexDirection: 'row', gap: space.sm }}>

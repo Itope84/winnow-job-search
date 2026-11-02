@@ -8,7 +8,7 @@ import { useActiveRuns, useMove, useRestore, useStartRun } from '@/lib/hooks';
 import { refreshJobs } from '@/lib/query';
 import { toast } from '@/lib/toast';
 import { fonts, radius, space, type, useTheme } from '@/theme';
-import { ApplicationPane } from './ApplicationPane';
+import { ApplicationPane, HaveThis } from './ApplicationPane';
 import { Chip, ScoreChip } from './chips';
 import { Input } from './inputs';
 import { CompanyTile } from './JobRow';
@@ -87,7 +87,7 @@ export function ScoreCard({ score }: { score: ScoreResult }) {
       ) : null}
       <View style={{ gap: space.sm, marginTop: space.md }}>
         <Points title="Hard stops" items={score.hardStops} tone="danger" empty="None" />
-        <Points title="Gaps" items={score.gaps} tone="amber" />
+        <Points title="Gaps" items={score.gaps} tone="amber" haveThis />
         <Points title="Strengths" items={score.strengths} tone="sage" />
       </View>
       {score.nextStep ? (
@@ -122,11 +122,14 @@ function Points({
   items,
   tone,
   empty,
+  haveThis,
 }: {
   title: string;
   items: string[];
   tone: 'danger' | 'amber' | 'sage';
   empty?: string;
+  /** Offer "I have this" under each item. */
+  haveThis?: boolean;
 }) {
   const { c } = useTheme();
   if (!items.length && !empty) return null;
@@ -138,7 +141,10 @@ function Points({
         items.map((it) => (
           <View key={it} style={{ flexDirection: 'row', gap: 6 }}>
             <Text style={[type.bodySmall, { color: c.lead }]}>•</Text>
-            <Text style={[type.bodySmall, { color: c.ink, flex: 1 }]}>{it}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={[type.bodySmall, { color: c.ink }]}>{it}</Text>
+              {haveThis ? <HaveThis requirement={it} again="Score again to count it." /> : null}
+            </View>
           </View>
         ))
       ) : (
