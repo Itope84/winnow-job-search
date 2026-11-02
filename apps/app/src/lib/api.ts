@@ -11,6 +11,7 @@ import type {
   JackStart,
   Job,
   JobDetail,
+  JobList,
   JobPage,
   JobQuery,
   ListCounts,
@@ -140,6 +141,11 @@ export const api = {
       })}`,
     ),
   counts: () => request<ListCounts>('/jobs/counts'),
+  resetJobs: (lists: JobList[]) =>
+    request<{ removed: number; counts: ListCounts }>('/jobs/reset', {
+      method: 'POST',
+      body: { lists },
+    }),
   jobSources: () => request<string[]>('/jobs/sources'),
   job: (id: string) => request<JobDetail>(`/jobs/${encodeURIComponent(id)}`),
   updateJob: (id: string, patch: { notes?: string; stage?: string }) =>

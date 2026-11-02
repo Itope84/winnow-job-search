@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import type {
   Application,
@@ -493,6 +493,39 @@ export class JobStore {
 
   remove(id: string) {
     this.db.prepare('DELETE FROM jobs WHERE id = ?').run(id);
+  }
+
+  /**
+   * Clear whole lists: their jobs, files and the scan memory of their links all go, so a later scan adds
+   * any that are still posted as new jobs. Returns how many jobs went.
+   */
+  reset(lists: JobList[]): number {
+    if (!lists.length) return 0;
+    const rows = this.db
+      .prepare(
+        `SELECT id, url, sources FROM jobs WHERE list IN (${lists.map(() => '?').join(', ')})`,
+      )
+      .all(...lists) as Row[];
+    const forget = this.db.prepare('DELETE FROM scan_history WHERE canon_url = ?');
+    const drop = this.db.prepare('DELETE FROM jobs WHERE id = ?');
+    tx(this.db, () => {
+      for (const r of rows) {
+        const urls = [
+          r.url as string,
+          ...parseJson<JobSource[]>(r.sources as string, []).map((s) => s.url),
+        ];
+        for (const url of new Set(urls.map(canonicalUrl))) forget.run(url);
+        drop.run(r.id as string);
+      }
+    });
+    for (const r of rows) {
+      const id = r.id as string;
+      rmSync(join(this.jdDir, `${id}.md`), { force: true });
+      rmSync(join(this.reportDir, `${id}.md`), { force: true });
+      rmSync(join(this.applicationDir, id), { recursive: true, force: true });
+    }
+    if (rows.length) this.changed();
+    return rows.length;
   }
 
   log(id: string, kind: string, text: string, runId: string | null = null, at = nowIso()) {

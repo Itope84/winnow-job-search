@@ -173,6 +173,17 @@ export function spaceRoutes(
     return c.json(c.var.space.jobs.move(body, 'you'));
   });
 
+  // Clear whole lists so a new scan can find their jobs again. Not while a run might be using them.
+  app.post('/jobs/reset', async (c) => {
+    const { lists } = (await c.req.json()) as { lists?: unknown };
+    if (!Array.isArray(lists) || !lists.length || lists.some((l) => !LISTS.includes(l)))
+      throw badRequest('Pick at least one list.');
+    if (c.var.runner.store.list({ active: true }).length)
+      throw badRequest('Wait for the runs going now to finish, then reset.');
+    const removed = c.var.space.jobs.reset([...new Set(lists as JobList[])]);
+    return c.json({ removed, counts: c.var.space.jobs.counts() });
+  });
+
   // Every job triage kept moves from Inbox to Shortlist; returns them for Undo.
   app.post('/jobs/shortlist-kept', (c) => {
     const ids = c.var.space.jobs.keptInInbox();

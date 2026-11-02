@@ -213,3 +213,34 @@ describe('Intake', () => {
     expect(jobs.detail(job.id).timeline.at(-1)?.text).toBe('CV and cover letter written');
   });
 });
+
+describe('Reset lists', () => {
+  const rules = { ...EMPTY_RULES, title: { positive: ['Grants'], negative: [] } };
+  const offer = (n: number, location = 'London') => ({
+    url: `https://a.org/${n}`,
+    title: 'Grants Manager',
+    company: `C${n}`,
+    location,
+  });
+
+  it('clears the chosen lists and lets a later scan find their jobs again', () => {
+    const space = tempSpace();
+    const first = new Intake(space.db, space.jobs, rules, 'run_1');
+    for (const n of [1, 2, 3]) first.add(offer(n), 'greenhouse');
+    const [kept, archived] = space.jobs.query({ list: 'inbox' }).items;
+    space.jobs.addSource(kept!.id, 'adzuna', 'https://agg.example/1');
+    space.jobs.writeJd(kept!.id, 'The posting.');
+    space.jobs.move({ ids: [archived!.id], to: 'archive', reason: 'not_for_me' }, 'you');
+
+    expect(space.jobs.reset(['inbox'])).toBe(2);
+    expect(space.jobs.counts()).toMatchObject({ inbox: 0, archive: 1 });
+    expect(space.jobs.readJd(kept!.id)).toBeNull();
+
+    const again = new Intake(space.db, space.jobs, rules, 'run_2');
+    for (const n of [1, 2, 3]) again.add(offer(n), 'greenhouse');
+    again.add({ ...offer(1), url: 'https://agg.example/1' }, 'adzuna');
+    // The two cleared jobs come back; the archived one stays archived and isn't added again.
+    expect(again.stats.added).toHaveLength(2);
+    expect(space.jobs.counts()).toMatchObject({ inbox: 2, archive: 1 });
+  });
+});

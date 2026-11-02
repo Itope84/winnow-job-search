@@ -1,6 +1,8 @@
 import { router } from 'expo-router';
+import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { Segmented } from '@/components/inputs';
+import { ResetJobsSheet } from '@/components/ResetJobsSheet';
 import { Button, Icon, Notice, Row, Screen, SectionTitle, T } from '@/components/ui';
 import { api } from '@/lib/api';
 import { useHealth, useJack, useMe, useProfile, useSettings } from '@/lib/hooks';
@@ -24,6 +26,7 @@ export default function You() {
     router.replace('/signin');
   };
   const setSetupLater = usePrefs((s) => s.setSetupLater);
+  const [resetting, setResetting] = useState(false);
   const openSetup = async () => {
     setSetupLater(null);
     if (me?.setup === 'done') {
@@ -121,6 +124,14 @@ export default function You() {
           onPress={() => router.push('/you/people' as never)}
         />
       ) : null}
+      <Row
+        title="Reset jobs"
+        subtitle="Clear lists so new scans can find their jobs again"
+        leading={<Icon name="delete-sweep" tone="lead" />}
+        trailing={<Icon name="chevron-right" tone="faint" />}
+        onPress={() => setResetting(true)}
+      />
+      <ResetJobsSheet open={resetting} onClose={() => setResetting(false)} />
       <View style={{ paddingVertical: space.md, gap: space.sm }}>
         <T variant="caps" tone="lead">
           Theme
