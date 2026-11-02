@@ -33,8 +33,8 @@
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
 \setsansfont{OpenSans}[Path = fonts/opensans/, Extension = .ttf,
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
-% Line height half again the default, as on the CV.
-\linespread{1.5}
+% Line height a quarter more than the default, as on the CV.
+\linespread{1.25}
 \newfontfamily\bodyfont{OpenSans}[Path = fonts/opensans/, Extension = .ttf,
   UprightFont = *-Regular, BoldFont = *-SemiBold, ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
 \newfontfamily\headingfont{Montserrat}[Path = fonts/montserrat/, Extension = .ttf,
