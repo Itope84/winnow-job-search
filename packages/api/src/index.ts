@@ -301,6 +301,7 @@ export const RUN_KINDS = [
   'scan_jack',
   'jack_update',
   'tailor',
+  'find_portal',
 ] as const;
 export type RunKind = (typeof RUN_KINDS)[number];
 
@@ -319,6 +320,7 @@ export const RUN_LABELS: Record<RunKind, string> = {
   scan_jack: 'Jack scan',
   jack_update: 'Draft Jack update',
   tailor: 'CV and letter',
+  find_portal: 'Find careers feed',
 };
 
 export type RunStatus =
@@ -381,6 +383,9 @@ export interface StartRunRequest {
   /** Setup follow-up: which question, and the answer as it stood (the server sets these). */
   question?: string;
   answer?: string;
+  /** Find careers feed: the page someone pasted, and the company's name if they gave one. */
+  url?: string;
+  name?: string;
 }
 
 /** What a scan or AI run costs, shown before it starts. */
@@ -404,6 +409,7 @@ export const RUN_COSTS: Record<RunKind, RunCost> = {
   scan_jack: { paid: false, estimate: 'About 2 min' },
   jack_update: { paid: true, estimate: 'About 1 min' },
   tailor: { paid: true, estimate: '5–10 min' },
+  find_portal: { paid: true, estimate: 'About 1 min' },
 };
 
 // ── Sources, profile, settings ───────────────────────────────────────────────
@@ -417,6 +423,24 @@ export interface SourceEntry {
   provider?: string;
   notes?: string;
   [key: string]: unknown;
+}
+
+/** A job feed found behind a careers page, loaded once to count its jobs. */
+export interface PortalMatch {
+  /** What to save in Companies. */
+  entry: SourceEntry;
+  /** The scanner that reads it ("greenhouse"). */
+  provider: string;
+  jobs: number;
+  /** direct: read as pasted; directory: the company's name in a job system's list; page: what the
+   * page loads; ai: what AI made of the page. */
+  how: 'direct' | 'directory' | 'page' | 'ai';
+}
+
+export interface PortalFind {
+  matches: PortalMatch[];
+  /** The page's title, when it opened. */
+  title: string | null;
 }
 
 export interface SearchQuery {

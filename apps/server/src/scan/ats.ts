@@ -18,10 +18,10 @@ const SLUG = /^[A-Za-z0-9._-]+$/;
 const CONCURRENCY = 20;
 const DEFAULT_SINCE_DAYS = 3;
 
-type Ats = 'greenhouse' | 'lever' | 'ashby' | 'workday';
-const ATS: Ats[] = ['greenhouse', 'lever', 'ashby', 'workday'];
+export type Ats = 'greenhouse' | 'lever' | 'ashby' | 'workday';
+export const ATS: Ats[] = ['greenhouse', 'lever', 'ashby', 'workday'];
 
-function toEntry(ats: Ats, raw: string): SourceEntry | null {
+export function toEntry(ats: Ats, raw: string): SourceEntry | null {
   const s = String(raw);
   const host = (url: string, ok: (h: string) => boolean) => {
     try {
@@ -48,7 +48,7 @@ function toEntry(ats: Ats, raw: string): SourceEntry | null {
   return { name: s, careers_url: `${base}${s}` };
 }
 
-async function companyList(cacheDir: string, ats: Ats): Promise<string[]> {
+export async function companyList(cacheDir: string, ats: Ats): Promise<string[]> {
   mkdirSync(cacheDir, { recursive: true });
   const file = join(cacheDir, `${ats}.json`);
   const fresh = existsSync(file) && Date.now() - statSync(file).mtimeMs < 24 * 3_600_000;
@@ -77,7 +77,7 @@ async function companyList(cacheDir: string, ats: Ats): Promise<string[]> {
 
 /** Boards that answered 404 recently, skipped for two weeks (career-ops `dead-slugs.json`). */
 const DEAD_DAYS = 14;
-function loadDead(cacheDir: string): Map<string, number> {
+export function loadDead(cacheDir: string): Map<string, number> {
   try {
     const raw = JSON.parse(readFileSync(join(cacheDir, 'dead-boards.json'), 'utf8')) as Record<
       string,

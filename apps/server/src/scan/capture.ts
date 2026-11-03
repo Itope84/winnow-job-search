@@ -307,7 +307,8 @@ async function viaPage(url: string, hidden: string[]): Promise<Captured | null> 
 
 let browserPromise: Promise<import('playwright-core').Browser> | null = null;
 
-async function viaBrowser(url: string, hidden: string[]): Promise<Captured | null> {
+/** One headless browser for the server, started on first use; null when Playwright isn't installed. */
+export async function sharedBrowser(): Promise<import('playwright-core').Browser | null> {
   let chromium: typeof import('playwright-core').chromium;
   try {
     ({ chromium } = await import('playwright-core'));
@@ -318,7 +319,14 @@ async function viaBrowser(url: string, hidden: string[]): Promise<Captured | nul
     browserPromise = null;
     throw e;
   });
-  const browser = await browserPromise;
+  return browserPromise;
+}
+
+export const BROWSER_UA = UA;
+
+async function viaBrowser(url: string, hidden: string[]): Promise<Captured | null> {
+  const browser = await sharedBrowser();
+  if (!browser) return null;
   const page = await browser.newPage({ userAgent: UA });
   try {
     const res = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
