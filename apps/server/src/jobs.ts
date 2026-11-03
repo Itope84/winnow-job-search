@@ -501,11 +501,20 @@ export class JobStore {
    */
   reset(lists: JobList[]): number {
     if (!lists.length) return 0;
+    const ids = (
+      this.db
+        .prepare(`SELECT id FROM jobs WHERE list IN (${lists.map(() => '?').join(', ')})`)
+        .all(...lists) as Row[]
+    ).map((r) => r.id as string);
+    return this.forget(ids);
+  }
+
+  /** Delete jobs with their files, and forget their links so a later scan can add them as new. */
+  forget(ids: string[]): number {
+    if (!ids.length) return 0;
     const rows = this.db
-      .prepare(
-        `SELECT id, url, sources FROM jobs WHERE list IN (${lists.map(() => '?').join(', ')})`,
-      )
-      .all(...lists) as Row[];
+      .prepare(`SELECT id, url, sources FROM jobs WHERE id IN (${ids.map(() => '?').join(', ')})`)
+      .all(...ids) as Row[];
     const forget = this.db.prepare('DELETE FROM scan_history WHERE canon_url = ?');
     const drop = this.db.prepare('DELETE FROM jobs WHERE id = ?');
     tx(this.db, () => {
