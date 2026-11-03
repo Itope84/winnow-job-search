@@ -2,6 +2,7 @@ import type {
   AddJobRequest,
   AddJobResult,
   ApplicationFile,
+  CompanyFeed,
   Health,
   JackApplyRequest,
   JackApplyResult,
@@ -21,6 +22,7 @@ import type {
   ProfileDoc,
   Run,
   RunLogLine,
+  SeenCompany,
   Settings,
   SetupDraft,
   SetupFinishRequest,
@@ -175,6 +177,10 @@ export const api = {
 
   sources: () => request<Sources>('/sources'),
   saveSources: (s: Sources) => request<Sources>('/sources', { method: 'PUT', body: s }),
+  seenCompanies: () => request<SeenCompany[]>('/sources/seen'),
+  dismissSeen: (company: string) =>
+    request<{ ok: boolean }>('/sources/seen/dismiss', { method: 'POST', body: { company } }),
+  jobFeed: (id: string) => request<{ feed: CompanyFeed | null }>(`/jobs/${id}/feed`),
   findSource: (entry: { name?: string; careers_url: string }) =>
     request<PortalFind>('/sources/find', { method: 'POST', body: entry }),
   checkSource: (entry: { name?: string; careers_url?: string }) =>

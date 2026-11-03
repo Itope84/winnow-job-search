@@ -25,6 +25,8 @@ export const keys = {
   run: (id: string) => ['run', id] as const,
   review: ['triage-review'] as const,
   sources: ['sources'] as const,
+  seen: ['seen-companies'] as const,
+  jobFeed: (id: string) => ['job-feed', id] as const,
   jobSources: ['job-sources'] as const,
   scans: ['scans'] as const,
   profile: ['profile'] as const,

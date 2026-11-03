@@ -96,6 +96,11 @@ function fresh(r: Row | null): boolean {
   return Date.now() - Date.parse(r.checked_at) < days * 86_400_000;
 }
 
+/** Record what's known about a company's feed (also how tests set one up). */
+export function rememberFeed(company: string, feed: Omit<CompanyFeed, 'company'> | null) {
+  save(companyKey(company), company, feed);
+}
+
 function save(key: string, company: string, feed: Omit<CompanyFeed, 'company'> | null) {
   store
     ?.prepare(

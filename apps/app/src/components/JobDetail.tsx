@@ -15,6 +15,7 @@ import { CompanyTile } from './JobRow';
 import { Markdown } from './Markdown';
 import { RunCard } from './runs';
 import { Sheet } from './Sheet';
+import { TrackCompany } from './TrackCompany';
 import { Button, Divider, Icon, Notice, T } from './ui';
 
 const MOVER: Record<Job['movedBy'], string> = {
@@ -339,6 +340,7 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
             </Pressable>
           ) : null}
         </View>
+        <TrackCompany jobId={job.id} />
       </View>
 
       <View style={[styles.status, { backgroundColor: c.surface }]}>

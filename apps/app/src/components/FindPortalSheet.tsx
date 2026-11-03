@@ -9,7 +9,7 @@ import { space, useTheme } from '@/theme';
 import { Sheet } from './Sheet';
 import { Button, Notice, T } from './ui';
 
-const SYSTEMS: Record<string, string> = {
+export const SYSTEMS: Record<string, string> = {
   greenhouse: 'Greenhouse',
   lever: 'Lever',
   ashby: 'Ashby',
@@ -20,6 +20,9 @@ const SYSTEMS: Record<string, string> = {
   teamtailor: 'Teamtailor',
   recruitee: 'Recruitee',
   bamboohr: 'BambooHR',
+  avature: 'Avature',
+  apple: 'Apple Jobs',
+  google: 'Google Careers',
 };
 const HOW: Record<PortalMatch['how'], string> = {
   direct: 'Read as pasted',
