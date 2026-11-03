@@ -1,6 +1,7 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import type { SourceEntry } from '@winnow/api';
+import { apple } from './boards/apple.ts';
 import { freehire } from './boards/freehire.ts';
 import { deeperLinkedIn, type LinkedInModule } from './boards/linkedin.ts';
 import type { Offer } from './intake.ts';
@@ -51,12 +52,13 @@ export function loadProviders() {
       BROWSER_LIKE_USER_AGENT: string;
     };
     const providers = await registry.loadProviders(PROVIDERS_DIR);
-    // Winnow's own: freehire, and LinkedIn read past its first page.
+    // Winnow's own: freehire, Apple's jobs site, and LinkedIn read past its first page.
     const linkedin = (await import(
       pathToFileURL(join(PROVIDERS_DIR, 'linkedin.mjs')).href
     )) as LinkedInModule;
     providers.set('linkedin', deeperLinkedIn(linkedin, http.BROWSER_LIKE_USER_AGENT));
     providers.set('freehire', freehire);
+    providers.set('apple', apple);
     return { providers, registry, makeHttpCtx: http.makeHttpCtx };
   })();
   return cache;
