@@ -174,7 +174,10 @@ function Matches({
         const link = String(m.entry.api ?? m.entry.careers_url ?? '');
         return (
           <View key={link} style={{ gap: 4 }}>
-            <T variant="title">{`${system} · ${m.jobs.toLocaleString()} ${m.jobs === 1 ? 'job' : 'jobs'}`}</T>
+            <T variant="title">{system}</T>
+            <T variant="bodySmall">
+              {m.sample.length ? `Jobs like ${m.sample.join(' · ')}` : 'No open jobs right now'}
+            </T>
             <T variant="meta" tone="lead">
               {HOW[m.how]}
             </T>

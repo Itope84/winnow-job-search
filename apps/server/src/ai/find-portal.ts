@@ -8,7 +8,7 @@ import { runSkill } from './run-skill.ts';
 /**
  * Find careers feed, the AI step: when no scanner, directory or request of the page names the feed,
  * AI reads what the page loads, links to and says, and names the job system behind it. Winnow loads
- * what it names before offering it, so a wrong guess shows no jobs and is dropped.
+ * what it names before offering it, so a feed that doesn't load is dropped.
  */
 export async function findPortalRun(ctx: RunCtx): Promise<RunOutput> {
   const params = ctx.runs.params(ctx.run.id);
@@ -53,7 +53,7 @@ export async function findPortalRun(ctx: RunCtx): Promise<RunOutput> {
   }
   return {
     summary: matches[0]
-      ? `${matches[0].provider}: ${matches[0].jobs} jobs`
+      ? `${matches[0].provider}: ${matches[0].sample[0] ?? 'no open jobs right now'}`
       : value.link
         ? 'AI named a feed, but no scanner could read it'
         : 'No feed found',

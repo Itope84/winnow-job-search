@@ -7,27 +7,35 @@ import { loadProviders, resolveEntry } from './providers.ts';
  * Find the job system behind a careers page, so a company can be scanned from its feed. In order: a
  * scanner that reads the link as it is; the Greenhouse, Lever, Ashby and Workday company directories,
  * by the company's name; the requests and links the page makes in a headless browser. Each find is
- * loaded once, so the person sees how many jobs it has before saving it. No AI: that is `find_portal`.
+ * loaded, first page only, so the person sees a few of its jobs before saving it. No AI: that is
+ * `find_portal`.
  */
 
 /** Boards search everyone's jobs; a company's own feed is what we're after. */
 const BOARDS = new Set(['linkedin', 'freehire', 'adzuna', 'careerjet', 'remotive', 'remoteok']);
 const MAX_PER_STEP = 4;
 
-/** How many jobs an entry's feed has now, or null when it doesn't load. */
-async function countJobs(entry: SourceEntry, timeoutMs = 20_000): Promise<number | null> {
+/**
+ * A few job titles from the first page of an entry's feed, or null when it doesn't load. Only the first
+ * page: a feed of 6 jobs a page (Avature) takes over a minute to read whole, and the titles show
+ * whether it's the right company better than a count would.
+ */
+async function sampleJobs(entry: SourceEntry, timeoutMs = 20_000): Promise<string[] | null> {
   const hit = await resolveEntry(entry);
   if ('error' in hit || BOARDS.has(hit.provider.id)) return null;
   const { makeHttpCtx } = await loadProviders();
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     const offers = await Promise.race([
-      hit.provider.fetch(entry, makeHttpCtx()),
+      hit.provider.fetch({ ...entry, max_pages: 1 }, makeHttpCtx()),
       new Promise<never>((_, reject) => {
         timer = setTimeout(() => reject(new Error('timed out')), timeoutMs);
       }),
     ]);
-    return Array.isArray(offers) ? offers.length : 0;
+    return (Array.isArray(offers) ? offers : [])
+      .map((o) => String((o as { title?: unknown })?.title ?? '').trim())
+      .filter(Boolean)
+      .slice(0, 3);
   } catch {
     return null;
   } finally {
@@ -50,11 +58,11 @@ export async function confirm(
     unique.slice(0, MAX_PER_STEP * 2).map(async (entry) => {
       const hit = await resolveEntry(entry);
       if ('error' in hit) return;
-      const jobs = await countJobs(entry);
-      if (jobs !== null) out.push({ entry, provider: hit.provider.id, jobs, how });
+      const sample = await sampleJobs(entry);
+      if (sample) out.push({ entry, provider: hit.provider.id, sample, how });
     }),
   );
-  return out.sort((a, b) => b.jobs - a.jobs);
+  return out.sort((a, b) => b.sample.length - a.sample.length);
 }
 
 const squash = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -217,4 +225,5 @@ export async function findPortal(
 }
 
 /** The same feed found two ways (a directory link and the API the page calls): same scanner, same jobs. */
-const same = (a: PortalMatch, b: PortalMatch) => a.provider === b.provider && a.jobs === b.jobs;
+const same = (a: PortalMatch, b: PortalMatch) =>
+  a.provider === b.provider && a.sample.join('|') === b.sample.join('|');

@@ -431,7 +431,8 @@ export interface PortalMatch {
   entry: SourceEntry;
   /** The scanner that reads it ("greenhouse"). */
   provider: string;
-  jobs: number;
+  /** Up to 3 job titles from its first page; empty when it has no open jobs right now. */
+  sample: string[];
   /** direct: read as pasted; directory: the company's name in a job system's list; page: what the
    * page loads; ai: what AI made of the page. */
   how: 'direct' | 'directory' | 'page' | 'ai';
