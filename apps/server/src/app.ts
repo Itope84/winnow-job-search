@@ -40,6 +40,7 @@ import {
   setSources,
 } from './library.ts';
 import type { Runner } from './runs/runner.ts';
+import { dismissFeed, feedForJob, learnFeeds, seenCompanies } from './scan/feeds.ts';
 import { findPortal } from './scan/find-portal.ts';
 import { resolveEntry } from './scan/providers.ts';
 import {
@@ -93,6 +94,9 @@ function startSetupRun(space: Space, runner: Runner, kind: 'profile_draft' | 'so
   );
 }
 
+/** People whose backlog of companies is being looked up now. */
+const learning = new Set<string>();
+
 /** The routes one signed-in person uses. `server.ts` resolves who they are and sets `space` and `runner`. */
 export function spaceRoutes(
   ai: { get: () => ServerAi | null; set: (next: ServerAi) => void },
@@ -126,6 +130,12 @@ export function spaceRoutes(
   });
 
   app.get('/jobs/counts', (c) => c.json(c.var.space.jobs.counts()));
+
+  /** The company's own job feed, to offer on the job's page when the person doesn't track it. */
+  app.get('/jobs/:id/feed', async (c) => {
+    const job = c.var.space.jobs.require(c.req.param('id'));
+    return c.json({ feed: await feedForJob(c.var.space, job) });
+  });
 
   /** Distinct sources in a list, for the filter sheet. */
   app.get('/jobs/sources', (c) => {
@@ -270,6 +280,24 @@ export function spaceRoutes(
     const url = (body.careers_url ?? '').trim();
     if (!/^https?:\/\//.test(url)) throw badRequest('Give a careers page link.');
     return c.json(await findPortal(atsCacheDir, url, body.name));
+  });
+
+  /** Untracked companies that keep turning up in this person's jobs, with their feeds. */
+  app.get('/sources/seen', (c) => {
+    const space = c.var.space;
+    // Companies seen before feeds were learned get looked up in the background, a few at a time.
+    if (!learning.has(space.userId)) {
+      learning.add(space.userId);
+      void learnFeeds(space, undefined, 10).finally(() => learning.delete(space.userId));
+    }
+    return c.json(seenCompanies(space));
+  });
+
+  app.post('/sources/seen/dismiss', async (c) => {
+    const { company } = (await c.req.json()) as { company?: string };
+    if (typeof company !== 'string' || !company.trim()) throw badRequest('Name the company.');
+    dismissFeed(c.var.space, company);
+    return c.json({ ok: true });
   });
 
   /** Which scanner reads a company, if any. */

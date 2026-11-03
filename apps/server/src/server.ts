@@ -28,6 +28,7 @@ import { type Executor, Runner } from './runs/runner.ts';
 import { Slots } from './runs/slots.ts';
 import { atsScanner } from './scan/ats.ts';
 import { captureMany, closeBrowser } from './scan/capture.ts';
+import { openFeeds } from './scan/feeds.ts';
 import { scanPortals } from './scan/portals.ts';
 import { getSetup } from './setup.ts';
 import { openSpace, type Space } from './space.ts';
@@ -45,6 +46,7 @@ export interface Shared {
 /** The server: sign-in, one space and runner per person, the API under /api, and the web app. */
 export function createServer(config: ServerConfig) {
   const users = new Users(config.stateDir);
+  openFeeds(config.stateDir, join(config.stateDir, 'ats-companies'));
   const slots = new Slots({ scan: config.maxRuns.scan, ai: config.maxRuns.ai });
   const spaces = new Map<string, { space: Space; runner: Runner }>();
   const jack = new JackLink(config.stateDir);

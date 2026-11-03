@@ -83,6 +83,11 @@ export class JobStore {
     return row ? this.toJob(row) : null;
   }
 
+  /** Every job in every list. */
+  all(): Job[] {
+    return (this.db.prepare('SELECT * FROM jobs').all() as Row[]).map((r) => this.toJob(r));
+  }
+
   require(id: string): Job {
     const job = this.get(id);
     if (!job) throw notFound('Job');

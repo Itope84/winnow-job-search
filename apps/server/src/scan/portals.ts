@@ -4,6 +4,7 @@ import { getSources } from '../library.ts';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
 import { clip, today } from '../util.ts';
 import { captureMany } from './capture.ts';
+import { learnFeeds } from './feeds.ts';
 import { Intake } from './intake.ts';
 import { loadProviders, resolveEntry } from './providers.ts';
 
@@ -78,6 +79,12 @@ export async function finishScan(
     await captureMany(
       ctx,
       intake.stats.added.filter((id) => !jobs.get(id)?.hasJd),
+    );
+  }
+  if (intake.stats.added.length) {
+    ctx.step('Looking up the job feeds of new companies');
+    await learnFeeds(ctx.space, intake.stats.added).catch((e) =>
+      ctx.log('stderr', `Company feeds: ${(e as Error).message}`),
     );
   }
   const closed = closePastDeadlines(jobs, ctx.run.id);

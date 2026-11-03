@@ -99,6 +99,8 @@ export interface JobSource {
 export interface TriageResult {
   verdict: TriageVerdict;
   reason: string;
+  /** Posted by a recruitment agency or job aggregator, not the employer itself. */
+  agency?: boolean;
   at: string;
   runId: string | null;
 }
@@ -436,6 +438,26 @@ export interface PortalMatch {
   /** direct: read as pasted; directory: the company's name in a job system's list; page: what the
    * page loads; ai: what AI made of the page. */
   how: 'direct' | 'directory' | 'page' | 'ai';
+}
+
+/** A company's own job feed, found from the jobs Winnow has seen. Shared by everyone on a server. */
+export interface CompanyFeed {
+  company: string;
+  entry: SourceEntry;
+  /** The scanner that reads it ("greenhouse"). */
+  provider: string;
+  /** link: a job's own link went to it; name: the company's name in a job system's list, with one of
+   * its jobs in the feed. */
+  how: 'link' | 'name';
+}
+
+/** An untracked company that keeps turning up in someone's jobs, with its feed. */
+export interface SeenCompany {
+  feed: CompanyFeed;
+  /** Jobs from it, in any list. */
+  jobs: number;
+  /** The best score any of them got, or null. */
+  bestScore: number | null;
 }
 
 export interface PortalFind {

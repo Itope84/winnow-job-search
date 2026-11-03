@@ -16,11 +16,11 @@ const BOARDS = new Set(['linkedin', 'freehire', 'adzuna', 'careerjet', 'remotive
 const MAX_PER_STEP = 4;
 
 /**
- * A few job titles from the first page of an entry's feed, or null when it doesn't load. Only the first
- * page: a feed of 6 jobs a page (Avature) takes over a minute to read whole, and the titles show
+ * The job titles on the first page of an entry's feed, or null when it doesn't load. Only the first
+ * page: a feed of 6 jobs a page (Avature) takes over a minute to read whole, and a few titles show
  * whether it's the right company better than a count would.
  */
-async function sampleJobs(entry: SourceEntry, timeoutMs = 20_000): Promise<string[] | null> {
+export async function firstPage(entry: SourceEntry, timeoutMs = 20_000): Promise<string[] | null> {
   const hit = await resolveEntry(entry);
   if ('error' in hit || BOARDS.has(hit.provider.id)) return null;
   const { makeHttpCtx } = await loadProviders();
@@ -34,8 +34,7 @@ async function sampleJobs(entry: SourceEntry, timeoutMs = 20_000): Promise<strin
     ]);
     return (Array.isArray(offers) ? offers : [])
       .map((o) => String((o as { title?: unknown })?.title ?? '').trim())
-      .filter(Boolean)
-      .slice(0, 3);
+      .filter(Boolean);
   } catch {
     return null;
   } finally {
@@ -58,8 +57,8 @@ export async function confirm(
     unique.slice(0, MAX_PER_STEP * 2).map(async (entry) => {
       const hit = await resolveEntry(entry);
       if ('error' in hit) return;
-      const sample = await sampleJobs(entry);
-      if (sample) out.push({ entry, provider: hit.provider.id, sample, how });
+      const titles = await firstPage(entry);
+      if (titles) out.push({ entry, provider: hit.provider.id, sample: titles.slice(0, 3), how });
     }),
   );
   return out.sort((a, b) => b.sample.length - a.sample.length);
@@ -162,9 +161,23 @@ export async function lookAtPage(url: string): Promise<PageLook | null> {
 }
 
 /** A job's link on a job system, cut back to the company's board (…greenhouse.io/acme/jobs/1 → …/acme). */
-function boardOf(url: string): string {
+export function boardOf(url: string): string {
   try {
     const u = new URL(url);
+    const parts = u.pathname.split('/').filter(Boolean);
+    // acme.wd3.myworkdayjobs.com/en-US/External/job/London/Engineer_R1 → …/External
+    if (u.hostname.endsWith('.myworkdayjobs.com')) {
+      const site =
+        parts.find((p, i) => !/^[a-z]{2}-[A-Z]{2}$/.test(p) && parts[i + 1] !== undefined) ??
+        parts[0];
+      if (site && site !== 'job') return `${u.origin}/${site}`;
+    }
+    // jobs.smartrecruiters.com/Acme/7436…, apply.workable.com/acme/j/ABC → the company's board
+    if (
+      /^(jobs|careers)\.smartrecruiters\.com$|^apply\.workable\.com$/.test(u.hostname) &&
+      parts[0]
+    )
+      return `${u.origin}/${parts[0]}`;
     if (
       /(^|\.)(greenhouse\.io|lever\.co|ashbyhq\.com)$/.test(u.hostname) &&
       !u.hostname.startsWith('boards-api') &&

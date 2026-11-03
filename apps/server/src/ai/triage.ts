@@ -11,6 +11,7 @@ interface Verdict {
   id: string;
   verdict: TriageVerdict;
   reason: string;
+  agency: boolean;
 }
 
 /**
@@ -50,7 +51,12 @@ function validate(ids: Set<string>) {
       const verdict = String(r?.verdict ?? '').toLowerCase();
       if (!ids.has(id)) continue;
       if (verdict !== 'keep' && verdict !== 'discard' && verdict !== 'unsure') continue;
-      out.push({ id, verdict, reason: clip(String(r?.reason ?? '').trim(), 300) });
+      out.push({
+        id,
+        verdict,
+        reason: clip(String(r?.reason ?? '').trim(), 300),
+        agency: r?.agency === true,
+      });
     }
     if (!out.length) throw new Error('result.json had no verdicts for these jobs.');
     return out;
@@ -119,11 +125,13 @@ export async function triage(ctx: RunCtx): Promise<RunOutput> {
         id,
         verdict: 'unsure' as const,
         reason: 'Triage gave no answer for this job.',
+        agency: false,
       };
       const noJd = !job.hasJd && v.verdict === 'keep';
       const result: TriageResult = {
         verdict: noJd ? 'unsure' : v.verdict,
         reason: noJd ? `No description to check. ${v.reason}`.trim() : v.reason,
+        ...(v.agency ? { agency: true } : {}),
         at,
         runId: ctx.run.id,
       };

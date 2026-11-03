@@ -60,6 +60,10 @@ with "closes {date}".
 **Unsure** when you can't tell: no description and an ambiguous title, a location you can't read, or a
 requirement that might or might not be a deal-breaker. Never keep a job just because you lack information.
 
+**Agency postings.** Set `"agency": true` when the posting is by a recruitment agency or a job
+aggregator for another employer ("our client", "on behalf of", an agency's name as the company). Judge
+the job itself as usual; this only says who posted it. Leave it out otherwise.
+
 ## Reasons
 
 One plain sentence, at most 20 words, specific to this job and this candidate. Good:
@@ -78,6 +82,7 @@ Write `result.json` in the run folder:
 {
   "results": [
     { "id": "<job id>", "verdict": "keep", "reason": "..." },
+    { "id": "<job id>", "verdict": "unsure", "reason": "...", "agency": true },
     { "id": "<job id>", "verdict": "discard", "reason": "..." },
     { "id": "<job id>", "verdict": "unsure", "reason": "..." }
   ]
