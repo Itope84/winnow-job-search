@@ -37,6 +37,11 @@ export default function Companies() {
             finds the feed behind it.
           </T>
           <SectionTitle>Add a company</SectionTitle>
+          <T variant="meta" tone="lead">
+            Tip: for a large company, search its jobs site first (your country, city or team) and
+            paste that link. Add several for one company if you like: Apple UK and Apple Singapore,
+            say.
+          </T>
           <Field label="Careers page">
             <Input
               value={url}
