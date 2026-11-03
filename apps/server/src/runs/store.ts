@@ -32,6 +32,7 @@ export const FIRST_KINDS: RunKind[] = [
   'profile_draft',
   'sources_suggest',
   'jack_update',
+  'find_portal',
 ];
 
 export const ACTIVE: RunStatus[] = ['queued', 'running', 'needs_input'];

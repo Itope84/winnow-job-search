@@ -94,9 +94,11 @@ export async function fromDirectories(cacheDir: string, names: string[]): Promis
     for (const r of raw) {
       const entry = toEntry(ats, r);
       if (!entry || dead.has(`${ats}:${entry.name}`)) continue;
-      const slug = squash(ats === 'workday' ? String(r).split('|')[0]! : entry.name);
+      const raw = (ats === 'workday' ? String(r).split('|')[0]! : entry.name).toLowerCase();
+      const slug = squash(raw);
       if (names.includes(slug)) exact.push(entry);
-      else if (names.some((n) => n.length >= 4 && slug.startsWith(n) && slug.length - n.length <= 6))
+      // The same company on a regional or numbered board ("acme-eu", "acme2"), not "acmetrade".
+      else if (names.some((n) => raw.startsWith(n) && /^([-_.]|\d)/.test(raw.slice(n.length))))
         prefix.push(entry);
     }
     out.push(...exact, ...prefix.slice(0, 2));
@@ -108,6 +110,8 @@ export interface PageLook {
   title: string | null;
   /** Requests the page made and links on it, outside the page's own site first. */
   urls: string[];
+  /** The page's visible text, for AI when nothing is recognised. */
+  text: string;
 }
 
 /** Open the page in a headless browser and note every request it makes and every link and frame. */
@@ -124,14 +128,24 @@ export async function lookAtPage(url: string): Promise<PageLook | null> {
     await page.waitForLoadState('networkidle', { timeout: 8_000 }).catch(() => {});
     const links = await page
       .$$eval('a[href], iframe[src]', (els) =>
-        els.map((e) => (e as HTMLAnchorElement).href || (e as HTMLIFrameElement).src),
+        els.map(
+          (e) =>
+            (e as unknown as { href?: string; src?: string }).href ||
+            (e as unknown as { src?: string }).src ||
+            '',
+        ),
       )
       .catch(() => [] as string[]);
     const title = await page.title().catch(() => null);
+    const text = await page.innerText('body').catch(() => '');
     const home = new URL(url).hostname.split('.').slice(-2).join('.');
     const all = [...requests, ...links].filter((u) => /^https?:/.test(u));
     const away = all.filter((u) => !new URL(u).hostname.endsWith(home));
-    return { title, urls: [...new Set([...away, ...all])].slice(0, 400) };
+    return {
+      title,
+      urls: [...new Set([...away, ...all])].slice(0, 400),
+      text: text.slice(0, 8000),
+    };
   } catch {
     return null;
   } finally {
@@ -139,10 +153,26 @@ export async function lookAtPage(url: string): Promise<PageLook | null> {
   }
 }
 
+/** A job's link on a job system, cut back to the company's board (…greenhouse.io/acme/jobs/1 → …/acme). */
+function boardOf(url: string): string {
+  try {
+    const u = new URL(url);
+    if (
+      /(^|\.)(greenhouse\.io|lever\.co|ashbyhq\.com)$/.test(u.hostname) &&
+      !u.hostname.startsWith('boards-api') &&
+      !u.hostname.startsWith('api.')
+    ) {
+      const slug = u.searchParams.get('for') ?? u.pathname.split('/').filter(Boolean)[0];
+      if (slug && slug !== 'embed') return `${u.origin}/${slug}`;
+    }
+  } catch {}
+  return url;
+}
+
 /** Entries a scanner recognises among the page's requests and links. */
 export async function fromPage(look: PageLook): Promise<SourceEntry[]> {
   const out: SourceEntry[] = [];
-  for (const url of look.urls) {
+  for (const url of [...new Set(look.urls.map(boardOf))]) {
     for (const entry of [{ careers_url: url }, { api: url }]) {
       const e = { name: 'Company', ...entry };
       const hit = await resolveEntry(e);
@@ -169,15 +199,21 @@ export async function findPortal(
     enabled: true,
   });
   const direct = await confirm([{ name: name || 'Company', careers_url: url }], 'direct');
-  if (direct.length) return { matches: direct.map((m) => ({ ...m, entry: label(m.entry) })), title: null };
+  if (direct.length)
+    return { matches: direct.map((m) => ({ ...m, entry: label(m.entry) })), title: null };
 
   const look = await lookAtPage(url);
   const names = namesFor(url, [name, look?.title]);
   const byName = await confirm(await fromDirectories(cacheDir, names), 'directory');
   const fromLook = look ? await confirm(await fromPage(look), 'page') : [];
   // What the page itself loads beats a name match.
-  const matches = [...fromLook, ...byName.filter((m) => !fromLook.some((f) => same(f, m)))];
-  return { matches: matches.map((m) => ({ ...m, entry: label(m.entry) })), title: look?.title ?? null };
+  const matches = [...fromLook, ...byName].filter(
+    (m, i, all) => all.findIndex((x) => same(x, m)) === i,
+  );
+  return {
+    matches: matches.map((m) => ({ ...m, entry: label(m.entry) })),
+    title: look?.title ?? null,
+  };
 }
 
 /** The same feed found two ways (a directory link and the API the page calls): same scanner, same jobs. */

@@ -40,6 +40,7 @@ import {
   setSources,
 } from './library.ts';
 import type { Runner } from './runs/runner.ts';
+import { findPortal } from './scan/find-portal.ts';
 import { resolveEntry } from './scan/providers.ts';
 import {
   confirmProfile,
@@ -96,6 +97,8 @@ function startSetupRun(space: Space, runner: Runner, kind: 'profile_draft' | 'so
 export function spaceRoutes(
   ai: { get: () => ServerAi | null; set: (next: ServerAi) => void },
   jack: JackLink,
+  /** Where the full ATS scan keeps the company directories; the careers feed finder searches them. */
+  atsCacheDir: string,
 ) {
   const app = new Hono<SpaceEnv>();
 
@@ -259,6 +262,14 @@ export function spaceRoutes(
       throw badRequest('Sources need companies, boards, queries and rules.');
     setSources(c.var.space.db, body, c.var.space.events);
     return c.json(getSources(c.var.space.db));
+  });
+
+  /** The job feed behind a careers page, without AI: the link itself, the directories, the page's requests. */
+  app.post('/sources/find', async (c) => {
+    const body = (await c.req.json()) as { name?: string; careers_url?: string };
+    const url = (body.careers_url ?? '').trim();
+    if (!/^https?:\/\//.test(url)) throw badRequest('Give a careers page link.');
+    return c.json(await findPortal(atsCacheDir, url, body.name));
   });
 
   /** Which scanner reads a company, if any. */

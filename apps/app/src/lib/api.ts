@@ -17,6 +17,7 @@ import type {
   ListCounts,
   Me,
   MoveRequest,
+  PortalFind,
   ProfileDoc,
   Run,
   RunLogLine,
@@ -174,6 +175,8 @@ export const api = {
 
   sources: () => request<Sources>('/sources'),
   saveSources: (s: Sources) => request<Sources>('/sources', { method: 'PUT', body: s }),
+  findSource: (entry: { name?: string; careers_url: string }) =>
+    request<PortalFind>('/sources/find', { method: 'POST', body: entry }),
   checkSource: (entry: { name?: string; careers_url?: string }) =>
     request<{ ok: boolean; provider?: string; message?: string }>('/sources/check', {
       method: 'POST',

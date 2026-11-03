@@ -130,6 +130,19 @@ export class Runner {
         );
         break;
       }
+      case 'find_portal': {
+        if (!req.url || !/^https?:\/\//.test(req.url))
+          throw badRequest('Give a careers page link.');
+        created.push(
+          this.store.create({
+            kind: 'find_portal',
+            title: RUN_LABELS.find_portal,
+            subtitle: req.name || new URL(req.url).hostname,
+            params: { url: req.url, name: req.name ?? '' },
+          }),
+        );
+        break;
+      }
       case 'setup_followup': {
         const answer = (req.answer ?? '').trim();
         if (!req.question || !answer) throw badRequest('There is no answer to follow up on.');
@@ -213,6 +226,12 @@ export class Runner {
     if (JOB_KINDS.includes(run.kind)) return this.enqueue({ kind: run.kind, jobIds: run.jobIds });
     if (run.kind === 'cv_import')
       return this.enqueue({ kind: run.kind, upload: String(params.upload ?? '') });
+    if (run.kind === 'find_portal')
+      return this.enqueue({
+        kind: run.kind,
+        url: String(params.url ?? ''),
+        name: String(params.name ?? ''),
+      });
     if (run.kind === 'setup_followup')
       return this.enqueue({
         kind: run.kind,

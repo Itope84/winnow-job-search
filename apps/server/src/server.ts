@@ -9,6 +9,7 @@ import { opencodeAdapter } from './adapters/opencode.ts';
 import { replayAdapter } from './adapters/replay.ts';
 import type { CliAdapter } from './adapters/types.ts';
 import { cvImport } from './ai/cv-import.ts';
+import { findPortalRun } from './ai/find-portal.ts';
 import { installSkills } from './ai/run-skill.ts';
 import { score } from './ai/score.ts';
 import { aiSearch } from './ai/search.ts';
@@ -72,6 +73,7 @@ export function createServer(config: ServerConfig) {
     scan_jack: jackScan(jack),
     jack_update: jackDraft(jack),
     tailor,
+    find_portal: findPortalRun,
     capture: async (ctx) => {
       await captureMany(ctx, ctx.run.jobIds);
       const read = ctx.run.jobIds.filter((id) => ctx.space.jobs.get(id)?.hasJd).length;
@@ -229,7 +231,11 @@ export function createServer(config: ServerConfig) {
 
   api.route(
     '/',
-    spaceRoutes({ get: serverAi, set: (next) => users.setServerSetting('ai', next) }, jack),
+    spaceRoutes(
+      { get: serverAi, set: (next) => users.setServerSetting('ai', next) },
+      jack,
+      join(config.stateDir, 'ats-companies'),
+    ),
   );
 
   // ── One origin: the API under /api and the web app everywhere else ─────────

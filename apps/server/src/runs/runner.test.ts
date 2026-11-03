@@ -63,6 +63,7 @@ function setup(
       scan_jack: never,
       jack_update: never,
       tailor: never,
+      find_portal: never,
       ...executors,
     },
     () => replayAdapter(replay),
