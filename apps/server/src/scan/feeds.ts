@@ -200,8 +200,11 @@ export async function learnFeeds(space: Space, jobIds?: string[], limit = 15): P
     ? new Set(jobIds.map((id) => companyKey(space.jobs.get(id)?.company ?? '')))
     : new Set(groups.keys());
   let looked = 0;
-  // Most-seen companies first: they're the ones worth suggesting.
-  for (const [key, g] of [...groups].sort((a, b) => b[1].jobs.length - a[1].jobs.length)) {
+  // The ones worth suggesting first: a job scored in the Apply band or above, then the most seen.
+  const apply = getSettings(space.db).bands.apply;
+  const rank = (g: { jobs: Job[] }) =>
+    (g.jobs.some((j) => (j.score?.score ?? 0) >= apply) ? 10_000 : 0) + g.jobs.length;
+  for (const [key, g] of [...groups].sort((a, b) => rank(b[1]) - rank(a[1]))) {
     if (looked >= limit) break;
     if (!wanted.has(key) || isAgency(g) || fresh(stored(key)) || tracked(space, g.company, null))
       continue;
