@@ -85,6 +85,20 @@ const UNKNOWN_PLACE = /^(location\s+)?(unknown|not specified|unspecified|n\/a|tb
 const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 /** A word or phrase on its own, not inside a longer word ("london" in "London (Hybrid)", not "Londonderry"). */
 const wordRe = (term: string) => new RegExp(`(^|[^a-z0-9])${escape(term)}($|[^a-z0-9])`);
+/** A location that only says how ("Hybrid", "In-Office"), not where: the place is unknown, not wrong. */
+const NO_PLACE = [
+  ...MODE_WORDS,
+  'in-office',
+  'office',
+  'office based',
+  'office-based',
+  'flexible',
+].map((w) => new RegExp(`(^|[^a-z0-9])${escape(w)}(?=$|[^a-z0-9])`, 'g'));
+const placeless = (lower: string) => {
+  let rest = lower;
+  for (const re of NO_PLACE) rest = rest.replace(re, ' ');
+  return !rest.replace(/[^a-z0-9]+/g, '');
+};
 const namesFor = (place: string) => COUNTRY_NAMES.find((g) => g.includes(place)) ?? [place];
 
 /** The countries the person's allowed places are in, under all their names. */
@@ -182,6 +196,8 @@ export function compileRules(rules: Rules, now = Date.now()): CompiledRules {
       const b = block.find((k) => lower.includes(k));
       if (b) return `Location “${location}” is blocked (${b})`;
       if (!allow.length || allow.some((matches) => matches(lower))) return null;
+      // No place named: triage reads the posting for it.
+      if (placeless(lower)) return null;
       return `Location “${location}” is outside your locations`;
     },
     salary(salary) {

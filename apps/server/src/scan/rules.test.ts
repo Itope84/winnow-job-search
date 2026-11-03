@@ -47,6 +47,11 @@ describe('location rule', () => {
     expect(rules.location('')).toBeNull();
     expect(rules.location('Location unknown')).toBeNull();
   });
+  it('passes a location that only names a way of working', () => {
+    for (const l of ['Hybrid', 'In-Office', 'On-site', 'Hybrid / In office', 'Flexible'])
+      expect(rules.location(l)).toBeNull();
+    expect(rules.location('Hybrid - Berlin')).toMatch(/outside your locations/);
+  });
 });
 
 describe('allowed places as setup writes them', () => {
