@@ -86,6 +86,7 @@ describe('importCareerOps', () => {
       applied: 1,
       archive: 3,
       kept: 1,
+      due: 0,
     });
     expect(first.triaged).toBe(2);
     expect(first.descriptions).toBe(1);

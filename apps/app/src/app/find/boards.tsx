@@ -1,3 +1,4 @@
+import { BOARD_CATALOGUE, boardEntry } from '@winnow/api';
 import { View } from 'react-native';
 import { Loading, SaveBar, ToggleRow, useSourcesDraft } from '@/components/SourceEditors';
 import { Header, Screen, SectionTitle, T } from '@/components/ui';
@@ -6,6 +7,9 @@ import { space } from '@/theme';
 /** Job boards and aggregators: one query across many employers each. */
 export default function Boards() {
   const { draft, update, save, dirty, saving, loading } = useSourcesDraft();
+  const available = draft
+    ? BOARD_CATALOGUE.filter((info) => !draft.boards.some((b) => b.provider === info.provider))
+    : [];
   return (
     <Screen
       header={<Header title="Job boards" />}
@@ -43,8 +47,27 @@ export default function Boards() {
           ))}
           {!draft.boards.length ? (
             <T variant="bodySmall" tone="lead">
-              No boards yet. Import from career-ops brings yours over.
+              No boards yet. Import from career-ops brings yours over, or switch one on below.
             </T>
+          ) : null}
+          {available.length ? (
+            <>
+              <SectionTitle>Available boards</SectionTitle>
+              <T variant="bodySmall" tone="lead">
+                Switching one on searches it with your title words and place.
+              </T>
+              {available.map((info) => (
+                <ToggleRow
+                  key={info.provider}
+                  title={info.name}
+                  subtitle={info.blurb}
+                  value={false}
+                  onChange={(v) =>
+                    v && update((s) => ({ ...s, boards: [...s.boards, boardEntry(info, s.rules)] }))
+                  }
+                />
+              ))}
+            </>
           ) : null}
         </View>
       )}

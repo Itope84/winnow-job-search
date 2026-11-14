@@ -2,7 +2,9 @@ import type {
   AddJobRequest,
   AddJobResult,
   ApplicationFile,
+  CatalogueItem,
   CompanyFeed,
+  CoverageReport,
   Health,
   JackApplyRequest,
   JackApplyResult,
@@ -17,9 +19,13 @@ import type {
   JobQuery,
   ListCounts,
   Me,
+  Mode,
   MoveRequest,
+  OppPlan,
+  PlanUpdate,
   PortalFind,
   ProfileDoc,
+  Referee,
   Run,
   RunLogLine,
   SeenCompany,
@@ -29,6 +35,7 @@ import type {
   SetupState,
   Sources,
   StartRunRequest,
+  StudyPrefs,
 } from '@winnow/api';
 import { Platform } from 'react-native';
 
@@ -138,6 +145,8 @@ export const api = {
         minScore: q.minScore,
         reason: q.reason,
         stage: q.stage,
+        kind: q.kind,
+        due: q.dueWithinDays,
         sort: q.sort,
         cursor: q.cursor,
         limit: q.limit,
@@ -231,6 +240,32 @@ export const api = {
   jackApply: (req: JackApplyRequest) =>
     request<JackApplyResult>('/connections/jack/apply', { method: 'POST', body: req }),
 
+  setMode: (mode: Mode) => request<{ mode: Mode }>('/mode', { method: 'POST', body: { mode } }),
+  study: () => request<StudyPrefs>('/study'),
+  saveStudy: (s: Partial<StudyPrefs>) => request<StudyPrefs>('/study', { method: 'PUT', body: s }),
+  coverage: () => request<CoverageReport>('/coverage'),
+  catalogue: () => request<CatalogueItem[]>('/catalogue'),
+  addCatalogue: (body: { urls?: string[]; fitting?: boolean }) =>
+    request<Sources>('/catalogue/add', { method: 'POST', body }),
+  savePlan: (id: string, patch: PlanUpdate) =>
+    request<OppPlan>(`/jobs/${encodeURIComponent(id)}/plan`, { method: 'PUT', body: patch }),
+  link: (id: string, other: string) =>
+    request<Job>(`/jobs/${encodeURIComponent(id)}/links`, { method: 'POST', body: { other } }),
+  unlink: (id: string, other: string) =>
+    request<Job>(`/jobs/${encodeURIComponent(id)}/links/${encodeURIComponent(other)}`, {
+      method: 'DELETE',
+    }),
+  referees: () => request<Referee[]>('/referees'),
+  saveReferees: (r: Referee[]) => request<Referee[]>('/referees', { method: 'PUT', body: r }),
+  uploadStatementPdf: (file: Blob, name: string) =>
+    request<ProfileDoc>('/profile/statement/pdf', {
+      method: 'POST',
+      body: file,
+      headers: { 'x-file-name': encodeURIComponent(name) },
+    }),
+  pasteStatement: (text: string) =>
+    request<ProfileDoc>('/profile/statement/text', { method: 'POST', body: { text } }),
+
   people: () =>
     request<
       {
@@ -240,10 +275,13 @@ export const api = {
         admin: boolean;
         disabled: boolean;
         hasPassword: boolean;
+        mode: Mode;
       }[]
     >('/admin/users'),
-  addPerson: (p: { id: string; email: string; name: string }) =>
+  addPerson: (p: { id: string; email: string; name: string; mode?: Mode }) =>
     request<{ invite: string }>('/admin/users', { method: 'POST', body: p }),
+  setPersonMode: (id: string, mode: Mode) =>
+    request<{ mode: Mode }>(`/admin/users/${id}/mode`, { method: 'POST', body: { mode } }),
   reinvite: (id: string) =>
     request<{ invite: string }>(`/admin/users/${id}/invite`, { method: 'POST', body: {} }),
 };

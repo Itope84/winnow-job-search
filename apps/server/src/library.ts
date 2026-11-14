@@ -41,6 +41,7 @@ export function libraryPaths(library: string) {
     narrative: join(profileDir, 'narrative.md'),
     profileYaml: join(profileDir, 'profile.yml'),
     extras: join(profileDir, 'extras.md'),
+    statement: join(profileDir, 'statement.md'),
     runsDir: join(library, 'runs'),
   };
 }
@@ -70,6 +71,7 @@ export class Profile {
       narrative: read(this.p.narrative),
       profileYaml: read(this.p.profileYaml),
       extras: read(this.p.extras),
+      statement: read(this.p.statement),
     };
   }
 
@@ -85,6 +87,7 @@ export class Profile {
     if (doc.cv !== undefined) writeFileAtomic(this.p.cv, doc.cv);
     if (doc.narrative !== undefined) writeFileAtomic(this.p.narrative, doc.narrative);
     if (doc.extras !== undefined) writeFileAtomic(this.p.extras, doc.extras);
+    if (doc.statement !== undefined) writeFileAtomic(this.p.statement, doc.statement);
     this.events?.emit('profile.changed', {});
   }
 

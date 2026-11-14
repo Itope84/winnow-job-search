@@ -1,0 +1,17 @@
+{
+  "steps": [
+    {
+      "event": {
+        "type": "text",
+        "text": "[winnow] 1/5 Searching"
+      }
+    },
+    {
+      "delay": 20,
+      "write": {
+        "path": "result.json",
+        "content": "{\"items\": [{\"kind\": \"programme\", \"url\": \"https://replay.example/de/msc-molmed\", \"title\": \"MSc Molecular Medicine\", \"org\": \"Replay University Germany\", \"country\": \"Germany\", \"funding\": \"tuition_free\", \"covers\": \"No tuition\", \"deadline\": \"2099-01-15\", \"why\": \"Replay\"}], \"checked\": 12, \"note\": \"Replay: 12 checked, 1 fits\"}"
+      }
+    }
+  ]
+}

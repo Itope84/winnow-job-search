@@ -15,6 +15,7 @@ import { api } from '@/lib/api';
 import { companyLabel } from '@/lib/format';
 import { useCounts, useJobSources, useRestore, useReview } from '@/lib/hooks';
 import { refreshJobs } from '@/lib/query';
+import { useMode } from '@/lib/study';
 import { fonts, radius, space, type, useTheme } from '@/theme';
 import { Chip } from './chips';
 import { Sheet } from './Sheet';
@@ -28,6 +29,9 @@ export interface Filters {
   reason?: ArchiveReason;
   stage?: Stage;
   sort?: JobSort;
+  /** Scholarships mode. */
+  kind?: 'scholarship' | 'programme';
+  dueWithinDays?: number;
 }
 
 /** Inbox · Shortlist · Scored · Applied · Archive, each with its live count. */
@@ -184,6 +188,7 @@ export function FilterSheet({
   onChange: (f: Filters) => void;
 }) {
   const sources = useJobSources().data ?? [];
+  const study = useMode() === 'scholarships';
   const set = (patch: Partial<Filters>) => onChange({ ...value, ...patch });
   return (
     <Sheet
@@ -196,13 +201,37 @@ export function FilterSheet({
         Sort
       </T>
       <Choice<JobSort | undefined>
-        options={[undefined, ...JOB_SORTS]}
+        options={[undefined, ...JOB_SORTS.filter((x) => study || x !== 'deadline')]}
         value={value.sort}
         label={(v) => (v ? JOB_SORT_LABELS[v] : 'Default')}
         onChange={(sort) => set({ sort })}
       />
+      {study ? (
+        <>
+          <T variant="caps" tone="lead" style={{ marginBottom: 6 }}>
+            Show
+          </T>
+          <Choice<Filters['kind']>
+            options={[undefined, 'scholarship', 'programme']}
+            value={value.kind}
+            label={(v) =>
+              v === 'scholarship' ? 'Scholarships' : v === 'programme' ? 'Programmes' : 'Both'
+            }
+            onChange={(kind) => set({ kind })}
+          />
+          <T variant="caps" tone="lead" style={{ marginBottom: 6 }}>
+            Due within
+          </T>
+          <Choice
+            options={[undefined, 14, 30, 60, 90]}
+            value={value.dueWithinDays}
+            label={(v) => (v ? `${v} days` : 'Any time')}
+            onChange={(dueWithinDays) => set({ dueWithinDays })}
+          />
+        </>
+      ) : null}
       <T variant="caps" tone="lead" style={{ marginBottom: 6 }}>
-        Posted within
+        {study ? 'Found within' : 'Posted within'}
       </T>
       <Choice
         options={WITHIN}
@@ -276,6 +305,9 @@ export function ActiveFilters({
 }) {
   const { c } = useTheme();
   const chips: [keyof Filters, string][] = [];
+  if (value.kind)
+    chips.push(['kind', value.kind === 'scholarship' ? 'Scholarships' : 'Programmes']);
+  if (value.dueWithinDays) chips.push(['dueWithinDays', `Due ≤ ${value.dueWithinDays}d`]);
   if (value.withinDays) chips.push(['withinDays', `Posted ≤ ${value.withinDays}d`]);
   if (value.minScore) chips.push(['minScore', `Score ≥ ${value.minScore.toFixed(1)}`]);
   if (value.reason) chips.push(['reason', ARCHIVE_REASON_LABELS[value.reason]]);

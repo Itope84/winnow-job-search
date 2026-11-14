@@ -1,8 +1,9 @@
 import type { Run, RunKind, RunLane, Settings, StartRunRequest } from '@winnow/api';
-import { RUN_LABELS } from '@winnow/api';
+import { RUN_LABELS, runLabel } from '@winnow/api';
 import type { CliAdapter } from '../adapters/types.ts';
 import { effectiveSettings, getSettings, getSources, type ServerAi } from '../library.ts';
 import type { Space } from '../space.ts';
+import { getMode } from '../study/mode.ts';
 import { badRequest, clip, conflict, nowIso } from '../util.ts';
 import type { Slots } from './slots.ts';
 import { ACTIVE, FIRST_KINDS, RunStore } from './store.ts';
@@ -43,7 +44,25 @@ export class Cancelled extends Error {
 }
 
 /** Runs that work on particular jobs, shown on those jobs while they go. */
-const JOB_KINDS: RunKind[] = ['score', 'triage', 'capture', 'tailor'];
+const JOB_KINDS: RunKind[] = [
+  'score',
+  'triage',
+  'capture',
+  'tailor',
+  'match_programmes',
+  'find_funding',
+  'essays',
+];
+
+/** Runs that judge or write against the CV and profile, so refuse until there is one. */
+const NEEDS_PROFILE: RunKind[] = [
+  'triage',
+  'score',
+  'tailor',
+  'match_programmes',
+  'find_funding',
+  'essays',
+];
 
 /** One person's runner. Scans and AI work queue in two lanes; the server-wide Slots cap how many run at once. */
 export class Runner {
@@ -75,26 +94,36 @@ export class Runner {
   enqueue(req: StartRunRequest): Run[] {
     const jobs = this.space.jobs;
     const created: Run[] = [];
-    if (req.kind === 'triage' || req.kind === 'score' || req.kind === 'tailor') {
+    const mode = getMode(this.space.db);
+    const label = (k: RunKind) => runLabel(k, mode);
+    if (NEEDS_PROFILE.includes(req.kind)) {
       const ready = this.space.profile.ready();
       if (!ready.cv || !ready.profile)
         throw badRequest(
-          `${RUN_LABELS[req.kind]} needs your CV and profile to judge jobs against. Finish setting up first.`,
+          `${label(req.kind)} needs your CV and profile to judge against. Finish setting up first.`,
         );
     }
     switch (req.kind) {
       case 'score':
-      case 'tailor': {
+      case 'tailor':
+      case 'match_programmes':
+      case 'find_funding':
+      case 'essays': {
         const ids = req.jobIds ?? [];
-        if (!ids.length) throw badRequest('Pick at least one job.');
+        if (!ids.length) throw badRequest('Pick at least one item.');
         for (const id of ids) {
           const job = jobs.require(id);
+          if (req.kind === 'match_programmes' && job.kind !== 'scholarship')
+            throw badRequest('Find programmes works on scholarships.');
+          if (req.kind === 'find_funding' && job.kind !== 'programme')
+            throw badRequest('Find funding works on programmes.');
           if (this.activeFor(id, req.kind)) continue;
+          const who = job.kind === 'job' ? job.company : job.role;
           created.push(
             this.store.create({
               kind: req.kind,
-              title: `${RUN_LABELS[req.kind]} · ${job.company && job.company !== '?' ? job.company : 'Job'}`,
-              subtitle: clip(job.role, 80),
+              title: `${label(req.kind)} · ${who && who !== '?' ? clip(who, 60) : 'Item'}`,
+              subtitle: clip(job.kind === 'job' ? job.role : job.company, 80),
               jobIds: [id],
             }),
           );
@@ -107,11 +136,11 @@ export class Runner {
           ids = jobs.ids("list = 'inbox' AND triage_verdict IS NULL");
         ids = ids.filter((id) => !this.activeFor(id, 'triage'));
         if (!ids.length)
-          throw badRequest('Nothing to triage: every inbox job already has a verdict.');
+          throw badRequest('Nothing to triage: everything in Inbox already has a verdict.');
         created.push(
           this.store.create({
             kind: 'triage',
-            title: `Triage · ${ids.length} job${ids.length === 1 ? '' : 's'}`,
+            title: `Triage · ${ids.length} ${mode === 'jobs' ? 'job' : 'item'}${ids.length === 1 ? '' : 's'}`,
             jobIds: ids,
           }),
         );
@@ -173,14 +202,18 @@ export class Runner {
         const busy = this.store.list({ active: true }).find((r) => r.kind === req.kind);
         if (busy)
           throw conflict(
-            `${RUN_LABELS[req.kind]} is already ${busy.status === 'queued' ? 'waiting' : 'running'}.`,
+            `${label(req.kind)} is already ${busy.status === 'queued' ? 'waiting' : 'running'}.`,
           );
-        if (req.kind === 'scan_ai' && !getSources(this.space.db).queries.some((q) => q.enabled))
+        if (
+          req.kind === 'scan_ai' &&
+          mode === 'jobs' &&
+          !getSources(this.space.db).queries.some((q) => q.enabled)
+        )
           throw badRequest('Add an AI search query first (Find › AI search queries).');
         created.push(
           this.store.create({
             kind: req.kind,
-            title: RUN_LABELS[req.kind],
+            title: label(req.kind),
             subtitle: req.options?.auto
               ? req.options.radarOnly
                 ? 'Automatic · new Jill roles'

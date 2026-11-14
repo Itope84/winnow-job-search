@@ -8,6 +8,7 @@ import { api } from '@/lib/api';
 import { useHealth, useJack, useMe, useProfile, useSettings } from '@/lib/hooks';
 import { usePrefs } from '@/lib/prefs';
 import { keys, queryClient } from '@/lib/query';
+import { useMode } from '@/lib/study';
 import { space, type, useTheme } from '@/theme';
 
 export default function You() {
@@ -17,6 +18,7 @@ export default function You() {
   const settings = useSettings().data;
   const health = useHealth().data;
   const jack = useJack().data;
+  const study = useMode() === 'scholarships';
   const theme = usePrefs((s) => s.theme);
   const setTheme = usePrefs((s) => s.setTheme);
   const signOut = async () => {
@@ -49,7 +51,7 @@ export default function You() {
           tone="warning"
           icon="warning-amber"
           title="Triage and scoring need your CV and targets"
-          body="Add them below so the AI judges jobs against you."
+          body={`Add them below so the AI judges ${study ? 'scholarships' : 'jobs'} against you.`}
         />
       ) : null}
       <SectionTitle>What steers triage and scoring</SectionTitle>
@@ -60,9 +62,22 @@ export default function You() {
         trailing={<Icon name="chevron-right" tone="faint" />}
         onPress={() => router.push('/you/cv' as never)}
       />
+      {study ? (
+        <Row
+          title="Study preferences"
+          subtitle="Subjects, places, nationality, English, your own words, referees"
+          leading={<Icon name="school" tone="lead" />}
+          trailing={<Icon name="chevron-right" tone="faint" />}
+          onPress={() => router.push('/you/study' as never)}
+        />
+      ) : null}
       <Row
-        title="Profile and targets"
-        subtitle="Who you are, your North Star, roles, places, pay, deal-breakers"
+        title={study ? 'Profile' : 'Profile and targets'}
+        subtitle={
+          study
+            ? 'Who you are, your story, strengths and plans'
+            : 'Who you are, your North Star, roles, places, pay, deal-breakers'
+        }
         leading={<Icon name="flag" tone="lead" />}
         trailing={<Icon name="chevron-right" tone="faint" />}
         onPress={() => router.push('/you/profile' as never)}
@@ -89,20 +104,22 @@ export default function You() {
         trailing={<Icon name="chevron-right" tone="faint" />}
         onPress={() => void openSetup()}
       />
-      <SectionTitle>Connections</SectionTitle>
-      <Row
-        title="Jack & Jill"
-        subtitle={
-          jack?.connected
-            ? jack.problem
-              ? 'Needs reconnecting'
-              : 'Connected'
-            : 'Connect your Jack account to search the jobs Jack finds'
-        }
-        leading={<Icon name="link" tone="lead" />}
-        trailing={<Icon name="chevron-right" tone="faint" />}
-        onPress={() => router.push('/you/jack' as never)}
-      />
+      {study ? null : <SectionTitle>Connections</SectionTitle>}
+      {study ? null : (
+        <Row
+          title="Jack & Jill"
+          subtitle={
+            jack?.connected
+              ? jack.problem
+                ? 'Needs reconnecting'
+                : 'Connected'
+              : 'Connect your Jack account to search the jobs Jack finds'
+          }
+          leading={<Icon name="link" tone="lead" />}
+          trailing={<Icon name="chevron-right" tone="faint" />}
+          onPress={() => router.push('/you/jack' as never)}
+        />
+      )}
       <SectionTitle>Settings</SectionTitle>
       <Row
         title="AI"
@@ -125,8 +142,8 @@ export default function You() {
         />
       ) : null}
       <Row
-        title="Reset jobs"
-        subtitle="Clear lists so new scans can find their jobs again"
+        title={study ? 'Reset lists' : 'Reset jobs'}
+        subtitle={`Clear lists so new scans can find their ${study ? 'items' : 'jobs'} again`}
         leading={<Icon name="delete-sweep" tone="lead" />}
         trailing={<Icon name="chevron-right" tone="faint" />}
         onPress={() => setResetting(true)}

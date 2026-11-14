@@ -2,6 +2,7 @@ import type { SourceEntry } from '@winnow/api';
 import type { JobStore } from '../jobs.ts';
 import { getSources } from '../library.ts';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
+import { getMode } from '../study/mode.ts';
 import { clip, today } from '../util.ts';
 import { captureMany } from './capture.ts';
 import { learnFeeds } from './feeds.ts';
@@ -81,7 +82,8 @@ export async function finishScan(
       intake.stats.added.filter((id) => !jobs.get(id)?.hasJd),
     );
   }
-  if (intake.stats.added.length) {
+  // Company job feeds mean nothing for scholarships and programmes.
+  if (intake.stats.added.length && getMode(ctx.space.db) === 'jobs') {
     ctx.step('Looking up the job feeds of new companies');
     await learnFeeds(ctx.space, intake.stats.added).catch((e) =>
       ctx.log('stderr', `Company feeds: ${(e as Error).message}`),
@@ -118,17 +120,15 @@ export async function finishScan(
 
 /** Archive open jobs whose stated deadline has passed. Applied jobs stay where they are. */
 export function closePastDeadlines(jobs: JobStore, runId: string | null): number {
-  const ids = jobs.ids(
-    "list IN ('inbox', 'shortlist', 'scored') AND json_extract(posting, '$.deadline') < ?",
-    today(),
-  );
+  const ids = jobs.ids("list IN ('inbox', 'shortlist', 'scored') AND due < ?", today());
   for (const id of ids) {
-    const deadline = jobs.get(id)?.posting?.deadline;
-    jobs.move(
-      { ids: [id], to: 'archive', reason: 'closed', detail: `Deadline passed (${deadline})` },
-      'server',
-      runId,
-    );
+    const job = jobs.get(id);
+    // A scholarship's round closes every year; the next scan of its page brings it back when it reopens.
+    const detail =
+      job?.kind === 'job'
+        ? `Deadline passed (${job.due})`
+        : `Deadline passed (${job?.due}). Winnow brings it back if a new round opens.`;
+    jobs.move({ ids: [id], to: 'archive', reason: 'closed', detail }, 'server', runId);
   }
   return ids.length;
 }

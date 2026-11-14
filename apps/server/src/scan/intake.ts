@@ -1,4 +1,4 @@
-import type { Rules } from '@winnow/api';
+import type { OppKind, Opportunity, Rules } from '@winnow/api';
 import type { Db } from '../db.ts';
 import type { JobStore } from '../jobs.ts';
 import { canonicalUrl, nowIso, today } from '../util.ts';
@@ -14,6 +14,9 @@ export interface Offer {
   description?: string;
   postedAt?: number;
   salary?: SalaryInfo & { text?: string };
+  /** Scholarships mode: what the item is, and what the scanner already knows about it. */
+  kind?: OppKind;
+  opportunity?: Opportunity;
 }
 
 export interface IntakeStats {
@@ -92,15 +95,18 @@ export class Intake {
       .run(canon, today(), outcome);
   }
 
-  /** `skipRules`: the posting was already matched to the person (Jill roles), so none of the rules apply. */
+  /**
+   * `skipRules`: the posting was already matched to the person (Jill roles), so none of the rules apply.
+   * Returns the item's id when it is in the lists (new or already there), null when it was dropped.
+   */
   add(
     offer: Offer,
     source: string,
     fallbackCompany = '',
     opts: { skipRules?: boolean } = {},
-  ): void {
+  ): string | null {
     this.stats.found++;
-    if (!offer?.url || !offer.title?.trim()) return;
+    if (!offer?.url || !offer.title?.trim()) return null;
     const canon = canonicalUrl(offer.url);
     const company = (offer.company || fallbackCompany || '').trim();
     const location = (offer.location || '').trim();
@@ -109,24 +115,24 @@ export class Intake {
     if (existing) {
       this.jobs.addSource(existing.id, source, offer.url);
       this.stats.duplicates++;
-      return;
+      return existing.id;
     }
     if (this.seen.has(canon)) {
       this.stats.seenBefore++;
-      return;
+      return null;
     }
     const titleMiss = opts.skipRules ? null : this.rules.title(offer.title);
     if (titleMiss) {
       this.stats.filteredTitle++;
       this.remember(offer.url, 'title');
-      return;
+      return null;
     }
     const twin = this.jobs.byFingerprint(company, offer.title, location);
     if (twin) {
       this.jobs.addSource(twin.id, source, offer.url);
       this.remember(offer.url, 'duplicate');
       this.stats.duplicates++;
-      return;
+      return twin.id;
     }
     const broken = opts.skipRules
       ? null
@@ -138,7 +144,7 @@ export class Intake {
       const kind = broken.split(' ')[0] ?? 'Rule';
       this.stats.ruleCounts[kind] = (this.stats.ruleCounts[kind] ?? 0) + 1;
       this.remember(offer.url, 'rules');
-      return;
+      return null;
     }
     const postedAt =
       typeof offer.postedAt === 'number' && Number.isFinite(offer.postedAt)
@@ -164,6 +170,8 @@ export class Intake {
         movedBy: broken ? 'rules' : 'scan',
         addedBy: 'scan',
         jd: description.length > 300 ? description : null,
+        kind: offer.kind ?? offer.opportunity?.kind,
+        opportunity: offer.opportunity ?? null,
       },
       this.runId,
     );
@@ -175,6 +183,7 @@ export class Intake {
       const kind = broken.split(' ')[0] ?? 'Rule';
       this.stats.ruleCounts[kind] = (this.stats.ruleCounts[kind] ?? 0) + 1;
     } else this.stats.added.push(job.id);
+    return job.id;
   }
 
   summary(): string {

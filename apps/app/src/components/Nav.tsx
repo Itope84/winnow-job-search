@@ -2,6 +2,7 @@ import { router, usePathname } from 'expo-router';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useActiveRuns } from '@/lib/hooks';
+import { useMode } from '@/lib/study';
 import { fonts, MAX_WIDTH, RAIL_WIDTH, space, TAB_HEIGHT, useTheme } from '@/theme';
 import { Icon, type IconName } from './ui';
 
@@ -22,6 +23,14 @@ const ITEMS: { path: string; label: string; icon: IconName; match: (p: string) =
   { path: '/you', label: 'You', icon: 'person-outline', match: (p) => p.startsWith('/you') },
 ];
 
+/** The nav items, with the first one named for what the account looks for. */
+function useItems() {
+  const study = useMode() === 'scholarships';
+  return study
+    ? ITEMS.map((i) => (i.path === '/' ? { ...i, label: 'Lists', icon: 'school' as IconName } : i))
+    : ITEMS;
+}
+
 function useBadges() {
   const runs = useActiveRuns();
   const list = runs.data ?? [];
@@ -40,6 +49,7 @@ export function TabBar() {
   const insets = useSafeAreaInsets();
   const path = usePathname();
   const badges = useBadges();
+  const items = useItems();
   return (
     <View
       style={[
@@ -48,7 +58,7 @@ export function TabBar() {
       ]}
     >
       <View style={styles.row} accessibilityRole="tablist">
-        {ITEMS.map((item) => {
+        {items.map((item) => {
           const on = item.match(path);
           const dot = badges[item.path];
           return (
@@ -98,6 +108,7 @@ export function Rail() {
   const { c } = useTheme();
   const path = usePathname();
   const badges = useBadges();
+  const items = useItems();
   return (
     <View style={[styles.rail, { backgroundColor: c.canvas, borderRightColor: c.rule }]}>
       <Pressable
@@ -110,7 +121,7 @@ export function Rail() {
           style={{ width: 36, height: 36, borderRadius: 9 }}
         />
       </Pressable>
-      {ITEMS.map((item) => {
+      {items.map((item) => {
         const on = item.match(path);
         const dot = badges[item.path];
         return (

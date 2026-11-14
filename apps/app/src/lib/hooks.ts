@@ -37,6 +37,10 @@ export const useProfile = () => useQuery({ queryKey: keys.profile, queryFn: api.
 export const useSetup = () => useQuery({ queryKey: keys.setup, queryFn: api.setup });
 export const useSettings = () => useQuery({ queryKey: keys.settings, queryFn: api.settings });
 export const useJack = () => useQuery({ queryKey: keys.jack, queryFn: api.jack });
+export const useStudy = () => useQuery({ queryKey: keys.study, queryFn: api.study });
+export const useCoverage = () => useQuery({ queryKey: keys.coverage, queryFn: api.coverage });
+export const useCatalogue = () => useQuery({ queryKey: keys.catalogue, queryFn: api.catalogue });
+export const useReferees = () => useQuery({ queryKey: keys.referees, queryFn: api.referees });
 export const useHealth = () =>
   useQuery({ queryKey: keys.health, queryFn: api.health, staleTime: 60_000 });
 

@@ -1,0 +1,7329 @@
+{
+  "microsoft": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oracle": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sap": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ibm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "servicenow": {
+    "candidates": 0,
+    "hits": []
+  },
+  "intuit": {
+    "candidates": 0,
+    "hits": []
+  },
+  "datadog": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/datadog",
+        "portal": "greenhouse",
+        "jobs": 396,
+        "weak": false,
+        "sample": [
+          "Accounts Payable Analyst",
+          "AI Research Engineer - Datadog AI Research (DAIR)",
+          "AI Research Scientist - Datadog AI Research (DAIR)"
+        ],
+        "locations": [
+          "New York, New York, USA",
+          "Paris, France",
+          "New York, New York, USA; Pittsburgh, Pennsylvania, USA"
+        ]
+      }
+    ]
+  },
+  "snowflake": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/snowflake",
+        "portal": "ashby",
+        "jobs": 373,
+        "weak": false,
+        "sample": [
+          "Software Engineer - Database Engineering",
+          "Software Engineer - Backend",
+          "Account Executive, Enterprise Acquisition"
+        ],
+        "locations": [
+          "US-CA-Menlo Park · US-WA-Bellevue · Bellevue · United States",
+          "US-CA-Menlo Park · US-WA-Bellevue · Bellevue · United States",
+          "US-NY-New York"
+        ]
+      }
+    ]
+  },
+  "vmware-by-broadcom": {
+    "candidates": 0,
+    "hits": []
+  },
+  "shopify": {
+    "candidates": 1,
+    "hits": []
+  },
+  "atlassian": {
+    "candidates": 1,
+    "hits": []
+  },
+  "stripe": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/stripe",
+        "portal": "greenhouse",
+        "jobs": 757,
+        "weak": false,
+        "sample": ["Abuse Investigator", "Abuse Investigator", "Abuse Investigator"],
+        "locations": ["Seattle, San Francisco, New York City", "Dublin", "Dublin"]
+      }
+    ]
+  },
+  "databricks": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/databricks",
+        "portal": "greenhouse",
+        "jobs": 929,
+        "weak": false,
+        "sample": [
+          "デリバリーソリューションアーキテクト",
+          "Account Executive",
+          "Account Executive, Commercial - Hunter"
+        ],
+        "locations": ["Tokyo, Japan", "Bengaluru, India; Mumbai, India", "Tokyo, Japan"]
+      }
+    ]
+  },
+  "amazon": {
+    "candidates": 0,
+    "hits": []
+  },
+  "twilio": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/twilio",
+        "portal": "greenhouse",
+        "jobs": 128,
+        "weak": false,
+        "sample": [
+          "Account Executive 4",
+          "Americas Sales Business Partner Manager",
+          "Applications Engineer 2"
+        ],
+        "locations": ["Remote - US", "Remote - US", "Remote - India"]
+      }
+    ]
+  },
+  "meta": {
+    "candidates": 0,
+    "hits": []
+  },
+  "apple": {
+    "candidates": 0,
+    "hits": []
+  },
+  "google": {
+    "candidates": 1,
+    "hits": []
+  },
+  "uber": {
+    "candidates": 0,
+    "hits": []
+  },
+  "netflix": {
+    "candidates": 2,
+    "hits": []
+  },
+  "booking-holdings": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ebay": {
+    "candidates": 1,
+    "hits": []
+  },
+  "airbnb": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/airbnb",
+        "portal": "greenhouse",
+        "jobs": 210,
+        "weak": false,
+        "sample": [
+          "AirCover Specialist, Claims Experience",
+          "AirCover Specialist, Claims Experience",
+          "Associate Legal Counsel, Japan"
+        ],
+        "locations": ["Japan", "Canada", "Tokyo, Japan"]
+      }
+    ]
+  },
+  "cisco": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://cisco.wd5.myworkdayjobs.com/cisco_careers",
+        "portal": "workday",
+        "jobs": 1459,
+        "weak": false,
+        "sample": [
+          "ASIC Design Verification Technical Leader",
+          "ASIC Link Modeling Technical Leader",
+          "ASIC High Speed AMS Technical Leader"
+        ],
+        "locations": ["2 Locations", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "snap": {
+    "candidates": 0,
+    "hits": []
+  },
+  "pinterest": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/pinterest",
+        "portal": "greenhouse",
+        "jobs": 170,
+        "weak": false,
+        "sample": [
+          "Administrative Business Partner I - Communications and Growth Marketing",
+          "B2B Growth Marketing Manager",
+          "Brand Marketing Manager"
+        ],
+        "locations": [
+          "Los Angeles, CA US",
+          "San Francisco, CA, US; Remote, US",
+          "San Francisco, CA, US; Remote, US"
+        ]
+      }
+    ]
+  },
+  "doordash": {
+    "candidates": 1,
+    "hits": []
+  },
+  "instacart": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/instacart",
+        "portal": "greenhouse",
+        "jobs": 87,
+        "weak": false,
+        "sample": [
+          "Account Manager",
+          "Activation Sales Development Representative II",
+          "Bilingual Customer Experience Specialist (Spanish)"
+        ],
+        "locations": ["United States - Remote", "United States - Remote", "United States - Remote"]
+      }
+    ]
+  },
+  "bytedance": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tencent": {
+    "candidates": 6,
+    "hits": []
+  },
+  "alibaba": {
+    "candidates": 0,
+    "hits": []
+  },
+  "zalando": {
+    "candidates": 0,
+    "hits": []
+  },
+  "reddit": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/reddit",
+        "portal": "greenhouse",
+        "jobs": 162,
+        "weak": false,
+        "sample": [
+          "Account Executive, Mid-Market (DACH)",
+          "Analytics Engineer",
+          "Associate General Counsel, Ads Product"
+        ],
+        "locations": ["Amsterdam, Netherlands", "Remote - United States", "Remote - United States"]
+      }
+    ]
+  },
+  "adobe": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced",
+        "portal": "workday",
+        "jobs": 275,
+        "weak": false,
+        "sample": [
+          "Senior Manager, Labor Relations",
+          "Sr. Director, Revenue Accounting",
+          "Head of Government Relations & Public Policy, UKI and Middle East"
+        ],
+        "locations": ["2 Locations", "San Jose", "London"]
+      }
+    ]
+  },
+  "autodesk": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://autodesk.wd1.myworkdayjobs.com/ext",
+        "portal": "workday",
+        "jobs": 5,
+        "weak": false,
+        "sample": [
+          "Principal MCP/AI Developer",
+          "Technical Adoption Specialist, Civil 3D, French speaking",
+          "Product Manager (Contractor for 6 months)"
+        ],
+        "locations": ["2 Locations", "5 Locations", "Tel Aviv, ISR"]
+      }
+    ]
+  },
+  "google-deepmind": {
+    "candidates": 0,
+    "hits": []
+  },
+  "microsoft-ai": {
+    "candidates": 0,
+    "hits": []
+  },
+  "anthropic": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/anthropic",
+        "portal": "greenhouse",
+        "jobs": 680,
+        "weak": false,
+        "sample": [
+          "3P Revenue Accounting & Reporting",
+          "Account Executive, AI Native",
+          "Account Executive, Nonprofit"
+        ],
+        "locations": [
+          "San Francisco, CA | Seattle, WA",
+          "New York City, NY; San Francisco, CA | New York City, NY",
+          "San Francisco, CA | New York City, NY"
+        ]
+      }
+    ]
+  },
+  "openai": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/openai",
+        "portal": "ashby",
+        "jobs": 814,
+        "weak": false,
+        "sample": [
+          "Research Engineer",
+          "Researcher, Safety Training",
+          "Software Engineer, Scaled Abuse"
+        ],
+        "locations": [
+          "San Francisco",
+          "San Francisco · London, UK · London · United Kingdom",
+          "San Francisco"
+        ]
+      }
+    ]
+  },
+  "mistral-ai": {
+    "candidates": 0,
+    "hits": []
+  },
+  "xai": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/xai",
+        "portal": "greenhouse",
+        "jobs": 307,
+        "weak": false,
+        "sample": [
+          "Agency Development Manager",
+          "AI Tutor, Applied Math - Temporary",
+          "AI Tutor, Design - Temporary"
+        ],
+        "locations": ["Austin, TX; New York, NY", "Remote International", "Remote International"]
+      }
+    ]
+  },
+  "spotify": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.lever.co/spotify",
+        "portal": "lever",
+        "jobs": 85,
+        "weak": false,
+        "sample": [
+          "Account Executive - Commercial, Spotify Technology",
+          "Account Executive - Commercial, Spotify Technology",
+          "Account Executive - Commercial, Spotify Technology"
+        ],
+        "locations": ["New York, NY", "London", "Toronto"]
+      }
+    ]
+  },
+  "hugging-face": {
+    "candidates": 0,
+    "hits": []
+  },
+  "scale-ai": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/scaleai",
+        "portal": "greenhouse",
+        "jobs": 166,
+        "weak": false,
+        "sample": [
+          "Account Based Marketing Lead",
+          "AI Advisory Principal",
+          "AI Product Manager (Coding/Multimodal)"
+        ],
+        "locations": [
+          "San Francisco, CA; New York, NY",
+          "San Francisco, CA; New York, NY",
+          "San Francisco, CA"
+        ]
+      }
+    ]
+  },
+  "safe-superintelligence": {
+    "candidates": 0,
+    "hits": []
+  },
+  "stability-ai": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/stabilityai",
+        "portal": "greenhouse",
+        "jobs": 1,
+        "weak": false,
+        "sample": ["IT Support Engineer"],
+        "locations": ["United States"]
+      }
+    ]
+  },
+  "perplexity": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/perplexity",
+        "portal": "ashby",
+        "jobs": 137,
+        "weak": false,
+        "sample": [
+          "Product Marketing Manager, Partnerships",
+          "Member of Technical Staff (Software Engineer, Monetization)",
+          "Associate Product Marketing Manager"
+        ],
+        "locations": [
+          "San Francisco · New York City · United States",
+          "San Francisco · New York City · United States",
+          "San Francisco · New York City · United States"
+        ]
+      }
+    ]
+  },
+  "cohere": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/cohere",
+        "portal": "ashby",
+        "jobs": 117,
+        "weak": false,
+        "sample": [
+          "Senior Full-Stack Engineer, Internal Applications",
+          "Member of Technical Staff, Modeling",
+          "Senior Member of Technical Staff, Multimodal AI"
+        ],
+        "locations": [
+          "Toronto · Canada",
+          "London · San Francisco · United States · New York · Paris · France · Toronto · Canada · Montreal",
+          "San Francisco · New York · United States · Paris · France · Toronto · Canada · Montreal"
+        ]
+      }
+    ]
+  },
+  "runway": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/runway",
+        "portal": "ashby",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "⚙️ Senior/Staff Platform Engineer",
+          "⚙️ Senior/Staff Product Engineer",
+          "⚙️ Engineering Manager"
+        ],
+        "locations": ["North America", "North America", "North America"]
+      }
+    ]
+  },
+  "character-ai": {
+    "candidates": 0,
+    "hits": []
+  },
+  "elevenlabs": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/elevenlabs",
+        "portal": "ashby",
+        "jobs": 144,
+        "weak": false,
+        "sample": [
+          "Account Manager - India",
+          "Enterprise Solutions Engineer - USA",
+          "Account Executive - Japan"
+        ],
+        "locations": [
+          "India",
+          "United States · New York · New York City · San Francisco",
+          "Japan · Tokyo"
+        ]
+      }
+    ]
+  },
+  "amd": {
+    "candidates": 0,
+    "hits": []
+  },
+  "glean": {
+    "candidates": 1,
+    "hits": []
+  },
+  "qualcomm": {
+    "candidates": 1,
+    "hits": []
+  },
+  "tsmc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "samsung-electronics": {
+    "candidates": 0,
+    "hits": []
+  },
+  "broadcom": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://broadcom.wd1.myworkdayjobs.com/external_career",
+        "portal": "workday",
+        "jobs": 388,
+        "weak": false,
+        "sample": [
+          "Software Engineer (ICB 3)",
+          "R&D Fab Process Engineer",
+          "Staff Memory Circuit Design Engineer"
+        ],
+        "locations": [
+          "USA-TX Plano Legacy Drive Suite 700",
+          "USA-Colorado-Fort Collins-4380 Ziegler Road",
+          "IND-Bangalore Electronic City - S1"
+        ]
+      }
+    ]
+  },
+  "asml": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://asml.wd3.myworkdayjobs.com/asmlext1",
+        "portal": "workday",
+        "jobs": 755,
+        "weak": false,
+        "sample": [
+          "Project Management Officer",
+          "2nd Shift Lithography Production Engineer- Optics (2:00pm-10:30pm Monday through Friday)",
+          "CNC Generating Technician"
+        ],
+        "locations": ["San Diego, CA, USA", "Wilton, CT, USA", "Wilton, CT, USA"]
+      }
+    ]
+  },
+  "texas-instruments": {
+    "candidates": 0,
+    "hits": []
+  },
+  "applied-materials": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lam-research": {
+    "candidates": 0,
+    "hits": []
+  },
+  "arm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "intel": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://intel.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 838,
+        "weak": false,
+        "sample": [
+          "Software Application Development Engineer",
+          "Database Administrator PL/SQL Developer",
+          "Staff Chemical Mechanical Planarization (CMP) Engineer"
+        ],
+        "locations": ["US, Arizona, Phoenix", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "dell-technologies": {
+    "candidates": 3,
+    "hits": []
+  },
+  "micron": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://micron.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 2854,
+        "weak": false,
+        "sample": [
+          "Staff Engineer, Technology - AMAIS",
+          "MTS Design Architect-Custom Layout, HBM",
+          "Semiconductor Equipment Maintenance Technician"
+        ],
+        "locations": ["Boise, ID - Main Site", "2 Locations", "Manassas, VA -  Fab 6"]
+      }
+    ]
+  },
+  "foxconn": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sony": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nvidia": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://nvidia.wd5.myworkdayjobs.com/nvidiaexternalcareersite",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Senior Infrastructure Security Engineer – EDA Clusters",
+          "Senior Solutions Architect, Networking and GPU System",
+          "Senior Applied Research Scientist"
+        ],
+        "locations": ["5 Locations", "4 Locations", "US, CA, Santa Clara"]
+      }
+    ]
+  },
+  "tcs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "infosys": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cognizant": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wipro": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hcltech": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ibm-consulting": {
+    "candidates": 0,
+    "hits": []
+  },
+  "capgemini": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tech-mahindra": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hp-inc": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://hpinc.wd5.myworkdayjobs.com/hpinc",
+        "portal": "workday",
+        "jobs": 73,
+        "weak": false,
+        "sample": [
+          "Financial Reporting Analyst, Experienced Senior",
+          "U.S. Rig Based Positions",
+          "Cybersecurity Analyst I"
+        ],
+        "locations": ["Tulsa-OK-USA", "6 Locations", "Tulsa-OK-USA"]
+      }
+    ]
+  },
+  "ntt-data": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fujitsu": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ltimindtree": {
+    "candidates": 0,
+    "hits": []
+  },
+  "genpact": {
+    "candidates": 0,
+    "hits": []
+  },
+  "epam": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cgi": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dxc-technology": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://dxctechnology.wd1.myworkdayjobs.com/dxcjobs",
+        "portal": "workday",
+        "jobs": 1222,
+        "weak": false,
+        "sample": [
+          "Agent de service à la clientèle bilingue en assurance vie",
+          "Product Marketing Manager- Insurance Technology",
+          "Sr Analyst I Sales Enablement"
+        ],
+        "locations": ["CAN - ON - MISSISSAUGA", "USA - SC - FORT MILL", "IND - KA - BANGALORE"]
+      }
+    ]
+  },
+  "palantir": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.lever.co/palantir",
+        "portal": "lever",
+        "jobs": 309,
+        "weak": false,
+        "sample": [
+          "Administrative Business Partner",
+          "Administrative Business Partner - ShipOS",
+          "Administrative Business Partner - ShipOS"
+        ],
+        "locations": ["Singapore, Singapore", "Washington, D.C.", "New York, NY"]
+      }
+    ]
+  },
+  "endava": {
+    "candidates": 0,
+    "hits": []
+  },
+  "microsoft-security": {
+    "candidates": 0,
+    "hits": []
+  },
+  "palo-alto-networks": {
+    "candidates": 0,
+    "hits": []
+  },
+  "capita": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://capita.wd3.myworkdayjobs.com/capitaglobal",
+        "portal": "workday",
+        "jobs": 119,
+        "weak": false,
+        "sample": [
+          "Trainee Pensions Administrator",
+          "Desktop Support Analyst (TVL)",
+          "Senior Project Manager"
+        ],
+        "locations": ["2 Locations", "Darwen", "Home-Based - GBR"]
+      }
+    ]
+  },
+  "fortinet": {
+    "candidates": 0,
+    "hits": []
+  },
+  "accenture": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://accenture.wd103.myworkdayjobs.com/accenturecareers",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "​​Sales Operations Support Analyst | Junior",
+          "Ethics and Compliance Data Privacy Specialist",
+          "Consultor(a) SAP HCM - PY"
+        ],
+        "locations": ["Heredia", "Sao Paulo Torre Paineira", "So Paulo   Sao Paulo"]
+      },
+      {
+        "url": "https://accenture.wd103.myworkdayjobs.com/avanadecareers",
+        "portal": "workday",
+        "jobs": 686,
+        "weak": false,
+        "sample": [
+          "Microsoft 365 Engineer",
+          "Modern Workplace Engineer – Microsoft Teams & Voice",
+          "Modern Workplace Architect - AI Workforce"
+        ],
+        "locations": ["9 Locations", "8 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "zscaler": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/zscaler",
+        "portal": "greenhouse",
+        "jobs": 376,
+        "weak": false,
+        "sample": [
+          "Account Executive",
+          "Account Executive -  Commercial",
+          "Account Executive- Commercial"
+        ],
+        "locations": ["Remote - Perth, Australia", "Remote - Tamil Nadu, India", "Mumbai, IND"]
+      }
+    ]
+  },
+  "check-point": {
+    "candidates": 0,
+    "hits": []
+  },
+  "salesforce": {
+    "candidates": 12,
+    "hits": [
+      {
+        "url": "https://salesforce.wd12.myworkdayjobs.com/external_career_site",
+        "portal": "workday",
+        "jobs": 1549,
+        "weak": false,
+        "sample": [
+          "Deployment Strategist - Public Sector, Nonprofit & Education",
+          "Strategic Events Associate Manager",
+          "Customer Success Manager - Core Clouds"
+        ],
+        "locations": ["United Kingdom - London", "California - San Francisco", "2 Locations"]
+      },
+      {
+        "url": "https://salesforce.wd12.myworkdayjobs.com/futureforce_newgradroles",
+        "portal": "workday",
+        "jobs": 38,
+        "weak": false,
+        "sample": [
+          "(CEMS Students) Commercial Graduate Rotation Program - Sales Path",
+          "Commercial Graduate Rotation Program - Solution Engineer Path - Arabic Speaking Markets",
+          "Service Management - Analyst, Global Public Sector, Early Talent"
+        ],
+        "locations": ["Ireland - Dublin", "Ireland - Dublin", "Indiana - Indianapolis"]
+      },
+      {
+        "url": "https://salesforce.wd12.myworkdayjobs.com/slack",
+        "portal": "workday",
+        "jobs": 18,
+        "weak": false,
+        "sample": [
+          "Senior Product Data Analyst",
+          "Enterprise Account Executive - Slack",
+          "Staff Data Engineer - Slack"
+        ],
+        "locations": ["6 Locations", "2 Locations", "2 Locations"]
+      },
+      {
+        "url": "https://salesforce.wd12.myworkdayjobs.com/mulesoft_careersite",
+        "portal": "workday",
+        "jobs": 14,
+        "weak": false,
+        "sample": [
+          "Business Development Representative – Data Foundation (Atlanta)",
+          "Technical Architect - MuleSoft",
+          "Senior Strategic Account Manager - Data Foundation ( MuleSoft & Informatica )"
+        ],
+        "locations": ["Georgia - Atlanta", "Japan - Tokyo - Remote", "Korea, Republic of - Seoul"]
+      }
+    ]
+  },
+  "sentinelone": {
+    "candidates": 0,
+    "hits": []
+  },
+  "okta": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/okta",
+        "portal": "greenhouse",
+        "jobs": 386,
+        "weak": false,
+        "sample": [
+          "Account Executive Auth0",
+          "Account Executive Large Enterprise Public Sector",
+          "AE, Okta & Auth0"
+        ],
+        "locations": ["Madrid, Spain", "London, United Kingdom", "Tokyo, Japan"]
+      }
+    ]
+  },
+  "mandiant-google-cloud": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rapid7": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cloudflare": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/cloudflare",
+        "portal": "greenhouse",
+        "jobs": 462,
+        "weak": false,
+        "sample": [
+          "Account Executive, FedCiv",
+          "Account Executive, Indonesia",
+          "AI Security Research & Red Team Engineer"
+        ],
+        "locations": ["Hybrid", "Hybrid", "Hybrid"]
+      }
+    ]
+  },
+  "cyberark": {
+    "candidates": 0,
+    "hits": []
+  },
+  "workday": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://workday.wd5.myworkdayjobs.com/workday",
+        "portal": "workday",
+        "jobs": 374,
+        "weak": false,
+        "sample": [
+          "Account Executive, Identity (West)",
+          "Payroll Systems Functional Consultant",
+          "Senior Software Development Engineer"
+        ],
+        "locations": ["11 Locations", "Costa Rica", "USA, CA, Pleasanton"]
+      },
+      {
+        "url": "https://workday.wd5.myworkdayjobs.com/workday_early_career",
+        "portal": "workday",
+        "jobs": 12,
+        "weak": false,
+        "sample": [
+          "Workday Intern Cohort 2026 (US)",
+          "Business Development Representative (Swedish)",
+          "Product Manager Intern (Canada)"
+        ],
+        "locations": ["2 Locations", "Ireland, Dublin", "Canada, BC, Vancouver"]
+      }
+    ]
+  },
+  "wiz-google": {
+    "candidates": 0,
+    "hits": []
+  },
+  "crowdstrike": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers",
+        "portal": "workday",
+        "jobs": 398,
+        "weak": false,
+        "sample": [
+          "Engineer III, Cloud - Authentication & Authorization (Hybrid)",
+          "Sr Software Engineer, Cloud - Fusion (Hybrid, Sunnyvale)",
+          "Data Center Technician (Sacramento, CA)"
+        ],
+        "locations": ["2 Locations", "USA - Sunnyvale, CA", "USA - Rancho Cordova, CA"]
+      }
+    ]
+  },
+  "trend-micro": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://trendmicro.wd3.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 171,
+        "weak": false,
+        "sample": [
+          "Cyber Security Engineer (Fresh Graduates) (For Pooling)",
+          "Technical Account Manager (Post-Sales Management)(Based in HK)",
+          "Join our Talent Community - ご自由に応募してください"
+        ],
+        "locations": ["Manila", "Hong Kong", "Tokyo"]
+      }
+    ]
+  },
+  "at-and-t": {
+    "candidates": 0,
+    "hits": []
+  },
+  "darktrace": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://darktrace.wd3.myworkdayjobs.com/darktaceexternal",
+        "portal": "workday",
+        "jobs": 76,
+        "weak": false,
+        "sample": [
+          "Technical Success Manager - Enterprise Accounts (France)",
+          "Technical Success Manager - Enterprise Accounts (DACH)",
+          "Director, Technical Success  - LATAM"
+        ],
+        "locations": ["2 Locations", "2 Locations", "3 Locations"]
+      }
+    ]
+  },
+  "proofpoint": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://proofpoint.wd5.myworkdayjobs.com/proofpointcareers",
+        "portal": "workday",
+        "jobs": 127,
+        "weak": false,
+        "sample": [
+          "Senior Sales Engineer, Tokyo",
+          "Associate Triage Analyst",
+          "Senior Sales Engineer (Michigan/Minnesota)"
+        ],
+        "locations": ["Tokyo, Japan", "Colorado", "2 Locations"]
+      }
+    ]
+  },
+  "comcast": {
+    "candidates": 1,
+    "hits": []
+  },
+  "charter": {
+    "candidates": 0,
+    "hits": []
+  },
+  "deutsche-telekom": {
+    "candidates": 0,
+    "hits": []
+  },
+  "vodafone": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bt-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "orange": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://orange.wd3.myworkdayjobs.com/orange_career",
+        "portal": "workday",
+        "jobs": 2,
+        "weak": false,
+        "sample": ["Audience & Analytics Expert", "CISCO Architect (CCIE)"],
+        "locations": ["ORANGE BELGIUM HEADQUARTER", "ORANGE BELGIUM HEADQUARTER"]
+      }
+    ]
+  },
+  "telefonica": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ericsson": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nokia": {
+    "candidates": 0,
+    "hits": []
+  },
+  "huawei": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mtn-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bharti-airtel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "reliance-jio": {
+    "candidates": 0,
+    "hits": []
+  },
+  "singtel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "verizon": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://verizon.wd12.myworkdayjobs.com/verizon-careers",
+        "portal": "workday",
+        "jobs": 1264,
+        "weak": false,
+        "sample": [
+          "Account Manager SMB- Business Sales",
+          "Technician Business/Government",
+          "Associate Director - Solutions Architect"
+        ],
+        "locations": ["Tucson, Arizona", "Pottstown, Pennsylvania", "2 Locations"]
+      }
+    ]
+  },
+  "rogers": {
+    "candidates": 0,
+    "hits": []
+  },
+  "e-and": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jpmorgan-chase": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bank-of-america": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wells-fargo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kyndryl": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://kyndryl.wd5.myworkdayjobs.com/kyndrylprofessionalcareers",
+        "portal": "workday",
+        "jobs": 872,
+        "weak": false,
+        "sample": [
+          "Intune Infrastructure Specialist",
+          "Arquitecto de Base de Datos OnPremise & Cloud",
+          "AI Engineer"
+        ],
+        "locations": ["2 Locations", "Lima, Peru", "CRAFZ Heredia (CRAFZ) Afz"]
+      },
+      {
+        "url": "https://kyndryl.wd5.myworkdayjobs.com/kyndrylearlycareers",
+        "portal": "workday",
+        "jobs": 33,
+        "weak": false,
+        "sample": [
+          "Technical Support Specialist",
+          "Technical Support Specialist",
+          "Infrastructure Specialist"
+        ],
+        "locations": ["KIN51655 Gurugram (KIN51655)", "Bangalore, Karnataka, India", "2 Locations"]
+      },
+      {
+        "url": "https://kyndryl.wd5.myworkdayjobs.com/ismcareers",
+        "portal": "workday",
+        "jobs": 2,
+        "weak": false,
+        "sample": [
+          "Technical Analyst",
+          "Technical Solutions Manager (Network Solutions Architect)"
+        ],
+        "locations": ["Victoria, British Columbia, Canada", "Regina, Saskatchewan, Canada"]
+      }
+    ]
+  },
+  "hsbc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "barclays": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://barclays.wd3.myworkdayjobs.com/external_career_site_barclays",
+        "portal": "workday",
+        "jobs": 646,
+        "weak": false,
+        "sample": [
+          "Agency CMO Trader/Structurer AVP",
+          "High Yield Credit Research Analyst",
+          "2027 Business Banking Degree Apprenticeship Programme London"
+        ],
+        "locations": [
+          "New York, 745 7th Avenue",
+          "New York, 745 7th Avenue",
+          "Canary Wharf, 1 Churchill Place"
+        ]
+      }
+    ]
+  },
+  "t-mobile-us": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://tmobile.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Mobile Associate - Retail Sales",
+          "Mobile Associate - Retail Sales",
+          "Mobile Associate - Retail Sales"
+        ],
+        "locations": ["Franklin, Indiana", "Brownsville, Texas", "Fort Dodge, Iowa"]
+      }
+    ]
+  },
+  "natwest-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "telstra": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://telstra.wd3.myworkdayjobs.com/telstra_careers",
+        "portal": "workday",
+        "jobs": 167,
+        "weak": false,
+        "sample": [
+          "Telstra Retail: Part Time Customer Service & Sales Consultant - NORWOOD",
+          "Security Engineering Senior Engineer",
+          "Senior Portfolio Economics Specialist"
+        ],
+        "locations": ["Telstra Store Norwood", "Australia (Flexible)", "Australia (Flexible)"]
+      }
+    ]
+  },
+  "bnp-paribas": {
+    "candidates": 0,
+    "hits": []
+  },
+  "standard-chartered": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hpe": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://hpe.wd5.myworkdayjobs.com/jobsathpe",
+        "portal": "workday",
+        "jobs": 1734,
+        "weak": false,
+        "sample": [
+          "Corporate Media Relations Manager",
+          "DSR New Business",
+          "Systems/Software Testing Engineer Cloud & On-Premise Intern"
+        ],
+        "locations": [
+          "Spring, Texas, United States of America",
+          "Barcelona, Barcelona, Spain",
+          "San Juan, Puerto Rico, Puerto Rico"
+        ]
+      },
+      {
+        "url": "https://hpe.wd5.myworkdayjobs.com/acjobsite",
+        "portal": "workday",
+        "jobs": 1725,
+        "weak": false,
+        "sample": [
+          "Corporate Media Relations Manager",
+          "DSR New Business",
+          "Account Support Manager"
+        ],
+        "locations": [
+          "Spring, Texas, United States of America",
+          "Barcelona, Barcelona, Spain",
+          "Bogota, Cundinamarca, Colombia"
+        ]
+      },
+      {
+        "url": "https://hpe.wd5.myworkdayjobs.com/wfmathpe",
+        "portal": "workday",
+        "jobs": 1718,
+        "weak": false,
+        "sample": [
+          "Corporate Media Relations Manager",
+          "DSR New Business",
+          "Account Support Manager"
+        ],
+        "locations": [
+          "Spring, Texas, United States of America",
+          "Barcelona, Barcelona, Spain",
+          "Bogota, Cundinamarca, Colombia"
+        ]
+      }
+    ]
+  },
+  "td-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "leidos": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://leidos.wd5.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Senior Software Engineer",
+          "Senior Supply Chain Risk Management Threat Intelligence Analyst",
+          "Senior DevOps Engineer"
+        ],
+        "locations": ["4 Locations", "Washington, DC", "Bethesda, MD"]
+      }
+    ]
+  },
+  "icici-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hdfc-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "standard-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "access-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "citigroup": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://citi.wd5.myworkdayjobs.com/citi_early_careers_events_site",
+        "portal": "workday",
+        "jobs": 11,
+        "weak": false,
+        "sample": [
+          "Mehnaty Graduate Program (UAE Nationals Only)",
+          "Wealth Solutions Advisor SAFE Act - C11 - JACKSONVILLE/O'FALLON",
+          "Investment Banking, Placement Analyst, Dubai, UAE 2027"
+        ],
+        "locations": [
+          "Dubai United Arab Emirates",
+          "1000 TECHNOLOGY DRIVE  OFALLON",
+          "Dubai United Arab Emirates"
+        ]
+      }
+    ]
+  },
+  "booz-allen-hamilton": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Health Insurance Data Analyst",
+          "Site Reliability Engineer",
+          "Exercise Planner"
+        ],
+        "locations": ["Bethesda, MD", "Reston, VA", "Base Lewis-McChord, WA"]
+      }
+    ]
+  },
+  "goldman-sachs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "morgan-stanley": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jpmorgan": {
+    "candidates": 0,
+    "hits": []
+  },
+  "blackrock": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://blackrock.wd1.myworkdayjobs.com/blackrock_professional",
+        "portal": "workday",
+        "jobs": 266,
+        "weak": false,
+        "sample": [
+          "Director, Technology Investment Products & Economics",
+          "Vice President – Private Credit Fund Accounting, PFS",
+          "Modern Workplace Engineer, Tech & Ops, Associate"
+        ],
+        "locations": ["New York, NY", "Mumbai, India", "Gurugram, India"]
+      }
+    ]
+  },
+  "capital-one": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://capitalone.wd12.myworkdayjobs.com/capital_one",
+        "portal": "workday",
+        "jobs": 2038,
+        "weak": false,
+        "sample": [
+          "Business Manager- Collections Credit Infrastructure",
+          "Sr. Business Analyst, Capital One Shopping (Remote-Eligible)",
+          "Director, Project Management - Domain Delivery Lead"
+        ],
+        "locations": ["2 Locations", "3 Locations", "3 Locations"]
+      }
+    ]
+  },
+  "ubs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "deutsche-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lazard": {
+    "candidates": 0,
+    "hits": []
+  },
+  "royal-bank-of-canada": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://rbc.wd3.myworkdayjobs.com/rbcglobal1",
+        "portal": "workday",
+        "jobs": 790,
+        "weak": false,
+        "sample": [
+          "Investment Production Analyst",
+          "Insurance Advisor - Life, Health & Wealth",
+          "Insurance Advisor Life, Health & Wealth"
+        ],
+        "locations": ["2 Locations", "100 NEW GOWER ST, SUITE 601:ST. JOHN'S", "7 Locations"]
+      },
+      {
+        "url": "https://rbc.wd3.myworkdayjobs.com/rbcearlytalent1",
+        "portal": "workday",
+        "jobs": 42,
+        "weak": false,
+        "sample": [
+          "2028 Global Markets Summer Associate, Equity Research",
+          "2028 Capital Markets, Global Markets Origination Summer Analyst",
+          "2028 Capital Markets, Global Markets Sales & Trading Analyst"
+        ],
+        "locations": [
+          "New York, New York, United States of America",
+          "New York, New York, United States of America",
+          "New York, New York, United States of America"
+        ]
+      }
+    ]
+  },
+  "evercore": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jefferies": {
+    "candidates": 0,
+    "hits": []
+  },
+  "santander": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://santander.wd3.myworkdayjobs.com/santandercareers",
+        "portal": "workday",
+        "jobs": 981,
+        "weak": false,
+        "sample": [
+          "Investment Banking Analyst",
+          "Initiativbewerbung",
+          "MEX Esp Comercial Cred Automotriz"
+        ],
+        "locations": ["4 Locations", "Wien", "OFNA REFORMA 490 CDMX"]
+      }
+    ]
+  },
+  "fidelity-investments": {
+    "candidates": 0,
+    "hits": []
+  },
+  "state-street": {
+    "candidates": 0,
+    "hits": []
+  },
+  "schroders": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lloyds-banking-group": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://lloyds.wd3.myworkdayjobs.com/lloyds-of-london",
+        "portal": "workday",
+        "jobs": 15,
+        "weak": false,
+        "sample": [
+          "Senior Market Development Manager – Middle East, Turkey",
+          "Claims Oversight Manager",
+          "Associate Revenue and AP Operations"
+        ],
+        "locations": ["Lloyd's Dubai", "Lloyd's UK: London", "Lloyd's UK: Chatham"]
+      },
+      {
+        "url": "https://lloyds.wd3.myworkdayjobs.com/early-careers",
+        "portal": "workday",
+        "jobs": 1,
+        "weak": false,
+        "sample": ["Lloyd's Military Network Placement"],
+        "locations": ["Lloyd's UK: London"]
+      }
+    ]
+  },
+  "kkr": {
+    "candidates": 1,
+    "hits": []
+  },
+  "carlyle": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rothschild-and-co": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://rothschildandco.wd3.myworkdayjobs.com/rothschildandco_lateral",
+        "portal": "workday",
+        "jobs": 115,
+        "weak": false,
+        "sample": [
+          "CEE Investment Banking, Senior Analyst/Associate, LDN , Global Advisory",
+          "Gérant de Portefeuilles - Portfolio Manager (H/F)",
+          "Private Markets Specialist"
+        ],
+        "locations": ["London", "Paris", "Zurich"]
+      }
+    ]
+  },
+  "citi": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://citi.wd5.myworkdayjobs.com/citi_early_careers_events_site",
+        "portal": "workday",
+        "jobs": 11,
+        "weak": false,
+        "sample": [
+          "Mehnaty Graduate Program (UAE Nationals Only)",
+          "Wealth Solutions Advisor SAFE Act - C11 - JACKSONVILLE/O'FALLON",
+          "Investment Banking, Placement Analyst, Dubai, UAE 2027"
+        ],
+        "locations": [
+          "Dubai United Arab Emirates",
+          "1000 TECHNOLOGY DRIVE  OFALLON",
+          "Dubai United Arab Emirates"
+        ]
+      }
+    ]
+  },
+  "pimco": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://pimco.wd1.myworkdayjobs.com/pimco-careers",
+        "portal": "workday",
+        "jobs": 172,
+        "weak": false,
+        "sample": [
+          "CIT Solutions Strategist",
+          "Product Analyst / Associate",
+          "Vice President, Corporate Actions"
+        ],
+        "locations": ["Newport Beach, CA USA", "2 Locations", "Newport Beach, CA USA"]
+      }
+    ]
+  },
+  "commonwealth-bank": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://cba.wd3.myworkdayjobs.com/commbank_careers",
+        "portal": "workday",
+        "jobs": 209,
+        "weak": false,
+        "sample": [
+          "Executive Product Owner - Enterprise Knowledge",
+          "Senior Associate / Associate Director, Energy Commodities and Sustainability",
+          "Staff Platform Engineer"
+        ],
+        "locations": [
+          "Bangalore - Manyata Tech Park Road",
+          "New York",
+          "Bangalore - Manyata Tech Park Road"
+        ]
+      },
+      {
+        "url": "https://cba.wd3.myworkdayjobs.com/private_ad",
+        "portal": "workday",
+        "jobs": 21,
+        "weak": false,
+        "sample": [
+          "Senior Software Engineer - .NET Full Stack",
+          "Retail Banking Services Career Tracker Summer Intern",
+          "Chief Engineer"
+        ],
+        "locations": ["2 Locations", "Sydney CBD Area", "2 Locations"]
+      },
+      {
+        "url": "https://cba.wd3.myworkdayjobs.com/x15_careers",
+        "portal": "workday",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "Procurement Senior Manager, x15ventures",
+          "AI Delivery Manager, x15ventures",
+          "Expression of Interest - Software Engineering, AI Venturing Pod"
+        ],
+        "locations": ["Sydney CBD Area", "Sydney CBD Area", "2 Locations"]
+      },
+      {
+        "url": "https://cba.wd3.myworkdayjobs.com/bankwest_careers",
+        "portal": "workday",
+        "jobs": 2,
+        "weak": false,
+        "sample": [
+          "Customer Communications Manager - 12 month fixed term contract",
+          "Technology Associate Program (Traineeship)"
+        ],
+        "locations": ["Perth Central", "3 Locations"]
+      }
+    ]
+  },
+  "block": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/block",
+        "portal": "greenhouse",
+        "jobs": 200,
+        "weak": false,
+        "sample": [
+          "Applied Research Intern, Proactive Intelligence & Customer World Models (PhD / Graduate Co-op)",
+          "Applied Research Intern, Proactive Intelligence & Customer World Models (PhD / Graduate Co-op)",
+          "B2B Content Marketing Lead"
+        ],
+        "locations": [
+          "Toronto, Ontario , Canada",
+          "Bay Area, CA, United States of America",
+          "Bay Area, CA, United States of America"
+        ]
+      }
+    ]
+  },
+  "us-bancorp": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://usbank.wd1.myworkdayjobs.com/us_bank_careers",
+        "portal": "workday",
+        "jobs": 1205,
+        "weak": false,
+        "sample": [
+          "Training Manager 2",
+          "Business Banking Relationship Manager",
+          "Business Banking Relationship Manager - Albuquerque"
+        ],
+        "locations": ["2 Locations", "Santa Fe, NM", "Albuquerque, NM"]
+      },
+      {
+        "url": "https://usbank.wd1.myworkdayjobs.com/elavon_careers",
+        "portal": "workday",
+        "jobs": 54,
+        "weak": false,
+        "sample": [
+          "Go To Market Lead",
+          "Elavon Mid-Market Client Executive",
+          "Marketing Manager, Content Manager"
+        ],
+        "locations": ["Frankfurt am Main, Germany", "Atlanta, GA", "4 Locations"]
+      }
+    ]
+  },
+  "adyen": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/adyen",
+        "portal": "greenhouse",
+        "jobs": 242,
+        "weak": false,
+        "sample": ["Account Manager", "Account Manager", "Account Manager"],
+        "locations": ["Paris", "London", "Madrid"]
+      }
+    ]
+  },
+  "monzo": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/monzo",
+        "portal": "greenhouse",
+        "jobs": 57,
+        "weak": false,
+        "sample": ["Android Engineer", "Backend Engineer III", "Controls Product Senior Manager"],
+        "locations": ["Barcelona", "Cardiff, London or Remote (UK)", "London; Remote (UK)"]
+      }
+    ]
+  },
+  "wise": {
+    "candidates": 0,
+    "hits": []
+  },
+  "revolut": {
+    "candidates": 1,
+    "hits": []
+  },
+  "chime": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/chime",
+        "portal": "greenhouse",
+        "jobs": 72,
+        "weak": false,
+        "sample": ["AI/ML Engineer", "Business Control Manager", "Business Control Manager"],
+        "locations": [
+          "Chicago, IL, USA; New York, NY, USA; San Francisco, CA, USA",
+          "Chicago, IL, USA; New York, NY, USA; San Francisco, CA, USA",
+          "Chicago, IL, USA; New York, NY, USA; San Francisco, CA, USA"
+        ]
+      }
+    ]
+  },
+  "klarna": {
+    "candidates": 1,
+    "hits": []
+  },
+  "robinhood": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/robinhood",
+        "portal": "greenhouse",
+        "jobs": 159,
+        "weak": false,
+        "sample": [
+          "Account Servicing Associate",
+          "AI Operations Engineer, Enterprise Tech",
+          "Android Engineer, Government Products"
+        ],
+        "locations": [
+          "Denver, CO; Westlake, TX",
+          "Bellevue, WA; Menlo Park, CA; New York, NY",
+          "New York, NY"
+        ]
+      }
+    ]
+  },
+  "coinbase": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/coinbase",
+        "portal": "greenhouse",
+        "jobs": 278,
+        "weak": false,
+        "sample": [
+          "Acceleration Programs Intern",
+          "Accounting Intern",
+          "Accounting Manager, GL Operations & Intercompany"
+        ],
+        "locations": ["Hybrid - New York, NY", "Hybrid - New York, NY", "Remote - USA"]
+      }
+    ]
+  },
+  "kraken": {
+    "candidates": 1,
+    "hits": []
+  },
+  "flutterwave": {
+    "candidates": 0,
+    "hits": []
+  },
+  "binance": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.lever.co/binance",
+        "portal": "lever",
+        "jobs": 5,
+        "weak": false,
+        "sample": [
+          "Business Compliance Manager - Payments",
+          "Law Enforcement Specialist – UAE",
+          "MLRO - Pakistan"
+        ],
+        "locations": ["Asia", "UAE, Dubai", "Pakistan, Islamabad"]
+      }
+    ]
+  },
+  "paypal": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://paypal.wd1.myworkdayjobs.com/jobs",
+        "portal": "workday",
+        "jobs": 310,
+        "weak": false,
+        "sample": [
+          "Director, Payment Partnerships",
+          "Legal Counsel, Merchant Checkout",
+          "Sr Product Manager"
+        ],
+        "locations": [
+          "2 Locations",
+          "6 Locations",
+          "San Jose, California, United States of America"
+        ]
+      }
+    ]
+  },
+  "moniepoint": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/moniepoint",
+        "portal": "greenhouse",
+        "jobs": 145,
+        "weak": false,
+        "sample": ["Analytics Manager", "Analytics Manager", "Analytics Manager"],
+        "locations": ["Remote, Poland", "London, United Kingdom", "Remote, Portugal"]
+      }
+    ]
+  },
+  "razorpay": {
+    "candidates": 0,
+    "hits": []
+  },
+  "axa": {
+    "candidates": 0,
+    "hits": []
+  },
+  "allianz": {
+    "candidates": 0,
+    "hits": []
+  },
+  "zurich": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nubank": {
+    "candidates": 1,
+    "hits": []
+  },
+  "legal-and-general": {
+    "candidates": 0,
+    "hits": []
+  },
+  "paystack": {
+    "candidates": 2,
+    "hits": []
+  },
+  "vanguard": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://vanguard.wd5.myworkdayjobs.com/vanguard_external",
+        "portal": "workday",
+        "jobs": 356,
+        "weak": false,
+        "sample": [
+          "Associate Director of Global Transfer Pricing- Malvern, PA",
+          "Workplace Financial Consultant, CFP/Licensed",
+          "Large Market Direct Sales Executive, Investments, West"
+        ],
+        "locations": ["Malvern, PA", "3 Locations", "5 Locations"]
+      },
+      {
+        "url": "https://vanguard.wd5.myworkdayjobs.com/contractors_restricted",
+        "portal": "workday",
+        "jobs": 22,
+        "weak": true,
+        "sample": [
+          "Financial Consultant",
+          "Application Security, Specialist",
+          "Sales Executive – Strategic Partnerships & Retirement Solutions - Frankfurt, Germany"
+        ],
+        "locations": ["Dallas/Ft. Worth, TX", "Dallas/Ft. Worth, TX", "Frankfurt, Germany"]
+      }
+    ]
+  },
+  "metlife": {
+    "candidates": 1,
+    "hits": []
+  },
+  "prudential-financial": {
+    "candidates": 0,
+    "hits": []
+  },
+  "chubb": {
+    "candidates": 0,
+    "hits": []
+  },
+  "visa": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://visa.wd5.myworkdayjobs.com/visa",
+        "portal": "workday",
+        "jobs": 843,
+        "weak": false,
+        "sample": [
+          "Sr. Finance Manager",
+          "Manager, Orchestration & Integration Product Management",
+          "Director, Acceptance Solutions Sales Executive"
+        ],
+        "locations": ["CO - Bogota, Colombia", "2 Locations", "2 Locations"]
+      },
+      {
+        "url": "https://visa.wd5.myworkdayjobs.com/visa_early_careers",
+        "portal": "workday",
+        "jobs": 63,
+        "weak": false,
+        "sample": [
+          "Consulting & Analytics Intern",
+          "Consulting & Analytics Graduate",
+          "Consulting & Analytics Graduate"
+        ],
+        "locations": ["SK - Bratislava, Slovakia", "NO - Oslo, Norway", "BG - Sofia, Bulgaria"]
+      }
+    ]
+  },
+  "progressive": {
+    "candidates": 0,
+    "hits": []
+  },
+  "state-farm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "blackstone": {
+    "candidates": 6,
+    "hits": [
+      {
+        "url": "https://blackstone.wd1.myworkdayjobs.com/blackstone_careers",
+        "portal": "workday",
+        "jobs": 131,
+        "weak": false,
+        "sample": [
+          "BXTI - Vice President - Networking",
+          "Physical Security - COO - Vice President",
+          "Blackstone Private Real Estate Credit and Income Fund (BREC) Finance, Vice President"
+        ],
+        "locations": ["Bangalore", "2 Locations", "New Jersey"]
+      },
+      {
+        "url": "https://blackstone.wd1.myworkdayjobs.com/bx_external_site",
+        "portal": "workday",
+        "jobs": 103,
+        "weak": false,
+        "sample": [
+          "2027 Blackstone Private Equity Analyst (London)",
+          "2027 Blackstone Fund Finance Oversight Off Cycle Internship (Luxembourg)",
+          "2027 Blackstone Valuation Associate Off Cycle Internship (Luxembourg)"
+        ],
+        "locations": ["London", "Luxembourg", "Luxembourg"]
+      },
+      {
+        "url": "https://blackstone.wd1.myworkdayjobs.com/blackstone_campus_careers",
+        "portal": "workday",
+        "jobs": 19,
+        "weak": false,
+        "sample": [
+          "2027 Blackstone Infrastructure, Investment Summer Senior Associate",
+          "2027 Blackstone APAC Future Leaders Program (Online)",
+          "2027 Blackstone Technology & Innovation Software Engineer Analyst (London)"
+        ],
+        "locations": ["New York", "6 Locations", "Berkeley Square House London"]
+      },
+      {
+        "url": "https://blackstone.wd1.myworkdayjobs.com/blackstone_technology",
+        "portal": "workday",
+        "jobs": 19,
+        "weak": false,
+        "sample": [
+          "Front-office Senior Software Engineer, VP - Liquid Credit",
+          "Desktop Support, Associate - Executive Technology Support",
+          "Software Engineering, AVP - Legal and Compliance Technology"
+        ],
+        "locations": ["Miami", "New York", "Miami"]
+      }
+    ]
+  },
+  "liberty-mutual": {
+    "candidates": 0,
+    "hits": []
+  },
+  "generali": {
+    "candidates": 0,
+    "hits": []
+  },
+  "munich-re": {
+    "candidates": 0,
+    "hits": []
+  },
+  "swiss-re": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mastercard": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://mastercard.wd1.myworkdayjobs.com/corporatecareers",
+        "portal": "workday",
+        "jobs": 968,
+        "weak": false,
+        "sample": [
+          "Senior Specialist, Product Management",
+          "Manager, Business Development Support",
+          "Manager, Software Engineering, AI Foundations"
+        ],
+        "locations": ["Bogota, Colombia", "Bogota, Colombia (Bldg 978)", "Atlanta, Georgia"]
+      },
+      {
+        "url": "https://mastercard.wd1.myworkdayjobs.com/campusapplyonly",
+        "portal": "workday",
+        "jobs": 39,
+        "weak": false,
+        "sample": [
+          "Product Management/ Product Development, Launch Program 2027 - India",
+          "Data Scientist, Launch Program 2027 - India",
+          "Director, VASS Regional Controllership"
+        ],
+        "locations": ["2 Locations", "2 Locations", "Dubai, United Arab Emirates"]
+      },
+      {
+        "url": "https://mastercard.wd1.myworkdayjobs.com/campus",
+        "portal": "workday",
+        "jobs": 33,
+        "weak": false,
+        "sample": [
+          "Internship Program, Account Management, 2027 – Santiago, Chile",
+          "Associate Analyst, Product Delivery Launch Program 2027-Malaysia",
+          "Summer internship 2027 - Sales Analyst Intern– Riyadh, Saudi Arabia"
+        ],
+        "locations": ["Santiago, Chile", "Kuala Lumpur, Malaysia", "Riyadh, Saudi Arabia"]
+      },
+      {
+        "url": "https://mastercard.wd1.myworkdayjobs.com/contractorconversion",
+        "portal": "workday",
+        "jobs": 1,
+        "weak": true,
+        "sample": [
+          "Senior Platform Architect (Infrastructure Design, IaaS, Cloud Architecture, F5, Network Security)"
+        ],
+        "locations": ["Pune, India"]
+      }
+    ]
+  },
+  "aon": {
+    "candidates": 0,
+    "hits": []
+  },
+  "prudential-plc": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://prudential.wd3.myworkdayjobs.com/prudential",
+        "portal": "workday",
+        "jobs": 438,
+        "weak": false,
+        "sample": [
+          "Supervisor, Data & Reporting, Cambodia & Myanmar (C&M) Hub",
+          "Senior Underwriting Specialist",
+          "Manager, Incident & Problem Management, Infrastructure & Service Management"
+        ],
+        "locations": ["Phnom Penh", "Singapore", "Hong Kong"]
+      },
+      {
+        "url": "https://prudential.wd3.myworkdayjobs.com/prudential_eastspring",
+        "portal": "workday",
+        "jobs": 43,
+        "weak": false,
+        "sample": [
+          "Head of Enterprise Risk Management",
+          "Associate Director, Client Solutions",
+          "Marketing Manager"
+        ],
+        "locations": ["Singapore", "Singapore", "Hong Kong"]
+      }
+    ]
+  },
+  "aviva": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://aviva.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 131,
+        "weak": false,
+        "sample": [
+          "Rédacteur(trice) principal(e), Production— Assurance des entreprises (P&C)",
+          "Rédacteur(trice) principal(e), Production— Assurance des entreprises (P&C)",
+          "Rédacteur(trice) production intermédiaire - Assurance des entreprises (P&C)"
+        ],
+        "locations": [
+          "Canada - QC - Home Office",
+          "Canada - Montreal QC 630 boul René Lévesque Ouest",
+          "Canada - Montreal QC 630 boul René Lévesque Ouest"
+        ]
+      },
+      {
+        "url": "https://aviva.wd1.myworkdayjobs.com/aviva_investors_external",
+        "portal": "workday",
+        "jobs": 6,
+        "weak": false,
+        "sample": [
+          "Fund Accounting Oversight Manager",
+          "Business Development Director, Institutional - Benelux and Nordics",
+          "Regional Business Development Manager"
+        ],
+        "locations": ["Luxembourg", "AVIN - Amsterdam", "UK - Manchester - Quay Street"]
+      }
+    ]
+  },
+  "ey": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kpmg": {
+    "candidates": 0,
+    "hits": []
+  },
+  "deloitte": {
+    "candidates": 1,
+    "hits": []
+  },
+  "grant-thornton": {
+    "candidates": 0,
+    "hits": []
+  },
+  "allstate": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers",
+        "portal": "workday",
+        "jobs": 422,
+        "weak": false,
+        "sample": [
+          "Field Auto Claims Adjuster - Little Rock, AR",
+          "ADS Field Sales Associate Manager",
+          "Data Scientist Senior Consultant – Remote"
+        ],
+        "locations": ["AR - Little Rock", "4 Locations", "Remote - Remote"]
+      },
+      {
+        "url": "https://allstate.wd5.myworkdayjobs.com/sourcing_event",
+        "portal": "workday",
+        "jobs": 25,
+        "weak": false,
+        "sample": [
+          "Software Engineer Consultant II",
+          "Software Engineer Lead Consultant/Senior Consultant I/II",
+          "Product Marketing Intern"
+        ],
+        "locations": ["2 Locations", "Ind – Blr Sez 1 (3Rd, 6Th & 7Th Floor)", "USA - IL (Remote)"]
+      },
+      {
+        "url": "https://allstate.wd5.myworkdayjobs.com/agent",
+        "portal": "workday",
+        "jobs": 421,
+        "weak": true,
+        "sample": [
+          "Insurance Agency Owner- Marta Blumka",
+          "Insurance Agency Owner - Maine",
+          "Insurance Agency Owner - New Hampshire"
+        ],
+        "locations": ["USA - CA (Remote)", "USA - ME (Remote)", "USA - NH (Remote)"]
+      }
+    ]
+  },
+  "forvis-mazars": {
+    "candidates": 0,
+    "hits": []
+  },
+  "travelers": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://travelers.wd5.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 403,
+        "weak": false,
+        "sample": [
+          "Director, Agile Product Owner-  Business Insights Delivery & Analytics",
+          "Sales Executive - Select",
+          "Data Engineer I (Databricks, AWS, Python)"
+        ],
+        "locations": ["CT - Hartford", "CO - Centennial", "3 Locations"]
+      },
+      {
+        "url": "https://travelers.wd5.myworkdayjobs.com/simplybusinesssexternal",
+        "portal": "workday",
+        "jobs": 8,
+        "weak": false,
+        "sample": [
+          "Customer Service Consultant",
+          "Service Desk Engineer",
+          "Financial Planning & Analysis Manager"
+        ],
+        "locations": ["NTH - Northampton", "MA - Boston", "MA - Boston"]
+      }
+    ]
+  },
+  "bdo": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bdo.wd3.myworkdayjobs.com/bdo",
+        "portal": "workday",
+        "jobs": 264,
+        "weak": false,
+        "sample": [
+          "Co-op or Intern, Technology - BizApps (January 2027)",
+          "Bilingual Senior Talent Acquisition Specialist",
+          "Manager, US Corporate Tax Services"
+        ],
+        "locations": ["2 Locations", "3 Locations", "Montreal - 1000 Rue De La Gauchetière Ouest"]
+      }
+    ]
+  },
+  "azets": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cherry-bekaert": {
+    "candidates": 0,
+    "hits": []
+  },
+  "marsh-mclennan": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://mmc.wd1.myworkdayjobs.com/mmc",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Client Relationship Management - Lead Specialist",
+          "Ejecutivo de Atención y Servicio Graduate Guadalajara",
+          "Analista de Benefícios Sênior"
+        ],
+        "locations": [
+          "Montreal - 1 Place Ville Marie",
+          "Guadalajara - Acueducto",
+          "Sao Paulo - EZTowers"
+        ]
+      }
+    ]
+  },
+  "moss-adams": {
+    "candidates": 0,
+    "hits": []
+  },
+  "h-and-r-block": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cliftonlarsonallen": {
+    "candidates": 1,
+    "hits": []
+  },
+  "xero": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/xero",
+        "portal": "ashby",
+        "jobs": 105,
+        "weak": false,
+        "sample": [
+          "Solutions Consultant",
+          "Accounting Professional? Discover a new career in SaaS Sales with Xero",
+          "Lead Engineer - AI FDE"
+        ],
+        "locations": [
+          "AU: Brisbane (243 Edward St)",
+          "AU: Brisbane (243 Edward St)",
+          "CAN: Vancouver (333 Seymour St)"
+        ]
+      }
+    ]
+  },
+  "rsm": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://rsm.wd1.myworkdayjobs.com/rsmcareers",
+        "portal": "workday",
+        "jobs": 664,
+        "weak": false,
+        "sample": [
+          "Workday Finance Analysts & Senior Analysts",
+          "Operations Manager - Risk Consulting",
+          "Tax Supervisor - Private Company"
+        ],
+        "locations": ["San Salvador", "Charlotte", "Toronto"]
+      }
+    ]
+  },
+  "bain": {
+    "candidates": 0,
+    "hits": []
+  },
+  "deloitte-consulting": {
+    "candidates": 0,
+    "hits": []
+  },
+  "accenture-strategy": {
+    "candidates": 0,
+    "hits": []
+  },
+  "pwc-strategy-and": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ey-parthenon": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kpmg-advisory": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oliver-wyman": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kearney": {
+    "candidates": 0,
+    "hits": []
+  },
+  "l-e-k": {
+    "candidates": 0,
+    "hits": []
+  },
+  "roland-berger": {
+    "candidates": 0,
+    "hits": []
+  },
+  "capgemini-invent": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fti-consulting": {
+    "candidates": 0,
+    "hits": []
+  },
+  "alvarez-and-marsal": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mckinsey": {
+    "candidates": 1,
+    "hits": []
+  },
+  "west-monroe": {
+    "candidates": 0,
+    "hits": []
+  },
+  "slalom": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mercer": {
+    "candidates": 0,
+    "hits": []
+  },
+  "willis-towers-watson": {
+    "candidates": 0,
+    "hits": []
+  },
+  "clifford-chance": {
+    "candidates": 0,
+    "hits": []
+  },
+  "boston-consulting-group": {
+    "candidates": 1,
+    "hits": []
+  },
+  "allen-and-overy-shearman": {
+    "candidates": 0,
+    "hits": []
+  },
+  "baker-tilly": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bakertilly.wd5.myworkdayjobs.com/btcareers",
+        "portal": "workday",
+        "jobs": 533,
+        "weak": false,
+        "sample": [
+          "Temporary Tax Preparer - BT Prep",
+          "Managing Director, Managed Services Delivery",
+          "HR Consultant (Generalist)"
+        ],
+        "locations": ["48 Locations", "4 Locations", "5 Locations"]
+      }
+    ]
+  },
+  "slaughter-and-may": {
+    "candidates": 0,
+    "hits": []
+  },
+  "crowe": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://crowe.wd12.myworkdayjobs.com/external_careers",
+        "portal": "workday",
+        "jobs": 172,
+        "weak": false,
+        "sample": [
+          "Machine Learning Engineer 2",
+          "Salesforce Consultant",
+          "International Tax Services Senior Associate 1"
+        ],
+        "locations": ["Hyderabad Telangana India", "34 Locations", "Hyderabad Telangana India"]
+      }
+    ]
+  },
+  "baker-mckenzie": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kirkland-and-ellis": {
+    "candidates": 0,
+    "hits": []
+  },
+  "latham-and-watkins": {
+    "candidates": 0,
+    "hits": []
+  },
+  "freshfields": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://freshfields.wd3.myworkdayjobs.com/fbd_101",
+        "portal": "workday",
+        "jobs": 184,
+        "weak": false,
+        "sample": [
+          "Event: Mia san M&A - M&A-Workshop am 14. Januar 2027 in München",
+          "Rechtsanwalt/Associate (m/w/x) Arbeitsrecht",
+          "Associate (m/w/x) – in allen Praxisgruppen mit Programmiererfahrung"
+        ],
+        "locations": ["Munich", "Munich", "5 Locations"]
+      }
+    ]
+  },
+  "white-and-case": {
+    "candidates": 0,
+    "hits": []
+  },
+  "norton-rose-fulbright": {
+    "candidates": 0,
+    "hits": []
+  },
+  "herbert-smith-freehills-kramer": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hogan-lovells": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ashurst": {
+    "candidates": 0,
+    "hits": []
+  },
+  "addleshaw-goddard": {
+    "candidates": 0,
+    "hits": []
+  },
+  "eversheds-sutherland": {
+    "candidates": 0,
+    "hits": []
+  },
+  "pinsent-masons": {
+    "candidates": 0,
+    "hits": []
+  },
+  "huron": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://huron.wd1.myworkdayjobs.com/huroncareers",
+        "portal": "workday",
+        "jobs": 284,
+        "weak": false,
+        "sample": [
+          "Solution Architect, Forward Deployed Architecture (AI Capability Center)",
+          "Technical Architect, Microsoft D365 F&SCM - Canada",
+          "ServiceNow Business Process Consultant (Manager)"
+        ],
+        "locations": ["2 Locations", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "lexisnexis": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hca-healthcare": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nhs-england-trusts-via-nhs-jobs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kaiser-permanente": {
+    "candidates": 0,
+    "hits": []
+  },
+  "commonspirit-health": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ascension": {
+    "candidates": 0,
+    "hits": []
+  },
+  "providence": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mayo-clinic": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cleveland-clinic": {
+    "candidates": 0,
+    "hits": []
+  },
+  "skadden": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://skadden.wd5.myworkdayjobs.com/skadden_careers",
+        "portal": "workday",
+        "jobs": 65,
+        "weak": false,
+        "sample": ["Global Payroll HRIS Analyst", "Technology Support Analyst", "Senior Paralegal"],
+        "locations": ["White Plains", "New York", "2 Locations"]
+      }
+    ]
+  },
+  "universal-health-services": {
+    "candidates": 0,
+    "hits": []
+  },
+  "community-health-systems": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tenet": {
+    "candidates": 1,
+    "hits": []
+  },
+  "veterans-health-administration": {
+    "candidates": 0,
+    "hits": []
+  },
+  "linklaters": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://linklaters.wd3.myworkdayjobs.com/linklaters",
+        "portal": "workday",
+        "jobs": 210,
+        "weak": false,
+        "sample": [
+          "Rechtsanwalt (m/w/d) Finanzaufsichtsrecht in Frankfurt",
+          "Finance Lawyer",
+          "U.S. Derivatives & Financial Markets Associate"
+        ],
+        "locations": ["Frankfurt", "Brussels", "New York"]
+      },
+      {
+        "url": "https://linklaters.wd3.myworkdayjobs.com/de_linklaters",
+        "portal": "workday",
+        "jobs": 75,
+        "weak": false,
+        "sample": [
+          "Rechtsanwalt (m/w/d) Finanzaufsichtsrecht in Frankfurt",
+          "Referendar (m/w/d) Litigation, Arbitration & Investigations in Frankfurt am Main",
+          "Wissenschaftlicher Mitarbeiter (m/w/d) Umwelt- und Planungsrecht in Berlin"
+        ],
+        "locations": ["Frankfurt", "Frankfurt", "Berlin"]
+      }
+    ]
+  },
+  "spire-healthcare": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ramsay-health-care": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://ramsayhealthcare.wd3.myworkdayjobs.com/ramsay_careers",
+        "portal": "workday",
+        "jobs": 99,
+        "weak": false,
+        "sample": ["Chef", "Physiotherapist", "Oncology Pharmacy Technician"],
+        "locations": ["Gloucester", "Middlesbrough", "Chelmsford"]
+      }
+    ]
+  },
+  "fresenius": {
+    "candidates": 0,
+    "hits": []
+  },
+  "apollo-hospitals": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mediclinic": {
+    "candidates": 0,
+    "hits": []
+  },
+  "aig": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://aig.wd1.myworkdayjobs.com/aig",
+        "portal": "workday",
+        "jobs": 412,
+        "weak": false,
+        "sample": [
+          "Senior Specialist Underwriter, Financial Lines",
+          "Director, Technology Analytics & Automation",
+          "Director, Technology Analytics and  Automation"
+        ],
+        "locations": ["Manchester", "NY-New York", "Dublin"]
+      },
+      {
+        "url": "https://aig.wd1.myworkdayjobs.com/japan",
+        "portal": "workday",
+        "jobs": 20,
+        "weak": false,
+        "sample": [
+          "(AIG Sonpo) 延長保証保険 アンダーライター",
+          "(AIG Sonpo) 大阪企業営業部ソリシター（代理店営業担当）",
+          "(AIG Sonpo) Senior IT Audit Manager"
+        ],
+        "locations": ["Minato-ku, Tokyo", "Osaka-shi", "Minato-ku, Japan, Tokyo"]
+      },
+      {
+        "url": "https://aig.wd1.myworkdayjobs.com/privatejobpostings",
+        "portal": "workday",
+        "jobs": 15,
+        "weak": false,
+        "sample": [
+          "Broker Development Coordinator",
+          "UK Head of Claims",
+          "Head of UK M&A & Emerging Markets"
+        ],
+        "locations": ["London", "London", "London"]
+      },
+      {
+        "url": "https://aig.wd1.myworkdayjobs.com/early_careers",
+        "portal": "workday",
+        "jobs": 7,
+        "weak": false,
+        "sample": [
+          "Early Career Claims Analyst, Casualty",
+          "Early Career Underwriting Analyst, Casualty",
+          "Early Career Underwriting Analyst, Financial Lines"
+        ],
+        "locations": ["Sydney", "Sydney", "Sydney"]
+      }
+    ]
+  },
+  "johnson-and-johnson": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dla-piper": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://dlapiper.wd1.myworkdayjobs.com/dlapiper",
+        "portal": "workday",
+        "jobs": 146,
+        "weak": false,
+        "sample": [
+          "Sr. Manager Communications",
+          "Sr. Manager Communications",
+          "Export Controls Associate (DC)"
+        ],
+        "locations": ["19 Locations", "19 Locations", "Washington, DC"]
+      }
+    ]
+  },
+  "thomson-reuters": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://thomsonreuters.wd5.myworkdayjobs.com/external_career_site",
+        "portal": "workday",
+        "jobs": 482,
+        "weak": false,
+        "sample": [
+          "Service Delivery Manager, Government",
+          "Senior Manager, AI Engineering",
+          "Manager, Integrated Technology"
+        ],
+        "locations": [
+          "United States of America Frisco Texas",
+          "Canada Toronto Ontario",
+          "United States of America New York New York"
+        ]
+      }
+    ]
+  },
+  "bupa": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://bupa.wd3.myworkdayjobs.com/ext_career",
+        "portal": "workday",
+        "jobs": 628,
+        "weak": false,
+        "sample": [
+          "Chef Manager",
+          "Clinical / Counselling Psychologist - Mindplace St Albans",
+          "Housekeeping Assistant"
+        ],
+        "locations": ["Sidcup", "Mindplace St Albans", "Cheshire"]
+      }
+    ]
+  },
+  "merck-and-co": {
+    "candidates": 0,
+    "hits": []
+  },
+  "abbvie": {
+    "candidates": 0,
+    "hits": []
+  },
+  "pwc": {
+    "candidates": 8,
+    "hits": [
+      {
+        "url": "https://pwc.wd3.myworkdayjobs.com/global_experienced_careers",
+        "portal": "workday",
+        "jobs": 3795,
+        "weak": false,
+        "sample": [
+          "Forensic and Dispute Services Senior Manager (Bilingual FR/EN)",
+          "IN_Senior Associate_GenAI and Agentic AI_GCC_Advisory_Hyderabad",
+          "Senior Associate SIEM Implementation"
+        ],
+        "locations": ["2 Locations", "Hyderabad - Salarpuria", "5 Locations"]
+      },
+      {
+        "url": "https://pwc.wd3.myworkdayjobs.com/nonpublic_postings",
+        "portal": "workday",
+        "jobs": 2907,
+        "weak": false,
+        "sample": [
+          "IN_Senior Associate_GenAI and Agentic AI_GCC_Advisory_Hyderabad",
+          "Senior Manager Cyber Cloud Security and AI",
+          "Cyber Generalist, Manager"
+        ],
+        "locations": ["Hyderabad - Salarpuria", "Toronto", "Toronto"]
+      },
+      {
+        "url": "https://pwc.wd3.myworkdayjobs.com/crm_experienced_careers_site",
+        "portal": "workday",
+        "jobs": 1742,
+        "weak": false,
+        "sample": [
+          "Ethics & Compliance - Records & Information Management - Senior Associate",
+          "Senior Associate - Organizational Change Management",
+          "Customer Transformation Senior Associate – Public Sector"
+        ],
+        "locations": ["Buenos Aires", "4 Locations", "London"]
+      },
+      {
+        "url": "https://pwc.wd3.myworkdayjobs.com/global_campus_careers",
+        "portal": "workday",
+        "jobs": 1338,
+        "weak": false,
+        "sample": [
+          "Junior - Práctica de Verano - Auditoría Externa Contable",
+          "ASS | Beca GRC Seguros Barcelona",
+          "Senior Databricks Engineer"
+        ],
+        "locations": ["Buenos Aires", "Barcelona", "Lviv"]
+      }
+    ]
+  },
+  "davita": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://davita.wd1.myworkdayjobs.com/dkc_external",
+        "portal": "workday",
+        "jobs": 3386,
+        "weak": false,
+        "sample": ["Registered Nurse", "Patient Care Technician", "Registered Nurse"],
+        "locations": [
+          "05298 - Port City Dialysis",
+          "05313 - West Orange",
+          "01274 - Newark Beth Israel Acute"
+        ]
+      },
+      {
+        "url": "https://davita.wd1.myworkdayjobs.com/uk_international",
+        "portal": "workday",
+        "jobs": 2,
+        "weak": false,
+        "sample": ["Employment Relations Specialist", "Clinical Governance Coordinator"],
+        "locations": [
+          "07149 - DAVITA INTERNATIONAL HQ OFFICE",
+          "07149 - DAVITA INTERNATIONAL HQ OFFICE"
+        ]
+      }
+    ]
+  },
+  "novo-nordisk": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mass-general-brigham": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/mgbexternal",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Operations Manager, Shift Lieutenant",
+          "Phlebotomist/Specimen Processor",
+          "Pathology Laboratory Assistant I"
+        ],
+        "locations": ["Boston-MA", "Jamaica Plain-MA", "Boston-MA"]
+      },
+      {
+        "url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/physicianorganization",
+        "portal": "workday",
+        "jobs": 95,
+        "weak": false,
+        "sample": ["YT - 113026 - RF", "HA.MA Research Fellow 12/1", "Research Fellow, PGY0"],
+        "locations": ["Boston-MA", "Charlestown-MA", "Boston-MA"]
+      }
+    ]
+  },
+  "roche": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://roche.wd3.myworkdayjobs.com/roche-ext",
+        "portal": "workday",
+        "jobs": 1252,
+        "weak": false,
+        "sample": [
+          "Associate Field Engineering Specialist - Atlanta, GA",
+          "Strategy Enabling Lead - QMS Portfolio Manager",
+          "Consultor Integral (Temporal)"
+        ],
+        "locations": ["Atlanta", "7 Locations", "Bogota"]
+      },
+      {
+        "url": "https://roche.wd3.myworkdayjobs.com/rog-a2o-gene",
+        "portal": "workday",
+        "jobs": 228,
+        "weak": false,
+        "sample": [
+          "Head of Corporate Culinary Strategy & Operations, Site Services",
+          "Principal / Senior Principal Scientist- Investigative Toxicology",
+          "Scientist 3 – Translational Medicine, Oncology"
+        ],
+        "locations": ["South San Francisco", "South San Francisco", "South San Francisco"]
+      },
+      {
+        "url": "https://roche.wd3.myworkdayjobs.com/mysugr-ext",
+        "portal": "workday",
+        "jobs": 9,
+        "weak": false,
+        "sample": [
+          "Clinical Development Lead – Diabetes Technology & Digital Health (m/f/d)",
+          "Medical Device Risk Manager - Freelancer (m/f/d)",
+          "Senior Software Architect (m/f/d)"
+        ],
+        "locations": ["3 Locations", "Vienna", "2 Locations"]
+      }
+    ]
+  },
+  "eli-lilly": {
+    "candidates": 2,
+    "hits": []
+  },
+  "bayer": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rakuten": {
+    "candidates": 19,
+    "hits": [
+      {
+        "url": "https://rakuten.wd1.myworkdayjobs.com/rakuteninc",
+        "portal": "workday",
+        "jobs": 715,
+        "weak": false,
+        "sample": [
+          "Store Development , Construction, and Operations , Rakuten Mobile Shop Business - Shop Operation Department , Area Business Supervisory Department (GSD)",
+          "Sales and Business Development , Rakuten Mobile Shop Business -  Business Operations Department , Area Business Supervisory Department (GSD)",
+          "Planning, Analysis and Management , Rakuten Mobile Shop Business - Business Operations Department , Area Business Supervisory Department (GSD)"
+        ],
+        "locations": ["Tokyo, Japan", "Tokyo, Japan", "Tokyo, Japan"]
+      },
+      {
+        "url": "https://rakuten.wd1.myworkdayjobs.com/rakutentotalsolutions",
+        "portal": "workday",
+        "jobs": 271,
+        "weak": false,
+        "sample": [
+          "物流管理課：東日本部材チーム（RTS基地局設置統括部）",
+          "DX Promotion Planner, DX Solution Sales Section, Corporate Business Division",
+          "推進企画課：戦略企画職メンバー 楽天モバイル基地局建設戦略策定（RTS基地局設置統括部）"
+        ],
+        "locations": ["2 Locations", "Tokyo, Japan", "Tokyo, Japan"]
+      },
+      {
+        "url": "https://rakuten.wd1.myworkdayjobs.com/rakuteninsurancegroup",
+        "portal": "workday",
+        "jobs": 51,
+        "weak": false,
+        "sample": [
+          "楽天損保/情報システム本部 IT企画部/サーバー構築・保守エンジニア",
+          "楽天生命/営業推進本部/代理店営業担当（初任地：福岡）",
+          "楽天生命/営業推進本部/代理店営業担当（初任地：大阪）"
+        ],
+        "locations": ["Tokyo, Japan", "Fukuoka, Japan", "Osaka, Japan"]
+      },
+      {
+        "url": "https://rakuten.wd1.myworkdayjobs.com/rakutenmobile",
+        "portal": "workday",
+        "jobs": 49,
+        "weak": false,
+        "sample": [
+          "【2028年新卒】セキュリティエンジニアコース",
+          "【2028新卒】基地局建設プロジェクトエンジニアコース",
+          "【2028年新卒】ネットワークエンジニアコース"
+        ],
+        "locations": ["Tokyo, Japan", "Tokyo, Japan", "Tokyo, Japan"]
+      }
+    ]
+  },
+  "boehringer-ingelheim": {
+    "candidates": 0,
+    "hits": []
+  },
+  "takeda": {
+    "candidates": 1,
+    "hits": []
+  },
+  "sanofi": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://sanofi.wd3.myworkdayjobs.com/sanoficareers",
+        "portal": "workday",
+        "jobs": 1046,
+        "weak": false,
+        "sample": [
+          "Aseptic Production Technician",
+          "Consumer Experience (CX) Strategy lead",
+          "Visual Inspection Mnager 2d shift"
+        ],
+        "locations": ["Swiftwater, PA", "Toronto, ON", "Swiftwater, PA"]
+      }
+    ]
+  },
+  "teva": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sun-pharma": {
+    "candidates": 0,
+    "hits": []
+  },
+  "astrazeneca": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://astrazeneca.wd3.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 1343,
+        "weak": false,
+        "sample": [
+          "KAM  PUBLIC BUSINESS",
+          "Senior Manager, US Digital Content & Channel Management",
+          "Senior Marketing Manager - GI Cancers"
+        ],
+        "locations": ["Chile - Santiago", "US - Boston - MA", "Canada - Mississauga"]
+      },
+      {
+        "url": "https://astrazeneca.wd3.myworkdayjobs.com/alexion",
+        "portal": "workday",
+        "jobs": 122,
+        "weak": false,
+        "sample": [
+          "Associate Director, RDU IT Communications and Change Management",
+          "Insight and Analytics Lead, Commercial Excellence",
+          "SAP Quality & Compliance Lead"
+        ],
+        "locations": ["US - Boston - MA", "Canada - Mississauga", "Ireland - Dublin College Park"]
+      },
+      {
+        "url": "https://astrazeneca.wd3.myworkdayjobs.com/emerging-talent",
+        "portal": "workday",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "Territory Account Specialist (Oncology), Cape Town",
+          "IT Principle Architect-Solution Architect, China Commercial",
+          "Oncology Medical Head, SSA & FSA based in Nairobi"
+        ],
+        "locations": ["South Africa - Western Cape", "China", "Kenya - Nairobi"]
+      },
+      {
+        "url": "https://astrazeneca.wd3.myworkdayjobs.com/broadbean_external",
+        "portal": "workday",
+        "jobs": 204,
+        "weak": true,
+        "sample": [
+          "Associate Director, Operational Resilience  Oncology R&D",
+          "Senior Scientist – Upstream Process Development (Temporary Maternity Cover)",
+          "Marketing Manager - Lung Cancer (Finland) – Nordic Marketing Company"
+        ],
+        "locations": ["UK - Cambridge", "UK - Cambridge", "Finland - Espoo"]
+      }
+    ]
+  },
+  "bristol-myers-squibb": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/bms",
+        "portal": "workday",
+        "jobs": 627,
+        "weak": false,
+        "sample": [
+          "Neuroscience Discovery Biology Spring 2027 Co-op (Undergrad or Master's)",
+          "Neuroscience TRC Co-op (PhD Candidates)",
+          "Senior Validation Engineer, Sterility & CQV"
+        ],
+        "locations": [
+          "Cambridge Crossing - MA - US",
+          "Cambridge Crossing - MA - US",
+          "Indianapolis - RayzeBio - IN"
+        ]
+      }
+    ]
+  },
+  "thermo-fisher": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://thermofisher.wd5.myworkdayjobs.com/thermofishercareers",
+        "portal": "workday",
+        "jobs": 3200,
+        "weak": false,
+        "sample": [
+          "Regional Site Specialist (RSS)",
+          "Intern, Commercial Finance",
+          "Validation Engineering Specialist II"
+        ],
+        "locations": ["Remote, North Carolina, USA", "Sofia, Bulgaria", "Whitby, Canada"]
+      }
+    ]
+  },
+  "novartis": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://novartis.wd3.myworkdayjobs.com/novartis_careers",
+        "portal": "workday",
+        "jobs": 862,
+        "weak": false,
+        "sample": [
+          "Senior Clinical Research Associate",
+          "Principal Scientist, Early Pipeline Development",
+          "Medical Grants Manager"
+        ],
+        "locations": ["Field Non-Sales (USA)", "San Diego", "Hyderabad (Office)"]
+      },
+      {
+        "url": "https://novartis.wd3.myworkdayjobs.com/internal_careers_for_acquired_entities",
+        "portal": "workday",
+        "jobs": 514,
+        "weak": true,
+        "sample": [
+          "Senior Clinical Research Associate",
+          "Principal Scientist, Early Pipeline Development",
+          "Area Business Manager (m/w/d) RLT, Gebiet: Heidelberg, Mainz, Ludwigshafen"
+        ],
+        "locations": [
+          "Field Non-Sales (USA)",
+          "San Diego",
+          "Rhineland-Palatinate (Novartis Pharma GmbH)"
+        ]
+      }
+    ]
+  },
+  "pfizer": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://pfizer.wd1.myworkdayjobs.com/pfizercareers",
+        "portal": "workday",
+        "jobs": 580,
+        "weak": false,
+        "sample": [
+          "Sr Manager, Performance Analytics & Insights, Oncology",
+          "Pasante PX (Recursos Humanos)",
+          "PSL&D Compliance Training Ops & Business Lead (Manager)"
+        ],
+        "locations": ["4 Locations", "Argentina - Buenos Aires", "5 Locations"]
+      },
+      {
+        "url": "https://pfizer.wd1.myworkdayjobs.com/internaljobs",
+        "portal": "workday",
+        "jobs": 320,
+        "weak": true,
+        "sample": [
+          "Sr Manager, Performance Analytics & Insights, Oncology",
+          "PSL&D Compliance Training Ops & Business Lead (Manager)",
+          "Director, AI Product, Innovation & Emerging Technology"
+        ],
+        "locations": ["4 Locations", "5 Locations", "4 Locations"]
+      }
+    ]
+  },
+  "viatris": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://viatris.wd5.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 343,
+        "weak": false,
+        "sample": [
+          "Senior Analytical Scientist (Material Science)",
+          "Clinical Operations Coordinator",
+          "Senior Director – HR COEs, Global Talent Management"
+        ],
+        "locations": [
+          "Sandwich, England, United Kingdom",
+          "Allschwil-Office",
+          "United States Remote Office"
+        ]
+      }
+    ]
+  },
+  "ppd-thermo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "syneos-health": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://syneoshealth.wd12.myworkdayjobs.com/syneos_health_external_site",
+        "portal": "workday",
+        "jobs": 737,
+        "weak": false,
+        "sample": [
+          "Clinical Trial Manager II - Brazil, Argentina, Mexico, Chile, Peru - Remote",
+          "CRA II - Sponsor-dedicated, Slovakia remote",
+          "Sr Medical Writer - Sponsor-dedicated (UK, Poland, Spain, Serbia)"
+        ],
+        "locations": ["BRA-Remote", "SVK-Remote", "5 Locations"]
+      }
+    ]
+  },
+  "gsk": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://gsk.wd5.myworkdayjobs.com/gskcareers",
+        "portal": "workday",
+        "jobs": 962,
+        "weak": false,
+        "sample": [
+          "Sr. Product Manager – Market Access",
+          "Senior Product Manager – Government Pricing & Compliance",
+          "Senior, Platform Engineer"
+        ],
+        "locations": ["2 Locations", "2 Locations", "Bengaluru Luxor North Tower"]
+      },
+      {
+        "url": "https://gsk.wd5.myworkdayjobs.com/viiv_careers",
+        "portal": "workday",
+        "jobs": 60,
+        "weak": false,
+        "sample": [
+          "ViiV Healthcare (GSK) Global Patient Engagement Director (US)",
+          "ViiV Healthcare (GSK) Sr. Director, Portfolio & Channel Marketing",
+          "Delegado especialista – ViiV Healthcare"
+        ],
+        "locations": ["Durham Blackwell Street", "Durham Blackwell Street", "Field Worker - ESP"]
+      }
+    ]
+  },
+  "charles-river-laboratories": {
+    "candidates": 0,
+    "hits": []
+  },
+  "medpace": {
+    "candidates": 0,
+    "hits": []
+  },
+  "gilead": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+        "portal": "workday",
+        "jobs": 406,
+        "weak": false,
+        "sample": [
+          "Sr Associate Scientist, Analytical Ops",
+          "Assoc Director, Supply Chain",
+          "Clinical Trials Manager"
+        ],
+        "locations": [
+          "United States - California - Santa Monica",
+          "United States - California - Foster City",
+          "United States - California - Foster City"
+        ]
+      },
+      {
+        "url": "https://gilead.wd1.myworkdayjobs.com/gileadhotjobcareers",
+        "portal": "workday",
+        "jobs": 195,
+        "weak": false,
+        "sample": [
+          "Assoc Director, Supply Chain",
+          "Clinical Trials Manager",
+          "Director, HR Operational Excellence"
+        ],
+        "locations": [
+          "United States - California - Foster City",
+          "United States - California - Foster City",
+          "United States - California - Foster City"
+        ]
+      },
+      {
+        "url": "https://gilead.wd1.myworkdayjobs.com/kitepharmacareers",
+        "portal": "workday",
+        "jobs": 54,
+        "weak": false,
+        "sample": [
+          "Sr Associate Scientist, Analytical Ops",
+          "Director, Patient Safety (MD)",
+          "Supply Chain Specialist III"
+        ],
+        "locations": [
+          "United States - California - Santa Monica",
+          "United States - New Jersey - Parsippany",
+          "United States - California - Santa Monica"
+        ]
+      }
+    ]
+  },
+  "moderna": {
+    "candidates": 0,
+    "hits": []
+  },
+  "amgen": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://amgen.wd1.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 1956,
+        "weak": false,
+        "sample": [
+          "Sr Manager Centralized Study Support (CSS)",
+          "Senior Medical Science Liaison - Bone Health - Northern FL",
+          "Senior Medical Science Liaison - Bone Health - Eastern MA, RI"
+        ],
+        "locations": ["India - Hyderabad", "4 Locations", "US - Massachusetts - Boston"]
+      },
+      {
+        "url": "https://amgen.wd1.myworkdayjobs.com/agency",
+        "portal": "workday",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "Représentant du développement de comptes en hématologie - Québec et Atlantique (Contrat de 12 mois)",
+          "Strategic Pharmacy Relations Mgr/Gestionnaire, relations stratégiques avec les pharmacies, Québec",
+          "Sr. Director, Global Customer Capabilities"
+        ],
+        "locations": ["Canada - Quebec", "Canada - Quebec", "India - Hyderabad"]
+      }
+    ]
+  },
+  "vertex": {
+    "candidates": 0,
+    "hits": []
+  },
+  "biontech": {
+    "candidates": 0,
+    "hits": []
+  },
+  "labcorp": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://labcorp.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 1760,
+        "weak": false,
+        "sample": [
+          "Phlebotomist",
+          "Senior Manager, Data Analytics Enablement",
+          "Laboratory Specimen Processor"
+        ],
+        "locations": ["Denville NJ", "Durham NC", "Oak Creek WI"]
+      }
+    ]
+  },
+  "iqvia": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://iqvia.wd1.myworkdayjobs.com/iqvia",
+        "portal": "workday",
+        "jobs": 1937,
+        "weak": false,
+        "sample": [
+          "Pharmacovigilance Specialist with French",
+          "VP, Global Marketing, Communications, & Insights",
+          "Assistente Administrativo / Auditoria de Dados"
+        ],
+        "locations": [
+          "Buenos Aires, Argentina",
+          "Wayne, PA, United States of America",
+          "São Paulo, Brazil"
+        ]
+      }
+    ]
+  },
+  "wuxi-apptec": {
+    "candidates": 0,
+    "hits": []
+  },
+  "icon-plc": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/icon",
+        "portal": "ashby",
+        "jobs": 6,
+        "weak": false,
+        "sample": ["Founding Sales", "Founding Growth", "Founding Engineer"],
+        "locations": ["New York / Remote", "New York / Remote", "New York / Remote"]
+      },
+      {
+        "url": "https://icon.wd3.myworkdayjobs.com/broadbean_external",
+        "portal": "workday",
+        "jobs": 901,
+        "weak": true,
+        "sample": [
+          "Global Head of Technical Regulatory & Quality (CMC, Quality & MDD)",
+          "Experienced Clinical Research Associate, ICON Biotech",
+          "Senior Study Delivery Lead"
+        ],
+        "locations": ["3 Locations", "Netherlands, Utrecht, Zen", "6 Locations"]
+      }
+    ]
+  },
+  "genentech": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lonza": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://lonza.wd3.myworkdayjobs.com/lonza_careers",
+        "portal": "workday",
+        "jobs": 579,
+        "weak": false,
+        "sample": [
+          "QA Deviation Specialist",
+          "Associate Director Drug Product Sales USA",
+          "Biotechnologist - CT (Multi Levels Nights)"
+        ],
+        "locations": ["US - Tampa, FL", "US - Portsmouth, NH", "US - Portsmouth, NH"]
+      }
+    ]
+  },
+  "regeneron": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://regeneron.wd1.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 641,
+        "weak": false,
+        "sample": [
+          "Staff Facilities Engineer - Data Center",
+          "Senior Associate Scientist - Proteogenomic & Immunopeptidomics",
+          "Associate Manager Pharmacy Support Services"
+        ],
+        "locations": ["RENSS - GLOBAL VIEW", "TARRYTOWN", "3 Locations"]
+      }
+    ]
+  },
+  "siemens-healthineers": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ge-healthcare": {
+    "candidates": 0,
+    "hits": []
+  },
+  "parexel": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://parexel.wd1.myworkdayjobs.com/parexel_external_careers",
+        "portal": "workday",
+        "jobs": 345,
+        "weak": false,
+        "sample": [
+          "Clinical Trial Coordinator Regulatory - Poland (Warsaw Office based) - FSP",
+          "Principal Clinical Database Programmer - eCOA",
+          "SKDL Programming Lead - Spain - FSP"
+        ],
+        "locations": ["Poland-Remote", "2 Locations", "Spain-Remote"]
+      }
+    ]
+  },
+  "johnson-and-johnson-medtech": {
+    "candidates": 0,
+    "hits": []
+  },
+  "boston-scientific": {
+    "candidates": 0,
+    "hits": []
+  },
+  "illumina": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://illumina.wd1.myworkdayjobs.com/illumina-careers",
+        "portal": "workday",
+        "jobs": 170,
+        "weak": false,
+        "sample": [
+          "Sr. Manager, Planning Process Improvement & Digitalization (SAP IBP suite)",
+          "Senior & Staff Bioinformatics Scientist's",
+          "Senior Tax Analyst"
+        ],
+        "locations": ["US - California - San Diego", "7 Locations", "England - Cambridge"]
+      }
+    ]
+  },
+  "becton-dickinson": {
+    "candidates": 0,
+    "hits": []
+  },
+  "danaher": {
+    "candidates": 12,
+    "hits": [
+      {
+        "url": "https://danaher.wd1.myworkdayjobs.com/danaherjobs",
+        "portal": "workday",
+        "jobs": 1447,
+        "weak": false,
+        "sample": [
+          "Sr. Controls and Automation Engineer",
+          "Manager, Quality & Regulatory Operations",
+          "IT Analyst"
+        ],
+        "locations": [
+          "Pensacola, Florida, United States",
+          "Neuchâtel, Switzerland",
+          "Grens, Switzerland"
+        ]
+      }
+    ]
+  },
+  "zimmer-biomet": {
+    "candidates": 0,
+    "hits": []
+  },
+  "edwards-lifesciences": {
+    "candidates": 0,
+    "hits": []
+  },
+  "intuitive-surgical": {
+    "candidates": 0,
+    "hits": []
+  },
+  "catalent": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://catalent.wd1.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 313,
+        "weak": false,
+        "sample": [
+          "Human Resources Business Partner",
+          "Commercial Project Manager, Pharmaceuticals",
+          "Energy Engineer"
+        ],
+        "locations": ["St. Petersburg, FL", "Kansas City, MO", "Aprilia, Italy"]
+      }
+    ]
+  },
+  "olympus": {
+    "candidates": 0,
+    "hits": []
+  },
+  "agilent": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://agilent.wd5.myworkdayjobs.com/agilent_careers",
+        "portal": "workday",
+        "jobs": 360,
+        "weak": false,
+        "sample": [
+          "Account Manager/in – Chromatographie/Massenspektrometrie/Spektroskopie M/F/D",
+          "Field Service Engineer - LCMS",
+          "Mitarbeiter/in Vertriebsinnendienst – Chromatographie/Massenspektrometrie/Spektroskopie M/F/D"
+        ],
+        "locations": ["Germany - Brandenburg - Berlin", "US-IL-Chicago", "Germany-Waldbronn"]
+      },
+      {
+        "url": "https://agilent.wd5.myworkdayjobs.com/agilent_student_careers",
+        "portal": "workday",
+        "jobs": 28,
+        "weak": false,
+        "sample": [
+          "Field Service Engineer",
+          "Service and Training Administrator (temporarily position)",
+          "Product Engineer (EE)"
+        ],
+        "locations": ["Taiwan-Remote Location", "Denmark-Glostrup", "Malaysia-Penang"]
+      }
+    ]
+  },
+  "baxter": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://baxter.wd1.myworkdayjobs.com/baxter",
+        "portal": "workday",
+        "jobs": 531,
+        "weak": false,
+        "sample": [
+          "Service Operations Manager",
+          "Sr Eng, Supplier Quality",
+          "Sr Analyst, Channel Operations"
+        ],
+        "locations": ["Downey, California", "Tijuana, Baja California", "La Aurora, Heredia"]
+      }
+    ]
+  },
+  "smith-nephew": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://smithnephew.wd5.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 355,
+        "weak": false,
+        "sample": [
+          "Full-Line Sales Representative (Naples/Ft Myers, FL)",
+          "Co-Op Electrical Engineering",
+          "Intern Electrical Engineering"
+        ],
+        "locations": ["2 Locations", "Andover, MA", "Andover, MA"]
+      }
+    ]
+  },
+  "stryker": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://stryker.wd1.myworkdayjobs.com/strykercareers",
+        "portal": "workday",
+        "jobs": 1445,
+        "weak": false,
+        "sample": [
+          "Foot and Ankle Sales Associate - Detroit, MI",
+          "Senior Test Engineer (Onsite)- Test Lab",
+          "Territory Sales Manager, Trauma"
+        ],
+        "locations": ["Detroit, Michigan", "2 Locations", "Oslo, Norway"]
+      }
+    ]
+  },
+  "hologic": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unitedhealth-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fresenius-medical-care": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Patient Care Technician - PCT",
+          "Patient Care Technician - PCT",
+          "Outpatient Licensed Practical Nurse - LPN LVN"
+        ],
+        "locations": ["Jacksonville, FL", "Riverton, UT", "Cincinnati, OH, USA"]
+      }
+    ]
+  },
+  "dexcom": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://dexcom.wd1.myworkdayjobs.com/dexcom",
+        "portal": "workday",
+        "jobs": 288,
+        "weak": false,
+        "sample": [
+          "Sr. Federal Business Manager - DoW WEST",
+          "Staff Process Development Engineer",
+          "Global Events Specialist"
+        ],
+        "locations": ["Remote - United States", "San Diego, California", "Remote California"]
+      }
+    ]
+  },
+  "cvs-health": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://cvshealth.wd1.myworkdayjobs.com/cvs_health_careers",
+        "portal": "workday",
+        "jobs": 19294,
+        "weak": false,
+        "sample": [
+          "District Support Pharmacist Full Time",
+          "Staff Pharmacist - FT",
+          "Operations Supervisor"
+        ],
+        "locations": ["MD - Pasadena", "TX - Fort Worth", "CA - La Jolla"]
+      }
+    ]
+  },
+  "resmed": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://resmed.wd3.myworkdayjobs.com/resmed_external_careers",
+        "portal": "workday",
+        "jobs": 268,
+        "weak": false,
+        "sample": [
+          "Senior Manager, Delivery & Deployment - ERP",
+          "Sachbearbeiter Privatpatientenservice (m/w/d) - befristet",
+          "Projektmanager Implementation Management (m/w/d)"
+        ],
+        "locations": ["Singapore, Singapore", "Munich, Germany", "DE Bundesweit"]
+      },
+      {
+        "url": "https://resmed.wd3.myworkdayjobs.com/brightree_external_careers",
+        "portal": "workday",
+        "jobs": 6,
+        "weak": false,
+        "sample": [
+          "AR RCM Specialist - DME",
+          "AR Team Lead, RCM",
+          "Professional Services Strategy & Optimization Lead"
+        ],
+        "locations": [
+          "US Brightree (Remote Workforce)",
+          "US Brightree (Remote Workforce)",
+          "Peachtree Corners, GA, United States"
+        ]
+      },
+      {
+        "url": "https://resmed.wd3.myworkdayjobs.com/matrixcare_external_careers",
+        "portal": "workday",
+        "jobs": 1,
+        "weak": false,
+        "sample": ["Customer Support Associate I"],
+        "locations": ["Bloomington, MN USA"]
+      }
+    ]
+  },
+  "philips": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers",
+        "portal": "workday",
+        "jobs": 803,
+        "weak": false,
+        "sample": [
+          "Account Manager, Medical Imaging - Based in British Columbia",
+          "Warehouse Operator",
+          "Global Media Relations Spokesperson"
+        ],
+        "locations": [
+          "Canada - Remote Based, Ontario, Canada - Canada - À distance, Ontario, Canada",
+          "Reedsville, Pennsylvania, United States",
+          "Amsterdam"
+        ]
+      },
+      {
+        "url": "https://philips.wd3.myworkdayjobs.com/internal-job-postings-list-for-philips-contingent-workers",
+        "portal": "workday",
+        "jobs": 216,
+        "weak": true,
+        "sample": [
+          "Senior Field Specialist HPM / CT (m/w/d)",
+          "Field Specialist (m/w/d) DXR NRW",
+          "IMS Sourcer (all genders)"
+        ],
+        "locations": ["Germany - Home Based", "Germany - Home Based", "Hamburg"]
+      }
+    ]
+  },
+  "axa-health": {
+    "candidates": 0,
+    "hits": []
+  },
+  "vitality": {
+    "candidates": 0,
+    "hits": []
+  },
+  "elevance-health": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/ant",
+        "portal": "workday",
+        "jobs": 283,
+        "weak": false,
+        "sample": [
+          "Referral Specialist I – Paragon",
+          "LTSS Service Coordinator - Clinician",
+          "Special Programs Case Manager I (Licensed BH Clinician)"
+        ],
+        "locations": [
+          "TX-PLANO, 3033 W PRESIDENT GEORGE BUSH HWY, STE 100",
+          "2 Locations",
+          "GA-ATLANTA, 740 W PEACHTREE ST NW"
+        ]
+      },
+      {
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/carelonglobal_ph",
+        "portal": "workday",
+        "jobs": 19,
+        "weak": false,
+        "sample": [
+          "CSR ( Financial Ops Recovery Spec I )",
+          "Mkt Research Analyst Talent Intel (PHL)",
+          "Mgr Asst Customer Care (PHL)"
+        ],
+        "locations": [
+          "PHL-Taguig City-Alliance Global Tower, 11th Ave, Corner 36th St, Uptown Bonifacio",
+          "PHL-Taguig City-Alliance Global Tower, 11th Ave, Corner 36th St, Uptown Bonifacio",
+          "PHL-Pasig City-Glas Building, Opal Road,"
+        ]
+      },
+      {
+        "url": "https://elevancehealth.wd1.myworkdayjobs.com/carelonglobal_in",
+        "portal": "workday",
+        "jobs": 14,
+        "weak": false,
+        "sample": [
+          "Fresher - Jr Associate Enrollment - BF - 8816-42904-3 - JR211161",
+          "Data Analytics & Reporting - Asst Manager PMO - BF - 37836-57626-2 - JR204427",
+          "Delivery Management - Assistant Manager EBA - BO - BF - 26745-42920-2 - JR209463"
+        ],
+        "locations": [
+          "IND - HR - Gurugram, Candor Tech Space",
+          "IND-KA-Bengaluru, Manyata Embassy Business Park",
+          "IND - HR - Gurugram, Candor Tech Space"
+        ]
+      }
+    ]
+  },
+  "oscar-health": {
+    "candidates": 0,
+    "hits": []
+  },
+  "epic-systems": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oracle-health-cerner": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cigna": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://cigna.wd5.myworkdayjobs.com/cignacareers",
+        "portal": "workday",
+        "jobs": 545,
+        "weak": false,
+        "sample": [
+          "PER DIEM Staff Pharmacist - Accredo (Memphis)",
+          "Product Strategy & Development Senior Advisor - Express Scripts Pharmacy - Remote",
+          "Corporate Security Advisor (Technology/Access Control)"
+        ],
+        "locations": ["Memphis, TN", "5 Locations", "Bloomfield, CT"]
+      }
+    ]
+  },
+  "doximity": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/doximity",
+        "portal": "greenhouse",
+        "jobs": 11,
+        "weak": false,
+        "sample": [
+          "Business Intelligence Analyst (Contractor)",
+          "Client Success Manager, Enterprise",
+          "Client Success Manager, Pharma"
+        ],
+        "locations": [
+          "San Francisco, CA or Remote (U.S.)",
+          "San Francisco, CA or Remote (U.S.)",
+          "San Francisco, CA or Remote (U.S.)"
+        ]
+      }
+    ]
+  },
+  "zocdoc": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/zocdoc",
+        "portal": "greenhouse",
+        "jobs": 61,
+        "weak": false,
+        "sample": [
+          "Account Director, Health Systems",
+          "Account Executive, Enterprise",
+          "Account Executive, Mid-Market"
+        ],
+        "locations": ["USA Remote", "New York, NY", "New York, NY"]
+      }
+    ]
+  },
+  "ro": {
+    "candidates": 0,
+    "hits": []
+  },
+  "teladoc": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://teladoc.wd503.myworkdayjobs.com/teladochealth_is_hiring",
+        "portal": "workday",
+        "jobs": 51,
+        "weak": false,
+        "sample": ["Senior Manager, Finance", "Staff Accountant", "Director of Product Marketing"],
+        "locations": ["CAN - Toronto", "ARG - Any Location (Remote)", "USA - Any Location (Remote)"]
+      }
+    ]
+  },
+  "kry": {
+    "candidates": 0,
+    "hits": []
+  },
+  "centene": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://centene.wd5.myworkdayjobs.com/centene_external",
+        "portal": "workday",
+        "jobs": 429,
+        "weak": false,
+        "sample": [
+          "Clinical Extern",
+          "Program Management, UM Program & Portfolio ManagementUndergraduate Summer Intern",
+          "LTSS Service Care Manager"
+        ],
+        "locations": ["Remote-SC", "Remote-MO", "7 Locations"]
+      }
+    ]
+  },
+  "warner-bros-discovery": {
+    "candidates": 0,
+    "hits": []
+  },
+  "paramount": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sony-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bbc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "itv": {
+    "candidates": 0,
+    "hits": []
+  },
+  "huma": {
+    "candidates": 1,
+    "hits": []
+  },
+  "news-corp": {
+    "candidates": 0,
+    "hits": []
+  },
+  "medtronic": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://medtronic.wd1.myworkdayjobs.com/redeploymentmedtroniccareers",
+        "portal": "workday",
+        "jobs": 1095,
+        "weak": false,
+        "sample": [
+          "Clinical Specialist, Cranial & Spinal Technologies - Las Vegas, NV",
+          "Training & Education Specialist",
+          "Cardiac Rhythm Management Clinical Specialist - Gainsville/Athens/Gwinnett"
+        ],
+        "locations": [
+          "Las Vegas, Nevada, United States of America",
+          "Brampton, Ontario, Canada",
+          "Atlanta, Georgia, United States of America"
+        ]
+      },
+      {
+        "url": "https://medtronic.wd1.myworkdayjobs.com/medtroniccareers",
+        "portal": "workday",
+        "jobs": 1022,
+        "weak": false,
+        "sample": [
+          "Clinical Specialist, Cranial & Spinal Technologies - Las Vegas, NV",
+          "Training & Education Specialist",
+          "Cardiac Rhythm Management Clinical Specialist - Gainsville/Athens/Gwinnett"
+        ],
+        "locations": [
+          "Las Vegas, Nevada, United States of America",
+          "Brampton, Ontario, Canada",
+          "Atlanta, Georgia, United States of America"
+        ]
+      }
+    ]
+  },
+  "pearson": {
+    "candidates": 0,
+    "hits": []
+  },
+  "penguin-random-house": {
+    "candidates": 0,
+    "hits": []
+  },
+  "harpercollins": {
+    "candidates": 0,
+    "hits": []
+  },
+  "universal-music-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cardinal-health": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://cardinalhealth.wd1.myworkdayjobs.com/ext",
+        "portal": "workday",
+        "jobs": 845,
+        "weak": false,
+        "sample": [
+          "Warehouse Associate II",
+          "Warehouse Worker (Inbound)",
+          "Delivery Driver - Pharmacy Services"
+        ],
+        "locations": [
+          "TX - Fort Worth - CAH-Home Solutions DC - Mark IV",
+          "NC-Durham-Cardinal Health at-Home Solutions DC",
+          "PA-Bethlehem-Allentwn Nuc Phar#24"
+        ]
+      },
+      {
+        "url": "https://cardinalhealth.wd1.myworkdayjobs.com/navista",
+        "portal": "workday",
+        "jobs": 37,
+        "weak": false,
+        "sample": [
+          "Nurse Practitioner",
+          "Staff Radiation Therapist - $5,000 Sign-On Bonus!",
+          "Staff Radiation Therapist - $5,000 Sign-On Bonus!"
+        ],
+        "locations": [
+          "GA-Statesboro-South Georgia Center for Cancer Care",
+          "CA-Chula Vista-ROSB",
+          "CA-Chula Vista-ROSB"
+        ]
+      },
+      {
+        "url": "https://cardinalhealth.wd1.myworkdayjobs.com/contractor",
+        "portal": "workday",
+        "jobs": 9,
+        "weak": true,
+        "sample": [
+          "Warehouse Associate (Full-Time, Days) - Contractor Conversion",
+          "Manufacturing Associate- 2nd Shift (Contract Conversion)",
+          "Manufacturing Associate- 3rd shift (Contract Conversion)"
+        ],
+        "locations": ["NY-Whitestone-Kinray", "MA-Chicopee", "MA-Chicopee"]
+      }
+    ]
+  },
+  "walt-disney": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://disney.wd5.myworkdayjobs.com/disneycareer",
+        "portal": "workday",
+        "jobs": 208,
+        "weak": false,
+        "sample": [
+          "Lead Software Engineer-AI Licensing & Publishing Systems",
+          "Product Manager (Project Hire)",
+          "Sr Product Manager"
+        ],
+        "locations": ["2 Locations", "Orlando, FL, USA", "Orlando, FL, USA"]
+      }
+    ]
+  },
+  "financial-times": {
+    "candidates": 0,
+    "hits": []
+  },
+  "microsoft-gaming": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sony-interactive": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nintendo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hims-and-hers": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/hims-and-hers",
+        "portal": "ashby",
+        "jobs": 148,
+        "weak": false,
+        "sample": [
+          "Maintenance Tech II, Compounding Facilities",
+          "Manager, Sterile Operations (Night Shift)",
+          "Operations Manager, Compounding"
+        ],
+        "locations": ["New Albany, Ohio", "New Albany, Ohio", "New Albany, Ohio"]
+      }
+    ]
+  },
+  "electronic-arts": {
+    "candidates": 0,
+    "hits": []
+  },
+  "take-two-interactive": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/taketwo",
+        "portal": "greenhouse",
+        "jobs": 37,
+        "weak": false,
+        "sample": [
+          "Business Development Manager",
+          "Business Intelligence Developer",
+          "Compensation Analyst"
+        ],
+        "locations": [
+          "New York, NY, USA",
+          "Toronto, Ontario, Canada",
+          "Bangalore, Karnataka, India"
+        ]
+      }
+    ]
+  },
+  "ubisoft": {
+    "candidates": 0,
+    "hits": []
+  },
+  "activision-blizzard-microsoft": {
+    "candidates": 0,
+    "hits": []
+  },
+  "humana": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://humana.wd5.myworkdayjobs.com/centerwell_external_career_site",
+        "portal": "workday",
+        "jobs": 1811,
+        "weak": false,
+        "sample": [
+          "Home Health Physical Therapist Assistant-Per Diem",
+          "Home Health Clinical Manager",
+          "Home Health Registered Nurse-Per Diem"
+        ],
+        "locations": ["Delco, NC", "Columbia, MD", "San Angelo, TX"]
+      },
+      {
+        "url": "https://humana.wd5.myworkdayjobs.com/humana_external_career_site",
+        "portal": "workday",
+        "jobs": 241,
+        "weak": false,
+        "sample": [
+          "Licensed Behavioral Health UM (RN, SW, Counseling, Psychology)",
+          "Senior IT Internal Auditor",
+          "Senior DevOps Platform Engineer"
+        ],
+        "locations": ["Remote Oklahoma", "3 Locations", "12 Locations"]
+      }
+    ]
+  },
+  "roblox": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/roblox",
+        "portal": "greenhouse",
+        "jobs": 272,
+        "weak": false,
+        "sample": [
+          "[2027] Applied Scientist - PhD Intern",
+          "[2027] Associate Product Designer, Early Career",
+          "[2027] Associate Product Manager, Early Career"
+        ],
+        "locations": [
+          "San Mateo, CA, United States",
+          "San Mateo, CA, United States",
+          "San Mateo, CA, United States"
+        ]
+      }
+    ]
+  },
+  "riot-games": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/riotgames",
+        "portal": "greenhouse",
+        "jobs": 186,
+        "weak": false,
+        "sample": [
+          "3D Character Artist (Contract)",
+          "3D Character Artist - Unpublished R&D Product",
+          "3D Environment Artist - Unpublished R&D Product (Contract)"
+        ],
+        "locations": ["Guangzhou, China", "Shanghai, China", "Guangzhou, China"]
+      }
+    ]
+  },
+  "supercell": {
+    "candidates": 0,
+    "hits": []
+  },
+  "king-microsoft": {
+    "candidates": 0,
+    "hits": []
+  },
+  "embracer-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cd-projekt": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bandai-namco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "square-enix": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unity": {
+    "candidates": 1,
+    "hits": []
+  },
+  "valve": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-oxford": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-cambridge": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ucl": {
+    "candidates": 0,
+    "hits": []
+  },
+  "imperial-college-london": {
+    "candidates": 0,
+    "hits": []
+  },
+  "king-s-college-london": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-manchester": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-edinburgh": {
+    "candidates": 0,
+    "hits": []
+  },
+  "harvard": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bloomberg": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bloomberg.wd1.myworkdayjobs.com/bloombergindustrygroup_external_career_site",
+        "portal": "workday",
+        "jobs": 68,
+        "weak": false,
+        "sample": [
+          "Technical Manager",
+          "Team Lead, Legal Content & Analysis, Commercial Transactions",
+          "Senior Technical Product Manager, AI Evaluations & Quality"
+        ],
+        "locations": [
+          "Arlington, VA - 1801 S Bell (INDG)",
+          "Arlington, VA - 1801 S Bell (INDG)",
+          "Arlington, VA - 1801 S Bell (INDG)"
+        ]
+      }
+    ]
+  },
+  "stanford": {
+    "candidates": 0,
+    "hits": []
+  },
+  "johns-hopkins": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-california-system": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-texas-system": {
+    "candidates": 0,
+    "hits": []
+  },
+  "state-university-of-new-york": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-toronto": {
+    "candidates": 0,
+    "hits": []
+  },
+  "university-of-melbourne": {
+    "candidates": 0,
+    "hits": []
+  },
+  "national-university-of-singapore": {
+    "candidates": 0,
+    "hits": []
+  },
+  "eth-zurich": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mit": {
+    "candidates": 1,
+    "hits": []
+  },
+  "coursera": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/coursera",
+        "portal": "greenhouse",
+        "jobs": 32,
+        "weak": false,
+        "sample": [
+          "Account Development Representative",
+          "Account Lead - C4B",
+          "Accounts Payable Specialist (Gurugram)"
+        ],
+        "locations": ["Singapore", "Singapore", "India"]
+      }
+    ]
+  },
+  "chegg": {
+    "candidates": 0,
+    "hits": []
+  },
+  "abbott": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "REGENTE",
+          "Business Development Representative, Informatics - West",
+          "Regional IT Director"
+        ],
+        "locations": ["Peru - Remote", "United States - California - Remote", "Ireland - Dublin"]
+      },
+      {
+        "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers2",
+        "portal": "workday",
+        "jobs": 1081,
+        "weak": false,
+        "sample": [
+          "Business Development Representative, Informatics - West",
+          "Director, Distributor Strategy - Toxicology",
+          "Manager, Systems Development Software"
+        ],
+        "locations": [
+          "United States - California - Remote",
+          "United States - Illinois - Lake Forest",
+          "United States - Wisconsin - Madison"
+        ]
+      },
+      {
+        "url": "https://abbott.wd5.myworkdayjobs.com/agency",
+        "portal": "workday",
+        "jobs": 6,
+        "weak": false,
+        "sample": [
+          "Staff Cyber Security Engineer",
+          "Production Supervisor (2nd Shift) - Sturgis, MI Plant",
+          "Manager Finance- Mumbai"
+        ],
+        "locations": [
+          "United States - California - Sylmar",
+          "United States - Michigan - Sturgis",
+          "India - Mumbai"
+        ]
+      }
+    ]
+  },
+  "2u": {
+    "candidates": 0,
+    "hits": []
+  },
+  "byju-s": {
+    "candidates": 0,
+    "hits": []
+  },
+  "physicswallah": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sky": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://sky.wd3.myworkdayjobs.com/tux",
+        "portal": "workday",
+        "jobs": 308,
+        "weak": false,
+        "sample": [
+          "Retail Sales Advisor - Edinburgh (12 month fixed term contract)",
+          "Factual Assistant/Personal Assistant",
+          "Part Time Retail Sales Advisor - Preston"
+        ],
+        "locations": ["Scotland & NI", "Osterley", "North West"]
+      },
+      {
+        "url": "https://sky.wd3.myworkdayjobs.com/sky_careers",
+        "portal": "workday",
+        "jobs": 34,
+        "weak": false,
+        "sample": [
+          "Stage Business Finance",
+          "Stage - Customer Data & Reporting Analyst – Sky Italia",
+          "Stage Area NOW & Business – Sky Italia"
+        ],
+        "locations": ["Milan, Monte Penice", "Milan, Monte Penice", "Milan, Monte Penice"]
+      }
+    ]
+  },
+  "epic-games": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/epicgames",
+        "portal": "greenhouse",
+        "jobs": 140,
+        "weak": false,
+        "sample": ["Cinematics Director", "Cinematics Director", "Communications Intern"],
+        "locations": [
+          "BLANK,BLANK,Multiple Locations",
+          "Cary,North Carolina,United States",
+          "Cary,North Carolina,United States"
+        ]
+      }
+    ]
+  },
+  "khan-academy": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/khanacademy",
+        "portal": "greenhouse",
+        "jobs": 4,
+        "weak": false,
+        "sample": [
+          "Bilingual Content Creator, Khan Academy Kids (24 months fixed-term)",
+          "Principal Experience Architect",
+          "Senior Efficacy Research and Psychometrics Analyst, Khan Kids (24 months fixed-term)"
+        ],
+        "locations": [
+          "San Mateo, CA / Remote (Continental US + Hawaii + Canada Only)",
+          "San Mateo, CA / Remote (Continental US + Hawaii + Canada Only)",
+          "San Mateo, CA / Remote (Continental US + Hawaii + Canada Only)"
+        ]
+      }
+    ]
+  },
+  "multiverse": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/multiverse",
+        "portal": "ashby",
+        "jobs": 26,
+        "weak": false,
+        "sample": [
+          "Enterprise Account Executive, UK",
+          "Mid Market Account Executive, UK",
+          "Data Technical Trainer"
+        ],
+        "locations": ["London", "London", "London · Remote (UK) · UK"]
+      }
+    ]
+  },
+  "bpp": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kaplan": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mcgraw-hill": {
+    "candidates": 0,
+    "hits": []
+  },
+  "gostudent": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/gostudent",
+        "portal": "greenhouse",
+        "jobs": 21,
+        "weak": false,
+        "sample": [
+          "Account Manager  (Madrid)",
+          "Center Manager Berlin - various locations (m/w/d)",
+          "Centre Sales & Operations Coordinator – Arese (Tempo determinato – 30h/settimana)"
+        ],
+        "locations": ["Madrid, Spain", "Berlin, Germany", "Milan, Italy"]
+      }
+    ]
+  },
+  "teach-first": {
+    "candidates": 0,
+    "hits": []
+  },
+  "udemy": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/udemy",
+        "portal": "greenhouse",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "Join Our Talent Community",
+          "Senior Merchandising Manager",
+          "Senior Pre-Sales Engineer"
+        ],
+        "locations": ["Global", "Denver, CO", "Remote, Japan"]
+      }
+    ]
+  },
+  "brac": {
+    "candidates": 0,
+    "hits": []
+  },
+  "international-rescue-committee": {
+    "candidates": 0,
+    "hits": []
+  },
+  "save-the-children": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oxfam": {
+    "candidates": 0,
+    "hits": []
+  },
+  "medecins-sans-frontieres": {
+    "candidates": 1,
+    "hits": []
+  },
+  "mercy-corps": {
+    "candidates": 0,
+    "hits": []
+  },
+  "instructure": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jobs.ashbyhq.com/instructure",
+        "portal": "ashby",
+        "jobs": 59,
+        "weak": false,
+        "sample": [
+          "Senior Account Executive - Canvas - K12",
+          "Renewal Manager - K-12",
+          "Senior Account Executive - Canvas - K12"
+        ],
+        "locations": ["US-REMOTE", "US-REMOTE", "United States"]
+      }
+    ]
+  },
+  "care": {
+    "candidates": 0,
+    "hits": []
+  },
+  "plan-international": {
+    "candidates": 0,
+    "hits": []
+  },
+  "catholic-relief-services": {
+    "candidates": 0,
+    "hits": []
+  },
+  "norwegian-refugee-council": {
+    "candidates": 0,
+    "hits": []
+  },
+  "international-committee-of-the-red-cross": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ifrc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "actionaid": {
+    "candidates": 0,
+    "hits": []
+  },
+  "christian-aid": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fhi-360": {
+    "candidates": 0,
+    "hits": []
+  },
+  "chemonics": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dai-global": {
+    "candidates": 0,
+    "hits": []
+  },
+  "palladium": {
+    "candidates": 0,
+    "hits": []
+  },
+  "abt-associates": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rti-international": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/rti",
+        "portal": "greenhouse",
+        "jobs": 8,
+        "weak": false,
+        "sample": [
+          "Embedded Lab Engineer",
+          "Field Application Engineer",
+          "Marketing Events Manager"
+        ],
+        "locations": ["Sunnyvale, CA", "Germany", "Denver, Colorado"]
+      }
+    ]
+  },
+  "wellcome-trust": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tencent-games": {
+    "candidates": 6,
+    "hits": [
+      {
+        "url": "https://tencent.wd1.myworkdayjobs.com/tencent_careers",
+        "portal": "workday",
+        "jobs": 314,
+        "weak": false,
+        "sample": [
+          "Tencent Cloud- Network Procurement Manager (Singapore)",
+          "Media Services Solution Architect Intern — Korea",
+          "Media Services Solution Architect (New Graduate) — Japan"
+        ],
+        "locations": ["Singapore-CapitaSky", "S.Korea-Seoul", "Japan-Tokyo-Business Tower"]
+      },
+      {
+        "url": "https://tencent.wd1.myworkdayjobs.com/oa_huoshui_platform",
+        "portal": "workday",
+        "jobs": 126,
+        "weak": false,
+        "sample": [
+          "全新PC游戏高级品牌经理",
+          "《流放之路2》Gameplay开发工程师",
+          "Marketing Manager"
+        ],
+        "locations": ["China-Shenzhen", "China-Shenzhen", "China-Shenzhen"]
+      },
+      {
+        "url": "https://tencent.wd1.myworkdayjobs.com/lightspeed",
+        "portal": "workday",
+        "jobs": 42,
+        "weak": false,
+        "sample": [
+          "Unreal Engine Programmer Intern",
+          "Controllable Video Generation Research Intern",
+          "Interactive Vision Model Research Intern"
+        ],
+        "locations": [
+          "Australia-New South Wales-Sydney",
+          "Australia-New South Wales-Sydney",
+          "Singapore-CapitaSky"
+        ]
+      }
+    ]
+  },
+  "ford-foundation": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://fordfoundation.wd1.myworkdayjobs.com/fordfoundationcareerpage",
+        "portal": "workday",
+        "jobs": 5,
+        "weak": false,
+        "sample": [
+          "Program Director, Gender Equality (International)",
+          "Program Director, Democracy and the Rule of Law (International)",
+          "Grants Officer"
+        ],
+        "locations": ["", "", "New York, USA"]
+      }
+    ]
+  },
+  "open-society-foundations": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rockefeller-foundation": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bloomberg-philanthropies": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oak-foundation": {
+    "candidates": 0,
+    "hits": []
+  },
+  "novo-nordisk-foundation": {
+    "candidates": 0,
+    "hits": []
+  },
+  "teach-for-america": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://teachforamerica.wd1.myworkdayjobs.com/tfa_careers",
+        "portal": "workday",
+        "jobs": 12,
+        "weak": false,
+        "sample": [
+          "Community Conversation Facilitator (Temp) - Greater Baton Rouge",
+          "Director, Matriculation: Corps Member Case Manager (Temporary)",
+          "Managing Director, Public Relations, Earned Media & High-Stakes Communications"
+        ],
+        "locations": ["LA - Greater Baton Rouge", "Remote/Home Office", "Remote/Home Office"]
+      }
+    ]
+  },
+  "british-heart-foundation": {
+    "candidates": 0,
+    "hits": []
+  },
+  "macmillan-cancer-support": {
+    "candidates": 0,
+    "hits": []
+  },
+  "age-uk": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rspca": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rspb": {
+    "candidates": 0,
+    "hits": []
+  },
+  "national-trust": {
+    "candidates": 0,
+    "hits": []
+  },
+  "barnardo-s": {
+    "candidates": 0,
+    "hits": []
+  },
+  "world-vision": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://worldvision.wd1.myworkdayjobs.com/worldvisioninternational",
+        "portal": "workday",
+        "jobs": 290,
+        "weak": false,
+        "sample": [
+          "Facilitador Desarrollo Integral HAINA",
+          "Facilitador (a) De Desarrollo Integral HAINA",
+          "Monitoring, Evaluation, Research, and Learning Coordinator"
+        ],
+        "locations": [
+          "PDA Haina, Dominican Republic",
+          "PDA Haina, Dominican Republic",
+          "Sarajevo, FBiH (NO), Bosnia and Herzegovina"
+        ]
+      }
+    ]
+  },
+  "american-cancer-society": {
+    "candidates": 0,
+    "hits": []
+  },
+  "united-way-worldwide": {
+    "candidates": 0,
+    "hits": []
+  },
+  "habitat-for-humanity": {
+    "candidates": 0,
+    "hits": []
+  },
+  "live-nation": {
+    "candidates": 7,
+    "hits": [
+      {
+        "url": "https://livenation.wd503.myworkdayjobs.com/lnexternalsite",
+        "portal": "workday",
+        "jobs": 1251,
+        "weak": false,
+        "sample": [
+          "Systems Engineer III, Datacenter Operations",
+          "Digital Director",
+          "Event Programming Specialist"
+        ],
+        "locations": ["Ashburn, VA, USA", "London, UK", "CZ Prague - Jungmannova 26/15"]
+      },
+      {
+        "url": "https://livenation.wd503.myworkdayjobs.com/insomniacexternalsite",
+        "portal": "workday",
+        "jobs": 134,
+        "weak": false,
+        "sample": [
+          "Insomniac - Global Freight & Logistics Shipping Manager, Consumer Products",
+          "Human Resources Coordinator",
+          "Insomniac - Marketing Campaign Specialist, Concerts"
+        ],
+        "locations": ["Henderson, NV, USA", "Calabasas, CA, USA", "Calabasas, CA, USA"]
+      },
+      {
+        "url": "https://livenation.wd503.myworkdayjobs.com/tmexternalsite",
+        "portal": "workday",
+        "jobs": 55,
+        "weak": false,
+        "sample": [
+          "Systems Engineer III, Datacenter Operations",
+          "Event Programming Specialist",
+          "Client Account Manager - System Venues (12 month FTC)"
+        ],
+        "locations": ["Ashburn, VA, USA", "CZ Prague - Jungmannova 26/15", "3 Locations"]
+      }
+    ]
+  },
+  "unicef": {
+    "candidates": 0,
+    "hits": []
+  },
+  "world-food-programme": {
+    "candidates": 0,
+    "hits": []
+  },
+  "undp": {
+    "candidates": 0,
+    "hits": []
+  },
+  "who": {
+    "candidates": 0,
+    "hits": []
+  },
+  "un-secretariat": {
+    "candidates": 0,
+    "hits": []
+  },
+  "world-bank-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "imf": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://imf.wd5.myworkdayjobs.com/imf",
+        "portal": "workday",
+        "jobs": 16,
+        "weak": false,
+        "sample": [
+          "Economist Program 2027",
+          "2027 Fund Internship Program (FIP) - Economists",
+          "Administrative Coordinator - SECAI"
+        ],
+        "locations": ["USA, Washington DC", "USA, Washington DC", "USA, Washington DC"]
+      }
+    ]
+  },
+  "iom": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fao": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unfpa": {
+    "candidates": 0,
+    "hits": []
+  },
+  "un-women": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unops": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ilo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unesco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "african-development-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "asian-development-bank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "european-commission": {
+    "candidates": 0,
+    "hits": []
+  },
+  "oecd": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wto": {
+    "candidates": 1,
+    "hits": []
+  },
+  "wipo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "uk-civil-service-jobs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nhs-jobs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "usajobs-federal": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ministry-of-defence": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hmrc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "department-for-work-and-pensions": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cengage": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://cengage.wd5.myworkdayjobs.com/cengagenorthamericacareers",
+        "portal": "workday",
+        "jobs": 70,
+        "weak": false,
+        "sample": ["AI Engineer", "Staff Accountant", "Sr Financial Analyst"],
+        "locations": ["Texas, USA", "2 Locations", "2 Locations"]
+      },
+      {
+        "url": "https://cengage.wd5.myworkdayjobs.com/cengageemeacareers",
+        "portal": "workday",
+        "jobs": 4,
+        "weak": false,
+        "sample": [
+          "Cengage Student Ambassador",
+          "Gale Student Ambassador",
+          "Customer Service Representative"
+        ],
+        "locations": ["12 Locations", "3 Locations", "2 Locations"]
+      },
+      {
+        "url": "https://cengage.wd5.myworkdayjobs.com/cengageindiacareers",
+        "portal": "workday",
+        "jobs": 4,
+        "weak": false,
+        "sample": [
+          "Media Designer - Apprentice",
+          "Account Manager/Sr Sales Executive",
+          "Operations Specialist"
+        ],
+        "locations": [
+          "IN, Noida, Uttar Pradesh, India",
+          "IN, Noida, Uttar Pradesh, India",
+          "IN, Noida, Uttar Pradesh, India"
+        ]
+      }
+    ]
+  },
+  "metropolitan-police": {
+    "candidates": 0,
+    "hits": []
+  },
+  "transport-for-london": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nasa": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lockheed-martin": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rtx": {
+    "candidates": 0,
+    "hits": []
+  },
+  "unhcr": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://unhcr.wd3.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 11,
+        "weak": false,
+        "sample": ["Programme Assistant", "PSP IG Assistant", "Assistant PPH Officer (Corporates)"],
+        "locations": ["Jakarta, Indonesia", "Seoul, Korea, Republic of", "The Hague, Netherlands"]
+      },
+      {
+        "url": "https://unhcr.wd3.myworkdayjobs.com/formerstaff",
+        "portal": "workday",
+        "jobs": 8,
+        "weak": false,
+        "sample": [
+          "Programme Assistant",
+          "Assistant PPH Officer (Corporates)",
+          "Senior PSP Assistant (Digital)"
+        ],
+        "locations": ["Jakarta, Indonesia", "The Hague, Netherlands", "Kuala Lumpur, Malaysia"]
+      }
+    ]
+  },
+  "home-office": {
+    "candidates": 1,
+    "hits": []
+  },
+  "general-dynamics": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bae-systems": {
+    "candidates": 0,
+    "hits": []
+  },
+  "airbus": {
+    "candidates": 0,
+    "hits": []
+  },
+  "l3harris": {
+    "candidates": 0,
+    "hits": []
+  },
+  "gates-foundation": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://gatesfoundation.wd1.myworkdayjobs.com/gates",
+        "portal": "workday",
+        "jobs": 27,
+        "weak": false,
+        "sample": [
+          "Senior Program Officer – Data and Measurement, Learning and Evaluation (6 Months LTE)",
+          "Senior Manager, Strategy & Implementation Management",
+          "Senior Data Engineer, IT Enterprise Data Solutions"
+        ],
+        "locations": ["Addis Ababa, Ethiopia", "2 Locations", "Seattle, WA"]
+      },
+      {
+        "url": "https://gatesfoundation.wd1.myworkdayjobs.com/gatesmri",
+        "portal": "workday",
+        "jobs": 2,
+        "weak": false,
+        "sample": ["Clinical Supply Lead", "Financial Business Partner Lead"],
+        "locations": ["Cambridge, MA", "Cambridge, MA"]
+      }
+    ]
+  },
+  "leonardo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cancer-research-uk": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://cancerresearchuk.wd3.myworkdayjobs.com/external_careers",
+        "portal": "workday",
+        "jobs": 47,
+        "weak": false,
+        "sample": [
+          "Power BI Reporting Analyst",
+          "Principal Content and Design Experience Lead",
+          "Retail Store Assistant Basildon Superstore"
+        ],
+        "locations": [
+          "Stratford (2 Redman Place)",
+          "Stratford (2 Redman Place)",
+          "Basildon Superstore"
+        ]
+      },
+      {
+        "url": "https://cancerresearchuk.wd3.myworkdayjobs.com/broadbean_external",
+        "portal": "workday",
+        "jobs": 25,
+        "weak": true,
+        "sample": ["QA Engineer", "Senior Strategy Manager", "Social Media Manager"],
+        "locations": [
+          "Stratford (2 Redman Place)",
+          "Stratford (2 Redman Place)",
+          "Stratford (2 Redman Place)"
+        ]
+      }
+    ]
+  },
+  "safran": {
+    "candidates": 0,
+    "hits": []
+  },
+  "salvation-army": {
+    "candidates": 3,
+    "hits": [
+      {
+        "url": "https://salvationarmy.wd3.myworkdayjobs.com/volunteer",
+        "portal": "workday",
+        "jobs": 522,
+        "weak": false,
+        "sample": [
+          "V- Doorways Support Assistant",
+          "Believe in Good and volunteer with us at Weeroona Aged Care Centre, Bass Hill",
+          "V- Supervising Driver/Mentor"
+        ],
+        "locations": [
+          "Volunteer | Wagga Wagga, NSW, Australia | Community Services Doorways",
+          "Volunteer | Bass Hill, NSW, Australia | Aged Care",
+          "Volunteer | Coburg North, VIC, Australia | Youth and Education"
+        ]
+      },
+      {
+        "url": "https://salvationarmy.wd3.myworkdayjobs.com/salvos",
+        "portal": "workday",
+        "jobs": 162,
+        "weak": false,
+        "sample": [
+          "Case Manager - Cultural Support",
+          "Part-Time Sales Assistant - Red Hill",
+          "Cleaner"
+        ],
+        "locations": [
+          "Maximum Term (Fixed Term) | Chisholm, ACT, Australia | Youth and Education",
+          "Permanent | Red Hill, QLD, Australia | Salvos Stores",
+          "Permanent | Bendigo, VIC, Australia | VIC Division"
+        ]
+      },
+      {
+        "url": "https://salvationarmy.wd3.myworkdayjobs.com/broadbean_external",
+        "portal": "workday",
+        "jobs": 141,
+        "weak": true,
+        "sample": [
+          "Case Manager - Cultural Support",
+          "Part-Time Sales Assistant - Red Hill",
+          "Cleaner"
+        ],
+        "locations": [
+          "Maximum Term (Fixed Term) | Chisholm, ACT, Australia | Youth and Education",
+          "Permanent | Red Hill, QLD, Australia | Salvos Stores",
+          "Permanent | Bendigo, VIC, Australia | VIC Division"
+        ]
+      }
+    ]
+  },
+  "honeywell-aerospace": {
+    "candidates": 0,
+    "hits": []
+  },
+  "babcock-international": {
+    "candidates": 0,
+    "hits": []
+  },
+  "qinetiq": {
+    "candidates": 0,
+    "hits": []
+  },
+  "northrop-grumman": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://ngc.wd1.myworkdayjobs.com/northrop_grumman_external_site",
+        "portal": "workday",
+        "jobs": 3690,
+        "weak": false,
+        "sample": [
+          "2027 Integration and Test (Electronics/Mechanical) Technical Intern - Dulles VA",
+          "Sentinel - Systems Engineer / Principal Systems Engineer - 20060",
+          "Senior Principal Systems Engineer *"
+        ],
+        "locations": ["United States-Virginia-Dulles", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "spacex": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/spacex",
+        "portal": "greenhouse",
+        "jobs": 2893,
+        "weak": false,
+        "sample": [
+          "Accountant",
+          "Account Lead, Starlink Strategic Connectivity",
+          "Account Lead, Starlink Strategic Connectivity"
+        ],
+        "locations": ["Hawthorne, CA", "Hawthorne, CA", "Bastrop, TX"]
+      }
+    ]
+  },
+  "rheinmetall": {
+    "candidates": 0,
+    "hits": []
+  },
+  "delta": {
+    "candidates": 0,
+    "hits": []
+  },
+  "american-airlines": {
+    "candidates": 0,
+    "hits": []
+  },
+  "united-airlines": {
+    "candidates": 0,
+    "hits": []
+  },
+  "southwest": {
+    "candidates": 0,
+    "hits": []
+  },
+  "emirates-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "qatar-airways": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lufthansa-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "air-france-klm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "international-airlines-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ryanair": {
+    "candidates": 0,
+    "hits": []
+  },
+  "easyjet": {
+    "candidates": 0,
+    "hits": []
+  },
+  "turkish-airlines": {
+    "candidates": 0,
+    "hits": []
+  },
+  "singapore-airlines": {
+    "candidates": 0,
+    "hits": []
+  },
+  "etihad": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ethiopian-airlines": {
+    "candidates": 0,
+    "hits": []
+  },
+  "air-canada": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ge-aerospace": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite",
+        "portal": "workday",
+        "jobs": 658,
+        "weak": false,
+        "sample": [
+          "Lead Manufacturing Engineer - 2nd Shift",
+          "Lead Manufacturing Engineer",
+          "Opérateur.trice production - Semaine Soir"
+        ],
+        "locations": ["Clearwater", "Clearwater", "Boisbriand"]
+      }
+    ]
+  },
+  "indigo": {
+    "candidates": 1,
+    "hits": []
+  },
+  "heathrow-airport": {
+    "candidates": 0,
+    "hits": []
+  },
+  "thales": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://thales.wd3.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "HSE & Product Sustainability Specialist",
+          "Responsable Gestion de configuration flux",
+          "HR Business Partner F/H"
+        ],
+        "locations": ["Irvine", "Orléans", "La Ferté-Saint-Aubin"]
+      }
+    ]
+  },
+  "volkswagen-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "stellantis": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ford": {
+    "candidates": 0,
+    "hits": []
+  },
+  "duolingo": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/duolingo",
+        "portal": "greenhouse",
+        "jobs": 55,
+        "weak": false,
+        "sample": [
+          "Ad Sales Lead, Programmatic",
+          "Ad Sales Lead - West",
+          "AI Research Engineer, New PhD Graduate"
+        ],
+        "locations": ["New York, NY", "Remote - California", "New York, NY; Pittsburgh, PA"]
+      }
+    ]
+  },
+  "hyundai-motor-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mercedes-benz": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bmw": {
+    "candidates": 0,
+    "hits": []
+  },
+  "honda": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tesla": {
+    "candidates": 0,
+    "hits": []
+  },
+  "byd": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nissan": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tata-motors": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jaguar-land-rover": {
+    "candidates": 0,
+    "hits": []
+  },
+  "renault": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rivian": {
+    "candidates": 1,
+    "hits": []
+  },
+  "bosch": {
+    "candidates": 0,
+    "hits": []
+  },
+  "continental": {
+    "candidates": 0,
+    "hits": []
+  },
+  "toyota": {
+    "candidates": 5,
+    "hits": [
+      {
+        "url": "https://toyota.wd503.myworkdayjobs.com/tmna",
+        "portal": "workday",
+        "jobs": 111,
+        "weak": false,
+        "sample": [
+          "Credit Analyst",
+          "Software Engineer, Lead",
+          "Seibi Technician - Production Engineering"
+        ],
+        "locations": ["Alpharetta, Georgia", "Plano, Texas", "Liberty, North Carolina"]
+      },
+      {
+        "url": "https://toyota.wd503.myworkdayjobs.com/toyota_ca",
+        "portal": "workday",
+        "jobs": 7,
+        "weak": false,
+        "sample": [
+          "Manager, Business Innovation",
+          "Field Warranty Specialist - Prairie Zone",
+          "Shop Technician"
+        ],
+        "locations": [
+          "Toyota Canada Inc - Head Office",
+          "Toyota Canada Inc - Prairie Zone Office",
+          "Toyota Canada Inc - Head Office"
+        ]
+      }
+    ]
+  },
+  "denso": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mahindra": {
+    "candidates": 0,
+    "hits": []
+  },
+  "exxonmobil": {
+    "candidates": 0,
+    "hits": []
+  },
+  "relx": {
+    "candidates": 9,
+    "hits": [
+      {
+        "url": "https://relx.wd3.myworkdayjobs.com/relx",
+        "portal": "workday",
+        "jobs": 775,
+        "weak": false,
+        "sample": [
+          "Client Manager - Legal & Professional",
+          "Retention Sales Development Representative",
+          "Senior Data Analyst II"
+        ],
+        "locations": ["Dayton, OH", "Dayton, OH", "2 Locations"]
+      },
+      {
+        "url": "https://relx.wd3.myworkdayjobs.com/lexisnexislegal",
+        "portal": "workday",
+        "jobs": 254,
+        "weak": false,
+        "sample": [
+          "Client Manager - Legal & Professional",
+          "Sales Development Representative - Legal & Professional",
+          "Retention Sales Development Representative"
+        ],
+        "locations": ["Dayton, OH", "Dayton, OH", "Dayton, OH"]
+      },
+      {
+        "url": "https://relx.wd3.myworkdayjobs.com/risksolutions",
+        "portal": "workday",
+        "jobs": 205,
+        "weak": false,
+        "sample": [
+          "Technical Implementation Specialist",
+          "Business Development Manager, Cirium - (Hybrid, New York)",
+          "Head of Account Management for UK, Ireland, and Southern Europe"
+        ],
+        "locations": ["Bela Cintra - Sao Paulo", "New York, NY", "London Wall"]
+      },
+      {
+        "url": "https://relx.wd3.myworkdayjobs.com/elsevierjobs",
+        "portal": "workday",
+        "jobs": 204,
+        "weak": false,
+        "sample": [
+          "Senior Data Analyst II",
+          "Senior Product Manager I",
+          "Senior Manager, GTM Enablement"
+        ],
+        "locations": ["2 Locations", "Mexico City", "London Wall"]
+      }
+    ]
+  },
+  "qantas": {
+    "candidates": 4,
+    "hits": []
+  },
+  "bp": {
+    "candidates": 0,
+    "hits": []
+  },
+  "totalenergies": {
+    "candidates": 0,
+    "hits": []
+  },
+  "saudi-aramco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "adnoc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "conocophillips": {
+    "candidates": 0,
+    "hits": []
+  },
+  "eni": {
+    "candidates": 0,
+    "hits": []
+  },
+  "general-motors": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://generalmotors.wd5.myworkdayjobs.com/careers_gm",
+        "portal": "workday",
+        "jobs": 742,
+        "weak": false,
+        "sample": [
+          "Principle Systems Engineer - Autonomy Behavior Validation",
+          "Manufacturing Group Leader - Production - Lansing",
+          "General Assembly Engineering Group Manager"
+        ],
+        "locations": [
+          "Sunnyvale, California, United States of America",
+          "Lansing, Michigan, United States of America",
+          "2 Locations"
+        ]
+      }
+    ]
+  },
+  "slb": {
+    "candidates": 0,
+    "hits": []
+  },
+  "halliburton": {
+    "candidates": 0,
+    "hits": []
+  },
+  "equinor": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://equinor.wd3.myworkdayjobs.com/eqnr",
+        "portal": "workday",
+        "jobs": 19,
+        "weak": false,
+        "sample": [
+          "Data Scientist - Agentic AI",
+          "Principal Agentic AI Expert",
+          "Environmental Engineer"
+        ],
+        "locations": ["4 Locations", "4 Locations", "Mongstad Raffineri, Norway"]
+      }
+    ]
+  },
+  "petrobras": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nnpc-ltd": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sinopec": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cnpc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "occidental": {
+    "candidates": 0,
+    "hits": []
+  },
+  "phillips-66": {
+    "candidates": 0,
+    "hits": []
+  },
+  "seplat": {
+    "candidates": 0,
+    "hits": []
+  },
+  "woodside": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nextera-energy": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rsted": {
+    "candidates": 0,
+    "hits": []
+  },
+  "chevron": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://chevron.wd5.myworkdayjobs.com/jobs",
+        "portal": "workday",
+        "jobs": 143,
+        "weak": false,
+        "sample": [
+          "Decision Analysis Consultant",
+          "Associate R&D Laboratory Technician 2",
+          "Firefighter Trainee"
+        ],
+        "locations": [
+          "Bengaluru, Karnataka, India",
+          "Ghent, East Flanders, Belgium",
+          "Richmond, California, United States of America"
+        ]
+      },
+      {
+        "url": "https://chevron.wd5.myworkdayjobs.com/university",
+        "portal": "workday",
+        "jobs": 34,
+        "weak": false,
+        "sample": [
+          "2026-2027 Facilities Engineering Intern (Previous Intern)",
+          "2026-2027 Supply & Trading Intern",
+          "2026 - 2027 Corporate Affairs Intern"
+        ],
+        "locations": ["13 Locations", "Houston, Texas, United States of America", "2 Locations"]
+      }
+    ]
+  },
+  "enel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "edf": {
+    "candidates": 0,
+    "hits": []
+  },
+  "national-grid": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sse": {
+    "candidates": 0,
+    "hits": []
+  },
+  "octopus-energy": {
+    "candidates": 0,
+    "hits": []
+  },
+  "vestas": {
+    "candidates": 0,
+    "hits": []
+  },
+  "magna": {
+    "candidates": 2,
+    "hits": []
+  },
+  "first-solar": {
+    "candidates": 0,
+    "hits": []
+  },
+  "shell": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://shell.wd3.myworkdayjobs.com/shellcareers",
+        "portal": "workday",
+        "jobs": 128,
+        "weak": false,
+        "sample": [
+          "Process Operator",
+          "Retail Site Assurance Advisor",
+          "E&I Maintenance Technician"
+        ],
+        "locations": [
+          "Indiana - Michigan City Catalyst Plant",
+          "Calgary – Shell Bow Building",
+          "Pernis - Depot"
+        ]
+      },
+      {
+        "url": "https://shell.wd3.myworkdayjobs.com/proactive",
+        "portal": "workday",
+        "jobs": 12,
+        "weak": false,
+        "sample": ["Supply Chain Network Optimization", "Intern", "Intern"],
+        "locations": ["Bangalore - Retail Office", "Amsterdam", "The Hague"]
+      }
+    ]
+  },
+  "rwe": {
+    "candidates": 0,
+    "hits": []
+  },
+  "duke-energy": {
+    "candidates": 0,
+    "hits": []
+  },
+  "southern-company": {
+    "candidates": 0,
+    "hits": []
+  },
+  "siemens-gamesa": {
+    "candidates": 2,
+    "hits": []
+  },
+  "scottishpower": {
+    "candidates": 0,
+    "hits": []
+  },
+  "adani-green": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tata-power": {
+    "candidates": 0,
+    "hits": []
+  },
+  "brookfield-renewable": {
+    "candidates": 0,
+    "hits": []
+  },
+  "schneider-electric": {
+    "candidates": 0,
+    "hits": []
+  },
+  "siemens": {
+    "candidates": 0,
+    "hits": []
+  },
+  "general-electric": {
+    "candidates": 0,
+    "hits": []
+  },
+  "honeywell": {
+    "candidates": 0,
+    "hits": []
+  },
+  "3m": {
+    "candidates": 0,
+    "hits": []
+  },
+  "iberdrola": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://iberdrola.wd3.myworkdayjobs.com/iberdrola",
+        "portal": "workday",
+        "jobs": 245,
+        "weak": false,
+        "sample": [
+          "NY - Distribution Planning Engineer (ALL LEVELS)",
+          "Banco de Talentos para Eletricistas | Neoenergia Pernambuco",
+          "🔌🔋🚀¿QUIERES FORMAR PARTE DE LA TRANSFORMACIÓN DIGITAL?🚀🔋🎓"
+        ],
+        "locations": ["2 Locations", "Brazil, Recife", "3 Locations"]
+      }
+    ]
+  },
+  "caterpillar": {
+    "candidates": 0,
+    "hits": []
+  },
+  "deere": {
+    "candidates": 0,
+    "hits": []
+  },
+  "emerson": {
+    "candidates": 2,
+    "hits": []
+  },
+  "eaton": {
+    "candidates": 0,
+    "hits": []
+  },
+  "johnson-controls": {
+    "candidates": 0,
+    "hits": []
+  },
+  "baker-hughes": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://bakerhughes.wd5.myworkdayjobs.com/bakerhughes",
+        "portal": "workday",
+        "jobs": 669,
+        "weak": false,
+        "sample": [
+          "Senior Mechanical Project Engineer- Tree Systems",
+          "Field Operator - TCP/Wireline",
+          "Jovem Aprendiz - Macaé- 2026"
+        ],
+        "locations": [
+          "GB-AC-ABERDEEN-BAKER HUGHES BUILDING",
+          "KE-Nairobi-Nairobi-The Address Building, off Waiyaki Way",
+          "2 Locations"
+        ]
+      }
+    ]
+  },
+  "mitsubishi-heavy-industries": {
+    "candidates": 0,
+    "hits": []
+  },
+  "centrica": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://centrica.wd3.myworkdayjobs.com/centrica",
+        "portal": "workday",
+        "jobs": 56,
+        "weak": false,
+        "sample": ["Senior Legal Counsel, Employment", "Pricing Manager", "Principal  IS Engineer"],
+        "locations": ["Windsor", "2 Locations", "Flexible"]
+      }
+    ]
+  },
+  "parker-hannifin": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cummins": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tata-steel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ge-vernova": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite",
+        "portal": "workday",
+        "jobs": 2229,
+        "weak": false,
+        "sample": [
+          "EHS Compliance Manager (m/k/n) - Grid Systems Integration Projects",
+          "Ingénieur d'application (H/F)",
+          "Manufacturing Shop Operations Manager"
+        ],
+        "locations": ["2 Locations", "Massy", "Zamudio"]
+      },
+      {
+        "url": "https://gevernova.wd5.myworkdayjobs.com/only_confidential_executive_recruiting",
+        "portal": "workday",
+        "jobs": 2382,
+        "weak": true,
+        "sample": [
+          "PTR Product Leader",
+          "EHS Compliance Manager (m/k/n) - Grid Systems Integration Projects",
+          "Ingénieur d'application (H/F)"
+        ],
+        "locations": ["Apodaca", "2 Locations", "Massy"]
+      }
+    ]
+  },
+  "whirlpool": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bechtel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "vinci": {
+    "candidates": 0,
+    "hits": []
+  },
+  "acs": {
+    "candidates": 2,
+    "hits": []
+  },
+  "hochtief": {
+    "candidates": 0,
+    "hits": []
+  },
+  "skanska": {
+    "candidates": 0,
+    "hits": []
+  },
+  "balfour-beatty": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kier": {
+    "candidates": 0,
+    "hits": []
+  },
+  "laing-o-rourke": {
+    "candidates": 0,
+    "hits": []
+  },
+  "aecom": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jacobs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "fluor": {
+    "candidates": 0,
+    "hits": []
+  },
+  "arup": {
+    "candidates": 0,
+    "hits": []
+  },
+  "atkins-realis": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wsp": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mott-macdonald": {
+    "candidates": 0,
+    "hits": []
+  },
+  "stantec": {
+    "candidates": 0,
+    "hits": []
+  },
+  "larsen-and-toubro": {
+    "candidates": 0,
+    "hits": []
+  },
+  "turner-construction": {
+    "candidates": 0,
+    "hits": []
+  },
+  "network-rail": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hs2-ltd": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cbre": {
+    "candidates": 0,
+    "hits": []
+  },
+  "anduril": {
+    "candidates": 1,
+    "hits": []
+  },
+  "cushman-and-wakefield": {
+    "candidates": 0,
+    "hits": []
+  },
+  "savills": {
+    "candidates": 0,
+    "hits": []
+  },
+  "knight-frank": {
+    "candidates": 0,
+    "hits": []
+  },
+  "rolls-royce": {
+    "candidates": 8,
+    "hits": [
+      {
+        "url": "https://rollsroyce.wd3.myworkdayjobs.com/professional",
+        "portal": "workday",
+        "jobs": 545,
+        "weak": false,
+        "sample": [
+          "Mechanical Engineer – Component Design",
+          "Electrical Engineering Specialist",
+          "Capability Acquisition Engineer"
+        ],
+        "locations": ["Indianapolis", "Indianapolis", "Indianapolis"]
+      },
+      {
+        "url": "https://rollsroyce.wd3.myworkdayjobs.com/rrpowersystems",
+        "portal": "workday",
+        "jobs": 263,
+        "weak": false,
+        "sample": [
+          "CNC (Computer Numerical Control) Machine Maintenance Technician - Off Shift",
+          "Senior Facilities Electrical Engineer",
+          "Senior Supervisor, Maintenance"
+        ],
+        "locations": ["Aiken", "Aiken", "Aiken"]
+      },
+      {
+        "url": "https://rollsroyce.wd3.myworkdayjobs.com/intern_graduate",
+        "portal": "workday",
+        "jobs": 93,
+        "weak": false,
+        "sample": [
+          "Programme d’apprentissage – Inspecteur/Monteur / Apprenticeship Program - Inspector/Fitter",
+          "Software Development Infrastructure Engineer",
+          "Intern, Sales - Dubai, UAE"
+        ],
+        "locations": ["Lachine", "Indianapolis", "Jebel Ali"]
+      },
+      {
+        "url": "https://rollsroyce.wd3.myworkdayjobs.com/rrpowersystemsearlycareer",
+        "portal": "workday",
+        "jobs": 48,
+        "weak": false,
+        "sample": [
+          "Werkstudent (m/w/d) Global Markets",
+          "Werkstudent (m/w/d) Hardware-in-the-Loop-Testsysteme",
+          "Werkstudent (m/w/d) Betriebskrankenkasse - Digitalisierung/Controlling"
+        ],
+        "locations": ["Friedrichshafen", "Friedrichshafen", "Friedrichshafen"]
+      }
+    ]
+  },
+  "dyson": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://dyson.wd3.myworkdayjobs.com/dyson_careers",
+        "portal": "workday",
+        "jobs": 412,
+        "weak": false,
+        "sample": [
+          "Verkaufsberater.in/Sales Associate",
+          "Order to Cash Senior Operations Manager",
+          "Model Maker (FTC)"
+        ],
+        "locations": [
+          "Germany - Brandenburg Remote",
+          "India - Gurgaon Office",
+          "United Kingdom - Malmesbury Office"
+        ]
+      }
+    ]
+  },
+  "compass": {
+    "candidates": 2,
+    "hits": []
+  },
+  "rightmove": {
+    "candidates": 0,
+    "hits": []
+  },
+  "zoopla": {
+    "candidates": 0,
+    "hits": []
+  },
+  "barratt-redrow": {
+    "candidates": 0,
+    "hits": []
+  },
+  "persimmon": {
+    "candidates": 0,
+    "hits": []
+  },
+  "taylor-wimpey": {
+    "candidates": 0,
+    "hits": []
+  },
+  "abb": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://abb.wd3.myworkdayjobs.com/external_career_page",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Shipping and Logistics Clerk",
+          "1st Shift Press Team Lead",
+          "1st Shift Setup Operator"
+        ],
+        "locations": ["Quebec, Quebec, Canada", "USA, AR, Jonesboro", "USA, AR, Jonesboro"]
+      }
+    ]
+  },
+  "d-r-horton": {
+    "candidates": 0,
+    "hits": []
+  },
+  "colliers": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://colliers.wd3.myworkdayjobs.com/colliers-external-career-site",
+        "portal": "workday",
+        "jobs": 270,
+        "weak": false,
+        "sample": ["Directeur Évaluation et Services Conseils", "Tax Analyst", "Associate Broker"],
+        "locations": [
+          "Québec, Quebec, Canada",
+          "Minneapolis, Minnesota, United States of America",
+          "Las Vegas, Nevada, United States of America"
+        ]
+      }
+    ]
+  },
+  "emaar": {
+    "candidates": 0,
+    "hits": []
+  },
+  "land-securities": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://landsecurities.wd3.myworkdayjobs.com/landseccareers",
+        "portal": "workday",
+        "jobs": 10,
+        "weak": false,
+        "sample": [
+          "Retail Manager FTC",
+          "Piccadilly Lights Account Manager - 12 months FTC",
+          "Finance Analyst – Cost Insights & Performance"
+        ],
+        "locations": ["Oxford", "London", "London"]
+      }
+    ]
+  },
+  "british-land": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hitachi": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://hitachi.wd1.myworkdayjobs.com/hitachi",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Procurement Junior Analyst (Fixed Term - 1 Year Contract)",
+          "Research Scientist – Power Systems Optimization",
+          "Director of HR Operations"
+        ],
+        "locations": [
+          "(DEAI HD) AR Remote",
+          "Raleigh, North Carolina, United States",
+          "Holland, Michigan, United States"
+        ]
+      }
+    ]
+  },
+  "costco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "tesco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "prologis": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://prologis.wd5.myworkdayjobs.com/prologis_external_careers",
+        "portal": "workday",
+        "jobs": 116,
+        "weak": false,
+        "sample": [
+          "Network Engineer — Collaboration & Enterprise Connectivity",
+          "Property Administrator (Real Estate & Customer Experience Coordinator)",
+          "Development Manager"
+        ],
+        "locations": ["8 Locations", "New Jersey-Mt. Laurel Office", "Munich, Germany"]
+      }
+    ]
+  },
+  "rockwell-automation": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://rockwellautomation.wd1.myworkdayjobs.com/external_rockwell_automation",
+        "portal": "workday",
+        "jobs": 436,
+        "weak": false,
+        "sample": ["Staff Firmware Security Engineer", "HR Generalist", "Industrial Engineer"],
+        "locations": ["Singapore, Singapore", "Artegna, Italy", "India Kancheepuram"]
+      },
+      {
+        "url": "https://rockwellautomation.wd1.myworkdayjobs.com/external-rockwell-automation-early-careers",
+        "portal": "workday",
+        "jobs": 37,
+        "weak": false,
+        "sample": [
+          "Sales Management Trainee",
+          "Sales Management Trainee",
+          "Sales Management Trainee"
+        ],
+        "locations": ["2 Locations", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "lennar": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://lennar.wd1.myworkdayjobs.com/lennar_jobs",
+        "portal": "workday",
+        "jobs": 256,
+        "weak": false,
+        "sample": [
+          "Regional Interior Design Assistant",
+          "Loan Officer",
+          "Regional Marketing Field Coordinator"
+        ],
+        "locations": ["3 Locations", "Orlando, FL (Job Posting Location)", "2 Locations"]
+      }
+    ]
+  },
+  "kroger": {
+    "candidates": 0,
+    "hits": []
+  },
+  "schwarz-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "aldi": {
+    "candidates": 0,
+    "hits": []
+  },
+  "carrefour": {
+    "candidates": 0,
+    "hits": []
+  },
+  "sainsbury-s": {
+    "candidates": 0,
+    "hits": []
+  },
+  "marks-and-spencer": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ikea": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ahold-delhaize": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jd-com": {
+    "candidates": 1,
+    "hits": []
+  },
+  "zillow": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://zillow.wd5.myworkdayjobs.com/zillow_group_external",
+        "portal": "workday",
+        "jobs": 192,
+        "weak": false,
+        "sample": [
+          "Marketing Specialist, Media Reporting and Automation",
+          "Corporate Communications Manager",
+          "Growth Account Executive, Agent Software and Advertising"
+        ],
+        "locations": ["Bengaluru", "Remote-USA", "Remote-USA"]
+      }
+    ]
+  },
+  "jumia": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/jumia",
+        "portal": "greenhouse",
+        "jobs": 21,
+        "weak": false,
+        "sample": [
+          "Defective Team Leader - Jumia (Full Time)",
+          "E&S and OHS Manager - Group - Jumia ( Fulltime)",
+          "First Mile & Last Mile Manager - Jumia (Full Time)"
+        ],
+        "locations": ["Nigeria", "Africa", "Nigeria"]
+      }
+    ]
+  },
+  "procter-and-gamble": {
+    "candidates": 0,
+    "hits": []
+  },
+  "nestle": {
+    "candidates": 0,
+    "hits": []
+  },
+  "pepsico": {
+    "candidates": 0,
+    "hits": []
+  },
+  "walmart": {
+    "candidates": 3,
+    "hits": []
+  },
+  "l-oreal": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mondelez": {
+    "candidates": 0,
+    "hits": []
+  },
+  "reckitt": {
+    "candidates": 0,
+    "hits": []
+  },
+  "colgate-palmolive": {
+    "candidates": 0,
+    "hits": []
+  },
+  "boeing": {
+    "candidates": 19,
+    "hits": [
+      {
+        "url": "https://boeing.wd1.myworkdayjobs.com/external_careers",
+        "portal": "workday",
+        "jobs": 758,
+        "weak": false,
+        "sample": [
+          "Materials and Processes Test Engineer (Associate or Experienced)",
+          "Experienced Staff Analyst",
+          "Project Management Specialist (Project Planner Scheduler)"
+        ],
+        "locations": ["USA - Huntsville, AL", "USA - Kennedy Space Center, FL", "2 Locations"]
+      },
+      {
+        "url": "https://boeing.wd1.myworkdayjobs.com/external_subsidiary",
+        "portal": "workday",
+        "jobs": 735,
+        "weak": false,
+        "sample": [
+          "Materials and Processes Test Engineer (Associate or Experienced)",
+          "Project Management Specialist (Project Planner Scheduler)",
+          "Systems Engineer (Experienced OR Lead)"
+        ],
+        "locations": ["USA - Huntsville, AL", "2 Locations", "USA - Hazelwood, MO"]
+      },
+      {
+        "url": "https://boeing.wd1.myworkdayjobs.com/tap2",
+        "portal": "workday",
+        "jobs": 21,
+        "weak": false,
+        "sample": [
+          "Classified Cloud Senior Manager **Sign on Bonus Potential**",
+          "Facilities Operations & Maintenance Manager",
+          "Senior Stationary Engineer"
+        ],
+        "locations": ["USA - Hazelwood, MO", "USA - Las Cruces, NM", "USA - Aurora, CO"]
+      },
+      {
+        "url": "https://boeing.wd1.myworkdayjobs.com/wmb",
+        "portal": "workday",
+        "jobs": 12,
+        "weak": false,
+        "sample": [
+          "Associate or Experienced Aerospace Systems Safety Engineer",
+          "Experienced and Senior Design and Analysis Engineers (Electronic Sys Design & Analy)",
+          "Procurement Agent (Procurement Admin)"
+        ],
+        "locations": ["2 Locations", "USA - Daytona Beach, FL", "2 Locations"]
+      }
+    ]
+  },
+  "danone": {
+    "candidates": 0,
+    "hits": []
+  },
+  "lowe-s": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://lowes.wd5.myworkdayjobs.com/lws_external_cs",
+        "portal": "workday",
+        "jobs": 13055,
+        "weak": false,
+        "sample": [
+          "Specialty ASM",
+          "Paralegal - Litigation",
+          "Full Time - Fulfillment Associate - Day"
+        ],
+        "locations": ["Waxahachie, TX 2601", "Mooresville, NC (SSC) 1999", "Moberly, MO 3088"]
+      }
+    ]
+  },
+  "haleon": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kraft-heinz": {
+    "candidates": 1,
+    "hits": []
+  },
+  "mars": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://mars.wd3.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 967,
+        "weak": false,
+        "sample": ["Senior Project Engineer", "Material Handler", "Senior Project Engineer"],
+        "locations": ["2 Locations", "USA-Pennsylvania-Chalfont", "3 Locations"]
+      }
+    ]
+  },
+  "estee-lauder": {
+    "candidates": 0,
+    "hits": []
+  },
+  "henkel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "beiersdorf": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kenvue": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dangote-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "diageo": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://diageo.wd3.myworkdayjobs.com/diageo_careers",
+        "portal": "workday",
+        "jobs": 253,
+        "weak": false,
+        "sample": [
+          "Warehouse Jr. Analyst - Serra/ES",
+          "Director, Insights",
+          "CP&A Coordinator/ Secondment (6 Months)"
+        ],
+        "locations": ["Espírito Santo", "3 World Trade Center, NY", "Bogota, Colombia"]
+      }
+    ]
+  },
+  "jbs": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cargill": {
+    "candidates": 0,
+    "hits": []
+  },
+  "adm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "bunge": {
+    "candidates": 0,
+    "hits": []
+  },
+  "general-mills": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kellanova": {
+    "candidates": 0,
+    "hits": []
+  },
+  "heineken": {
+    "candidates": 0,
+    "hits": []
+  },
+  "home-depot": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://homedepot.wd5.myworkdayjobs.com/careerdepot",
+        "portal": "workday",
+        "jobs": 977,
+        "weak": false,
+        "sample": [
+          "San Antonio FDC/BDC Maintenance Manager",
+          "Senior Analyst, Marketing Technology",
+          "Administrative Assistant"
+        ],
+        "locations": [
+          "SAN ANTONIO FDC/BDC - 5977",
+          "STORE SUPPORT CENTER, ATLANTA - 9090",
+          "GEORGIA - VIRTUAL - GA01"
+        ]
+      }
+    ]
+  },
+  "bayer-crop-science": {
+    "candidates": 0,
+    "hits": []
+  },
+  "syngenta": {
+    "candidates": 0,
+    "hits": []
+  },
+  "target": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://target.wd5.myworkdayjobs.com/targetcareers",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Property Management Lead",
+          "Specialty Sales Team Leader - Lake Worth, TX",
+          "Target Security Specialist - Regional Distribution Center - Cedar Falls, IA"
+        ],
+        "locations": [
+          "26 White Bridge Pike, Nashville,TN 37205-1411",
+          "6604 Lake Worth Blvd, Lake Worth,TX 76135-3000",
+          "2200 Viking Rd, Cedar Falls,IA 50613-9526"
+        ]
+      }
+    ]
+  },
+  "olam": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wilmar": {
+    "candidates": 0,
+    "hits": []
+  },
+  "marriott": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hilton": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ihg": {
+    "candidates": 0,
+    "hits": []
+  },
+  "accor": {
+    "candidates": 0,
+    "hits": []
+  },
+  "hyatt": {
+    "candidates": 0,
+    "hits": []
+  },
+  "wyndham": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mcdonald-s": {
+    "candidates": 0,
+    "hits": []
+  },
+  "starbucks": {
+    "candidates": 0,
+    "hits": []
+  },
+  "yum-brands": {
+    "candidates": 0,
+    "hits": []
+  },
+  "compass-group": {
+    "candidates": 2,
+    "hits": []
+  },
+  "tui": {
+    "candidates": 0,
+    "hits": []
+  },
+  "carnival": {
+    "candidates": 0,
+    "hits": []
+  },
+  "royal-caribbean": {
+    "candidates": 0,
+    "hits": []
+  },
+  "expedia": {
+    "candidates": 0,
+    "hits": []
+  },
+  "whitbread": {
+    "candidates": 0,
+    "hits": []
+  },
+  "merlin-entertainments": {
+    "candidates": 0,
+    "hits": []
+  },
+  "disney-parks": {
+    "candidates": 0,
+    "hits": []
+  },
+  "las-vegas-sands": {
+    "candidates": 0,
+    "hits": []
+  },
+  "jll": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://jll.wd1.myworkdayjobs.com/jllcareers",
+        "portal": "workday",
+        "jobs": 2000,
+        "weak": false,
+        "sample": [
+          "Senior Workplace Consultant",
+          "Senior Project Manager, Construction",
+          "Project Manager - Mission Critical Facilities"
+        ],
+        "locations": ["2 Locations", "Dallas, TX", "Charlotte, NC"]
+      },
+      {
+        "url": "https://jll.wd1.myworkdayjobs.com/jllcareerschina",
+        "portal": "workday",
+        "jobs": 64,
+        "weak": false,
+        "sample": ["Technician", "Technical Officer", "Intern"],
+        "locations": ["Shanghai, China", "Shanghai, China", "Beijing, CHN"]
+      },
+      {
+        "url": "https://jll.wd1.myworkdayjobs.com/lasallecareers",
+        "portal": "workday",
+        "jobs": 9,
+        "weak": false,
+        "sample": [
+          "Associate, Fund Controller (m/f/d)",
+          "Asset Management Analyst, LaSalle Value Partners",
+          "Vice President/Associate Vice President, Strategist"
+        ],
+        "locations": ["Munich, DEU", "Chicago, IL", "3 Locations"]
+      }
+    ]
+  },
+  "amazon-logistics": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dhl-group": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ups": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ab-inbev": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://abinbev.wd1.myworkdayjobs.com/eur",
+        "portal": "workday",
+        "jobs": 127,
+        "weak": false,
+        "sample": [
+          "Media Manager",
+          "Customer Experience Specialist",
+          "Electromécanicien dépannage (3 pauses)"
+        ],
+        "locations": ["Belgium Leuven", "Czechia Praha", "Belgium Jupille-Sur-Meuse"]
+      },
+      {
+        "url": "https://job-boards.greenhouse.io/abinbev",
+        "portal": "greenhouse",
+        "jobs": 56,
+        "weak": false,
+        "sample": ["AI Engineer", "Country Director", "Culture & Internal Communications"],
+        "locations": ["Remote", "Melbourne, AU", "Campinas, Brazil"]
+      }
+    ]
+  },
+  "unilever": {
+    "candidates": 5,
+    "hits": [
+      {
+        "url": "https://unilever.wd3.myworkdayjobs.com/unilever_experienced_professionals",
+        "portal": "workday",
+        "jobs": 263,
+        "weak": false,
+        "sample": [
+          "Gestor De Execução - Sinop - MT",
+          "Executivo de Negócios SR - Foods",
+          "Assessor de Execução - Goiânia - GO"
+        ],
+        "locations": ["Brasília, Brazil", "São Paulo, Brazil", "Brasília, Brazil"]
+      },
+      {
+        "url": "https://unilever.wd3.myworkdayjobs.com/uk_temporaryworkersite",
+        "portal": "workday",
+        "jobs": 13,
+        "weak": false,
+        "sample": [
+          "Site Services Technician",
+          "Sustainability Manager – Impact & Assurance",
+          "Climate Strategy & Performance Lead"
+        ],
+        "locations": ["Leeds Factory", "Sunlight House", "Sunlight House"]
+      },
+      {
+        "url": "https://unilever.wd3.myworkdayjobs.com/unilever_early_careers",
+        "portal": "workday",
+        "jobs": 3,
+        "weak": false,
+        "sample": [
+          "Pasantías Unilever Ecuador: Comercial 2027-1",
+          "Pasantías Unilever Ecuador: Marketing 2027-1",
+          "Pasantías Unilever Ecuador: Finanzas 2027-1"
+        ],
+        "locations": ["Guayaquil, Ecuador", "Guayaquil, Ecuador", "Guayaquil, Ecuador"]
+      }
+    ]
+  },
+  "dsv": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kuehne-nagel": {
+    "candidates": 0,
+    "hits": []
+  },
+  "xpo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "gxo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "cma-cgm": {
+    "candidates": 0,
+    "hits": []
+  },
+  "msc": {
+    "candidates": 0,
+    "hits": []
+  },
+  "royal-mail": {
+    "candidates": 0,
+    "hits": []
+  },
+  "evri": {
+    "candidates": 0,
+    "hits": []
+  },
+  "dp-world": {
+    "candidates": 0,
+    "hits": []
+  },
+  "coca-cola": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://coke.wd1.myworkdayjobs.com/coca-cola-careers",
+        "portal": "workday",
+        "jobs": 239,
+        "weak": false,
+        "sample": [
+          "Manager, Global Share Plans Delivery",
+          "Director, Corporate Strategy",
+          "Director, Supply Chain Warehouse Architect"
+        ],
+        "locations": ["US - GA - Atlanta", "US - GA - Atlanta", "US - GA - Atlanta"]
+      }
+    ]
+  },
+  "corteva": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://corteva.wd5.myworkdayjobs.com/corteva",
+        "portal": "workday",
+        "jobs": 49,
+        "weak": false,
+        "sample": [
+          "Operator/Mechanic",
+          "Area Sales Manager (AR, TM, CS, HD)",
+          "Reliability & Equipment Engineer"
+        ],
+        "locations": [
+          "El Paso, Illinois, United States",
+          "Bucarest, Bucarest, Romania",
+          "Valdosta, Georgia, United States"
+        ]
+      },
+      {
+        "url": "https://corteva.wd5.myworkdayjobs.com/ctp",
+        "portal": "workday",
+        "jobs": 13,
+        "weak": false,
+        "sample": [
+          "Operator/Mechanic",
+          "Reliability & Equipment Engineer",
+          "Network and Voice – Senior Team Lead"
+        ],
+        "locations": [
+          "El Paso, Illinois, United States",
+          "Valdosta, Georgia, United States",
+          "3 Locations"
+        ]
+      }
+    ]
+  },
+  "expeditors": {
+    "candidates": 0,
+    "hits": []
+  },
+  "ocado": {
+    "candidates": 0,
+    "hits": []
+  },
+  "flexport": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://job-boards.greenhouse.io/flexport",
+        "portal": "greenhouse",
+        "jobs": 189,
+        "weak": false,
+        "sample": ["Account Executive", "Account Executive", "Account Executive, Enterprise"],
+        "locations": [
+          "Atlanta, Georgia, United States",
+          "San Diego, California, United States",
+          "Amsterdam, Netherlands"
+        ]
+      }
+    ]
+  },
+  "sodexo": {
+    "candidates": 0,
+    "hits": []
+  },
+  "aramark": {
+    "candidates": 0,
+    "hits": []
+  },
+  "iss": {
+    "candidates": 0,
+    "hits": []
+  },
+  "serco": {
+    "candidates": 0,
+    "hits": []
+  },
+  "allied-universal": {
+    "candidates": 0,
+    "hits": []
+  },
+  "securitas": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mitie": {
+    "candidates": 0,
+    "hits": []
+  },
+  "c-h-robinson": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://chrobinson.wd5.myworkdayjobs.com/chrobinson",
+        "portal": "workday",
+        "jobs": 154,
+        "weak": false,
+        "sample": [
+          "Associate Portfolio Executive Roles Starting Spring/Summer 2027",
+          "Account Manager – Full Time Roles Starting Spring/Summer 2027",
+          "Senior Designer, Packaging"
+        ],
+        "locations": [
+          "Conshohocken, PA United States of America",
+          "Memphis, TN United States of America",
+          "4 Locations"
+        ]
+      }
+    ]
+  },
+  "concentrix": {
+    "candidates": 0,
+    "hits": []
+  },
+  "mgm-resorts": {
+    "candidates": 4,
+    "hits": [
+      {
+        "url": "https://mgmresorts.wd5.myworkdayjobs.com/mgmcareers",
+        "portal": "workday",
+        "jobs": 478,
+        "weak": false,
+        "sample": [
+          "Slots Manager - MGM Springfield",
+          "Fitness Attendant - Bellagio",
+          "Social Media Manager - Borgata"
+        ],
+        "locations": ["Property - MGM Springfield", "Property - Bellagio", "Property - Borgata"]
+      }
+    ]
+  },
+  "experian": {
+    "candidates": 0,
+    "hits": []
+  },
+  "j-b-hunt": {
+    "candidates": 2,
+    "hits": [
+      {
+        "url": "https://jbhunt.wd501.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 451,
+        "weak": false,
+        "sample": [
+          "Manager, Sales Enablement",
+          "Capacity Procurement Representative - ICS",
+          "Sr Strategic Accounts Manager"
+        ],
+        "locations": [
+          "Lowell, AR - JB Hunt Corporate B & C",
+          "Lowell, AR - JB Hunt Corporate B & C",
+          "Atlanta, GA - 2727 Paces Ferry Rd SE"
+        ]
+      }
+    ]
+  },
+  "maersk": {
+    "candidates": 5,
+    "hits": [
+      {
+        "url": "https://maersk.wd3.myworkdayjobs.com/maersk_careers",
+        "portal": "workday",
+        "jobs": 1184,
+        "weak": false,
+        "sample": [
+          "Senior Specialist, Booking Services - SWE",
+          "Contract Logistics Account Manager",
+          "Box Truck Driver"
+        ],
+        "locations": [
+          "Philippines, Pasig, 1600",
+          "Vietnam, Hồ Chí Minh, Ho Chi Minh City, 71100",
+          "United States of America,California,Fontana,92337"
+        ]
+      },
+      {
+        "url": "https://maersk.wd3.myworkdayjobs.com/maersk_manual",
+        "portal": "workday",
+        "jobs": 893,
+        "weak": false,
+        "sample": [
+          "Box Truck Driver",
+          "Customs Operations Specialist - CCT",
+          "Accounts Receivable Senior Specialist with Dutch language skills"
+        ],
+        "locations": [
+          "USA, California, Torrance, 90503",
+          "Poland, Warsaw, 00-839",
+          "Poland, Warsaw, 00-839"
+        ]
+      },
+      {
+        "url": "https://maersk.wd3.myworkdayjobs.com/apmt_careers",
+        "portal": "workday",
+        "jobs": 141,
+        "weak": false,
+        "sample": [
+          "Talent Acquisition Manager",
+          "Analista de Tesorería",
+          "Maintenance Technical Support"
+        ],
+        "locations": [
+          "India, Chennai, 600116",
+          "Peru, Lima, Lima, 7021",
+          "Sweden, Gothenburg, S-403 13"
+        ]
+      },
+      {
+        "url": "https://maersk.wd3.myworkdayjobs.com/pt_careers",
+        "portal": "workday",
+        "jobs": 52,
+        "weak": false,
+        "sample": [
+          "Supervisor, Operations",
+          "Technical Maintenance Mechanic - Hopedale, MA",
+          "Operations Supervisor"
+        ],
+        "locations": [
+          "United States of Americas, Texas, Brookshire, 77423",
+          "United States of Americas, Massachusetts, Hopedale, 01747",
+          "United States of America,Texas,Cedar Hill,75104"
+        ]
+      }
+    ]
+  },
+  "cintas": {
+    "candidates": 0,
+    "hits": []
+  },
+  "adp": {
+    "candidates": 1,
+    "hits": []
+  },
+  "paychex": {
+    "candidates": 0,
+    "hits": []
+  },
+  "kimberly-clark": {
+    "candidates": 6,
+    "hits": [
+      {
+        "url": "https://kimberlyclark.wd1.myworkdayjobs.com/global",
+        "portal": "workday",
+        "jobs": 139,
+        "weak": false,
+        "sample": [
+          "Continuous Improvement (CI) and Capabilities Manager",
+          "Sr Asset Leader - Personal Care",
+          "Sr. Engineer - Process"
+        ],
+        "locations": ["Marinette, WI, USA", "Warren Plant", "USA-WI-Neenah"]
+      },
+      {
+        "url": "https://kimberlyclark.wd1.myworkdayjobs.com/linkedin",
+        "portal": "workday",
+        "jobs": 123,
+        "weak": false,
+        "sample": [
+          "Continuous Improvement (CI) and Capabilities Manager",
+          "Sr Asset Leader - Personal Care",
+          "Onsite Technology Specialist"
+        ],
+        "locations": ["Marinette, WI, USA", "Warren Plant", "USA-AR-Maumelle"]
+      },
+      {
+        "url": "https://kimberlyclark.wd1.myworkdayjobs.com/equest",
+        "portal": "workday",
+        "jobs": 77,
+        "weak": false,
+        "sample": [
+          "Sr Asset Leader - Personal Care",
+          "Sr. Engineer - Process",
+          "Shift Millwright $2K sign on bonus"
+        ],
+        "locations": ["Warren Plant", "USA-WI-Neenah", "Canada-Ontario-Huntsville"]
+      }
+    ]
+  },
+  "taskus": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://taskus.wd1.myworkdayjobs.com/careers",
+        "portal": "workday",
+        "jobs": 407,
+        "weak": false,
+        "sample": ["Teammate", "Business Insights Analyst", "IT Helpdesk Supervisor"],
+        "locations": ["Indore, India", "2 Locations", "2 Locations"]
+      }
+    ]
+  },
+  "equifax": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://equifax.wd5.myworkdayjobs.com/external",
+        "portal": "workday",
+        "jobs": 164,
+        "weak": false,
+        "sample": [
+          "Data Analyst Senior",
+          "Analista de Governança de Dados - Pleno",
+          "Data Operator (Human In The Loop)"
+        ],
+        "locations": ["CRI-Sabana", "BRA-Barueri", "IRL - County Wexford - Wexford"]
+      }
+    ]
+  },
+  "gartner": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://gartner.wd5.myworkdayjobs.com/ext",
+        "portal": "workday",
+        "jobs": 796,
+        "weak": false,
+        "sample": [
+          "Executive Partner - Chief Sales Officer Advisory (Remote)",
+          "Product Operations Specialist",
+          "Communications Specialist - IT"
+        ],
+        "locations": ["Remote - United States", "Stamford, CT", "2 Locations"]
+      }
+    ]
+  },
+  "teleperformance": {
+    "candidates": 1,
+    "hits": [
+      {
+        "url": "https://teleperformance.wd1.myworkdayjobs.com/allianceone",
+        "portal": "workday",
+        "jobs": 15,
+        "weak": false,
+        "sample": [
+          "Collections Specialist — Paid Training | No Collections Experience Required",
+          "Call Center Supervisor (Collections)",
+          "Collections Specialists $18.00/Hour + Up to $500 Monthly Bonus Potential"
+        ],
+        "locations": ["Maumee, OH", "Maumee, OH", "Port St. Lucie, FL"]
+      }
+    ]
+  },
+  "tyson-foods": {
+    "candidates": 7,
+    "hits": [
+      {
+        "url": "https://tysonfoods.wd5.myworkdayjobs.com/tsn",
+        "portal": "workday",
+        "jobs": 719,
+        "weak": false,
+        "sample": [
+          "2nd Shift - Harvest Room Labor - Eufaula Fresh Plant",
+          "Materials Handler Opr Warehouse 2nd Shift -Enterprise-Enid OK",
+          "General Labor 2nd Shift-Enterprise-Enid (OK)"
+        ],
+        "locations": [
+          "Eufaula Fresh Plant - Baker Hill, Alabama",
+          "Enterprise Enid Plant - Enid, Oklahoma",
+          "Enterprise Enid Plant - Enid, Oklahoma"
+        ]
+      },
+      {
+        "url": "https://tysonfoods.wd5.myworkdayjobs.com/tsn5",
+        "portal": "workday",
+        "jobs": 493,
+        "weak": false,
+        "sample": [
+          "2nd Shift - Harvest Room Labor - Eufaula Fresh Plant",
+          "Materials Handler Opr Warehouse 2nd Shift -Enterprise-Enid OK",
+          "General Labor 2nd Shift-Enterprise-Enid (OK)"
+        ],
+        "locations": [
+          "Eufaula Fresh Plant - Baker Hill, Alabama",
+          "Enterprise Enid Plant - Enid, Oklahoma",
+          "Enterprise Enid Plant - Enid, Oklahoma"
+        ]
+      },
+      {
+        "url": "https://tysonfoods.wd5.myworkdayjobs.com/cvt",
+        "portal": "workday",
+        "jobs": 65,
+        "weak": false,
+        "sample": [
+          "Coordinator Operations-1st Shift -Wadesboro Hatchery",
+          "Cobb - Laying House Worker Labor PR02",
+          "Cobb - 2nd Shift Sanitation Labor"
+        ],
+        "locations": [
+          "Wadesboro Hatchery / Transp - Wadesboro, North Carolina",
+          "Princess Anne Farm - Princess Anne, Maryland",
+          "Wadesboro Hatchery / Transp - Wadesboro, North Carolina"
+        ]
+      },
+      {
+        "url": "https://tysonfoods.wd5.myworkdayjobs.com/tyit",
+        "portal": "workday",
+        "jobs": 26,
+        "weak": false,
+        "sample": [
+          "Developer MDM (Master Data Management)",
+          "Senior Developer Snaplogic Integration",
+          "Development Engineer I MXT"
+        ],
+        "locations": [
+          "Bangalore, India",
+          "Bangalore, India",
+          "TRC IT HUB - Torreon, El Fresno, Coahuila, Mexico"
+        ]
+      }
+    ]
+  },
+  "fedex": {
+    "candidates": 17,
+    "hits": [
+      {
+        "url": "https://fedex.wd1.myworkdayjobs.com/fxe-eu_external",
+        "portal": "workday",
+        "jobs": 312,
+        "weak": false,
+        "sample": [
+          "Handler - Nightshift",
+          "Vehicle Maintenance Technician - HGV",
+          "Vehicle Maintenance Technician Advanced"
+        ],
+        "locations": [
+          "FXE-EU/GBR/BRST8/BRST8/Westerleigh Business Park",
+          "FXE-EU/GBR/EXTT8/EXTT8/Exeter",
+          "FXE-EU/GBR/EXTT8/EXTT8/Broadclyst Station"
+        ]
+      },
+      {
+        "url": "https://fedex.wd1.myworkdayjobs.com/fxe-lac_external_career_site",
+        "portal": "workday",
+        "jobs": 176,
+        "weak": false,
+        "sample": [
+          "Pessoa Jovem Aprendiz",
+          "LM014: Courier",
+          "Pessoa Assistente de Operações Logísticas"
+        ],
+        "locations": [
+          "FXE-LAC/BRCPQA/CPQA Campinas",
+          "FXE-LAC/MXHMOA/HMOA Hermosillo",
+          "FXE-LAC/BRBHEDC/BHEDC Betim"
+        ]
+      },
+      {
+        "url": "https://fedex.wd1.myworkdayjobs.com/fxe_apac_external",
+        "portal": "workday",
+        "jobs": 84,
+        "weak": false,
+        "sample": [
+          "Manager, Worldwide Sales (Luxury Retail)",
+          "Customer Financial Services Specialist",
+          "Senior Data Scientist"
+        ],
+        "locations": ["FXE_APAC/SGP/SGSINIT/ITD", "2 Locations", "FXE_APAC/SGP/SGSINIT/ITD"]
+      },
+      {
+        "url": "https://fedex.wd1.myworkdayjobs.com/fxe-meisa-external",
+        "portal": "workday",
+        "jobs": 47,
+        "weak": false,
+        "sample": ["Manager Marketing", "M00I0: Intern – Professional", "Operations Support Agent"],
+        "locations": [
+          "2 Locations",
+          "FXE-MEISA/IND/DELIP/DELIP/New Delhi",
+          "FXE-MEISA/IND/BLRIP/BLRIP/Bangalore"
+        ]
+      }
+    ]
+  }
+}

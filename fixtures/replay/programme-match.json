@@ -1,0 +1,17 @@
+{
+  "steps": [
+    {
+      "event": {
+        "type": "text",
+        "text": "[winnow] 2/4 Finding programmes"
+      }
+    },
+    {
+      "delay": 20,
+      "write": {
+        "path": "result.json",
+        "content": "{\"programmes\": [{\"title\": \"MSc Replay Biomedicine\", \"university\": \"University of Replay\", \"country\": \"United Kingdom\", \"url\": \"https://replay.example/msc-biomedicine\", \"subject\": \"Biomedical sciences\", \"tuition\": \"Covered\", \"admissionDeadline\": \"2099-03-01\", \"why\": \"Replay: fits\"}, {\"title\": \"MSc Replay Neuroscience\", \"university\": \"University of Replay\", \"country\": \"United Kingdom\", \"url\": \"https://replay.example/msc-neuro\", \"why\": \"Replay: fits\"}], \"note\": \"Replay: 2 found\"}"
+      }
+    }
+  ]
+}

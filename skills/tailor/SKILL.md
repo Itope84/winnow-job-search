@@ -118,6 +118,24 @@ are copied next to your file before compiling; keep `\documentclass[a4paper]{cov
   `cover-reference.tex` does.
 - No `\address{}{}{}` with empty fields: leave the line out.
 
+## Scholarships mode
+
+When `input.mode` is `"scholarships"`, the item is a master's programme or a scholarship
+(`job.kind`, with its facts in `job.facts`), and "the posting" is its page.
+
+- **The cover letter is a motivation letter** to the admissions committee or selection panel named on
+  the page ("Dear Members of the Admissions Committee" when none is named). One page. Open with what
+  draws them to this programme or scheme by name; then their research and lab experience and how it
+  prepares them; then what they want to work on here (name modules, research groups or people from the
+  page; when the page names none, write `[check: name a group]`); then leadership and service; close
+  with their plan after the degree. When `profileFiles.statement` is set, it is their own letter: keep
+  their voice and their strongest sentences.
+- **The CV is an academic CV**: education first (degree, class, GPA, thesis), then research experience,
+  publications and preprints, honours and awards, lab and technical skills, presentations and
+  conferences, leadership and service. Two pages at most. Keep every fact from `cv.md`.
+- Requirements in the result are the page's entry and selection criteria (degree, grades, subjects,
+  English, references) rather than job duties.
+
 ## Step: draft
 
 1. `[winnow] 1/5 Reading the job and the CV`. Read `input.json`, the profile files (`extras` too), the score report

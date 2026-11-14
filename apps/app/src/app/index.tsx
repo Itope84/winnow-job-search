@@ -1,5 +1,5 @@
 import type { Job, JobList } from '@winnow/api';
-import { RUN_COSTS } from '@winnow/api';
+import { costEstimate } from '@winnow/api';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -39,6 +39,7 @@ import {
   useStartRun,
 } from '@/lib/hooks';
 import { usePrefs } from '@/lib/prefs';
+import { useMode } from '@/lib/study';
 import { fonts, space, TAB_HEIGHT, type, useTheme, useWide } from '@/theme';
 
 const EMPTY: Record<JobList, { title: string; body: string }> = {
@@ -61,6 +62,26 @@ const EMPTY: Record<JobList, { title: string; body: string }> = {
   },
 };
 
+const EMPTY_STUDY: Record<JobList, { title: string; body: string }> = {
+  inbox: {
+    title: 'Inbox is clear',
+    body: 'New scholarships and programmes from scans land here. Run a scan from Find, or paste a link.',
+  },
+  shortlist: {
+    title: 'Nothing shortlisted',
+    body: 'Swipe an item right in Inbox to save it for scoring.',
+  },
+  scored: { title: 'No scores yet', body: 'Score a shortlisted item to see how well it fits you.' },
+  applied: {
+    title: 'No applications yet',
+    body: 'Mark a scored item as applied, and track each part in its Plan.',
+  },
+  archive: {
+    title: 'Archive is empty',
+    body: 'Items you or triage set aside land here, always with a reason.',
+  },
+};
+
 export default function JobsScreen() {
   const { c } = useTheme();
   const wide = useWide();
@@ -70,6 +91,8 @@ export default function JobsScreen() {
   const setLastList = usePrefs((s) => s.setLastList);
   const setSetupLater = usePrefs((s) => s.setSetupLater);
   const me = useMe().data;
+  const study = useMode() === 'scholarships';
+  const empty = study ? EMPTY_STUDY : EMPTY;
   const [list, setList] = useState<JobList>((params.list as JobList) || lastList || 'inbox');
   const [filters, setFilters] = useState<Filters>({});
   const [q, setQ] = useState('');
@@ -96,7 +119,13 @@ export default function JobsScreen() {
     setList(l);
     setLastList(l);
     setChecked(new Set());
-    setFilters((f) => ({ sort: f.sort, withinDays: f.withinDays, source: f.source }));
+    setFilters((f) => ({
+      sort: f.sort,
+      withinDays: f.withinDays,
+      source: f.source,
+      kind: f.kind,
+      dueWithinDays: f.dueWithinDays,
+    }));
   };
 
   const query = useMemo(
@@ -269,13 +298,20 @@ export default function JobsScreen() {
           <IconButton name="search" label="Search" onPress={() => setSearching((s) => !s)} />
         ) : null}
         <IconButton name="tune" label="Filters" onPress={() => setFilterOpen(true)} />
-        <IconButton name="add" label="Add a job" onPress={() => setAdding(true)} filled />
+        <IconButton
+          name="add"
+          label={study ? 'Add a link' : 'Add a job'}
+          onPress={() => setAdding(true)}
+          filled
+        />
       </View>
       {wide || searching ? (
         <Input
           value={q}
           onChangeText={setQ}
-          placeholder="Search role, company or place"
+          placeholder={
+            study ? 'Search name, university or country' : 'Search role, company or place'
+          }
           autoFocus={searching && !wide}
           returnKeyType="search"
         />
@@ -345,7 +381,7 @@ export default function JobsScreen() {
       {list === 'inbox' && counts?.inbox ? (
         <ListAction
           label="Triage inbox"
-          note={`Jobs without a verdict · uses tokens · ${RUN_COSTS.triage.estimate}`}
+          note={`${study ? 'Items' : 'Jobs'} without a verdict · uses tokens · ${costEstimate('triage', study ? 'scholarships' : 'jobs')}`}
           busy={start.isPending}
           onPress={() => start.mutate({ kind: 'triage', scope: 'untriaged' })}
           disabled={untriaged === 0 && !pages.hasNextPage}
@@ -354,7 +390,7 @@ export default function JobsScreen() {
       {list === 'shortlist' && jobs.length ? (
         <ListAction
           label={`Score all ${total}`}
-          note={`Uses tokens · ${RUN_COSTS.score.estimate} · runs a few at a time`}
+          note={`Uses tokens · ${costEstimate('score', study ? 'scholarships' : 'jobs')} · runs a few at a time`}
           busy={start.isPending}
           onPress={() =>
             start.mutate({
@@ -453,7 +489,7 @@ export default function JobsScreen() {
         ) : pages.error ? (
           <Empty
             icon="cloud-off"
-            title="Couldn’t load jobs"
+            title={study ? 'Couldn’t load items' : 'Couldn’t load jobs'}
             body={(pages.error as Error).message}
             action={<Button label="Try again" onPress={() => void pages.refetch()} />}
           />
@@ -462,13 +498,15 @@ export default function JobsScreen() {
             icon="inbox"
             title={
               debounced || Object.values(filters).some(Boolean)
-                ? 'No jobs match'
-                : EMPTY[list].title
+                ? study
+                  ? 'Nothing matches'
+                  : 'No jobs match'
+                : empty[list].title
             }
             body={
               debounced || Object.values(filters).some(Boolean)
                 ? 'Try clearing the search or filters.'
-                : EMPTY[list].body
+                : empty[list].body
             }
           />
         )

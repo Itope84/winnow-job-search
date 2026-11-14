@@ -9,6 +9,7 @@ import type {
   JobQuery,
   JobSort,
   MoveRequest,
+  PlanUpdate,
   ProfileDoc,
   Settings,
   Sources,
@@ -28,7 +29,7 @@ import {
 import { Hono } from 'hono';
 import { streamSSE } from 'hono/streaming';
 import { addJob } from './add-job.ts';
-import { saveCvPdf, saveCvText } from './ai/cv-import.ts';
+import { saveCvPdf, saveCvText, uploadsDir } from './ai/cv-import.ts';
 import type { JackLink } from './connect/jack.ts';
 import { applyDraft, discardDraft, editDraft, overview } from './connect/jack-sync.ts';
 import {
@@ -53,6 +54,11 @@ import {
   updateSetup,
 } from './setup.ts';
 import type { Space } from './space.ts';
+import { coverageReport } from './study/coverage.ts';
+import { catalogue, entryFits } from './study/data.ts';
+import { getStudy, setMode, setStudy } from './study/mode.ts';
+import { getReferees, setReferees, updatePlan } from './study/plan.ts';
+import { addCatalogueSources, tidyStatement, writeStudyYaml } from './study/profile.ts';
 import { badRequest, HttpError, notFound, nowIso } from './util.ts';
 
 const forbidden = (message: string) => new HttpError(403, 'forbidden', message);
@@ -122,6 +128,9 @@ export function spaceRoutes(
         ? (q.reason as ArchiveReason)
         : undefined,
       stage: STAGES.includes(q.stage as Stage) ? (q.stage as Stage) : undefined,
+      kind:
+        q.kind === 'scholarship' || q.kind === 'programme' || q.kind === 'job' ? q.kind : undefined,
+      dueWithinDays: num(q.due),
       sort: JOB_SORTS.includes(q.sort as JobSort) ? (q.sort as JobSort) : undefined,
       cursor: q.cursor || undefined,
       limit: num(q.limit),
@@ -178,6 +187,84 @@ export function spaceRoutes(
     }
     return c.json(c.var.space.jobs.require(id));
   });
+
+  // ── Scholarships mode: plans, links, preferences, coverage ─────────────────
+  app.put('/jobs/:id/plan', async (c) => {
+    const body = (await c.req.json()) as PlanUpdate;
+    return c.json(updatePlan(c.var.space.jobs, c.req.param('id'), body ?? {}));
+  });
+
+  /** Pair a scholarship and a programme by hand (either id can come first). */
+  app.post('/jobs/:id/links', async (c) => {
+    const jobs = c.var.space.jobs;
+    const a = jobs.require(c.req.param('id'));
+    const { other } = (await c.req.json()) as { other?: string };
+    const b = jobs.require(String(other ?? ''));
+    const [s, p] = a.kind === 'scholarship' ? [a, b] : [b, a];
+    if (s.kind !== 'scholarship' || p.kind !== 'programme')
+      throw badRequest('Link a scholarship with a programme.');
+    jobs.link(s.id, p.id, 'covers');
+    jobs.changed([s.id, p.id]);
+    return c.json(jobs.require(a.id));
+  });
+
+  app.delete('/jobs/:id/links/:other', (c) => {
+    const jobs = c.var.space.jobs;
+    const a = jobs.require(c.req.param('id'));
+    const b = jobs.require(c.req.param('other'));
+    const [s, p] = a.kind === 'scholarship' ? [a, b] : [b, a];
+    jobs.unlink(s.id, p.id);
+    jobs.changed([s.id, p.id]);
+    return c.json(jobs.require(a.id));
+  });
+
+  app.post('/mode', async (c) => {
+    const { mode } = (await c.req.json()) as { mode?: string };
+    return c.json({ mode: setMode(c.var.space.db, mode ?? '', c.var.space.events) });
+  });
+
+  app.get('/study', (c) => c.json(getStudy(c.var.space.db)));
+
+  app.put('/study', async (c) => {
+    const study = setStudy(c.var.space.db, await c.req.json(), c.var.space.events);
+    writeStudyYaml(c.var.space, study);
+    return c.json(study);
+  });
+
+  app.get('/coverage', (c) => c.json(coverageReport(c.var.space.db, getStudy(c.var.space.db))));
+
+  /** Scheme and university pages and feeds Winnow knows, marked with whether they're added and fit. */
+  app.get('/catalogue', (c) => {
+    const study = getStudy(c.var.space.db);
+    const sources = getSources(c.var.space.db);
+    const have = new Set(
+      [...sources.companies, ...sources.boards].map((e) =>
+        String(e.careers_url ?? e.api ?? '').toLowerCase(),
+      ),
+    );
+    return c.json(
+      catalogue().map((e) => ({
+        ...e,
+        added: have.has(e.url.toLowerCase()),
+        fits: entryFits(e, study),
+      })),
+    );
+  });
+
+  app.post('/catalogue/add', async (c) => {
+    const body = (await c.req.json()) as { urls?: string[]; fitting?: boolean };
+    const study = getStudy(c.var.space.db);
+    const want = new Set((body.urls ?? []).map((u) => u.toLowerCase()));
+    const picks = catalogue().filter((e) =>
+      body.fitting ? entryFits(e, study) : want.has(e.url.toLowerCase()),
+    );
+    const sources = addCatalogueSources(getSources(c.var.space.db), picks);
+    setSources(c.var.space.db, sources, c.var.space.events);
+    return c.json(sources);
+  });
+
+  app.get('/referees', (c) => c.json(getReferees(c.var.space.db)));
+  app.put('/referees', async (c) => c.json(setReferees(c.var.space.db, await c.req.json())));
 
   app.post('/jobs/move', async (c) => {
     const body = (await c.req.json()) as MoveRequest;
@@ -362,6 +449,27 @@ export function spaceRoutes(
     const body = (await c.req.json()) as { text?: string };
     const upload = saveCvText(c.var.space.library, String(body.text ?? ''));
     return c.json(readCv(c.var.space, c.var.runner, upload));
+  });
+
+  // A document in the person's own words: kept as text, no AI needed.
+  app.post('/profile/statement/pdf', async (c) => {
+    const name = decodeURIComponent(c.req.header('x-file-name') ?? 'statement.pdf');
+    const body = new Uint8Array(await c.req.arrayBuffer());
+    const file = await saveCvPdf(c.var.space.library, body, name);
+    const text = readFileSync(
+      join(uploadsDir(c.var.space.library), file.replace(/\.pdf$/, '.txt')),
+      'utf8',
+    );
+    c.var.space.profile.set({ statement: tidyStatement(text) });
+    return c.json({ ...c.var.space.profile.get(), ready: c.var.space.profile.ready() });
+  });
+
+  app.post('/profile/statement/text', async (c) => {
+    const body = (await c.req.json()) as { text?: string };
+    const text = String(body.text ?? '').trim();
+    if (text.length > 60_000) throw badRequest('That’s too long: keep it under 60,000 characters.');
+    c.var.space.profile.set({ statement: tidyStatement(text) });
+    return c.json({ ...c.var.space.profile.get(), ready: c.var.space.profile.ready() });
   });
 
   // ── Setup ─────────────────────────────────────────────────────────────────

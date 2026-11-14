@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { api } from '@/lib/api';
 import { refreshJobs } from '@/lib/query';
+import { useMode } from '@/lib/study';
 import { toast } from '@/lib/toast';
 import { space } from '@/theme';
-import { Input } from './inputs';
+import { Input, Segmented } from './inputs';
 import { Sheet } from './Sheet';
 import { Button, Field, Notice, T } from './ui';
 
@@ -27,6 +28,8 @@ export function AddJobSheet({
   const [company, setCompany] = useState('');
   const [role, setRole] = useState('');
   const [mode, setMode] = useState<'link' | 'text'>('link');
+  const study = useMode() === 'scholarships';
+  const [kind, setKind] = useState<'auto' | 'scholarship' | 'programme'>('auto');
   const [busy, setBusy] = useState<AddJobRequest['then'] | null>(null);
   const [needsText, setNeedsText] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -38,6 +41,7 @@ export function AddJobSheet({
       setCompany('');
       setRole('');
       setMode('link');
+      setKind('auto');
       setNeedsText(false);
       setError(null);
     }
@@ -52,13 +56,16 @@ export function AddJobSheet({
         text: mode === 'text' || needsText ? text.trim() || undefined : undefined,
         company: company.trim() || undefined,
         role: role.trim() || undefined,
+        kind: study && kind !== 'auto' ? kind : undefined,
         then,
       });
       if (res.needsText) {
         setNeedsText(true);
         setMode('text');
         setError(
-          'That page can’t be read from here (it may need a login). Paste the job description below.',
+          study
+            ? 'That page can’t be read from here (it may need a login). Paste its text below.'
+            : 'That page can’t be read from here (it may need a login). Paste the job description below.',
         );
         return;
       }
@@ -88,7 +95,7 @@ export function AddJobSheet({
     <Sheet
       open={open}
       onClose={onClose}
-      title="Add a job"
+      title={study ? 'Add a scholarship or programme' : 'Add a job'}
       footer={
         <View style={{ gap: space.sm }}>
           <Button
@@ -117,14 +124,29 @@ export function AddJobSheet({
             />
           </View>
           <T variant="meta" tone="faint" style={{ textAlign: 'center' }}>
-            Added jobs skip triage. Scoring uses tokens.
+            {study
+              ? 'Winnow reads the page and fills in funding, deadlines and who can apply. Scoring uses tokens.'
+              : 'Added jobs skip triage. Scoring uses tokens.'}
           </T>
         </View>
       }
     >
       {error ? <Notice tone="warning" title={error} /> : null}
+      {study ? (
+        <Field label="It’s a">
+          <Segmented
+            value={kind}
+            onChange={setKind}
+            options={[
+              { value: 'auto', label: 'Let Winnow tell' },
+              { value: 'scholarship', label: 'Scholarship' },
+              { value: 'programme', label: 'Programme' },
+            ]}
+          />
+        </Field>
+      ) : null}
       {mode === 'link' ? (
-        <Field label="Link to the posting">
+        <Field label={study ? 'Link to the page' : 'Link to the posting'}>
           <Input
             value={url}
             onChangeText={setUrl}
@@ -137,24 +159,24 @@ export function AddJobSheet({
         </Field>
       ) : (
         <>
-          <Field label="Job description">
+          <Field label={study ? 'Page text' : 'Job description'}>
             <Input
               area
               multiline
               value={text}
               onChangeText={setText}
-              placeholder="Paste the whole posting"
+              placeholder={study ? 'Paste the whole page' : 'Paste the whole posting'}
               style={{ minHeight: 160 }}
             />
           </Field>
           <View style={{ flexDirection: 'row', gap: space.sm }}>
             <View style={{ flex: 1 }}>
-              <Field label="Company">
+              <Field label={study ? 'Provider or university' : 'Company'}>
                 <Input value={company} onChangeText={setCompany} placeholder="Optional" />
               </Field>
             </View>
             <View style={{ flex: 1 }}>
-              <Field label="Role">
+              <Field label={study ? 'Name' : 'Role'}>
                 <Input value={role} onChangeText={setRole} placeholder="Optional" />
               </Field>
             </View>

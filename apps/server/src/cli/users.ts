@@ -1,7 +1,8 @@
 /**
  * Manage who can sign in.
  *
- *   pnpm users add <id> <email> [name] [--admin]   create an account and print an invite link
+ *   pnpm users add <id> <email> [name] [--admin] [--mode=scholarships]   create an account and print an invite link
+ *   pnpm users mode <id> jobs|scholarships        what the account looks for
  *   pnpm users invite <id>                         a fresh invite link (also resets a forgotten password)
  *   pnpm users password <id>                       set a password now (reads it from stdin)
  *   pnpm users email <id> <new email>                change the sign-in email
@@ -16,6 +17,7 @@ import { join } from 'node:path';
 import { createInterface } from 'node:readline/promises';
 import { loadConfig, loadDotEnv } from '../config.ts';
 import { openSpace } from '../space.ts';
+import { setMode } from '../study/mode.ts';
 import { Users } from '../users.ts';
 
 loadDotEnv();
@@ -46,7 +48,11 @@ try {
       if (!id || !email) throw new Error('Usage: pnpm users add <id> <email> [name] [--admin]');
       const admin = flags.has('--admin') || users.list().length === 0;
       const user = users.add({ id, email, name: name.join(' ') || id, admin });
-      openSpace(config.usersDir, user.id).db.close();
+      const space = openSpace(config.usersDir, user.id);
+      const mode = [...flags].find((f) => f.startsWith('--mode='))?.slice(7);
+      if (mode) setMode(space.db, mode);
+      space.db.close();
+      if (mode) console.log(`Mode: ${mode}.`);
       console.log(`Added ${user.id} <${user.email}>${user.admin ? ' (admin)' : ''}.`);
       console.log(`Invite link (valid 14 days): ${link(users.invite(user.id))}`);
       break;
@@ -62,6 +68,16 @@ try {
       if (!id || !users.get(id)) throw new Error('Usage: pnpm users password <id>');
       await users.setPassword(id, await readSecret('New password: '));
       console.log(`Password set for ${id}.`);
+      break;
+    }
+    case 'mode': {
+      const [id, mode] = args;
+      if (!id || !mode || !users.get(id))
+        throw new Error('Usage: pnpm users mode <id> jobs|scholarships');
+      const space = openSpace(config.usersDir, id);
+      setMode(space.db, mode);
+      space.db.close();
+      console.log(`${id} now looks for ${mode}. Restart the server so it picks this up.`);
       break;
     }
     case 'email': {

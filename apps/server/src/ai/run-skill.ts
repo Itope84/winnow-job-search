@@ -28,7 +28,14 @@ export interface SkillRun<T> {
     | 'sources-suggest'
     | 'jack-update'
     | 'tailor'
-    | 'find-portal';
+    | 'find-portal'
+    | 'scholarship-triage'
+    | 'scholarship-score'
+    | 'scholarship-search'
+    | 'programme-match'
+    | 'funding-find'
+    | 'scholarship-essays'
+    | 'study-sources-suggest';
   /** Folder name under `runs/`; defaults to the run id. */
   folder?: string;
   input: unknown;

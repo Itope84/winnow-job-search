@@ -1,0 +1,17 @@
+{
+  "steps": [
+    {
+      "event": {
+        "type": "text",
+        "text": "[winnow] 1/4 Reading the profile"
+      }
+    },
+    {
+      "delay": 20,
+      "write": {
+        "path": "result.json",
+        "content": "{\"pages\": [{\"name\": \"Replay University scholarships\", \"url\": \"https://replay.example/funding\", \"kind\": \"university\", \"countries\": [\"Sweden\"], \"note\": \"Replay\"}], \"feeds\": [], \"queries\": [{\"name\": \"Funded MSc\", \"query\": \"fully funded MSc biomedical Europe\"}], \"erasmusKeywords\": [\"biomed\", \"molecular\"]}"
+      }
+    }
+  ]
+}

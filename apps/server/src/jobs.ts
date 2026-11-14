@@ -13,6 +13,11 @@ import type {
   ListCounts,
   MoveRequest,
   Mover,
+  OppKind,
+  OppLink,
+  Opportunity,
+  OppPlan,
+  OppRelation,
   PostingCheck,
   ScoreResult,
   Stage,
@@ -53,6 +58,24 @@ export interface NewJob {
   stage?: Stage | null;
   notes?: string;
   jd?: string | null;
+  kind?: OppKind;
+  opportunity?: Opportunity | null;
+}
+
+/** The deadline that matters for an item: a scholarship's own, a programme's admission, a posting's. */
+export function dueOf(
+  kind: OppKind,
+  opp: Opportunity | null,
+  posting: PostingCheck | null,
+): string | null {
+  const d = opp?.deadlines;
+  const pick =
+    kind === 'scholarship'
+      ? (d?.scholarship ?? d?.admission)
+      : kind === 'programme'
+        ? (d?.admission ?? d?.scholarship)
+        : null;
+  return pick ?? posting?.deadline ?? null;
 }
 
 /** One person's jobs: the lists, the moves between them, and the files that belong to each job. */
@@ -126,7 +149,14 @@ export class JobStore {
         runId: (r.run_id as string | null) ?? null,
       }),
     );
-    return { ...job, timeline, jd: this.readJd(id), report: this.readReport(id) };
+    const essays = join(this.applicationDir, id, 'essays.md');
+    return {
+      ...job,
+      timeline,
+      jd: this.readJd(id),
+      report: this.readReport(id),
+      essays: existsSync(essays) ? readFileSync(essays, 'utf8') : null,
+    };
   }
 
   readJd(id: string): string | null {
@@ -152,6 +182,17 @@ export class JobStore {
             "SELECT COUNT(*) AS n FROM jobs WHERE list = 'inbox' AND triage_verdict = 'keep'",
           )
           .get() as Row
+      ).n,
+    );
+    const now = new Date();
+    const soon = new Date(now.getTime() + 14 * 86_400_000).toISOString().slice(0, 10);
+    out.due = Number(
+      (
+        this.db
+          .prepare(
+            "SELECT COUNT(*) AS n FROM jobs WHERE list != 'archive' AND due >= ? AND due <= ?",
+          )
+          .get(now.toISOString().slice(0, 10), soon) as Row
       ).n,
     );
     return out;
@@ -196,6 +237,18 @@ export class JobStore {
       where.push('stage = ?');
       args.push(q.stage);
     }
+    if (q.kind) {
+      where.push('kind = ?');
+      args.push(q.kind);
+    }
+    if (q.dueWithinDays) {
+      const now = Date.now();
+      where.push('due >= ? AND due <= ?');
+      args.push(
+        new Date(now).toISOString().slice(0, 10),
+        new Date(now + q.dueWithinDays * 86_400_000).toISOString().slice(0, 10),
+      );
+    }
     const whereSql = where.join(' AND ');
     const total = Number(
       (this.db.prepare(`SELECT COUNT(*) AS n FROM jobs WHERE ${whereSql}`).get(...args) as Row).n,
@@ -210,10 +263,12 @@ export class JobStore {
           ? "COALESCE(json_extract(score_json, '$.at'), '')"
           : sort === 'company'
             ? 'lower(company)'
-            : q.list === 'inbox' || q.list === 'shortlist'
-              ? 'COALESCE(posted_at, first_seen)'
-              : 'moved_at';
-    const dir = sort === 'company' ? 'ASC' : 'DESC';
+            : sort === 'deadline'
+              ? "COALESCE(due, '9999-12-31')"
+              : q.list === 'inbox' || q.list === 'shortlist'
+                ? 'COALESCE(posted_at, first_seen)'
+                : 'moved_at';
+    const dir = sort === 'company' || sort === 'deadline' ? 'ASC' : 'DESC';
     const pageArgs = [...args];
     let cursorSql = '';
     if (q.cursor) {
@@ -260,8 +315,8 @@ export class JobStore {
       .prepare(
         `INSERT INTO jobs (id, url, canon_url, fp, company, role, location, work_model, salary, posted_at,
           first_seen, sources, list, stage, archive_reason, archive_detail, moved_by, moved_at, added_by,
-          notes, updated_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          notes, updated_at, kind, opp, due)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       )
       .run(
         id,
@@ -285,6 +340,9 @@ export class JobStore {
         input.addedBy,
         input.notes ?? '',
         at,
+        input.kind ?? 'job',
+        input.opportunity ? JSON.stringify(input.opportunity) : null,
+        dueOf(input.kind ?? 'job', input.opportunity ?? null, null),
       );
     if (input.jd) this.writeJd(id, input.jd);
     const how =
@@ -344,6 +402,18 @@ export class JobStore {
         nowIso(),
         id,
       );
+  }
+
+  /** A better name for an item, and its place from the countries it is in. */
+  rename(id: string, role: string, company: string) {
+    const job = this.require(id);
+    const place = job.opportunity?.countries.join(', ') || job.location;
+    if (job.role === role && job.company === company && job.location === place) return;
+    this.db
+      .prepare(
+        'UPDATE jobs SET role = ?, company = ?, location = ?, fp = ?, updated_at = ? WHERE id = ?',
+      )
+      .run(role, company || '?', place, fingerprint(company, role, place), nowIso(), id);
   }
 
   move(req: MoveRequest, by: Mover, runId: string | null = null): Job[] {
@@ -479,8 +549,109 @@ export class JobStore {
     this.db
       .prepare('UPDATE jobs SET posting = ?, updated_at = ? WHERE id = ?')
       .run(JSON.stringify(next), nowIso(), id);
+    this.refreshDue(id);
     if (patch.warnings?.length && !cur?.warnings.length)
       this.log(id, 'posting', `Posting check: ${patch.warnings[0]}`);
+  }
+
+  /** Save what a scholarship or programme offers, and what kind of item it turned out to be. */
+  setOpportunity(id: string, opp: Opportunity, runId: string | null = null) {
+    const job = this.require(id);
+    const before = job.opportunity;
+    this.db
+      .prepare('UPDATE jobs SET kind = ?, opp = ?, updated_at = ? WHERE id = ?')
+      .run(opp.kind, JSON.stringify(opp), nowIso(), id);
+    this.refreshDue(id);
+    const was = before?.deadlines;
+    const now = opp.deadlines;
+    if (
+      before &&
+      (was?.scholarship !== now.scholarship || was?.admission !== now.admission) &&
+      (now.scholarship || now.admission)
+    )
+      this.log(
+        id,
+        'deadline',
+        `Deadline now ${[now.scholarship && `scholarship ${now.scholarship}`, now.admission && `admission ${now.admission}`].filter(Boolean).join(', ')}`,
+        runId,
+      );
+  }
+
+  setPlan(id: string, plan: OppPlan) {
+    this.require(id);
+    this.db
+      .prepare('UPDATE jobs SET plan = ?, updated_at = ? WHERE id = ?')
+      .run(JSON.stringify(plan), nowIso(), id);
+    this.changed([id]);
+  }
+
+  /** Link a scholarship to a programme it could pay for. Linking twice keeps the stronger relation. */
+  link(
+    scholarshipId: string,
+    programmeId: string,
+    relation: OppRelation,
+    runId: string | null = null,
+  ) {
+    if (scholarshipId === programmeId) return;
+    const had = this.db
+      .prepare('SELECT relation FROM opp_links WHERE scholarship_id = ? AND programme_id = ?')
+      .get(scholarshipId, programmeId) as Row | undefined;
+    const rank: Record<OppRelation, number> = { built_in: 3, covers: 2, eligible: 1 };
+    if (had && rank[had.relation as OppRelation] >= rank[relation]) return;
+    this.db
+      .prepare(
+        `INSERT INTO opp_links (scholarship_id, programme_id, relation, created) VALUES (?, ?, ?, ?)
+         ON CONFLICT(scholarship_id, programme_id) DO UPDATE SET relation = excluded.relation`,
+      )
+      .run(scholarshipId, programmeId, relation, nowIso());
+    if (!had) {
+      const s = this.get(scholarshipId);
+      const p = this.get(programmeId);
+      if (s && p) {
+        this.log(programmeId, 'link', `Could be paid for by ${s.role}`, runId);
+        this.log(scholarshipId, 'link', `Covers ${p.role} at ${p.company}`, runId);
+      }
+    }
+  }
+
+  unlink(scholarshipId: string, programmeId: string) {
+    this.db
+      .prepare('DELETE FROM opp_links WHERE scholarship_id = ? AND programme_id = ?')
+      .run(scholarshipId, programmeId);
+  }
+
+  links(id: string): OppLink[] {
+    const rows = this.db
+      .prepare(
+        `SELECT j.id, j.kind, j.role, j.company, j.score, j.list, j.opp, l.relation FROM opp_links l
+         JOIN jobs j ON j.id = CASE WHEN l.scholarship_id = ? THEN l.programme_id ELSE l.scholarship_id END
+         WHERE l.scholarship_id = ? OR l.programme_id = ?
+         ORDER BY j.list = 'archive', COALESCE(j.score, -1) DESC, j.role`,
+      )
+      .all(id, id, id) as Row[];
+    return rows.map((r) => ({
+      id: r.id as string,
+      kind: r.kind as OppKind,
+      title: r.role as string,
+      org: r.company as string,
+      score: (r.score as number | null) ?? null,
+      list: r.list as JobList,
+      funding: parseJson<Opportunity | null>(r.opp as string | null, null)?.funding ?? null,
+      relation: r.relation as OppRelation,
+    }));
+  }
+
+  private refreshDue(id: string) {
+    const r = this.db.prepare('SELECT kind, opp, posting FROM jobs WHERE id = ?').get(id) as
+      | Row
+      | undefined;
+    if (!r) return;
+    const due = dueOf(
+      r.kind as OppKind,
+      parseJson<Opportunity | null>(r.opp as string | null, null),
+      parseJson<PostingCheck | null>(r.posting as string | null, null),
+    );
+    this.db.prepare('UPDATE jobs SET due = ? WHERE id = ?').run(due, id);
   }
 
   setApplication(id: string, application: Application) {
@@ -585,6 +756,11 @@ export class JobStore {
       activity: this.activity.get(id) ?? null,
       posting: parseJson<PostingCheck | null>(r.posting as string | null, null),
       application: parseJson<Application | null>(r.application as string | null, null),
+      kind: ((r.kind as OppKind | null) ?? 'job') as OppKind,
+      opportunity: parseJson<Opportunity | null>(r.opp as string | null, null),
+      plan: parseJson<OppPlan | null>(r.plan as string | null, null),
+      due: (r.due as string | null) ?? null,
+      links: (r.kind ?? 'job') === 'job' ? [] : this.links(id),
     };
   }
 }

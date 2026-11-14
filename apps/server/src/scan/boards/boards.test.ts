@@ -1,3 +1,4 @@
+import { BOARD_CATALOGUE, boardEntry, type Rules } from '@winnow/api';
 import { describe, expect, it } from 'vitest';
 import type { Offer } from '../intake.ts';
 import { freehire, freehireOffer, freehireParams } from './freehire.ts';
@@ -137,5 +138,40 @@ describe('freehire', () => {
     const got = await freehire.fetch({ name: 'x', keywords: 'a', max_pages: 5 }, ctx);
     expect(got).toHaveLength(130);
     expect(urls).toHaveLength(2);
+  });
+});
+
+describe('Boards a person can switch on', () => {
+  const rules = (positive: string[], allow: string[]): Rules => ({
+    title: { positive, negative: [] },
+    location: { alwaysAllow: [], allow, block: [] },
+    salary: { min: 0, max: 0, currency: '' },
+    maxAgeDays: null,
+  });
+  const info = (provider: string) => BOARD_CATALOGUE.find((b) => b.provider === provider)!;
+
+  it('searches with the title words and the first place that is not remote', () => {
+    expect(boardEntry(info('nhs-jobs'), rules(['nurse', 'midwife'], ['Remote', 'Leeds']))).toEqual({
+      name: 'NHS Jobs',
+      provider: 'nhs-jobs',
+      enabled: true,
+      keywords: ['nurse', 'midwife'],
+      location: 'Leeds',
+      distance: 20,
+    });
+  });
+
+  it('keeps at most five title words, and leaves out a place the board does not take', () => {
+    const e = boardEntry(info('jobs-ac-uk'), rules(['a', 'b', 'c', 'd', 'e', 'f'], ['Edinburgh']));
+    expect(e.keywords).toEqual(['a', 'b', 'c', 'd', 'e']);
+    expect(e).not.toHaveProperty('location');
+    expect(e.locations).toEqual(['united-kingdom']);
+  });
+
+  it('works with nothing set, and every board has a scanner', async () => {
+    expect(boardEntry(info('nhs-jobs'), rules([], []))).toMatchObject({ keywords: [] });
+    const { loadProviders } = await import('../providers.ts');
+    const { providers } = await loadProviders();
+    for (const b of BOARD_CATALOGUE) expect(providers.has(b.provider)).toBe(true);
   });
 });

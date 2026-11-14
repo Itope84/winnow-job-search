@@ -22,6 +22,28 @@ told us in setup. They review and edit it before it is saved.
 
 Read only `input.json` and `cv.md`. Do not browse the web. Do not open other files.
 
+## Scholarships mode
+
+When `input.mode` is `"scholarships"`, the person wants funded master's study and scholarship panels
+read the profile, not employers. Then:
+
+- `want.roles` are programmes or fields of study; `want.study` holds level, intake, places, funding need,
+  English test and work experience. `about.nationality` is their citizenship.
+- The answers are about why this subject, the question they want to work on, their plans after the
+  degree, leadership and service, and their circumstances.
+- `statementFile`, when set, is `statement.md` in the run folder: their own writing (a cover letter or
+  personal statement). Read it; it is their voice and a source of facts.
+- `headline`: their academic identity in one line ("First-class biochemistry graduate aiming at the
+  molecular links between cancer and neurodegeneration").
+- `story`: why this subject now and what comes after (a PhD, a career), in their words.
+- `superpowers`: academic and personal strengths with evidence (grades, research, lab skills,
+  leadership, awards).
+- `proofPoints`: research, awards, leadership and service with a concrete detail each.
+- `roleNotes`: one line per subject in `want.roles`: why it fits.
+- `narrative`: the same sections as below, written for scholarship and admissions panels: who they
+  are, what they want to study and why, research experience, skills, leadership and service, awards,
+  plans after the degree, and anything about their circumstances they chose to share.
+
 ## Rules
 
 1. **Add no facts.** Every employer, number, result and skill you write comes from the CV or the answers.

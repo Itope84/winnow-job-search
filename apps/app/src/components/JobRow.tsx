@@ -2,8 +2,10 @@ import type { Job } from '@winnow/api';
 import { memo, useRef, useState } from 'react';
 import { Animated, PanResponder, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { companyLabel, deadline, isStale, jobAge, monogram } from '@/lib/format';
+import { oppMeta } from '@/lib/study';
 import { fonts, radius, space, type, useTheme } from '@/theme';
 import { JobStatusChip } from './chips';
+import { EligibilityChip, FundingChip } from './Study';
 import { Icon, IconButton } from './ui';
 
 const TRIGGER = 96;
@@ -114,15 +116,20 @@ export const JobRow = memo(function JobRow({
   ).current;
 
   const due = deadline(job);
-  const meta = [
-    job.posting?.warnings.length ? '⚠ Check posting' : null,
-    due?.soon ? `🔥 ${due.label}` : null,
-    companyLabel(job.company),
-    job.location,
-    isStale(job) ? `⚠ ${jobAge(job)}` : jobAge(job),
-  ]
-    .filter(Boolean)
-    .join(' · ');
+  const study = job.kind !== 'job';
+  const meta = study
+    ? oppMeta(job)
+    : [
+        job.posting?.warnings.length ? '⚠ Check posting' : null,
+        due?.soon ? `🔥 ${due.label}` : null,
+        companyLabel(job.company),
+        job.location,
+        isStale(job) ? `⚠ ${jobAge(job)}` : jobAge(job),
+      ]
+        .filter(Boolean)
+        .join(' · ');
+  const programmes =
+    job.kind === 'scholarship' ? job.links.filter((l) => l.kind === 'programme') : [];
 
   return (
     <View
@@ -180,15 +187,47 @@ export const JobRow = memo(function JobRow({
               />
             </View>
           ) : (
-            <CompanyTile company={job.company} />
+            <CompanyTile
+              company={
+                job.kind === 'programme' ? job.opportunity?.university || job.company : job.company
+              }
+            />
           )}
           <View style={{ flex: 1, minWidth: 0, gap: 3 }}>
-            <Text style={[type.rowTitle, { color: c.ink }]} numberOfLines={1}>
-              {job.role || 'Untitled role'}
+            <Text style={[type.rowTitle, { color: c.ink }]} numberOfLines={study ? 2 : 1}>
+              {job.role || (study ? 'Untitled' : 'Untitled role')}
             </Text>
             <Text style={[type.meta, { color: c.lead }]} numberOfLines={1}>
               {meta}
             </Text>
+            {study ? (
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+                <FundingChip job={job} />
+                <EligibilityChip job={job} />
+              </View>
+            ) : null}
+            {programmes.length ? (
+              <View
+                style={{
+                  gap: 1,
+                  marginTop: 4,
+                  paddingLeft: 8,
+                  borderLeftWidth: 2,
+                  borderLeftColor: c.rule,
+                }}
+              >
+                {programmes.slice(0, 3).map((p) => (
+                  <Text key={p.id} style={[type.meta, { color: c.lead }]} numberOfLines={1}>
+                    {p.title}
+                    {p.org ? ` · ${p.org}` : ''}
+                    {p.score != null ? ` · ${p.score.toFixed(1)}` : ''}
+                  </Text>
+                ))}
+                {programmes.length > 3 ? (
+                  <Text style={[type.meta, { color: c.faint }]}>+{programmes.length - 3} more</Text>
+                ) : null}
+              </View>
+            ) : null}
           </View>
           {wide && hover && !selecting ? (
             <View style={{ flexDirection: 'row' }}>

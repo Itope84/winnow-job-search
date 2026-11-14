@@ -37,6 +37,21 @@ Read only `input.json` and `cv.md`. Do not browse the web. Do not open other fil
 7. **languages** (in `about`): the languages the CV lists, each with the level it gives, written like
    "English (native), French (B1)". Leave `""` when the CV lists none; don't infer one from where they live.
 
+## Scholarships mode
+
+When `input.mode` is `"scholarships"`, the person is looking for funded study, not a job:
+
+- `roles` are the **programmes or fields of study** they would apply for next, judged from their degree,
+  thesis, research interests and (when `statementFile` is set) their own statement in `statement.md`
+  in the run folder. Write them as a university would ("MSc Molecular Medicine", "MSc Biomedical
+  Sciences", "MSc Neuroscience"). `dream`: what their own words aim at; `good`: close fields their
+  degree fits; `stretch`: neighbouring fields.
+- `level`: the degree they'd apply for ("Master's").
+- `places`: leave `[]`: where to study is asked separately.
+- `about.nationality`: only if the CV or statement says it outright; otherwise `""`. Never infer it
+  from where they studied or live.
+- `workTypes` `[]`, `currency` `""`.
+
 ## Output
 
 Write `result.json` in the run folder:

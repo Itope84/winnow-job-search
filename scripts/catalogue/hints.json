@@ -1,0 +1,256 @@
+{
+  "safe-superintelligence": {
+    "fail": true
+  },
+  "paystack": {
+    "portal": "teamtailor",
+    "url": "https://careers.paystack.com/jobs",
+    "jobs": 15,
+    "sample": [
+      "Product Manager, South Africa",
+      "Business Development Manager, South Africa",
+      "Business Development Lead, South Africa"
+    ]
+  },
+  "state-street": {
+    "portal": "phenom",
+    "url": "https://careers.statestreet.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Full Stack Developer Global Link ,Vice President",
+      "Senior Databricks / Snowflake Data Architect – BestX",
+      "Senior Consultant, Charles River Development, Assistant Vice President"
+    ]
+  },
+  "allianz": {
+    "portal": "phenom",
+    "url": "https://careers.allianz.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Product Category Manager",
+      "Precertification Officer",
+      "Conseiller Expérimenté en Gestion de Patrimoine H/F - Cahors (46)"
+    ]
+  },
+  "ntt-data": {
+    "portal": "phenom",
+    "url": "https://careers.nttdata.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Analista de Cloud Pleno - FinOps",
+      "Desenvolvedor(a) Full Stack Sênior",
+      "Pessoa Desenvolvedora Java/Angular — Foco Front-end"
+    ]
+  },
+  "boston-consulting-group": {
+    "portal": "phenom",
+    "url": "https://careers.bcg.com/global/en/",
+    "jobs": 100,
+    "sample": [
+      "Global Product Senior Manager - Risk-InfoEx",
+      "Operational Innovations Senior Analyst",
+      "Lead AI Tech Architect - Salesforce/CRM - London | BCG Platinion"
+    ]
+  },
+  "herbert-smith-freehills-kramer": {
+    "portal": "phenom",
+    "url": "https://careers.hsfkramer.com/global/en",
+    "jobs": 100,
+    "sample": ["Operations Manager, Southeast Asia", "Conflicts Advisor", "Data Systems Analyst"]
+  },
+  "bayer": {
+    "portal": "teamtailor",
+    "url": "https://nordiccareers.bayer.com/",
+    "jobs": 2,
+    "sample": ["Valmistustyöntekijöitä", "R&D Data Operations"]
+  },
+  "ascension": {
+    "portal": "phenom",
+    "url": "https://jobs.ascension.org/us/en",
+    "jobs": 100,
+    "sample": [
+      "Senior Director Community Impact",
+      "Registered Nurse Float",
+      "Certified Medical Assistant Urgent Care"
+    ]
+  },
+  "mercer": {
+    "portal": "phenom",
+    "url": "https://careers.marsh.com/global/en/people-and-investments",
+    "jobs": 100,
+    "sample": [
+      "Tech Services –Associate & Engagement Manager – London",
+      "Operations – Engagement Manager (m/f/d) – Germany",
+      "Oliver Wyman - AI Product Enablement Analyst- Kuala Lumpur"
+    ]
+  },
+  "ppd-thermo": {
+    "portal": "phenom",
+    "url": "https://jobs.thermofisher.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "DO NOT APPLY - TEST REQ - CRG - Medical Monitor Sr Manager - St. Louis US",
+      "DO NOT APPLY - TEST REQ - CRG - Manager, Clinical Lab Scientist - Athlon Ireland",
+      "DO NOT APPLY - TEST REQ - CRG - Trial management Manager - St. Louis US"
+    ]
+  },
+  "warner-bros-discovery": {
+    "portal": "phenom",
+    "url": "https://careers.wbd.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Cybersecurity Engineer (Linux DevSecOps Engineer)",
+      "Senior Software Engineer (Advertising Technology - AWS experience required)",
+      "Producer, CNN en Español"
+    ]
+  },
+  "ge-healthcare": {
+    "portal": "phenom",
+    "url": "https://careers.gehealthcare.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Operatør Sterilproduksjon",
+      "Senior MA Manager",
+      "CT Product Sales Specialist - Thailand"
+    ]
+  },
+  "zimmer-biomet": {
+    "portal": "phenom",
+    "url": "https://careers.zimmerbiomet.com/us/en",
+    "jobs": 100,
+    "sample": [
+      "Return Receiver/Classifier 1",
+      "Senior Administrative Assistant",
+      "Corporate Strategy Manager"
+    ]
+  },
+  "king-microsoft": {
+    "portal": "phenom",
+    "url": "https://careers.king.com/us/en",
+    "jobs": 15,
+    "sample": [
+      "Art Director | New Games",
+      "UI Artist | New Games",
+      "Senior Systems Engineer | Shared Tech"
+    ]
+  },
+  "rtx": {
+    "portal": "phenom",
+    "url": "https://careers.rtx.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Kontrolerka / Kontroler Jakości",
+      "Specjalistka / Specjalista ds. BHP i Ochrony Środowiska",
+      "Mécanicien d'aéronefs"
+    ]
+  },
+  "international-rescue-committee": {
+    "fail": true
+  },
+  "southwest": {
+    "portal": "phenom",
+    "url": "https://careers.southwestair.com/us/en/",
+    "jobs": 17,
+    "sample": [
+      "Flight Ops Flight Instructor - HDQ",
+      "Ramp Agent - GEG (Part-Time)",
+      "Regulatory Affairs Investigator - DMX"
+    ]
+  },
+  "bae-systems": {
+    "portal": "phenom",
+    "url": "https://jobs.baesystems.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "IT Systems Admin Sr",
+      "Field Service Tech III (Classified)",
+      "Engineer II - Software Quality Assurance"
+    ]
+  },
+  "adnoc": {
+    "portal": "phenom",
+    "url": "https://jobs.adnoc.ae/us/en",
+    "jobs": 71,
+    "sample": [
+      "Graduate Trainee - Technology (UAE Nationals)",
+      "Graduate Trainee - Business, Arts & Law (UAE Nationals)",
+      "Graduate Trainee - Engineering & Science (UAE Nationals)"
+    ]
+  },
+  "air-canada": {
+    "portal": "phenom",
+    "url": "https://careers.aircanada.com/ca/en",
+    "jobs": 71,
+    "sample": [
+      "Customer Sales and Service Agent - Call Centre - Proactive hiring",
+      "Aircraft Maintenance Engineer – (CAT 38) - Avionics",
+      "Counsel, Labour and Employment Law"
+    ]
+  },
+  "honda": {
+    "portal": "phenom",
+    "url": "https://careers.honda.com/us/en",
+    "jobs": 100,
+    "sample": ["Project Process Engineer", "Equipment Engineer", "Project Equipment Engineer"]
+  },
+  "bechtel": {
+    "portal": "phenom",
+    "url": "https://jobs.bechtel.com/us/en",
+    "jobs": 100,
+    "sample": [
+      "Construction Engineer - Airfield & Roads",
+      "Construction Manager-Runway",
+      "Testing & Commissioning Manager"
+    ]
+  },
+  "savills": {
+    "portal": "teamtailor",
+    "url": "https://careers.savills.com/",
+    "jobs": 83,
+    "sample": ["Saturday Assistant", "Lettings Negotiator Bristol", "Office Coordinator"]
+  },
+  "syngenta": {
+    "fail": true
+  },
+  "dhl-group": {
+    "portal": "phenom",
+    "url": "https://careers.dhl.com/global/en",
+    "jobs": 100,
+    "sample": ["Account Manager", "First Line Manager", "Health and Safety Business Partner - BACC"]
+  },
+  "royal-mail": {
+    "portal": "phenom",
+    "url": "https://careers.royalmailgroup.com/gb/en",
+    "jobs": 100,
+    "sample": ["Parcel Delivery Driver", "Postal Delivery Driver", "Postperson with Driving"]
+  },
+  "kuehne-nagel": {
+    "portal": "phenom",
+    "url": "https://jobs.kuehne-nagel.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "EURO Temperature Controlled Vehicle (TCV) Driver",
+      "Schülerpraktikum (m/w/d)",
+      "Lagermitarbeiter Landverkehr (m/w/d)"
+    ]
+  },
+  "serco": {
+    "portal": "phenom",
+    "url": "https://careers.serco.com/gb/en",
+    "jobs": 100,
+    "sample": ["Fuels Technician", "Able Seafarer (Crane Operations Lead)", "Cleaner"]
+  },
+  "epic-systems": {
+    "fail": true
+  },
+  "procter-and-gamble": {
+    "portal": "phenom",
+    "url": "https://www.pgcareers.com/global/en",
+    "jobs": 100,
+    "sample": [
+      "Territory Manager - Oral B - South West London",
+      "Influencer & Community Manager",
+      "Sales Graduate Role 2027"
+    ]
+  }
+}

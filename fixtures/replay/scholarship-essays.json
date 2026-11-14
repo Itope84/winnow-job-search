@@ -1,0 +1,23 @@
+{
+  "steps": [
+    {
+      "event": {
+        "type": "text",
+        "text": "[winnow] 3/4 Drafting"
+      }
+    },
+    {
+      "delay": 20,
+      "write": {
+        "path": "essays.md",
+        "content": "## Why this subject? (500 words)\n\nReplay essay.\n\n*2 words*\n"
+      }
+    },
+    {
+      "write": {
+        "path": "result.json",
+        "content": "{\"essays\": [{\"prompt\": \"Why this subject?\", \"limit\": \"500 words\", \"words\": 2}]}"
+      }
+    }
+  ]
+}

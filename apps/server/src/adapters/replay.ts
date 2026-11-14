@@ -11,7 +11,13 @@ export interface ReplayScript {
   steps: Array<
     | { delay?: number; event: AdapterEvent }
     | { delay?: number; write: { path: string; content: string } }
-    | { delay?: number; writeFrom: { path: string; template: 'triage-keep-all' | 'score' } }
+    | {
+        delay?: number;
+        writeFrom: {
+          path: string;
+          template: 'triage-keep-all' | 'score' | 'study-triage' | 'study-score';
+        };
+      }
   >;
   exitCode?: number;
 }
@@ -53,9 +59,20 @@ export function replayAdapter(dir: string): CliAdapter {
           const input = JSON.parse(readFileSync(join(meta.folder, 'input.json'), 'utf8')) as {
             jobs?: { id: string }[];
             job?: { id: string };
+            items?: { id: string; kind: string; title: string; org: string }[];
           };
+          const template = step.writeFrom.template;
+          if (template === 'study-triage' || template === 'study-score') {
+            writeFileSync(
+              join(meta.folder, step.writeFrom.path),
+              JSON.stringify(studyReplay(template, input), null, 2),
+            );
+            if (template === 'study-score')
+              writeFileSync(join(meta.folder, 'report.md'), '# Replay\n\nA replayed report.\n');
+            continue;
+          }
           const out =
-            step.writeFrom.template === 'triage-keep-all'
+            template === 'triage-keep-all'
               ? {
                   results: (input.jobs ?? []).map((j, i) => ({
                     id: j.id,
@@ -112,4 +129,90 @@ function sleep(ms: number, signal: AbortSignal) {
       resolve();
     });
   });
+}
+
+/** Facts a replayed scholarship skill reads off a page: a UK scholarship naming one school. */
+const REPLAY_FACTS = {
+  kind: 'scholarship',
+  shape: 'many_schools',
+  funding: 'full',
+  covers: 'Tuition, living costs and flights',
+  countries: ['United Kingdom'],
+  level: 'Master’s',
+  subject: 'Any',
+  university: null,
+  intake: 'September 2027',
+  deadlines: { scholarship: '2099-01-15', admission: null },
+  round: 'open',
+  eligibility: { status: 'eligible', who: 'Replay', fails: [], todos: ['Replay: IELTS 6.5'] },
+  schools: ['University of Replay'],
+  essays: ['Why this subject? (500 words)'],
+  documents: ['Transcript', 'Two references'],
+  tuition: null,
+  length: null,
+  officialUrl: null,
+};
+
+/**
+ * Scholarship triage and score, replayed: every third item is discarded as not eligible; programmes
+ * keep their kind and sit at the University of Replay, so a scholarship naming it links to them.
+ */
+function studyReplay(
+  template: 'study-triage' | 'study-score',
+  input: { items?: { id: string; kind: string; title: string; org: string }[] },
+) {
+  const facts = (kind: string) =>
+    kind === 'programme'
+      ? {
+          ...REPLAY_FACTS,
+          kind: 'programme',
+          shape: null,
+          funding: 'fees',
+          university: 'University of Replay',
+          schools: [],
+          deadlines: { scholarship: null, admission: '2099-03-01' },
+        }
+      : REPLAY_FACTS;
+  if (template === 'study-triage')
+    return {
+      results: (input.items ?? []).map((it, i) => ({
+        id: it.id,
+        verdict: i % 3 === 2 ? 'discard' : 'keep',
+        reason: i % 3 === 2 ? 'Replay: not eligible' : 'Replay: fits your subjects',
+        title: it.title,
+        org: it.kind === 'programme' ? 'University of Replay' : it.org,
+        facts:
+          i % 3 === 2
+            ? {
+                ...facts(it.kind),
+                eligibility: {
+                  status: 'ineligible',
+                  who: 'Replay',
+                  fails: ['Replay: needs 2 years’ work'],
+                  todos: [],
+                },
+              }
+            : facts(it.kind),
+      })),
+    };
+  return {
+    score: 4.3,
+    summary: 'Replay: a strong fit you can apply for.',
+    dimensions: [
+      { key: 'eligibility', label: 'Eligibility', score: 5, note: 'Replay' },
+      { key: 'fit', label: 'Subject fit', score: 4.4, note: 'Replay' },
+      { key: 'funding', label: 'Funding', score: 5, note: 'Replay' },
+      { key: 'odds', label: 'Odds', score: 3.2, note: 'Replay' },
+      { key: 'place', label: 'Place', score: 5, note: 'Replay' },
+      { key: 'effort', label: 'Effort and timing', score: 3.5, note: 'Replay' },
+    ],
+    hardStops: [],
+    gaps: ['Replay: book IELTS'],
+    strengths: ['Replay strength'],
+    nextStep: 'Replay: ask two referees this week.',
+    legitimacy: 'High Confidence',
+    archetype: 'Replay',
+    comp: 'Full funding',
+    facts: { ...REPLAY_FACTS, deadlines: { scholarship: '2099-02-01', admission: null } },
+  };
 }

@@ -68,7 +68,7 @@ export default function Setup() {
     refreshJobs();
     toast.show(
       scan && runs
-        ? 'You’re set up. Your first scan is running; new jobs land in Inbox.'
+        ? `You’re set up. Your first scan is running; new ${s?.mode === 'scholarships' ? 'items' : 'jobs'} land in Inbox.`
         : 'You’re set up.',
     );
     router.replace('/');
@@ -145,7 +145,10 @@ export default function Setup() {
               profile.
             </T>
             <View style={{ flexDirection: 'row', gap: space.sm }}>
-              <Button label="Go to Jobs" onPress={() => router.replace('/')} />
+              <Button
+                label={s?.mode === 'scholarships' ? 'Go to Inbox' : 'Go to Jobs'}
+                onPress={() => router.replace('/')}
+              />
               <Button kind="secondary" label="Set up again" onPress={() => void redo()} />
             </View>
           </View>

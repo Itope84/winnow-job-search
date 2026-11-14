@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import type { Application, DocCheck, Requirement } from '@winnow/api';
 import { parse } from 'yaml';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
+import { getMode } from '../study/mode.ts';
 import { clip, nowIso } from '../util.ts';
 import { compileTex, type TexCheck } from './latex.ts';
 import { runSkill } from './run-skill.ts';
@@ -94,9 +95,13 @@ export async function tailor(ctx: RunCtx): Promise<RunOutput> {
       role: job.role,
       location: job.location,
       url: job.url,
-      deadline: job.posting?.deadline ?? null,
+      deadline: job.due ?? job.posting?.deadline ?? null,
       warnings: job.posting?.warnings ?? [],
+      kind: job.kind,
+      facts: job.opportunity,
     },
+    // `scholarships`: the letter is a motivation letter and the CV an academic one (see the skill).
+    mode: getMode(ctx.space.db),
     // In its own file: OpenCode's read tool cuts long lines, and a JSON string is one line.
     description: join(folder, 'posting.md'),
     profileFiles: {
@@ -104,6 +109,9 @@ export async function tailor(ctx: RunCtx): Promise<RunOutput> {
       narrative: join(library, 'profile/narrative.md'),
       profile: join(library, 'profile/profile.yml'),
       extras: ctx.space.profile.get().extras.trim() ? join(library, 'profile/extras.md') : null,
+      statement: ctx.space.profile.get().statement.trim()
+        ? join(library, 'profile/statement.md')
+        : null,
     },
     score: job.score
       ? { summary: job.score.summary, strengths: job.score.strengths, gaps: job.score.gaps }

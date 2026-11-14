@@ -1,0 +1,1785 @@
+{
+  "servicenow": {
+    "page": "https://careers.servicenow.com/",
+    "fingerprints": []
+  },
+  "microsoft": {
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "fingerprints": []
+  },
+  "ibm": {
+    "page": "https://www.ibm.com/careers",
+    "fingerprints": []
+  },
+  "shopify": {
+    "page": "https://www.shopify.com/careers",
+    "fingerprints": []
+  },
+  "atlassian": {
+    "page": "https://www.atlassian.com/company/careers",
+    "fingerprints": []
+  },
+  "netflix": {
+    "page": "https://jobs.netflix.com/",
+    "fingerprints": []
+  },
+  "apple": {
+    "page": "https://idmsac.apple.com/IDMSWebAuth/appleauth/auth/oauth2/v2/authorize?client_id=k8pehdkbjdfms5zvaavpjtmxj2d5nh&redirect_uri=https%3A//people.apple.com/idms/oidc-authorize&response_type=code&state=/careers&scope=openid%20offline_access%20profile%20email%20roles%20api%20extended_profile",
+    "fingerprints": []
+  },
+  "booking-holdings": {
+    "page": "https://www.bookingholdings.com/careers/careers/",
+    "fingerprints": []
+  },
+  "intuit": {
+    "page": "https://www.intuit.com/careers/",
+    "fingerprints": ["radancy"]
+  },
+  "ebay": {
+    "page": "https://careers.ebayinc.com/",
+    "fingerprints": []
+  },
+  "zalando": {
+    "page": "https://jobs.zalando.com/en",
+    "fingerprints": []
+  },
+  "snap": {
+    "page": "https://careers.snap.com/",
+    "fingerprints": []
+  },
+  "mistral-ai": {
+    "page": "https://mistral.ai/",
+    "fingerprints": []
+  },
+  "palantir": {
+    "page": "https://www.palantir.com/careers",
+    "fingerprints": ["lever"]
+  },
+  "qualcomm": {
+    "page": "https://careers.qualcomm.com/careers",
+    "fingerprints": ["eightfold"]
+  },
+  "alibaba": {
+    "page": "https://talent.alibaba.com/en/home",
+    "fingerprints": []
+  },
+  "tcs": {
+    "page": "https://www.tcs.com/careers",
+    "fingerprints": []
+  },
+  "tsmc": {
+    "page": "https://jobs.tsmc.com/zh-TW",
+    "fingerprints": []
+  },
+  "foxconn": {
+    "page": "https://www.foxconn.com/zh-tw",
+    "fingerprints": []
+  },
+  "cognizant": {
+    "page": "https://careers.cognizant.com/global-en/",
+    "fingerprints": []
+  },
+  "bytedance": {
+    "page": "https://jobs.bytedance.com/",
+    "fingerprints": []
+  },
+  "applied-materials": {
+    "page": "https://careers.appliedmaterials.com/careers",
+    "fingerprints": ["radancy", "eightfold"]
+  },
+  "infosys": {
+    "page": "https://careers.infosys.com/",
+    "fingerprints": []
+  },
+  "sony": {
+    "page": "https://www.sony.com/en_us/SCA/careers/overview.html",
+    "fingerprints": ["greenhouse"]
+  },
+  "sap": {
+    "page": "https://careers.sap.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.sap.com/",
+      "jobs": 562,
+      "sample": [
+        "SAP iXp Intern - Sales Development Associate (SDA) for Portugal, located in Barcelona",
+        "SAP iXP Intern - Cloud DevOps & Automation Engineering",
+        "Solution Sales Expert - Finance (oCFO) / Cloud ERP Solution"
+      ]
+    }
+  },
+  "ltimindtree": {
+    "page": "https://www.ltm.com/careers",
+    "fingerprints": []
+  },
+  "hcltech": {
+    "page": "https://careers.hcltech.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.hcltech.com/",
+      "jobs": 10,
+      "sample": ["Hunter", "Hunter", "Hunter"]
+    }
+  },
+  "epam": {
+    "page": "https://careers.epam.com/en/jobs",
+    "fingerprints": []
+  },
+  "check-point": {
+    "page": "https://careers.checkpoint.com/jobs",
+    "fingerprints": ["smartrecruiters"]
+  },
+  "endava": {
+    "page": "https://www.endava.com/careers",
+    "fingerprints": []
+  },
+  "rapid7": {
+    "page": "https://careers.rapid7.com/",
+    "fingerprints": []
+  },
+  "cgi": {
+    "page": "https://www.cgi.com/en/careers",
+    "fingerprints": []
+  },
+  "tech-mahindra": {
+    "page": "https://careers.techmahindra.com/",
+    "fingerprints": []
+  },
+  "deutsche-telekom": {
+    "page": "https://www.telekom.com/",
+    "fingerprints": []
+  },
+  "vodafone": {
+    "page": "https://careers.vodafone.com/",
+    "fingerprints": []
+  },
+  "wipro": {
+    "page": "https://careers.wipro.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.wipro.com/",
+      "jobs": 10,
+      "sample": [
+        "Configurator - L4",
+        "TECHNO FUNCTIONAL CONSULTANT L1",
+        "BMC Helix ITSM- Senior Developer"
+      ]
+    }
+  },
+  "ericsson": {
+    "page": "https://jobs.ericsson.com/careers",
+    "fingerprints": ["successfactors", "eightfold"]
+  },
+  "huawei": {
+    "page": "https://www.huawei.com/cn/?redir=huawei_cn",
+    "fingerprints": []
+  },
+  "e-and": {
+    "page": "https://careers.etisalat.ae/en/index.html",
+    "fingerprints": ["oracle-recruiting"]
+  },
+  "wells-fargo": {
+    "page": "https://www.wellsfargojobs.com/en/",
+    "fingerprints": []
+  },
+  "hsbc": {
+    "page": "https://www.hsbc.com/careers",
+    "fingerprints": []
+  },
+  "mtn-group": {
+    "page": "https://www.mtn.co.za/careers",
+    "fingerprints": []
+  },
+  "bnp-paribas": {
+    "page": "https://group.bnpparibas/en/careers",
+    "fingerprints": []
+  },
+  "standard-bank": {
+    "page": "https://www.standardbank.com/sbg/standard-bank-group/careers",
+    "fingerprints": []
+  },
+  "td-bank": {
+    "page": "https://careers.td.com/",
+    "fingerprints": ["workday"]
+  },
+  "standard-chartered": {
+    "page": "https://jobs.standardchartered.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.standardchartered.com/",
+      "jobs": 11,
+      "sample": [
+        "Customer Service Ambassador",
+        "Director, Markets Operational Client Relationship Manager - GCNA Lead",
+        "Assoc, BackEnd Eng, WRB Tech"
+      ]
+    }
+  },
+  "goldman-sachs": {
+    "page": "https://www.goldmansachs.com/careers",
+    "fingerprints": []
+  },
+  "evercore": {
+    "page": "https://www.evercore.com/careers/",
+    "fingerprints": []
+  },
+  "ubs": {
+    "page": "https://careers.ubs.com/",
+    "fingerprints": []
+  },
+  "deutsche-bank": {
+    "page": "https://careers.db.com/index?kid=careers-index-html.redirect-en.shortcut&language_id=3",
+    "fingerprints": []
+  },
+  "jefferies": {
+    "page": "https://www.jefferies.com/careers/",
+    "fingerprints": []
+  },
+  "kkr": {
+    "page": "https://www.kkr.com/careers",
+    "fingerprints": []
+  },
+  "telefonica": {
+    "page": "https://jobs.telefonica.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.telefonica.com/",
+      "jobs": 240,
+      "sample": [
+        "TE_FC_ACCOUNT EXECUTIVE VENTAS GRANDES ADMINISTRACIONES",
+        "EPECIALISTA EN SONIDO BROADCAST (TEMPORAL)",
+        "TE_FC_ACCOUNT EXECUTIVE AAPP CATALUÑA"
+      ]
+    }
+  },
+  "klarna": {
+    "page": "https://www.klarna.com/international/careers/",
+    "fingerprints": []
+  },
+  "bank-of-america": {
+    "page": "https://careers.bankofamerica.com/en-us",
+    "fingerprints": ["avature", "csod", "workday"]
+  },
+  "wise": {
+    "page": "https://wise.jobs/",
+    "fingerprints": []
+  },
+  "kraken": {
+    "page": "https://www.kraken.com/careers",
+    "fingerprints": ["ashby"]
+  },
+  "morgan-stanley": {
+    "page": "https://www.morganstanley.com/people",
+    "fingerprints": []
+  },
+  "legal-and-general": {
+    "page": "https://careers.legalandgeneral.com/",
+    "fingerprints": []
+  },
+  "flutterwave": {
+    "page": "https://www.flutterwave.com/us/careers",
+    "fingerprints": []
+  },
+  "revolut": {
+    "page": "https://revolut.co.uk/",
+    "fingerprints": []
+  },
+  "state-farm": {
+    "page": "https://www.statefarm.com/careers",
+    "fingerprints": ["icims"]
+  },
+  "deloitte": {
+    "page": "https://www.deloitte.com/global/en.html",
+    "fingerprints": []
+  },
+  "liberty-mutual": {
+    "page": "https://www.libertymutualgroup.com/about-lm/careers/overview",
+    "fingerprints": []
+  },
+  "kpmg": {
+    "page": "https://kpmg.com/xx/en/careers.html",
+    "fingerprints": []
+  },
+  "azets": {
+    "page": "https://www.azets.com/en-uk/careers",
+    "fingerprints": []
+  },
+  "munich-re": {
+    "page": "https://careers.munichre.com/en",
+    "fingerprints": ["radancy"],
+    "supported": {
+      "portal": "radancy",
+      "hint": true,
+      "url": "https://careers.munichre.com/en",
+      "jobs": 15,
+      "sample": [
+        "Inspector - Modesto, California",
+        "Inspector - Houston, TX",
+        "Inspector - Plainfield, IL"
+      ]
+    }
+  },
+  "forvis-mazars": {
+    "page": "https://careers.forvismazars.com/",
+    "fingerprints": []
+  },
+  "capgemini": {
+    "page": "https://careers.capgemini.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.capgemini.com/",
+      "jobs": 1000,
+      "sample": [
+        "Perception Engineer",
+        "Embedded Controls Engineer",
+        "Salesforce Engagement/ Solution Lead"
+      ]
+    }
+  },
+  "cherry-bekaert": {
+    "page": "https://www.cbh.com/",
+    "fingerprints": []
+  },
+  "oliver-wyman": {
+    "page": "https://www.oliverwyman.com/careers.html",
+    "fingerprints": []
+  },
+  "deloitte-consulting": {
+    "page": "https://www.deloitte.com/uk/en.html",
+    "fingerprints": ["radancy"]
+  },
+  "accenture-strategy": {
+    "page": "https://www.accenture.com/en",
+    "fingerprints": []
+  },
+  "swiss-re": {
+    "page": "https://careers.swissre.com/",
+    "fingerprints": ["successfactors", "radancy"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.swissre.com/",
+      "jobs": 243,
+      "sample": [
+        "Insurance -Team Lead, Engineering & Construction (E&C) & Energy Ops",
+        "Senior Distribution Manager",
+        "Actuarial Analytics & Platform Specialist (L&H)"
+      ]
+    }
+  },
+  "cliftonlarsonallen": {
+    "page": "https://www.claconnect.com/en",
+    "fingerprints": []
+  },
+  "l-e-k": {
+    "page": "https://www.lek.com/careers",
+    "fingerprints": []
+  },
+  "clifford-chance": {
+    "page": "https://www.cliffordchance.com/careers.html",
+    "fingerprints": []
+  },
+  "west-monroe": {
+    "page": "https://www.westmonroe.com/careers",
+    "fingerprints": []
+  },
+  "bain": {
+    "page": "https://careers.bain.com/",
+    "fingerprints": []
+  },
+  "slaughter-and-may": {
+    "page": "https://careers.slaughterandmay.com/V2/Vacancy",
+    "fingerprints": []
+  },
+  "mckinsey": {
+    "page": "https://jobs.mckinsey.com/en_US/careers",
+    "fingerprints": ["radancy"]
+  },
+  "norton-rose-fulbright": {
+    "page": "https://www.nortonrosefulbright.com/careers",
+    "fingerprints": []
+  },
+  "fresenius": {
+    "page": "https://careers.fresenius.com/",
+    "fingerprints": []
+  },
+  "kearney": {
+    "page": "https://www.kearney.com/careers",
+    "fingerprints": []
+  },
+  "abbvie": {
+    "page": "https://careers.abbvie.com/",
+    "fingerprints": []
+  },
+  "slalom": {
+    "page": "https://jobs.slalom.com/en_US/careersmarketplace",
+    "fingerprints": []
+  },
+  "baker-mckenzie": {
+    "page": "https://careers.bakermckenzie.com/en_US/opportunities",
+    "fingerprints": []
+  },
+  "vertex": {
+    "page": "https://www.vertex.com/",
+    "fingerprints": []
+  },
+  "takeda": {
+    "page": "https://jobs.takeda.com/",
+    "fingerprints": ["radancy", "avature"]
+  },
+  "biontech": {
+    "page": "https://jobs.biontech.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.biontech.com/",
+      "jobs": 137,
+      "sample": [
+        "Director / Associate Director, Clinical Science",
+        "Associate Director, External QC Network China",
+        "Haustechniker im Facility Management (m/w/d)"
+      ]
+    }
+  },
+  "genentech": {
+    "page": "https://www.gene.com/",
+    "fingerprints": []
+  },
+  "olympus": {
+    "page": "https://www.olympus-global.com/",
+    "fingerprints": []
+  },
+  "huma": {
+    "page": "https://careers.huma.com/",
+    "fingerprints": []
+  },
+  "novo-nordisk": {
+    "page": "https://careers.novonordisk.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.novonordisk.com/",
+      "jobs": 445,
+      "sample": [
+        "cLEAN Partner III - Virginia",
+        "Sr Manager, Key Account",
+        "Automation Engineer I/II - DeltaV"
+      ]
+    }
+  },
+  "hologic": {
+    "page": "https://careers.hologic.com/",
+    "fingerprints": []
+  },
+  "wuxi-apptec": {
+    "page": "https://www.wuxiapptec.com/careers/talent",
+    "fingerprints": []
+  },
+  "bbc": {
+    "page": "https://www.bbc.com/careers",
+    "fingerprints": []
+  },
+  "sony-group": {
+    "page": "https://www.sony.com/en_us/SCA/careers/overview.html",
+    "fingerprints": ["greenhouse"]
+  },
+  "penguin-random-house": {
+    "page": "https://careers.penguinrandomhouse.com/",
+    "fingerprints": []
+  },
+  "news-corp": {
+    "page": "https://careers.newscorp.com/",
+    "fingerprints": []
+  },
+  "electronic-arts": {
+    "page": "https://www.ea.com/",
+    "fingerprints": []
+  },
+  "sony-interactive": {
+    "page": "https://careers.playstation.com/",
+    "fingerprints": ["greenhouse"]
+  },
+  "nintendo": {
+    "page": "https://careers.nintendo.com/",
+    "fingerprints": []
+  },
+  "cd-projekt": {
+    "page": "https://www.cdprojekt.com/en/careers/",
+    "fingerprints": []
+  },
+  "ubisoft": {
+    "page": "https://www.ubisoft.com/en-us/company/careers",
+    "fingerprints": []
+  },
+  "sun-pharma": {
+    "page": "https://careers.sunpharma.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.sunpharma.com/",
+      "jobs": 259,
+      "sample": [
+        "Manager / Sr.Manager Engineering",
+        "Manager - Direct Procurement",
+        "Group Product Manager"
+      ]
+    }
+  },
+  "supercell": {
+    "page": "https://supercell.com/en/careers/",
+    "fingerprints": []
+  },
+  "universal-music-group": {
+    "page": "https://www.universalmusic.com/careers/",
+    "fingerprints": []
+  },
+  "unity": {
+    "page": "https://unity.com/careers",
+    "fingerprints": []
+  },
+  "king-s-college-london": {
+    "fingerprints": [],
+    "error": "TypeError: fetch failed"
+  },
+  "eth-zurich": {
+    "fingerprints": [],
+    "error": "TypeError: fetch failed"
+  },
+  "chegg": {
+    "page": "https://careers.chegg.com/app/auth/sign-in",
+    "fingerprints": []
+  },
+  "university-of-edinburgh": {
+    "page": "https://universityofedinburgh.co.uk/",
+    "fingerprints": []
+  },
+  "mediclinic": {
+    "page": "https://careers.mediclinic.com/",
+    "fingerprints": ["successfactors", "radancy"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.mediclinic.com/",
+      "jobs": 547,
+      "sample": [
+        "Dipl. Expertin / Experte Intensivpflege NDS (a) 50-100%",
+        "Dipl. Expertin / Dipl. Experte Notfallpflege Mitarbeitenden-Pool (a)",
+        "OP-Lagerungspfleger/ Lagerungspflegerin (a) 60-100%"
+      ]
+    }
+  },
+  "bpp": {
+    "page": "https://www.bpp.com/about-bpp/careers",
+    "fingerprints": []
+  },
+  "teach-first": {
+    "page": "https://www.teachfirst.org.uk/",
+    "fingerprints": []
+  },
+  "plan-international": {
+    "page": "https://www.plan.com/careers",
+    "fingerprints": []
+  },
+  "bandai-namco": {
+    "page": "https://bandainamco.com/careers",
+    "fingerprints": []
+  },
+  "oak-foundation": {
+    "fingerprints": [],
+    "error": "TypeError: fetch failed"
+  },
+  "british-heart-foundation": {
+    "fingerprints": [],
+    "error": "TypeError: fetch failed"
+  },
+  "chemonics": {
+    "page": "https://www.chemonics.com/careers/",
+    "fingerprints": []
+  },
+  "care": {
+    "page": "https://www.care.com/careers",
+    "fingerprints": []
+  },
+  "age-uk": {
+    "page": "https://www.ageuk.org.uk/",
+    "fingerprints": []
+  },
+  "rspb": {
+    "page": "https://www.rspb.org.uk/",
+    "fingerprints": []
+  },
+  "ilo": {
+    "page": "https://www.ilo.org/about-ilo/employment-opportunities",
+    "fingerprints": []
+  },
+  "byju-s": {
+    "page": "https://byjus.com/careers-at-byjus/",
+    "fingerprints": []
+  },
+  "actionaid": {
+    "page": "https://careers.actionaid.co.uk/",
+    "fingerprints": []
+  },
+  "unfpa": {
+    "page": "https://www.unfpa.org/",
+    "fingerprints": []
+  },
+  "unesco": {
+    "page": "https://onu.diplomatie.gouv.fr/fr",
+    "fingerprints": []
+  },
+  "general-dynamics": {
+    "page": "https://www.gd.com/",
+    "fingerprints": []
+  },
+  "wto": {
+    "page": "https://www.wto.com/",
+    "fingerprints": []
+  },
+  "oecd": {
+    "page": "https://careers.oecd.com/",
+    "fingerprints": []
+  },
+  "novo-nordisk-foundation": {
+    "page": "https://novonordiskfonden.dk/en",
+    "fingerprints": []
+  },
+  "safran": {
+    "page": "https://www.safran.com/en-gb/careers",
+    "fingerprints": []
+  },
+  "babcock-international": {
+    "page": "https://careers.babcockinternational.com/",
+    "fingerprints": ["successfactors"]
+  },
+  "l3harris": {
+    "page": "https://careers.l3harris.com/en",
+    "fingerprints": ["radancy"]
+  },
+  "leonardo": {
+    "page": "https://www.leonardo.com/en/careers",
+    "fingerprints": []
+  },
+  "delta": {
+    "page": "https://www.delta.com/us/en/careers/overview",
+    "fingerprints": ["avature"]
+  },
+  "united-airlines": {
+    "page": "https://www.united.com/",
+    "fingerprints": []
+  },
+  "anduril": {
+    "page": "https://www.anduril.com/careers",
+    "fingerprints": []
+  },
+  "honeywell-aerospace": {
+    "page": "https://www.honeywellaerospace.com/us/en/company/careers",
+    "fingerprints": ["oracle-recruiting"]
+  },
+  "emirates-group": {
+    "page": "https://www.theemiratesgroup.com/",
+    "fingerprints": []
+  },
+  "singapore-airlines": {
+    "page": "https://www.singaporeair.com/en_UK/gb/careers/",
+    "fingerprints": []
+  },
+  "ryanair": {
+    "page": "https://careers.ryanair.com/",
+    "fingerprints": ["successfactors"]
+  },
+  "american-airlines": {
+    "page": "https://jobs.aa.com/?utm_source=careersite",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.aa.com/?utm_source=careersite",
+      "jobs": 10,
+      "sample": [
+        "Manager, Executive Compensation",
+        "Principal Solution Architect, IT Software",
+        "Category Manager/Sr Category Manager, Procurement"
+      ]
+    }
+  },
+  "turkish-airlines": {
+    "page": "https://careers.turkishairlines.com/tr-TR/",
+    "fingerprints": []
+  },
+  "qantas": {
+    "page": "https://careers.qantas.com/",
+    "fingerprints": []
+  },
+  "qinetiq": {
+    "page": "https://careers.qinetiq.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.qinetiq.com/",
+      "jobs": 163,
+      "sample": [
+        "Senior Cloud Engineer",
+        "Senior Mechanical/Structural Engineer",
+        "Senior Project Manager"
+      ]
+    }
+  },
+  "ethiopian-airlines": {
+    "page": "https://www.ethiopianairlines.com/careers",
+    "fingerprints": []
+  },
+  "stellantis": {
+    "page": "https://careers.stellantis.com/",
+    "fingerprints": []
+  },
+  "volkswagen-group": {
+    "page": "https://www.volkswagen.co.uk/en.html",
+    "fingerprints": []
+  },
+  "indigo": {
+    "page": "https://www.indigo.ca/?fdtcm=1",
+    "fingerprints": []
+  },
+  "bmw": {
+    "page": "https://www.bmw.co.uk/en/index.html",
+    "fingerprints": []
+  },
+  "tata-motors": {
+    "page": "https://careers.tatamotors.com/",
+    "fingerprints": ["successfactors"]
+  },
+  "renault": {
+    "page": "https://www.renaultgroup.com/en/careers/",
+    "fingerprints": []
+  },
+  "bosch": {
+    "page": "https://jobs.bosch.com/en",
+    "fingerprints": ["smartrecruiters"]
+  },
+  "paramount": {
+    "page": "https://careers.paramount.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.paramount.com/",
+      "jobs": 224,
+      "sample": [
+        "Associate Producer, 60 Minutes",
+        "Sr Live Event Technology Engineer",
+        "Manager, Publicity - Germany"
+      ]
+    }
+  },
+  "continental": {
+    "page": "https://jobs.continental.com/en/",
+    "fingerprints": []
+  },
+  "byd": {
+    "page": "https://careers.byd.com/",
+    "fingerprints": []
+  },
+  "ford": {
+    "page": "https://www.careers.ford.com/en",
+    "fingerprints": ["radancy"],
+    "supported": {
+      "portal": "radancy",
+      "hint": true,
+      "url": "https://www.careers.ford.com/en",
+      "jobs": 15,
+      "sample": [
+        "Manufacturing Engineer-Package Attach/ Reflow Soldering",
+        "Thermal Test Engineer - Early Career Program, Advanced EV",
+        "Thermal Firmware Integration Engineer - Early Career Program, Advanced EV"
+      ]
+    }
+  },
+  "mahindra": {
+    "page": "https://www.mahindra.com/career",
+    "fingerprints": []
+  },
+  "magna": {
+    "page": "https://wd3.myworkdaysite.com/en-US/recruiting/magna/Magna",
+    "fingerprints": []
+  },
+  "eni": {
+    "page": "https://www.eni.com/en-IT/careers/job-opportunities/employee-value-proposition.html",
+    "fingerprints": []
+  },
+  "totalenergies": {
+    "page": "https://careers.totalenergies.com/en",
+    "fingerprints": ["avature"]
+  },
+  "jaguar-land-rover": {
+    "page": "https://careers.jaguarlandrover.com/",
+    "fingerprints": ["successfactors"]
+  },
+  "saudi-aramco": {
+    "page": "https://www.aramco.com/careers",
+    "fingerprints": []
+  },
+  "slb": {
+    "page": "https://careers.slb.com/",
+    "fingerprints": []
+  },
+  "halliburton": {
+    "page": "https://careers.halliburton.com/",
+    "fingerprints": ["successfactors", "radancy"]
+  },
+  "denso": {
+    "page": "https://careers.denso.com/",
+    "fingerprints": []
+  },
+  "phillips-66": {
+    "page": "https://careers.phillips66.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.phillips66.com/",
+      "jobs": 72,
+      "sample": [
+        "Engineer III, Hydraulic Modeling & Optimization",
+        "Advisor II, Process Automation",
+        "Specialist III, Health & Safety, Borger Refinery"
+      ]
+    }
+  },
+  "national-grid": {
+    "page": "https://careers.nationalgrid.co.uk/",
+    "fingerprints": []
+  },
+  "siemens-gamesa": {
+    "page": "https://www.siemensgamesa.com/global/en/home.html",
+    "fingerprints": []
+  },
+  "woodside": {
+    "page": "https://careers.woodside.com.au/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.woodside.com.au/",
+      "jobs": 12,
+      "sample": [
+        "Finance Business Partner - Mexico",
+        "Corporate Affairs Manager North West (Karratha based)",
+        "Regulatory Affairs Specialist (LNG)"
+      ]
+    }
+  },
+  "enel": {
+    "page": "https://jobs.enel.com/en_US/careers",
+    "fingerprints": []
+  },
+  "octopus-energy": {
+    "page": "https://octopusenergy.com/careers",
+    "fingerprints": ["lever"]
+  },
+  "scottishpower": {
+    "page": "https://www.scottishpower.co.uk/careers",
+    "fingerprints": []
+  },
+  "rwe": {
+    "page": "https://jobs.rwe.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.rwe.com/",
+      "jobs": 213,
+      "sample": [
+        "Sr Wind Farm Technician",
+        "Wind Farm Technician Associate",
+        "Solar Farm Technician II"
+      ]
+    }
+  },
+  "duke-energy": {
+    "page": "https://www.duke-energy.com/home",
+    "fingerprints": ["workday"]
+  },
+  "general-electric": {
+    "page": "https://www.ge.com/",
+    "fingerprints": []
+  },
+  "southern-company": {
+    "page": "https://southerncompany.jobs/",
+    "fingerprints": []
+  },
+  "nextera-energy": {
+    "page": "https://jobs.nexteraenergy.com/",
+    "fingerprints": ["successfactors", "radancy", "avature"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.nexteraenergy.com/",
+      "jobs": 286,
+      "sample": [
+        "Project Director, ERCOT Transmission Planning",
+        "Production Technician II - Instrumentation & Controls",
+        "Sr Physical Trader"
+      ]
+    }
+  },
+  "caterpillar": {
+    "page": "https://www.caterpillar.com/en/careers.html",
+    "fingerprints": ["workday"]
+  },
+  "siemens": {
+    "page": "https://jobs.siemens.com/en_US/externaljobs",
+    "fingerprints": []
+  },
+  "whirlpool": {
+    "page": "https://www.whirlpoolcareers.com/",
+    "fingerprints": []
+  },
+  "deere": {
+    "page": "https://careers.deere.com/careers",
+    "fingerprints": ["radancy", "eightfold"]
+  },
+  "vinci": {
+    "page": "https://jobs.vinci.com/en",
+    "fingerprints": ["radancy"]
+  },
+  "tata-steel": {
+    "page": "https://www.tatasteel.com/careers",
+    "fingerprints": []
+  },
+  "hochtief": {
+    "page": "https://www.hochtief.com/careers",
+    "fingerprints": []
+  },
+  "balfour-beatty": {
+    "page": "https://www.balfourbeatty.com/careers/careers-at-balfour-beatty",
+    "fingerprints": []
+  },
+  "acs": {
+    "page": "https://acs.com/careers/",
+    "fingerprints": []
+  },
+  "kier": {
+    "page": "https://jobs.kier.co.uk/",
+    "fingerprints": []
+  },
+  "laing-o-rourke": {
+    "page": "https://careers.laingorourke.com/",
+    "fingerprints": []
+  },
+  "exxonmobil": {
+    "page": "https://jobs.exxonmobil.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.exxonmobil.com/",
+      "jobs": 521,
+      "sample": [
+        "Exchange Management Analyst",
+        "Product Development Advisor- Finished Lubricants Technology",
+        "Product Performance Advisor"
+      ]
+    }
+  },
+  "aecom": {
+    "page": "https://aecom.com/careers/",
+    "fingerprints": []
+  },
+  "vestas": {
+    "page": "https://careers.vestas.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.vestas.com/",
+      "jobs": 400,
+      "sample": [
+        "CPX Technical Supervisor",
+        "Operator/ka Produkcji",
+        "100% Travel MCE Wind Technician II -South"
+      ]
+    }
+  },
+  "stantec": {
+    "page": "https://www.stantec.com/en",
+    "fingerprints": []
+  },
+  "arup": {
+    "page": "https://careers.arup.com/earlycareers/events/",
+    "fingerprints": []
+  },
+  "network-rail": {
+    "page": "https://www.networkrail.co.uk/careers",
+    "fingerprints": []
+  },
+  "wsp": {
+    "page": "https://www.wsp.com/careers",
+    "fingerprints": []
+  },
+  "jacobs": {
+    "page": "https://www.jacobs.com/careers-jacobs",
+    "fingerprints": ["avature"]
+  },
+  "compass": {
+    "page": "https://www.compass.com/careers/",
+    "fingerprints": []
+  },
+  "rightmove": {
+    "page": "https://www.rightmove.co.uk/en/careers",
+    "fingerprints": []
+  },
+  "barratt-redrow": {
+    "page": "https://www.barrattredrow.co.uk/careers",
+    "fingerprints": []
+  },
+  "british-land": {
+    "page": "https://www.britishland.com/careers/",
+    "fingerprints": []
+  },
+  "atkins-realis": {
+    "page": "https://careers.atkinsrealis.com/en",
+    "fingerprints": []
+  },
+  "walmart": {
+    "page": "https://careers.walmart.com/us/en/home",
+    "fingerprints": []
+  },
+  "taylor-wimpey": {
+    "page": "https://jobs.taylorwimpey.co.uk/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.taylorwimpey.co.uk/",
+      "jobs": 20,
+      "sample": [
+        "Senior IT Project Manager",
+        "Quantity Surveyor",
+        "Design & Planning Executive - Fixed Term Contract"
+      ]
+    }
+  },
+  "schwarz-group": {
+    "page": "https://ts.domainname.de/schwarzgroup.de",
+    "fingerprints": []
+  },
+  "carrefour": {
+    "page": "https://www.carrefour.com/en/hr-work-carrefour",
+    "fingerprints": []
+  },
+  "ikea": {
+    "page": "https://jobs.ikea.com/en",
+    "fingerprints": ["radancy"]
+  },
+  "ahold-delhaize": {
+    "page": "https://careers.aholddelhaize.com/",
+    "fingerprints": []
+  },
+  "mondelez": {
+    "page": "https://www.mondelezinternational.com/",
+    "fingerprints": []
+  },
+  "l-oreal": {
+    "page": "https://careers.loreal.com/en",
+    "fingerprints": ["radancy"],
+    "supported": {
+      "portal": "radancy",
+      "hint": true,
+      "url": "https://careers.loreal.com/en",
+      "jobs": 15,
+      "sample": [
+        "STAGE 6 MOIS - À partir de Janvier/Mars 2027 – Ingénieur Supply Chain Lancement (H/F) – Usine de LASSIGNY – Master 2 – 1 700 € mensuel Hauts-de-France, France",
+        "Strategic Account Manager - Maryland/DC Ft. Washington, MD, United States",
+        "Supervisor de Mantenimiento Xochimilco, Mexico City, Mexico"
+      ]
+    }
+  },
+  "danone": {
+    "page": "https://careers.danone.com/en-global/home.html",
+    "fingerprints": []
+  },
+  "pepsico": {
+    "page": "https://www.pepsicojobs.com/main/",
+    "fingerprints": ["avature", "icims"]
+  },
+  "tesco": {
+    "page": "https://careers.tesco.com/en_GB/careers",
+    "fingerprints": []
+  },
+  "kraft-heinz": {
+    "page": "https://careers.kraftheinzcompany.com/",
+    "fingerprints": []
+  },
+  "estee-lauder": {
+    "page": "https://www.esteelauder.com/customer-service/careers",
+    "fingerprints": []
+  },
+  "beiersdorf": {
+    "page": "https://www.beiersdorf.com/career/overview",
+    "fingerprints": []
+  },
+  "jbs": {
+    "page": "https://www.jbs.com.br/en/careers/",
+    "fingerprints": []
+  },
+  "henkel": {
+    "page": "https://www.henkel.com/careers",
+    "fingerprints": []
+  },
+  "adm": {
+    "page": "https://www.e-adm.com/",
+    "fingerprints": []
+  },
+  "reckitt": {
+    "page": "https://careers.reckitt.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.reckitt.com/",
+      "jobs": 429,
+      "sample": ["CDM WM Advisor, VMS", "Processing Operator", "Electronic Technician - Licensed"]
+    }
+  },
+  "cargill": {
+    "page": "https://careers.cargill.com/en",
+    "fingerprints": ["successfactors", "radancy"]
+  },
+  "heineken": {
+    "page": "https://www.heineken.com/gb/en/agegateway/?returnUrl=%2fcareers",
+    "fingerprints": []
+  },
+  "dangote-group": {
+    "page": "https://careers.dangote.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.dangote.com/",
+      "jobs": 145,
+      "sample": [
+        "Deputy General Manager, Mechanical",
+        "Kiln Refractory Maintenance Supervisor",
+        "Manager, Mechanical L3&4"
+      ]
+    }
+  },
+  "ihg": {
+    "page": "https://careers.ihg.com/en/",
+    "fingerprints": []
+  },
+  "hyatt": {
+    "page": "https://careers.hyatt.com/",
+    "fingerprints": []
+  },
+  "mcdonald-s": {
+    "page": "https://careers.mcdonalds.com/",
+    "fingerprints": []
+  },
+  "wyndham": {
+    "page": "https://www.wyndhamhotels.com/de-de",
+    "fingerprints": []
+  },
+  "colgate-palmolive": {
+    "page": "https://jobs.colgate.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.colgate.com/",
+      "jobs": 45,
+      "sample": [
+        "Key Account Manager (m/w/d)",
+        "Sales Manager (m/w/d) Vertriebsaußendienst mit Schwerpunkt Südhessen",
+        "Scientific Affairs Manager (f/m/d)"
+      ]
+    }
+  },
+  "starbucks": {
+    "page": "https://careers.starbucks.com/",
+    "fingerprints": ["eightfold"]
+  },
+  "accor": {
+    "page": "https://careers.accor.com/",
+    "fingerprints": []
+  },
+  "royal-caribbean": {
+    "page": "https://careers.royalcaribbeangroup.com/",
+    "fingerprints": []
+  },
+  "compass-group": {
+    "page": "https://www.compass.com/careers/",
+    "fingerprints": []
+  },
+  "mitsubishi-heavy-industries": {
+    "fingerprints": [],
+    "error": "TypeError: fetch failed"
+  },
+  "amazon-logistics": {
+    "page": "https://www.amazonlogistics.com/ap/signin?openid.pape.max_auth_age=43200&openid.return_to=https%3A%2F%2Fwww.amazonlogistics.com%2Fcareers&suppressChangeEmailLink=1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amazonlogistics_na&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&suppressSignInRadioButtons=1",
+    "fingerprints": []
+  },
+  "las-vegas-sands": {
+    "page": "https://www.sands.com/",
+    "fingerprints": []
+  },
+  "merlin-entertainments": {
+    "page": "https://www.merlincareers.com/en",
+    "fingerprints": []
+  },
+  "ups": {
+    "page": "https://www.ups.com/us/en/error",
+    "fingerprints": []
+  },
+  "carnival": {
+    "page": "https://jobs.carnival.com/",
+    "fingerprints": ["radancy"]
+  },
+  "kellanova": {
+    "page": "https://jobs.kellanova.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.kellanova.com/",
+      "jobs": 110,
+      "sample": [
+        "Team Leader",
+        "Multi-Craft Maintenance Electrician",
+        "Promotor de Vendas - Banco de Talentos para Pessoas com Deficiência - Rio de Janeiro e Região"
+      ]
+    }
+  },
+  "disney-parks": {
+    "page": "https://disneyparks.disney.go.com/",
+    "fingerprints": []
+  },
+  "msc": {
+    "page": "https://www.msc.com/en/careers",
+    "fingerprints": ["csod"]
+  },
+  "aramark": {
+    "page": "https://careers.aramark.com/",
+    "fingerprints": []
+  },
+  "expeditors": {
+    "page": "https://www.expeditors.com/careers",
+    "fingerprints": []
+  },
+  "iss": {
+    "page": "https://iss.com/careers",
+    "fingerprints": []
+  },
+  "experian": {
+    "page": "https://jobs.experian.com/jobs",
+    "fingerprints": ["smartrecruiters"]
+  },
+  "concentrix": {
+    "page": "https://jobs.concentrix.com/",
+    "fingerprints": ["workday"]
+  },
+  "mitie": {
+    "page": "https://careers.mitie.com/jobs/home/",
+    "fingerprints": []
+  },
+  "bunge": {
+    "page": "https://jobs.bunge.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.bunge.com/",
+      "jobs": 830,
+      "sample": [
+        "Facility Assistant I - Temporary",
+        "Commercial Manager (Griggsville, IL)",
+        "Seasonal Operations Worker"
+      ]
+    }
+  },
+  "adp": {
+    "page": "https://jobs.adp.com/en/",
+    "fingerprints": []
+  },
+  "dsv": {
+    "page": "https://jobs.dsv.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.dsv.com/",
+      "jobs": 400,
+      "sample": [
+        "Operationeel Key Account Manager",
+        "Senior Business Manager, GCM",
+        "Senior Customer Enablement Manager, GCM, Customer Enablement"
+      ]
+    }
+  },
+  "xpo": {
+    "page": "https://jobs.xpo.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.xpo.com/",
+      "jobs": 551,
+      "sample": [
+        "Forklift Operator - Part-Time",
+        "Forklift Operator",
+        "Supervisor, Freight Operations"
+      ]
+    }
+  },
+  "gxo": {
+    "page": "https://jobs.gxo.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.gxo.com/",
+      "jobs": 1000,
+      "sample": [
+        "Warehouse Lead - Weekend 1st Shift",
+        "Manager, Human Resources - 1st Shift",
+        "Data Center Lead - 1st Shift"
+      ]
+    }
+  },
+  "cintas": {
+    "page": "https://careers.cintas.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.cintas.com/",
+      "jobs": 1000,
+      "sample": [
+        "Maintenance Technician I",
+        "Warehouse Associate - Loader/Unloader - 2nd Shift",
+        "Stockroom Supervisor"
+      ]
+    }
+  },
+  "microsoft-security": {
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "fingerprints": []
+  },
+  "ibm-consulting": {
+    "page": "https://www.ibm.com/careers/search",
+    "fingerprints": []
+  },
+  "microsoft-ai": {
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "fingerprints": []
+  },
+  "cyberark": {
+    "page": "https://www.paloaltonetworks.com/idira",
+    "fingerprints": []
+  },
+  "wiz-google": {
+    "page": "https://www.wiz.io/careers",
+    "fingerprints": []
+  },
+  "fidelity-investments": {
+    "page": "https://jobs.fidelity.com/en/",
+    "fingerprints": []
+  },
+  "reliance-jio": {
+    "page": "https://careers.jio.com/",
+    "fingerprints": []
+  },
+  "access-bank": {
+    "page": "https://www.accessbankplc.com/notfound?aspxerrorpath=/careers",
+    "fingerprints": []
+  },
+  "icici-bank": {
+    "page": "https://www.icicicareers.com/",
+    "fingerprints": []
+  },
+  "charter": {
+    "page": "https://jobs.spectrum.com/",
+    "fingerprints": ["radancy"]
+  },
+  "zurich": {
+    "page": "https://www.zurich.com/careers",
+    "fingerprints": []
+  },
+  "pwc-strategy-and": {
+    "page": "https://www.pwc.co.uk/careers.html",
+    "fingerprints": []
+  },
+  "kpmg-advisory": {
+    "page": "https://www.kpmgcareers.co.uk/",
+    "fingerprints": []
+  },
+  "capgemini-invent": {
+    "page": "https://www.capgemini.com/careers/",
+    "fingerprints": []
+  },
+  "willis-towers-watson": {
+    "page": "https://careers.wtwco.com/",
+    "fingerprints": []
+  },
+  "kirkland-and-ellis": {
+    "page": "https://www.kirkland.com/careers",
+    "fingerprints": []
+  },
+  "metlife": {
+    "page": "https://www.metlifecareers.com/en_US/ml",
+    "fingerprints": ["avature"]
+  },
+  "white-and-case": {
+    "page": "https://www.whitecase.com/careers",
+    "fingerprints": []
+  },
+  "allen-and-overy-shearman": {
+    "page": "https://careers.aoshearman.com/en",
+    "fingerprints": ["radancy"]
+  },
+  "nhs-england-trusts-via-nhs-jobs": {
+    "page": "https://www.jobs.nhs.uk/candidate/search",
+    "fingerprints": []
+  },
+  "hogan-lovells": {
+    "page": "https://www.hlc.com/en/-sxa/hoganlovells/home/global-careers",
+    "fingerprints": []
+  },
+  "addleshaw-goddard": {
+    "page": "https://joinus.addleshawgoddard.com/",
+    "fingerprints": []
+  },
+  "boehringer-ingelheim": {
+    "page": "https://www.boehringer-ingelheim.com/careers",
+    "fingerprints": []
+  },
+  "ashurst": {
+    "page": "https://www.ashurstperkinscoie.com/en/careers/",
+    "fingerprints": ["workday"]
+  },
+  "merck-and-co": {
+    "page": "https://jobs.merck.com/",
+    "fingerprints": []
+  },
+  "teva": {
+    "page": "https://www.careers.teva/careers",
+    "fingerprints": []
+  },
+  "microsoft-gaming": {
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "fingerprints": []
+  },
+  "activision-blizzard-microsoft": {
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "fingerprints": []
+  },
+  "veterans-health-administration": {
+    "page": "https://vacareers.va.gov/",
+    "fingerprints": []
+  },
+  "university-of-cambridge": {
+    "page": "https://www.cam.ac.uk/jobs",
+    "fingerprints": []
+  },
+  "valve": {
+    "page": "https://www.valvesoftware.com/en/",
+    "fingerprints": []
+  },
+  "square-enix": {
+    "page": "https://www.jp.square-enix.com/recruit/",
+    "fingerprints": []
+  },
+  "harvard": {
+    "page": "https://hr.harvard.edu/careers",
+    "fingerprints": ["smartrecruiters"]
+  },
+  "imperial-college-london": {
+    "page": "https://www.imperial.ac.uk/jobs/",
+    "fingerprints": ["radancy"]
+  },
+  "university-of-manchester": {
+    "page": "https://www.jobs.manchester.ac.uk/Home/Job",
+    "fingerprints": []
+  },
+  "2u": {
+    "page": "https://2u.com/careers/",
+    "fingerprints": []
+  },
+  "save-the-children": {
+    "page": "https://jobs.savethechildren.org.uk/jobs/home/",
+    "fingerprints": []
+  },
+  "national-university-of-singapore": {
+    "page": "https://www.nus.edu.sg/careers",
+    "fingerprints": []
+  },
+  "oxfam": {
+    "page": "https://jobs.oxfam.org.uk/jobs/home/",
+    "fingerprints": []
+  },
+  "charles-river-laboratories": {
+    "page": "https://jobs.criver.com/",
+    "fingerprints": ["successfactors", "avature"]
+  },
+  "palladium": {
+    "page": "https://thepalladiumgroup.com/careers",
+    "fingerprints": []
+  },
+  "rspca": {
+    "page": "https://www.rspca.org.uk/utilities/jobs",
+    "fingerprints": []
+  },
+  "international-committee-of-the-red-cross": {
+    "page": "https://careers.icrc.org/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.icrc.org/",
+      "jobs": 59,
+      "sample": [
+        "Welcome Supervisor 2 - Re-advertisement",
+        "First Aid and Pre-Hospital Emergency Care Delegate",
+        "Burmese Interpreter"
+      ]
+    }
+  },
+  "bloomberg-philanthropies": {
+    "page": "https://www.bloomberg.org/about/careers/",
+    "fingerprints": ["greenhouse"]
+  },
+  "unicef": {
+    "page": "https://www.unicef.org/careers/",
+    "fingerprints": []
+  },
+  "undp": {
+    "page": "https://www.undp.org/careers",
+    "fingerprints": []
+  },
+  "who": {
+    "page": "https://www.who.int/careers",
+    "fingerprints": []
+  },
+  "iom": {
+    "page": "https://www.iom.int/iom-career-gateways",
+    "fingerprints": ["oracle-recruiting"]
+  },
+  "world-food-programme": {
+    "page": "https://www.wfp.org/careers",
+    "fingerprints": []
+  },
+  "ey": {
+    "page": "https://careers.ey.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.ey.com/",
+      "jobs": 990,
+      "sample": [
+        "Business Consulting - Finance - GBS - Manager - Multiple Positions - 1749436",
+        "Canada Tax Technology Group (CTTG) - Manager, AI Adoption & Enablement - Vancouver",
+        "SDC WAMT Principal Backend Engineer---Manager---Dallas, Raleigh, San Antonio"
+      ]
+    }
+  },
+  "ey-parthenon": {
+    "page": "https://careers.ey.com/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://careers.ey.com/",
+      "jobs": 994,
+      "sample": [
+        "Business Consulting - Finance - GBS - Manager - Multiple Positions - 1749436",
+        "Canada Tax Technology Group (CTTG) - Manager, AI Adoption & Enablement - Vancouver",
+        "SDC WAMT Principal Backend Engineer---Manager---Dallas, Raleigh, San Antonio"
+      ]
+    }
+  },
+  "national-trust": {
+    "page": "https://www.nationaltrust.org.uk/who-we-are/about-us",
+    "fingerprints": []
+  },
+  "fao": {
+    "page": "https://jobs.fao.org/careersection/fao_external/jobsearch.ftl?lang=en",
+    "fingerprints": []
+  },
+  "european-commission": {
+    "page": "https://eu-careers.europa.eu/index_en",
+    "fingerprints": []
+  },
+  "asian-development-bank": {
+    "page": "https://www.adb.org/work-with-us/careers",
+    "fingerprints": []
+  },
+  "uk-civil-service-jobs": {
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "fingerprints": []
+  },
+  "nhs-jobs": {
+    "page": "https://www.jobs.nhs.uk/candidate/search",
+    "fingerprints": []
+  },
+  "hmrc": {
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "fingerprints": []
+  },
+  "ministry-of-defence": {
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "fingerprints": []
+  },
+  "department-for-work-and-pensions": {
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "fingerprints": []
+  },
+  "home-office": {
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "fingerprints": []
+  },
+  "world-bank-group": {
+    "page": "https://www.worldbank.org/ext/en/careers",
+    "fingerprints": ["csod"]
+  },
+  "un-secretariat": {
+    "page": "https://careers.un.org/",
+    "fingerprints": []
+  },
+  "nasa": {
+    "page": "https://www.usajobs.gov/",
+    "fingerprints": []
+  },
+  "mercedes-benz": {
+    "page": "https://group.mercedes-benz.com/careers/",
+    "fingerprints": ["taleo"]
+  },
+  "usajobs-federal": {
+    "page": "https://www.usajobs.gov/",
+    "fingerprints": []
+  },
+  "edf": {
+    "page": "https://careers.edfenergy.com/",
+    "fingerprints": []
+  },
+  "nnpc-ltd": {
+    "page": "https://nnpcgroup.com/careers",
+    "fingerprints": []
+  },
+  "rsted": {
+    "page": "https://orsted.com/en/careers",
+    "fingerprints": []
+  },
+  "3m": {
+    "page": "https://www.3m.com/3M/en_US/careers-us/",
+    "fingerprints": ["workday"]
+  },
+  "sse": {
+    "page": "https://careers.sse.com/homepage",
+    "fingerprints": []
+  },
+  "brookfield-renewable": {
+    "page": "https://bep.brookfield.com/page-not-found",
+    "fingerprints": []
+  },
+  "parker-hannifin": {
+    "page": "https://www.parker.com/us/en/careers.html",
+    "fingerprints": []
+  },
+  "adani-green": {
+    "page": "https://www.adanigreenenergy.com/careers",
+    "fingerprints": []
+  },
+  "schneider-electric": {
+    "page": "https://www.se.com/ww/en/",
+    "fingerprints": []
+  },
+  "hs2-ltd": {
+    "page": "https://www.hs2.org.uk/careers/",
+    "fingerprints": []
+  },
+  "cbre": {
+    "page": "https://careers.cbre.com/",
+    "fingerprints": []
+  },
+  "mott-macdonald": {
+    "page": "https://www.mottmac.com/en/careers/",
+    "fingerprints": []
+  },
+  "lufthansa-group": {
+    "page": "https://www.lufthansagroup.careers/de/",
+    "fingerprints": []
+  },
+  "cushman-and-wakefield": {
+    "page": "https://www.cushmanwakefield.com/en/careers",
+    "fingerprints": []
+  },
+  "sainsbury-s": {
+    "page": "https://www.sainsburys.jobs/",
+    "fingerprints": []
+  },
+  "university-of-toronto": {
+    "page": "https://jobs.utoronto.ca/",
+    "fingerprints": ["successfactors"],
+    "supported": {
+      "portal": "successfactors",
+      "hint": true,
+      "url": "https://jobs.utoronto.ca/",
+      "jobs": 344,
+      "sample": [
+        "Full Professor - Chair in Healthy Aging",
+        "Assistant Professor - Aerospace Engineering (Aeronautics)",
+        "Staff Scientist (AI for Self-Driving Labs)"
+      ]
+    }
+  },
+  "larsen-and-toubro": {
+    "page": "https://www.larsentoubro.com/corporate/careers",
+    "fingerprints": []
+  },
+  "sinopec": {
+    "page": "http://www.sinopecgroup.com/group/en/",
+    "fingerprints": []
+  },
+  "olam": {
+    "page": "https://www.olamgroup.com/careers.html",
+    "fingerprints": []
+  },
+  "bayer-crop-science": {
+    "page": "https://www.bayer.com/en/careers",
+    "fingerprints": []
+  },
+  "aldi": {
+    "page": "https://careers.aldi.us/",
+    "fingerprints": ["radancy"]
+  },
+  "jd-com": {
+    "page": "https://zhaopin.jd.com/home;jsessionid=8BF87846170885084303F4269C38F195.s1",
+    "fingerprints": []
+  },
+  "yum-brands": {
+    "page": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/careers",
+    "fingerprints": ["radancy"]
+  },
+  "wilmar": {
+    "page": "https://www.wilmar-international.com/careers",
+    "fingerprints": []
+  }
+}

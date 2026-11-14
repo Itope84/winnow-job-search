@@ -1,0 +1,7 @@
+{
+  "steps": [
+    { "event": { "type": "text", "text": "[winnow] 1/7 Reading the page and the profile" } },
+    { "delay": 20, "event": { "type": "text", "text": "[winnow] 6/7 Writing the report" } },
+    { "writeFrom": { "path": "result.json", "template": "study-score" } }
+  ]
+}

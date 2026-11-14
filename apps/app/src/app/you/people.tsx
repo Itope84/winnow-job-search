@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
+import type { Mode } from '@winnow/api';
+import { MODE_LABELS } from '@winnow/api';
 import * as Clipboard from 'expo-clipboard';
 import { useState } from 'react';
 import { View } from 'react-native';
 import { Chip } from '@/components/chips';
-import { Input } from '@/components/inputs';
+import { Input, Segmented } from '@/components/inputs';
 import {
   Button,
   Field,
@@ -26,6 +28,7 @@ export default function People() {
   const [id, setId] = useState('');
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [mode, setMode] = useState<Mode>('jobs');
   const [link, setLink] = useState<string | null>(null);
 
   const share = async (token: string) => {
@@ -65,16 +68,27 @@ export default function People() {
             autoCapitalize="none"
           />
         </Field>
+        <Field label="Looking for" hint="They confirm it on the first setup screen.">
+          <Segmented
+            value={mode}
+            onChange={setMode}
+            options={[
+              { value: 'jobs', label: 'Jobs' },
+              { value: 'scholarships', label: 'Scholarships' },
+            ]}
+          />
+        </Field>
         <Button
           label="Create invite"
           disabled={!id || !email}
           onPress={() =>
-            void api.addPerson({ id, email, name }).then(
+            void api.addPerson({ id, email, name, mode }).then(
               (r) => {
                 void people.refetch();
                 setId('');
                 setEmail('');
                 setName('');
+                setMode('jobs');
                 void share(r.invite);
               },
               (e) => toast.show((e as Error).message),
@@ -89,7 +103,7 @@ export default function People() {
             <Row
               key={p.id}
               title={p.name}
-              subtitle={`${p.id} · ${p.email}`}
+              subtitle={`${p.id} · ${p.email} · ${MODE_LABELS[p.mode ?? 'jobs']}`}
               meta={
                 <Chip
                   label={

@@ -6,6 +6,8 @@ import { runSkill } from './run-skill.ts';
 
 const CHUNK = 20;
 const JD_CHARS = 1800;
+/** A job posted longer ago than this may be filled or forgotten: triage never calls it a Keep. */
+export const STALE_DAYS = 60;
 
 interface Verdict {
   id: string;
@@ -39,6 +41,37 @@ export function candidateBrief(ctx: RunCtx) {
       ...(doc.extras.trim() ? { 'extras.md': clip(doc.extras, 4000) } : {}),
     },
   };
+}
+
+/** How long ago a job was posted, in words, when that is past `STALE_DAYS`; otherwise null. */
+export function staleAge(postedAt: string | null | undefined, now = Date.now()): string | null {
+  const posted = postedAt ? Date.parse(postedAt) : Number.NaN;
+  if (!Number.isFinite(posted)) return null;
+  const days = Math.floor((now - posted) / 86_400_000);
+  if (days <= STALE_DAYS) return null;
+  const months = Math.round(days / 30);
+  return months >= 2 ? `${months} months ago` : `${days} days ago`;
+}
+
+/**
+ * A Keep the server won't stand behind becomes Unsure with the reason why, so it gets a human look: the
+ * job has no description to check, or was posted long ago. Other verdicts pass as they are. The model is
+ * told the same in the skill; this is for when it slips.
+ */
+export function holdBack(
+  v: { verdict: TriageVerdict; reason: string },
+  job: { hasJd: boolean; postedAt: string | null },
+  now = Date.now(),
+): { verdict: TriageVerdict; reason: string } {
+  if (v.verdict !== 'keep') return v;
+  const stale = staleAge(job.postedAt, now);
+  if (job.hasJd && !stale) return v;
+  const why = [
+    stale ? `Posted ${stale}.` : '',
+    job.hasJd ? '' : 'No description to check.',
+    v.reason,
+  ];
+  return { verdict: 'unsure', reason: why.filter(Boolean).join(' ') };
 }
 
 function validate(ids: Set<string>) {
@@ -127,10 +160,10 @@ export async function triage(ctx: RunCtx): Promise<RunOutput> {
         reason: 'Triage gave no answer for this job.',
         agency: false,
       };
-      const noJd = !job.hasJd && v.verdict === 'keep';
+      const held = holdBack(v, job);
       const result: TriageResult = {
-        verdict: noJd ? 'unsure' : v.verdict,
-        reason: noJd ? `No description to check. ${v.reason}`.trim() : v.reason,
+        verdict: held.verdict,
+        reason: held.reason,
         ...(v.agency ? { agency: true } : {}),
         at,
         runId: ctx.run.id,

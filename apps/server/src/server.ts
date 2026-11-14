@@ -32,10 +32,22 @@ import { openFeeds } from './scan/feeds.ts';
 import { scanPortals } from './scan/portals.ts';
 import { getSetup } from './setup.ts';
 import { openSpace, type Space } from './space.ts';
+import { draftEssays, findFunding, matchProgrammes } from './study/links.ts';
+import { getMode, setMode } from './study/mode.ts';
+import { scanStudySources } from './study/scan.ts';
+import { studyScore } from './study/score.ts';
+import { studySearch } from './study/search.ts';
+import { studyTriage } from './study/triage.ts';
 import { type UserRow, Users } from './users.ts';
 import { HttpError } from './util.ts';
 
 const COOKIE = 'winnow_session';
+
+/** The same run kind does a job search's work or a scholarship search's, by the person's mode. */
+const byMode =
+  (jobs: Executor, study: Executor): Executor =>
+  (ctx) =>
+    getMode(ctx.space.db) === 'scholarships' ? study(ctx) : jobs(ctx);
 
 export interface Shared {
   config: ServerConfig;
@@ -62,11 +74,11 @@ export function createServer(config: ServerConfig) {
   };
 
   const executors: Record<RunKind, Executor> = {
-    scan_portals: scanPortals,
+    scan_portals: byMode(scanPortals, scanStudySources),
     scan_ats: atsScanner(join(config.stateDir, 'ats-companies')),
-    scan_ai: aiSearch,
-    triage,
-    score,
+    scan_ai: byMode(aiSearch, studySearch),
+    triage: byMode(triage, studyTriage),
+    score: byMode(score, studyScore),
     cv_import: cvImport,
     profile_prefill: profilePrefill,
     setup_followup: setupFollowup,
@@ -76,6 +88,9 @@ export function createServer(config: ServerConfig) {
     jack_update: jackDraft(jack),
     tailor,
     find_portal: findPortalRun,
+    match_programmes: matchProgrammes,
+    find_funding: findFunding,
+    essays: draftEssays,
     capture: async (ctx) => {
       await captureMany(ctx, ctx.run.jobIds);
       const read = ctx.run.jobIds.filter((id) => ctx.space.jobs.get(id)?.hasJd).length;
@@ -213,14 +228,33 @@ export function createServer(config: ServerConfig) {
 
   api.get('/admin/users', (c) => {
     if (!c.var.user.admin) throw new HttpError(403, 'forbidden', 'Only admins can see people.');
-    return c.json(users.list());
+    return c.json(
+      users
+        .list()
+        .map((u) => ({ ...u, mode: u.disabled ? 'jobs' : getMode(spaceFor(u.id).space.db) })),
+    );
+  });
+
+  api.post('/admin/users/:id/mode', async (c) => {
+    if (!c.var.user.admin) throw new HttpError(403, 'forbidden', 'Only admins can change this.');
+    const id = c.req.param('id');
+    if (!users.get(id)) throw new HttpError(404, 'not_found', 'No such person.');
+    const body = (await c.req.json()) as { mode?: string };
+    const { space } = spaceFor(id);
+    return c.json({ mode: setMode(space.db, body.mode ?? '', space.events) });
   });
 
   api.post('/admin/users', async (c) => {
     if (!c.var.user.admin) throw new HttpError(403, 'forbidden', 'Only admins can invite people.');
-    const body = (await c.req.json()) as { id?: string; email?: string; name?: string };
+    const body = (await c.req.json()) as {
+      id?: string;
+      email?: string;
+      name?: string;
+      mode?: string;
+    };
     const user = users.add({ id: body.id ?? '', email: body.email ?? '', name: body.name ?? '' });
-    spaceFor(user.id);
+    const { space } = spaceFor(user.id);
+    if (body.mode) setMode(space.db, body.mode, space.events);
     return c.json({ user, invite: users.invite(user.id) });
   });
 
@@ -287,5 +321,6 @@ function toMe(u: UserRow, space: Space): Me {
     name: u.name,
     admin: u.admin,
     setup: s.redo ? 'done' : s.status,
+    mode: getMode(space.db),
   };
 }

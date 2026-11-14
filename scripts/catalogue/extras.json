@@ -1,0 +1,112 @@
+{
+  "palantir": {
+    "portal": "lever",
+    "url": "https://jobs.lever.co/palantir",
+    "jobs": 309,
+    "sample": [
+      "Administrative Business Partner",
+      "Administrative Business Partner - ShipOS",
+      "Administrative Business Partner - ShipOS"
+    ]
+  },
+  "check-point": {
+    "portal": "smartrecruiters",
+    "url": "https://jobs.smartrecruiters.com/CheckPointSoftwareTechnologies2",
+    "jobs": 256,
+    "sample": [
+      "Regional Sales Manager, EMEA & APAC",
+      "Regional Head of Sales, Exposure Management (East)",
+      "Regional Head of Sales, Exposure Management (East)"
+    ]
+  },
+  "td-bank": {
+    "portal": "workday",
+    "url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers",
+    "jobs": 20,
+    "sample": [
+      "Senior IT Developer- Java, Springboot",
+      "VP, Equity Research - Semiconductor Equipment, Manufacturing, Memory & IT Hardware",
+      "Bilingual Insurance Advisor"
+    ]
+  },
+  "kraken": {
+    "portal": "ashby",
+    "url": "https://jobs.ashbyhq.com/kraken.com",
+    "jobs": 87,
+    "sample": [
+      "Senior Analytics Engineer - Finance",
+      "Senior Analytics Engineer - Finance",
+      "Content Lead - Kraken Pro"
+    ]
+  },
+  "sony-interactive": {
+    "portal": "greenhouse",
+    "url": "https://job-boards.greenhouse.io/siei",
+    "jobs": 57,
+    "sample": [
+      "テクニカルアカウントマネージャー",
+      "3Dアーティスト・3D Artist/Team ASOBI",
+      "3Dエンバイロメントアーティスト [ミッドキャリア]・3D Environmental Artist [Mid-career]/Team ASOBI"
+    ]
+  },
+  "bosch": {
+    "portal": "smartrecruiters",
+    "url": "https://careers.smartrecruiters.com/BoschGroup",
+    "jobs": 5000,
+    "sample": [
+      "Manufacturing Engineering Grinding Technician",
+      "Controls & Instrumentation Engineer",
+      "Facilities Maintenance Mechanic Level open: I-IV (depending on exp) B Shift, Thursday-Saturday, every other Sunday 6am-6pm)"
+    ]
+  },
+  "octopus-energy": {
+    "portal": "lever",
+    "url": "https://jobs.lever.co/octoenergy",
+    "jobs": 164,
+    "sample": [
+      "(Senior) Legal Counsel (m/w/d)",
+      "Accountant (6 months FTC)",
+      "Always on the lookout for Brilliant Humans - Power Market Edition!"
+    ]
+  },
+  "caterpillar": {
+    "portal": "workday",
+    "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers",
+    "jobs": 20,
+    "sample": [
+      "Software Engineer",
+      "Senior Software Engineer - Backend Engineering",
+      "Product Auditor - 2nd Shift"
+    ]
+  },
+  "concentrix": {
+    "portal": "workday",
+    "url": "https://cnx.wd1.myworkdayjobs.com/external_global",
+    "jobs": 20,
+    "sample": [
+      "Specialist, Wellbeing",
+      "Associate Planning & Scheduling",
+      "Analyst Forecasting/Data Scientist"
+    ]
+  },
+  "ashurst": {
+    "portal": "workday",
+    "url": "https://perkinscoie.wd115.myworkdayjobs.com/en-US/perkinscoieexternal",
+    "jobs": 20,
+    "sample": [
+      "Senior Legal Project Manager",
+      "Litigation e-Filing Coordinator",
+      "Regulatory, Compliance & Disputes Associate Attorney - Senior"
+    ]
+  },
+  "3m": {
+    "portal": "workday",
+    "url": "https://3m.wd1.myworkdayjobs.com/en-US/Search",
+    "jobs": 20,
+    "sample": [
+      "Production Planner",
+      "Ingeniero Mecánico, San Luis Potosí",
+      "Ausbildung - Maschinen- und Anlagenführer (m/w/*)"
+    ]
+  }
+}

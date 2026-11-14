@@ -4,6 +4,7 @@ import { router } from 'expo-router';
 import { Pressable, Switch, Text, View } from 'react-native';
 import { Chip } from '@/components/chips';
 import { RunCard } from '@/components/runs';
+import { StudyFind } from '@/components/StudyFind';
 import { Button, Divider, Icon, Row, Screen, SectionTitle, T } from '@/components/ui';
 import { api } from '@/lib/api';
 import { dateLabel, timeAgo } from '@/lib/format';
@@ -16,6 +17,7 @@ import {
   useStartRun,
 } from '@/lib/hooks';
 import { keys, queryClient } from '@/lib/query';
+import { useMode } from '@/lib/study';
 import { toast } from '@/lib/toast';
 import { radius, space, type, useTheme } from '@/theme';
 
@@ -112,6 +114,10 @@ function ScanCard({
 }
 
 export default function Find() {
+  return useMode() === 'scholarships' ? <StudyFind /> : <JobsFind />;
+}
+
+function JobsFind() {
   const { c } = useTheme();
   const sources = useSources().data;
   const settings = useSettings().data;

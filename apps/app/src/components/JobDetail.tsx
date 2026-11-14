@@ -1,7 +1,13 @@
 import type { ArchiveReason, Job, JobDetail as JobDetailT, ScoreResult, Stage } from '@winnow/api';
-import { ARCHIVE_REASON_LABELS, LIST_LABELS, RUN_COSTS, STAGE_LABELS, STAGES } from '@winnow/api';
+import {
+  ARCHIVE_REASON_LABELS,
+  costEstimate,
+  LIST_LABELS,
+  STAGE_LABELS,
+  STAGES,
+} from '@winnow/api';
 import { useEffect, useState } from 'react';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { api } from '@/lib/api';
 import { companyLabel, dateLabel, deadline, isStale, timeAgo } from '@/lib/format';
 import { useActiveRuns, useMove, useRestore, useStartRun } from '@/lib/hooks';
@@ -15,6 +21,7 @@ import { CompanyTile } from './JobRow';
 import { Markdown } from './Markdown';
 import { RunCard } from './runs';
 import { Sheet } from './Sheet';
+import { EssaysView, OppFacts, OppLinks, OppPlanView } from './Study';
 import { TrackCompany } from './TrackCompany';
 import { Button, Divider, Icon, Notice, T } from './ui';
 
@@ -282,7 +289,7 @@ function PostingNotes({ job }: { job: Job }) {
   );
 }
 
-type Tab = 'report' | 'application' | 'description' | 'timeline' | 'notes';
+type Tab = 'report' | 'plan' | 'essays' | 'application' | 'description' | 'timeline' | 'notes';
 
 /** Everything about one job. Used by the phone page and the desktop detail pane. */
 export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () => void }) {
@@ -301,8 +308,9 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
   const scoreIt = () => start.mutate({ kind: 'score', jobIds: [job.id] });
   const busy = !!job.activity;
 
+  const study = job.kind !== 'job';
   const facts = [
-    job.workModel,
+    study ? null : job.workModel,
     job.salary,
     ...[...new Set(job.sources.map((s) => s.source))].slice(0, 3),
   ].filter((x): x is string => !!x);
@@ -311,14 +319,18 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
     <View style={{ gap: space.md }}>
       <View style={{ gap: space.sm }}>
         <CompanyTile company={job.company} size={48} />
-        <Text style={[type.headline, { color: c.ink }]}>{job.role || 'Untitled role'}</Text>
+        <Text style={[type.headline, { color: c.ink }]}>
+          {job.role || (study ? 'Untitled' : 'Untitled role')}
+        </Text>
         <Text style={[type.bodySmall, { color: c.lead }]}>
           {[
             companyLabel(job.company),
             job.location,
             job.postedAt
               ? `Posted ${timeAgo(job.postedAt)} ago${isStale(job) ? ', may be stale' : ''}`
-              : `Found ${timeAgo(job.firstSeen)} ago`,
+              : timeAgo(job.firstSeen) === 'just now'
+                ? 'Found just now'
+                : `Found ${timeAgo(job.firstSeen)} ago`,
           ]
             .filter(Boolean)
             .join(' · ')}
@@ -334,20 +346,20 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
               style={{ flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: 4 }}
             >
               <T variant="label" tone="primary">
-                Open posting
+                {study ? 'Open page' : 'Open posting'}
               </T>
               <Icon name="open-in-new" size={16} tone="primary" />
             </Pressable>
           ) : null}
         </View>
-        <TrackCompany jobId={job.id} />
+        {study ? null : <TrackCompany jobId={job.id} />}
       </View>
 
       <View style={[styles.status, { backgroundColor: c.surface }]}>
         <Icon name={job.list === 'archive' ? 'archive' : 'info-outline'} size={16} tone="lead" />
         <Text style={[type.bodySmall, { color: c.ink, flex: 1 }]}>{statusLine(job)}</Text>
       </View>
-      <PostingNotes job={job} />
+      {study ? null : <PostingNotes job={job} />}
       {job.triage && job.list !== 'archive' ? (
         <T variant="bodySmall" tone="lead">
           Triage:{' '}
@@ -445,28 +457,43 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
       </View>
       {job.list === 'inbox' || job.list === 'shortlist' ? (
         <T variant="meta" tone="faint">
-          Scoring uses tokens · {RUN_COSTS.score.estimate}
+          Scoring uses tokens ·{' '}
+          {costEstimate('score', job.kind === 'job' ? 'jobs' : 'scholarships')}
         </T>
       ) : null}
 
+      {study ? <OppFacts job={job} /> : null}
       {job.score ? <ScoreCard score={job.score} /> : null}
+      {study ? <OppLinks job={job} /> : null}
 
-      <View
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
         style={{
-          flexDirection: 'row',
-          gap: space.md,
           borderBottomWidth: StyleSheet.hairlineWidth,
           borderBottomColor: c.rule,
+          flexGrow: 0,
         }}
+        contentContainerStyle={{ flexDirection: 'row', gap: space.md }}
       >
         {(
-          [
-            ['report', 'Report'],
-            ['application', 'CV & letter'],
-            ['description', 'Description'],
-            ['timeline', 'Timeline'],
-            ['notes', 'Notes'],
-          ] as [Tab, string][]
+          (study
+            ? [
+                ['report', 'Report'],
+                ['plan', 'Plan'],
+                ['essays', 'Essays'],
+                ['application', 'CV & letter'],
+                ['description', 'Page'],
+                ['timeline', 'Timeline'],
+                ['notes', 'Notes'],
+              ]
+            : [
+                ['report', 'Report'],
+                ['application', 'CV & letter'],
+                ['description', 'Description'],
+                ['timeline', 'Timeline'],
+                ['notes', 'Notes'],
+              ]) as [Tab, string][]
         ).map(([t, label]) => (
           <Pressable
             key={t}
@@ -488,7 +515,7 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
             </Text>
           </Pressable>
         ))}
-      </View>
+      </ScrollView>
       {tab === 'report' ? (
         job.report ? (
           <Markdown text={job.report} />
@@ -498,10 +525,14 @@ export function JobDetailView({ job, onGone }: { job: JobDetailT; onGone?: () =>
             body={
               job.score
                 ? 'This score came without a full report.'
-                : 'Score this job to get a full report.'
+                : `Score this ${study ? 'item' : 'job'} to get a full report.`
             }
           />
         )
+      ) : tab === 'plan' ? (
+        <OppPlanView job={job} />
+      ) : tab === 'essays' ? (
+        <EssaysView job={job} />
       ) : tab === 'application' ? (
         <ApplicationPane job={job} />
       ) : tab === 'description' ? (

@@ -16,6 +16,8 @@ export interface Captured {
   warnings?: string[];
   /** How it was read, for the log. */
   via: string;
+  /** A closed notice found on a page read leniently (a scholarship between rounds). */
+  closed?: string;
 }
 
 /** Proof the posting is closed: a 410, a closed notice, a redirect to the job list, a passed deadline. */
@@ -363,7 +365,11 @@ export function cleanPosting(
  * Read a posting's description: the ATS API when there is one, then the page, then a headless browser.
  * Throws PostingClosed on proof the posting is closed, and the last error when nothing could be read.
  */
-export async function captureJd(url: string): Promise<Captured | null> {
+export async function captureJd(
+  url: string,
+  /** `lenient`: a scholarship page between rounds says "closed" but stays useful; note it, don't throw. */
+  opts: { lenient?: boolean } = {},
+): Promise<Captured | null> {
   const attempts: ((hidden: string[]) => Promise<Captured | null>)[] = [
     (h) => viaAts(url, h),
     (h) => viaPage(url, h),
@@ -372,10 +378,15 @@ export async function captureJd(url: string): Promise<Captured | null> {
   const checked = (got: Captured, hidden: string[]): Captured => {
     const { text, warnings } = cleanPosting(got.text, hidden);
     const notice = closedNotice(text);
-    if (notice) throw new PostingClosed(`the page says “${notice}”`);
-    if (got.deadline && got.deadline < today())
+    if (notice && !opts.lenient) throw new PostingClosed(`the page says “${notice}”`);
+    if (got.deadline && got.deadline < today() && !opts.lenient)
       throw new PostingClosed(`its deadline passed (${got.deadline})`);
-    return { ...got, text: clip(text, 40_000), warnings };
+    return {
+      ...got,
+      text: clip(text, 40_000),
+      warnings,
+      ...(notice ? { closed: notice } : {}),
+    };
   };
   let best: { got: Captured; hidden: string[] } | null = null;
   let lastError: Error | null = null;
@@ -431,7 +442,7 @@ export async function captureMany(ctx: RunCtx, ids: string[]) {
     const job = ctx.space.jobs.get(id);
     if (!job) continue;
     try {
-      const got = await captureJd(job.url);
+      const got = await captureJd(job.url, { lenient: job.kind !== 'job' });
       if (got && got.text.length >= 120) saveCapture(ctx.space.jobs, id, got);
       else ctx.log('info', `No description found for ${job.company} · ${job.role}`);
     } catch (e) {

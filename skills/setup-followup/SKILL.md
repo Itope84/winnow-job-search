@@ -30,6 +30,13 @@ Read only `input.json` and `cv.md`. Do not browse the web. Do not open other fil
 4. Don't ask for anything the CV already answers. Don't ask for personal data (age, health, family).
 5. For a question about links, never follow up.
 
+## Scholarships mode
+
+When `input.mode` is `"scholarships"`, the questions come from a scholarship application (why this
+subject, the research question, plans after, leadership, circumstances). Ask a follow-up only when an
+answer is too vague for a panel to believe: ask for the concrete moment, result or example. Never press
+on the circumstances question: it is optional.
+
 ## Output
 
 Write `result.json` in the run folder:

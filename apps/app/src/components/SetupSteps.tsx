@@ -1,4 +1,5 @@
 import type {
+  Mode,
   RoleFit,
   SetupAbout,
   SetupAnswer,
@@ -8,9 +9,16 @@ import type {
   SetupStep,
   SetupWant,
   SourceEntry,
+  StudyPrefs,
   WorkType,
 } from '@winnow/api';
-import { ROLE_FIT_LABELS, SETUP_QUESTIONS, WORK_TYPE_LABELS } from '@winnow/api';
+import {
+  EMPTY_STUDY,
+  MODE_LABELS,
+  questionsFor,
+  ROLE_FIT_LABELS,
+  WORK_TYPE_LABELS,
+} from '@winnow/api';
 import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { Platform, View } from 'react-native';
 import { api } from '@/lib/api';
@@ -21,6 +29,7 @@ import { toast } from '@/lib/toast';
 import { space, useTheme } from '@/theme';
 import { Check, Input, Segmented } from './inputs';
 import { Markdown } from './Markdown';
+import { StudyForm } from './StudyForm';
 import { ChipInput, SetupField, SetupRun, ToggleChip } from './setup';
 import { Button, IconButton, Loading, Notice, T } from './ui';
 
@@ -77,25 +86,64 @@ export function StartStep({ s, go, onLater }: StepProps & { onLater: () => void 
       setBusy(false);
     }
   };
-  const items = [
-    ['Your CV', 'A PDF, or pasted text'],
-    ['About you', 'Contact details and where you can work'],
-    ['What you want', 'Roles, places, pay and deal-breakers'],
-    ['Get to know you', 'Five questions a CV can’t answer'],
-    ['Review', 'The profile AI drafts from all of it'],
-    ['Sources', 'Where your jobs will come from'],
-  ];
+  const study = s.mode === 'scholarships';
+  const [mode, setMode] = useState<Mode>(s.mode);
+  const pickMode = async (m: Mode) => {
+    setMode(m);
+    try {
+      await api.setMode(m);
+      void queryClient.invalidateQueries({ queryKey: keys.me });
+      void queryClient.invalidateQueries({ queryKey: keys.setup });
+    } catch (e) {
+      setMode(s.mode);
+      fail(e);
+    }
+  };
+  const items = study
+    ? [
+        ['Your CV', 'A PDF, or pasted text, plus a statement or letter in your own words'],
+        ['About you', 'Contact details'],
+        ['What you want to study', 'Subjects, places, nationality, English, funding'],
+        ['Get to know you', 'Five questions scholarship panels ask'],
+        ['Review', 'The profile AI drafts from all of it'],
+        ['Sources', 'Scheme and university pages, feeds and searches to watch'],
+      ]
+    : [
+        ['Your CV', 'A PDF, or pasted text'],
+        ['About you', 'Contact details and where you can work'],
+        ['What you want', 'Roles, places, pay and deal-breakers'],
+        ['Get to know you', 'Five questions a CV can’t answer'],
+        ['Review', 'The profile AI drafts from all of it'],
+        ['Sources', 'Where your jobs will come from'],
+      ];
   return (
     <View>
       <Title
         lead={
           s.redo
             ? 'We start from your current profile. Nothing changes until you confirm it on Review, and your old files are kept as backups.'
-            : 'Winnow judges every job against your CV and profile. This sets them up, in about 10 minutes.'
+            : study
+              ? 'Winnow finds scholarships and master’s programmes, and judges each one against your CV and profile. This sets them up, in about 10 minutes.'
+              : 'Winnow judges every job against your CV and profile. This sets them up, in about 10 minutes.'
         }
       >
         {s.redo ? 'Set up again' : 'Let’s set up Winnow'}
       </Title>
+      {s.redo ? null : (
+        <View style={{ gap: 6, marginBottom: space.md }}>
+          <T variant="caps" tone="lead">
+            You’re looking for
+          </T>
+          <Segmented
+            value={mode}
+            onChange={(m) => void pickMode(m)}
+            options={(['jobs', 'scholarships'] as Mode[]).map((m) => ({
+              value: m,
+              label: MODE_LABELS[m],
+            }))}
+          />
+        </View>
+      )}
       <View style={{ gap: space.sm }}>
         {items.map(([title, note], i) => (
           <View key={title} style={{ flexDirection: 'row', gap: space.md, alignItems: 'baseline' }}>
@@ -219,6 +267,7 @@ export function CvStep({ s, go, set }: StepProps) {
       <T variant="meta" tone="faint" style={{ marginTop: space.md }}>
         Scanned PDFs (photos of pages) can’t be read. Export it from Word or Google Docs instead.
       </T>
+      {s.mode === 'scholarships' ? <StatementPart /> : null}
       <Actions>
         <Button
           label="Continue"
@@ -227,6 +276,83 @@ export function CvStep({ s, go, set }: StepProps) {
           onPress={() => void go('about')}
         />
       </Actions>
+    </View>
+  );
+}
+
+/** Scholarships: a personal statement or cover letter, kept as written. Optional. */
+function StatementPart() {
+  const profile = useProfile().data;
+  const [text, setText] = useState('');
+  const [busy, setBusy] = useState<'pdf' | 'text' | null>(null);
+  const words = profile?.statement?.trim() ? profile.statement.split(/\s+/).length : 0;
+  const saved = (p: unknown) => {
+    queryClient.setQueryData(keys.profile, p);
+    toast.show('Saved your document');
+  };
+  const upload = async () => {
+    const file = await pickPdf();
+    if (!file) return;
+    setBusy('pdf');
+    try {
+      saved(await api.uploadStatementPdf(file, file.name));
+    } catch (e) {
+      fail(e);
+    } finally {
+      setBusy(null);
+    }
+  };
+  return (
+    <View style={{ marginTop: space.lg, gap: space.sm }}>
+      <T variant="title">In your own words (optional)</T>
+      <T variant="body" tone="lead">
+        A personal statement, motivation letter or cover letter you’ve written. AI reads it for
+        facts the CV leaves out, and keeps your voice in essays and letters.
+      </T>
+      {words ? (
+        <Notice
+          tone="neutral"
+          icon="description"
+          title={`Saved (${words.toLocaleString()} words)`}
+          body="Upload or paste again to replace it."
+        />
+      ) : null}
+      {Platform.OS === 'web' ? (
+        <View style={{ flexDirection: 'row' }}>
+          <Button
+            kind="secondary"
+            icon="upload-file"
+            label="Upload a PDF"
+            busy={busy === 'pdf'}
+            onPress={() => void upload()}
+          />
+        </View>
+      ) : null}
+      <Input
+        area
+        value={text}
+        onChangeText={setText}
+        placeholder="Or paste it here"
+        style={{ minHeight: 120 }}
+      />
+      <View style={{ flexDirection: 'row' }}>
+        <Button
+          kind="secondary"
+          label="Save this text"
+          busy={busy === 'text'}
+          disabled={text.trim().length < 100}
+          onPress={() => {
+            setBusy('text');
+            void api
+              .pasteStatement(text)
+              .then((p) => {
+                saved(p);
+                setText('');
+              }, fail)
+              .finally(() => setBusy(null));
+          }}
+        />
+      </View>
     </View>
   );
 }
@@ -303,11 +429,15 @@ export function AboutStep({ s, go }: StepProps) {
       return '';
     }
   })();
+  const fields =
+    s.mode === 'scholarships'
+      ? ABOUT.filter((f) => f.key !== 'timezone' && f.key !== 'workRight')
+      : ABOUT;
   const { form, change, fromCv } = usePrefilled<keyof SetupAbout>(
     s.about,
     s.prefill?.about ?? null,
-    ABOUT.map((f) => f.key),
-    { timezone: tz },
+    fields.map((f) => f.key),
+    s.mode === 'scholarships' ? {} : { timezone: tz },
   );
   const [busy, setBusy] = useState(false);
   const next = async () => {
@@ -321,10 +451,18 @@ export function AboutStep({ s, go }: StepProps) {
   const name = String(form.name ?? '').trim();
   return (
     <View>
-      <Title lead="Used on applications and to judge where you can work.">About you</Title>
+      <Title
+        lead={
+          s.mode === 'scholarships'
+            ? 'Used on applications, essays and letters.'
+            : 'Used on applications and to judge where you can work.'
+        }
+      >
+        About you
+      </Title>
       <SetupRun id={s.runs.cv} label="Reading your CV" />
       <SetupRun id={s.runs.prefill} label="Filling these in from your CV" />
-      {ABOUT.map((f) => (
+      {fields.map((f) => (
         <SetupField key={f.key} label={f.label} hint={f.hint} fromCv={fromCv(f.key)}>
           <Input
             value={String(form[f.key] ?? '')}
@@ -374,7 +512,73 @@ const WANT_KEYS: WantKey[] = [
   'dealBreakers',
 ];
 
-export function WantStep({ s, go }: StepProps) {
+export function WantStep(props: StepProps) {
+  return props.s.mode === 'scholarships' ? (
+    <StudyWantStep {...props} />
+  ) : (
+    <JobWantStep {...props} />
+  );
+}
+
+/** Scholarships: what to study, where, and the facts schemes judge on. */
+function StudyWantStep({ s, go }: StepProps) {
+  const pre = s.prefill;
+  const initial = (): StudyPrefs => ({
+    ...EMPTY_STUDY,
+    ...(s.want.study ?? {}),
+    places: { ...EMPTY_STUDY.places, ...(s.want.study?.places ?? {}) },
+    subjects: s.want.roles ?? [],
+    nationality: s.about.nationality ?? pre?.about?.nationality ?? '',
+  });
+  const [study, setStudy] = useState<StudyPrefs>(initial);
+  const touched = useRef(false);
+  // The pre-fill can land after the step opens: take its nationality if nothing was typed.
+  useEffect(() => {
+    if (!touched.current && pre?.about?.nationality && !study.nationality)
+      setStudy((v) => ({ ...v, nationality: pre.about?.nationality ?? '' }));
+  }, [pre]);
+  const [busy, setBusy] = useState(false);
+  const next = async () => {
+    setBusy(true);
+    const { subjects, nationality, ...rest } = study;
+    try {
+      await go('know', {
+        want: { roles: subjects, level: study.level, study: rest },
+        about: { ...s.about, nationality },
+      });
+    } finally {
+      setBusy(false);
+    }
+  };
+  const suggested = (pre?.roles ?? []).map((r) => r.title);
+  return (
+    <View>
+      <Title lead="Scans, triage and scoring judge every scholarship and programme against these.">
+        What you want to study
+      </Title>
+      <SetupRun id={s.runs.prefill} label="Suggesting subjects from your CV" />
+      <StudyForm
+        value={study}
+        onChange={(v) => {
+          touched.current = true;
+          setStudy(v);
+        }}
+        subjectSuggestions={suggested}
+      />
+      <Actions>
+        <Button
+          label="Continue"
+          busy={busy}
+          disabled={!study.subjects.length}
+          hint={!study.subjects.length ? 'Add at least one programme or subject.' : null}
+          onPress={() => void next()}
+        />
+      </Actions>
+    </View>
+  );
+}
+
+function JobWantStep({ s, go }: StepProps) {
   const pre = s.prefill;
   // Suggested roles stay outlined until tapped in, so they aren't in the form's pre-fill.
   const { form, change, fromCv } = usePrefilled<WantKey>(
@@ -588,8 +792,9 @@ export function KnowStep({ s, go, set }: StepProps) {
     ),
   );
   const [busy, setBusy] = useState(false);
-  const n = SETUP_QUESTIONS.length;
-  const q = SETUP_QUESTIONS[Math.min(i, n - 1)];
+  const questions = questionsFor(s.mode);
+  const n = questions.length;
+  const q = questions[Math.min(i, n - 1)];
   const value = (k: string) => local[k] ?? { answer: '', followUpAnswer: '' };
   const edit = (k: string, patch: Partial<Local[string]>) =>
     setLocal((l) => ({ ...l, [k]: { ...value(k), ...patch } }));
@@ -675,7 +880,7 @@ function FollowUp({
   const { c } = useTheme();
   const run = useRun(a.followUpRun ?? '').data?.run;
   const thinking = !a.followUp && !!run && ACTIVE.has(run.status);
-  const q = SETUP_QUESTIONS.find((x) => x.key === a.key);
+  const q = [...questionsFor('jobs'), ...questionsFor('scholarships')].find((x) => x.key === a.key);
   if (!a.followUp && !thinking) return null;
   return (
     <View
@@ -795,6 +1000,7 @@ const lines = (v: string) =>
     .filter(Boolean);
 
 export function ReviewStep({ s, go, set }: StepProps) {
+  const study = s.mode === 'scholarships';
   const [draft, setDraft] = useState<SetupDraft | null>(s.draft);
   const [editing, setEditing] = useState<string | null>(null);
   const [text, setText] = useState('');
@@ -871,7 +1077,9 @@ export function ReviewStep({ s, go, set }: StepProps) {
   );
   return (
     <View>
-      <Title lead="This is what triage and scoring will judge jobs against. Change anything that isn’t right.">
+      <Title
+        lead={`This is what triage and scoring will judge ${study ? 'scholarships and programmes' : 'jobs'} against. Change anything that isn’t right.`}
+      >
         Your profile
       </Title>
       <SetupRun id={s.runs.draft} label="Writing it again" onRetry={() => void rewrite()} />
@@ -889,7 +1097,11 @@ export function ReviewStep({ s, go, set }: StepProps) {
       >
         {editing === 'story' ? box(3) : <T variant="reading">{draft.story}</T>}
       </Part>
-      <Part title="Target roles" onEdit={() => void go('want')} editLabel="Change">
+      <Part
+        title={study ? 'Subjects' : 'Target roles'}
+        onEdit={() => void go('want')}
+        editLabel="Change"
+      >
         {(w.roles ?? []).map((r) => (
           <View key={r.title}>
             <T variant="label">
@@ -950,28 +1162,58 @@ export function ReviewStep({ s, go, set }: StepProps) {
           </T>
         )}
       </Part>
-      <Part title="Pay and places" onEdit={() => void go('want')} editLabel="Change">
-        <T variant="body">
-          {[
-            w.salaryTarget ? `Target ${w.salaryTarget}` : null,
-            w.salaryMin ? `minimum ${w.salaryMin}` : null,
-            w.currency || null,
-          ]
-            .filter(Boolean)
-            .join(', ') || 'No pay given'}
-        </T>
-        <T variant="body" tone="lead">
-          {[
-            (w.workTypes ?? []).map((t) => WORK_TYPE_LABELS[t]).join(', '),
-            (w.places ?? []).join(', '),
-          ]
-            .filter(Boolean)
-            .join(' · ') || 'No places given'}
-        </T>
-      </Part>
-      <Part title="Deal-breakers" onEdit={() => void go('want')} editLabel="Change">
-        <T variant="body">{(w.dealBreakers ?? []).join(' · ') || 'None'}</T>
-      </Part>
+      {study ? (
+        <Part title="Places and funding" onEdit={() => void go('want')} editLabel="Change">
+          <T variant="body">
+            {[
+              w.study?.places?.prefer?.length ? `Prefer ${w.study.places.prefer.join(', ')}` : null,
+              w.study?.places?.allow?.length ? `also ${w.study.places.allow.join(', ')}` : null,
+            ]
+              .filter(Boolean)
+              .join('; ') || 'Anywhere'}
+          </T>
+          {w.study?.places?.exclude?.length ? (
+            <T variant="body" tone="lead">
+              Never {w.study.places.exclude.join(', ')}
+            </T>
+          ) : null}
+          <T variant="body" tone="lead">
+            {[
+              s.about.nationality,
+              w.study?.fundingNeed === 'full' ? 'Full funding only' : 'Any funding level',
+              w.study?.englishTest,
+            ]
+              .filter(Boolean)
+              .join(' · ')}
+          </T>
+        </Part>
+      ) : null}
+      {study ? null : (
+        <Part title="Pay and places" onEdit={() => void go('want')} editLabel="Change">
+          <T variant="body">
+            {[
+              w.salaryTarget ? `Target ${w.salaryTarget}` : null,
+              w.salaryMin ? `minimum ${w.salaryMin}` : null,
+              w.currency || null,
+            ]
+              .filter(Boolean)
+              .join(', ') || 'No pay given'}
+          </T>
+          <T variant="body" tone="lead">
+            {[
+              (w.workTypes ?? []).map((t) => WORK_TYPE_LABELS[t]).join(', '),
+              (w.places ?? []).join(', '),
+            ]
+              .filter(Boolean)
+              .join(' · ') || 'No places given'}
+          </T>
+        </Part>
+      )}
+      {study ? null : (
+        <Part title="Deal-breakers" onEdit={() => void go('want')} editLabel="Change">
+          <T variant="body">{(w.dealBreakers ?? []).join(' · ') || 'None'}</T>
+        </Part>
+      )}
       <Part
         title="The full profile triage and scoring read"
         editing={editing === 'narrative'}
@@ -1043,6 +1285,7 @@ export function SourcesStep({
   onFinished,
 }: StepProps & { onFinished: (scan: boolean, runs: number) => void }) {
   const sug = s.suggestions;
+  const study = s.mode === 'scholarships';
   const run = useRun(s.runs.sources ?? '').data?.run;
   const [picked, setPicked] = useState<Set<string> | null>(null);
   const [busy, setBusy] = useState<'scan' | 'plain' | null>(null);
@@ -1094,8 +1337,14 @@ export function SourcesStep({
   if (!sug)
     return (
       <View>
-        <Title lead="AI looks for employers, job-board searches and web searches that fit your roles and places, then checks each careers page.">
-          Where your jobs come from
+        <Title
+          lead={
+            study
+              ? 'Winnow picks the schemes, university award pages and feeds it knows that suit you, and AI looks for more for your subjects and places, then checks each page.'
+              : 'AI looks for employers, job-board searches and web searches that fit your roles and places, then checks each careers page.'
+          }
+        >
+          {study ? 'Where your scholarships come from' : 'Where your jobs come from'}
         </Title>
         <SetupRun
           id={s.runs.sources}
@@ -1122,14 +1371,22 @@ export function SourcesStep({
   return (
     <View>
       <Title lead="Untick anything you don’t want. You can change all of this in Find.">
-        Where your jobs come from
+        {study ? 'Where your scholarships come from' : 'Where your jobs come from'}
       </Title>
       <Pick
-        title="Employers"
+        title={study ? 'Pages to watch' : 'Employers'}
         items={sug.companies.map((c) => ({ name: c.name, note: c.notes }))}
         picked={picked ?? new Set()}
         toggle={toggle}
-        note="Read directly in every Portals scan. Free."
+        note={
+          study
+            ? `Scheme and university pages, read on every scan; a change means a new round. Free.${
+                sug.dropped.length
+                  ? ` Left out because their link didn’t work: ${sug.dropped.join(', ')}.`
+                  : ''
+              }`
+            : 'Read directly in every Portals scan. Free.'
+        }
       />
       <Pick
         title="Employers’ own careers sites"
@@ -1143,13 +1400,13 @@ export function SourcesStep({
         }`}
       />
       <Pick
-        title="Job-board searches"
+        title={study ? 'News feeds' : 'Job-board searches'}
         items={sug.boards.map((b) => ({ name: b.name, note: boardNote(b) }))}
         picked={picked ?? new Set()}
         toggle={toggle}
       />
       <Pick
-        title="AI search queries"
+        title={study ? 'AI searches' : 'AI search queries'}
         items={sug.queries.map((q) => ({ name: q.name, note: q.query }))}
         picked={picked ?? new Set()}
         toggle={toggle}
@@ -1184,7 +1441,9 @@ export function SourcesStep({
           disabled={!scannable}
           hint={
             !scannable
-              ? 'Tick an employer or a board to scan.'
+              ? study
+                ? 'Tick a page or a feed to scan.'
+                : 'Tick an employer or a board to scan.'
               : 'Free. Triage runs on what it finds.'
           }
           onPress={() => void finish(true)}

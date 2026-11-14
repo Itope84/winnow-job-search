@@ -165,6 +165,297 @@ export interface Job {
   posting: PostingCheck | null;
   /** The tailored CV and cover letter, when one has been written. */
   application: Application | null;
+  /** `job` in jobs mode; a scholarship or a programme in scholarships mode. */
+  kind: OppKind;
+  /** What a scholarship or programme offers and asks, read off its page. Null for jobs. */
+  opportunity: Opportunity | null;
+  /** The person's plan for applying: which funding goes with a programme, the checklist, the tracks. */
+  plan: OppPlan | null;
+  /** The earliest open deadline (YYYY-MM-DD): the scholarship's, the admission's, or the posting's. */
+  due: string | null;
+  /** Programmes a scholarship would pay for, or scholarships that could pay for a programme. */
+  links: OppLink[];
+}
+
+// ── Scholarships mode ────────────────────────────────────────────────────────
+
+/** What an account looks for. Picked on the invite, confirmed on the first setup screen. */
+export const MODES = ['jobs', 'scholarships'] as const;
+export type Mode = (typeof MODES)[number];
+export const MODE_LABELS: Record<Mode, string> = { jobs: 'Jobs', scholarships: 'Scholarships' };
+
+export type OppKind = 'job' | 'scholarship' | 'programme';
+export const OPP_KIND_LABELS: Record<OppKind, string> = {
+  job: 'Job',
+  scholarship: 'Scholarship',
+  programme: 'Programme',
+};
+
+/** How much a scholarship pays, or what a programme costs without one. */
+export const FUNDING_LEVELS = [
+  'full',
+  'tuition_stipend',
+  'tuition',
+  'stipend',
+  'partial',
+  'tuition_free',
+  'fees',
+  'unknown',
+] as const;
+export type FundingLevel = (typeof FUNDING_LEVELS)[number];
+export const FUNDING_LABELS: Record<FundingLevel, string> = {
+  full: 'Full funding',
+  tuition_stipend: 'Tuition and stipend',
+  tuition: 'Tuition only',
+  stipend: 'Stipend only',
+  partial: 'Partial',
+  tuition_free: 'Tuition-free',
+  fees: 'Fees to pay',
+  unknown: 'Funding unclear',
+};
+
+/** How a scholarship relates to programmes. */
+export const FUNDING_SHAPES = ['many_schools', 'country', 'built_in', 'one_school'] as const;
+export type FundingShape = (typeof FUNDING_SHAPES)[number];
+export const SHAPE_LABELS: Record<FundingShape, string> = {
+  many_schools: 'Many schools',
+  country: 'Whole country',
+  built_in: 'Built in',
+  one_school: 'One school',
+};
+export const SHAPE_HINTS: Record<FundingShape, string> = {
+  many_schools: 'Pays for study at a list of universities.',
+  country: 'Pays for any eligible course in the country.',
+  built_in: 'The programme and its funding are one application.',
+  one_school: 'A university’s own award for its own courses.',
+};
+
+export interface Eligibility {
+  /** Whether the person can apply, as far as the page says. */
+  status: 'eligible' | 'ineligible' | 'unclear';
+  /** Who may apply, in the page's terms ("Citizens of Commonwealth countries"). */
+  who: string;
+  /** What rules the person out, if anything ("Needs 2 years' work experience; you have 1"). */
+  fails: string[];
+  /** What the person can still fix before the deadline ("IELTS 6.5 or an English-medium letter"). */
+  todos: string[];
+}
+
+export interface Opportunity {
+  kind: 'scholarship' | 'programme';
+  /** Scholarships: how it relates to programmes. Null for programmes. */
+  shape: FundingShape | null;
+  funding: FundingLevel;
+  /** What it pays or costs, in words ("Tuition, €1,300 a month, flights"). */
+  covers: string;
+  /** Host countries. A scheme open across a region lists the region ("Europe"). */
+  countries: string[];
+  /** "Master's", "PhD". */
+  level: string;
+  /** Programmes: the field. Scholarships: fields it is limited to, or "Any". */
+  subject: string;
+  /** The university, for a programme or a one-school award. */
+  university: string | null;
+  /** "September 2027". */
+  intake: string | null;
+  /** YYYY-MM-DD, or null when unknown. */
+  deadlines: { scholarship: string | null; admission: string | null };
+  /** Whether a round is open, opening later, or closed until next year. */
+  round: 'open' | 'upcoming' | 'closed' | 'unknown';
+  eligibility: Eligibility | null;
+  /** Universities or programmes a scheme names. */
+  schools: string[];
+  /** Essays or statements the application asks for, as the page words them. */
+  essays: string[];
+  /** Documents to send. */
+  documents: string[];
+  /** A programme's tuition for this person, in words ("€0; €150 a semester in fees"). */
+  tuition: string | null;
+  /** How long a programme lasts ("2 years, 120 ECTS"). */
+  length: string | null;
+  /** The provider's own page, when the item was found on a news site or aggregator. */
+  officialUrl: string | null;
+  /** When the facts were last read. */
+  at: string;
+}
+
+export type OppRelation = 'covers' | 'built_in' | 'eligible';
+
+export interface OppLink {
+  id: string;
+  kind: OppKind;
+  /** Programme or scholarship name. */
+  title: string;
+  /** University or provider. */
+  org: string;
+  score: number | null;
+  list: JobList;
+  funding: FundingLevel | null;
+  relation: OppRelation;
+}
+
+export const TRACK_STATUSES = [
+  'to_do',
+  'in_progress',
+  'submitted',
+  'interview',
+  'offer',
+  'declined',
+] as const;
+export type TrackStatus = (typeof TRACK_STATUSES)[number];
+export const TRACK_LABELS: Record<TrackStatus, string> = {
+  to_do: 'To do',
+  in_progress: 'In progress',
+  submitted: 'Submitted',
+  interview: 'Interview',
+  offer: 'Offer',
+  declined: 'Unsuccessful',
+};
+
+/** One application inside a plan: admission to the programme, or one scholarship. */
+export interface PlanTrack {
+  key: string;
+  /** `admission`, or the scholarship's id. */
+  label: string;
+  deadline: string | null;
+  status: TrackStatus;
+}
+
+export interface ChecklistItem {
+  key: string;
+  label: string;
+  done: boolean;
+}
+
+export interface OppPlan {
+  /** Scholarships applied for alongside this programme. */
+  fundingIds: string[];
+  tracks: PlanTrack[];
+  checklist: ChecklistItem[];
+}
+
+export interface PlanUpdate {
+  fundingIds?: string[];
+  tracks?: { key: string; status: TrackStatus }[];
+  checklist?: ChecklistItem[];
+}
+
+/** Someone who writes a reference. */
+export interface Referee {
+  id: string;
+  name: string;
+  role: string;
+  contact: string;
+  agreed: boolean;
+}
+
+/** What a scholarships account wants. Kept in the person's database and written into profile.yml. */
+export interface StudyPrefs {
+  nationality: string;
+  /** "Master's". */
+  level: string;
+  /** Programmes or fields, best first ("MSc Molecular Medicine"). */
+  subjects: SetupRole[];
+  /** "Any", "September 2027". */
+  intake: string;
+  /** `full`: only fully funded; `any`: show every level and say what each covers. */
+  fundingNeed: 'full' | 'any';
+  places: { prefer: string[]; allow: string[]; exclude: string[] };
+  /** "None yet; degree taught in English; will sit IELTS if asked". */
+  englishTest: string;
+  /** Years of full-time work since graduating, as a number of years. */
+  workYears: number;
+  /** Anything else a scholarship asks about: finances, disability, refugee status. Free text. */
+  notes: string;
+}
+
+export const EMPTY_STUDY: StudyPrefs = {
+  nationality: '',
+  level: 'Master’s',
+  subjects: [],
+  intake: 'Any',
+  fundingNeed: 'any',
+  places: { prefer: [], allow: [], exclude: [] },
+  englishTest: '',
+  workYears: 0,
+  notes: '',
+};
+
+/** Coverage: what the scans looked at, when, and what turned up. */
+export type CoverageLayer = 'scheme' | 'university' | 'country' | 'feed' | 'query' | 'pasted';
+export const COVERAGE_LAYER_LABELS: Record<CoverageLayer, string> = {
+  scheme: 'Named schemes',
+  university: 'Universities’ own awards',
+  country: 'Countries',
+  feed: 'News feeds',
+  query: 'AI searches',
+  pasted: 'Pasted links',
+};
+
+export interface CoverageRow {
+  layer: CoverageLayer;
+  target: string;
+  checkedAt: string | null;
+  /** Items the source showed. */
+  found: number;
+  /** New items it added. */
+  added: number;
+  /** Open items from it now (not archived). */
+  open: number;
+  /** A short note ("page unchanged", "403", "12 programmes checked, 0 fit"). */
+  note: string;
+}
+
+/** A country's fact card: what it costs a student from outside the EU and what funding it has. */
+export interface CountryFacts {
+  name: string;
+  region: string;
+  /** Tuition for students from outside the EU/EEA at public universities, in words. */
+  tuition: string;
+  /** `free`, `low` (under about €3,000 a year), or `fees`. */
+  tuitionBand: 'free' | 'low' | 'fees';
+  living: string;
+  /** National scholarship schemes. */
+  schemes: string[];
+  /** Regional or need-based grants. */
+  grants: string[];
+  /** Where to look for courses. */
+  portals: { name: string; url: string }[];
+  postStudyWork: string;
+  notes: string;
+}
+
+export interface CountryCoverage {
+  facts: CountryFacts;
+  stance: 'prefer' | 'allow' | 'exclude' | 'other';
+  checkedAt: string | null;
+  /** Open scholarships and programmes in this country, and the best score among them. */
+  open: number;
+  best: number | null;
+  note: string;
+}
+
+export interface CoverageReport {
+  rows: CoverageRow[];
+  countries: CountryCoverage[];
+  /** Scheme and university pages Winnow knows about but the person hasn't added. */
+  catalogue: number;
+}
+
+/** A scheme page, university page, feed or catalogue Winnow knows, for adding to Find. */
+export interface CatalogueItem {
+  name: string;
+  url: string;
+  kind: 'scheme' | 'university' | 'feed' | 'erasmus';
+  countries: string[];
+  /** Who may apply, in a few words. */
+  who: string;
+  level: string;
+  note: string;
+  /** Already among the person's sources. */
+  added: boolean;
+  /** Suits their nationality, level and places. */
+  fits: boolean;
 }
 
 /** One requirement from the posting, and where the application answers it. */
@@ -224,15 +515,18 @@ export interface JobDetail extends Job {
   timeline: TimelineEntry[];
   jd: string | null;
   report: string | null;
+  /** Drafted scholarship essays, as Markdown. */
+  essays: string | null;
 }
 
-export type JobSort = 'newest' | 'score' | 'scoredAt' | 'company';
-export const JOB_SORTS: JobSort[] = ['newest', 'score', 'scoredAt', 'company'];
+export type JobSort = 'newest' | 'score' | 'scoredAt' | 'company' | 'deadline';
+export const JOB_SORTS: JobSort[] = ['newest', 'score', 'scoredAt', 'company', 'deadline'];
 export const JOB_SORT_LABELS: Record<JobSort, string> = {
   newest: 'Newest',
   score: 'Score',
   scoredAt: 'Last scored',
   company: 'Company',
+  deadline: 'Deadline',
 };
 
 export interface JobQuery {
@@ -244,6 +538,10 @@ export interface JobQuery {
   minScore?: number;
   reason?: ArchiveReason;
   stage?: Stage;
+  /** Scholarships mode: only scholarships or only programmes. */
+  kind?: OppKind;
+  /** Only items with an open deadline within this many days. */
+  dueWithinDays?: number;
   sort?: JobSort;
   cursor?: string;
   limit?: number;
@@ -258,6 +556,8 @@ export interface JobPage {
 export type ListCounts = Record<JobList, number> & {
   /** Inbox jobs triage kept: what "Shortlist kept" would move. */
   kept: number;
+  /** Open items (not archived) with a deadline in the next 14 days. */
+  due: number;
 };
 
 export interface MoveRequest {
@@ -275,6 +575,8 @@ export interface AddJobRequest {
   role?: string;
   location?: string;
   then?: 'inbox' | 'shortlist' | 'score';
+  /** Scholarships mode: what the link is, when the person knows. */
+  kind?: 'scholarship' | 'programme';
 }
 
 export interface AddJobResult {
@@ -304,6 +606,9 @@ export const RUN_KINDS = [
   'jack_update',
   'tailor',
   'find_portal',
+  'match_programmes',
+  'find_funding',
+  'essays',
 ] as const;
 export type RunKind = (typeof RUN_KINDS)[number];
 
@@ -323,6 +628,9 @@ export const RUN_LABELS: Record<RunKind, string> = {
   jack_update: 'Draft Jack update',
   tailor: 'CV and letter',
   find_portal: 'Find careers feed',
+  match_programmes: 'Find programmes',
+  find_funding: 'Find funding',
+  essays: 'Draft essays',
 };
 
 export type RunStatus =
@@ -412,7 +720,28 @@ export const RUN_COSTS: Record<RunKind, RunCost> = {
   jack_update: { paid: true, estimate: 'About 1 min' },
   tailor: { paid: true, estimate: '5–10 min' },
   find_portal: { paid: true, estimate: 'About 1 min' },
+  match_programmes: { paid: true, estimate: 'About 5 min' },
+  find_funding: { paid: true, estimate: 'About 4 min' },
+  essays: { paid: true, estimate: 'About 4 min' },
 };
+
+/** A run's cost estimate in the account's words ("per job" or "per item"). */
+export function costEstimate(kind: RunKind, mode: Mode = 'jobs'): string {
+  const e = RUN_COSTS[kind].estimate;
+  return mode === 'scholarships' ? e.replace(/\bjob(s?)\b/g, 'item$1') : e;
+}
+
+/** Run names as a scholarships account sees them, where they differ. */
+export const RUN_LABELS_STUDY: Partial<Record<RunKind, string>> = {
+  scan_portals: 'Pages and feeds scan',
+  scan_ai: 'AI search',
+  capture: 'Read page',
+  tailor: 'CV and motivation letter',
+  sources_suggest: 'Suggest sources',
+};
+
+export const runLabel = (kind: RunKind, mode: Mode = 'jobs') =>
+  (mode === 'scholarships' ? RUN_LABELS_STUDY[kind] : undefined) ?? RUN_LABELS[kind];
 
 // ── Sources, profile, settings ───────────────────────────────────────────────
 
@@ -486,6 +815,52 @@ export interface Sources {
   rules: Rules;
 }
 
+/** A ready-made job board anyone can switch on from Find › Job boards. */
+export interface BoardInfo {
+  /** The scanner that reads it (`nhs-jobs`). */
+  provider: string;
+  /** What the board is called in the list. */
+  name: string;
+  /** One line on what it covers. */
+  blurb: string;
+  /** Fields every search on it starts with. */
+  defaults?: Record<string, unknown>;
+  /** Whether the board's search takes a place (`location`). */
+  takesPlace?: boolean;
+}
+
+/**
+ * Boards that are not a company's own feed but a whole sector's listing, which a person turns on rather
+ * than looks up. Civil Service Jobs is not here: it asks every visitor to tick "I'm not a robot".
+ */
+export const BOARD_CATALOGUE: BoardInfo[] = [
+  {
+    provider: 'nhs-jobs',
+    name: 'NHS Jobs',
+    blurb: 'NHS trusts and GP practices in England and Wales, near your place.',
+    takesPlace: true,
+  },
+  {
+    provider: 'jobs-ac-uk',
+    name: 'jobs.ac.uk',
+    blurb: 'University, research and academic jobs, mostly UK.',
+    defaults: { locations: ['united-kingdom'] },
+  },
+];
+
+/** The saved search that switching a catalogue board on adds: the person's own title words and place. */
+export function boardEntry(info: BoardInfo, rules: Rules): SourceEntry {
+  const place = rules.location.allow.find((p) => p.trim() && !/^remote$/i.test(p.trim()));
+  return {
+    name: info.name,
+    provider: info.provider,
+    enabled: true,
+    keywords: rules.title.positive.slice(0, 5),
+    ...(info.takesPlace && place ? { location: place.trim(), distance: 20 } : {}),
+    ...info.defaults,
+  };
+}
+
 export interface ProfileDoc {
   /** The CV as Markdown. */
   cv: string;
@@ -495,6 +870,8 @@ export interface ProfileDoc {
   profileYaml: string;
   /** Experience that isn't on the CV but is true: used only when a job asks for it. Free Markdown. */
   extras: string;
+  /** A document in the person's own words (a personal statement or cover letter): facts and voice. */
+  statement: string;
 }
 
 export interface Settings {
@@ -522,6 +899,7 @@ export interface Me {
   admin: boolean;
   /** Whether this person has been through setup. Accounts with a CV and profile already count as done. */
   setup: SetupStatus;
+  mode: Mode;
 }
 
 // ── Setup (onboarding) ───────────────────────────────────────────────────────
@@ -542,6 +920,8 @@ export interface SetupAbout {
   workRight: string;
   /** Languages they speak, with levels: "English (native), French (B1)". */
   languages: string;
+  /** Citizenship, as on the passport. Scholarships depend on it. */
+  nationality: string;
 }
 
 /** Career-ops' primary, secondary and adjacent. */
@@ -573,6 +953,8 @@ export interface SetupWant {
   salaryTarget: string;
   salaryMin: string;
   dealBreakers: string[];
+  /** Scholarships mode: everything else about what they want to study. `roles` holds the programmes. */
+  study: Partial<Omit<StudyPrefs, 'subjects' | 'nationality'>>;
 }
 
 /** The "get to know you" questions: what a CV can't say. Career-ops asks the same in chat. */
@@ -603,7 +985,46 @@ export const SETUP_QUESTIONS = [
     hint: 'Articles, projects, talks, a portfolio. One per line.',
   },
 ] as const;
-export type SetupQuestionKey = (typeof SETUP_QUESTIONS)[number]['key'];
+
+/** Scholarships mode asks what selection panels ask. */
+export const STUDY_QUESTIONS = [
+  {
+    key: 'why',
+    text: 'Why this subject, and what got you interested?',
+    hint: 'A moment, a project, a person. Panels read this first.',
+  },
+  {
+    key: 'research',
+    text: 'What question would you most like to work on?',
+    hint: 'In plain words. It can change later.',
+  },
+  {
+    key: 'after',
+    text: 'What do you plan to do after the degree?',
+    hint: 'A PhD, a job, work back home. Many scholarships ask how you’ll use it.',
+  },
+  {
+    key: 'impact',
+    text: 'Where have you led, helped others or made something better?',
+    hint: 'Leadership and service count for a lot with scholarship panels.',
+  },
+  {
+    key: 'need',
+    text: 'Anything about your circumstances a panel should know?',
+    hint: 'Funding needs, first in family at university, other hardships. Optional.',
+  },
+] as const;
+
+export type SetupQuestionKey =
+  | (typeof SETUP_QUESTIONS)[number]['key']
+  | (typeof STUDY_QUESTIONS)[number]['key'];
+
+export const questionsFor = (mode: Mode) =>
+  (mode === 'scholarships' ? STUDY_QUESTIONS : SETUP_QUESTIONS) as readonly {
+    key: SetupQuestionKey;
+    text: string;
+    hint: string;
+  }[];
 
 export interface SetupAnswer {
   key: SetupQuestionKey;
@@ -667,6 +1088,7 @@ export interface SetupState {
   runs: { cv: string | null; prefill: string | null; draft: string | null; sources: string | null };
   /** Set when setup is reopened from You: Finish replaces today's profile only then. */
   redo: boolean;
+  mode: Mode;
   doneAt: string | null;
 }
 
@@ -766,6 +1188,7 @@ export interface Health {
 
 export type EventType =
   | 'jobs.changed'
+  | 'study.changed'
   | 'run.changed'
   | 'sources.changed'
   | 'profile.changed'

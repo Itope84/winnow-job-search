@@ -1,0 +1,5714 @@
+{
+  "intuit": {
+    "tried": 1,
+    "page": "https://www.intuit.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Explore Career and Job Opportunities | Intuit Careers"
+  },
+  "oracle": {
+    "tried": 1,
+    "page": "https://careers.oracle.com/en/sites/jobsearch",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandExpStatic/js/ce-custom.js?themeNumber=default_minimal_theme_CX_45001&themeVersion=10&brandVersion=82",
+    "title": "Oracle Careers"
+  },
+  "servicenow": {
+    "tried": 3,
+    "page": "https://careers.servicenow.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "ServiceNow Careers - Join the team putting AI to work for people. | ServiceNow Careers"
+  },
+  "shopify": {
+    "tried": 1,
+    "page": "https://www.shopify.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers, Internships, and Jobs at Shopify | Shopify Careers - Shopify"
+  },
+  "ibm": {
+    "tried": 3,
+    "page": "https://www.ibm.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Define your career with IBM"
+  },
+  "microsoft": {
+    "tried": 1,
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Microsoft Careers"
+  },
+  "sap": {
+    "tried": 1,
+    "page": "https://careers.sap.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at SAP | SAP Careers"
+  },
+  "google": {
+    "tried": 1,
+    "page": "https://www.google.com/about/careers/applications/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://www.google.com/about/careers/applications/jobs/results",
+        "portal": "google",
+        "sample": [
+          "Communications Manager, Technical Infrastructure, EMEA",
+          "Manager, AI and Infrastructure Strategic Initiatives (Mandarin, English)",
+          "Senior Accountant, Google Payments"
+        ]
+      }
+    ]
+  },
+  "atlassian": {
+    "tried": 3,
+    "page": "https://www.atlassian.com/company/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Atlassian Careers: Join the Team | Atlassian"
+  },
+  "apple": {
+    "tried": 1,
+    "page": "https://idmsac.apple.com/IDMSWebAuth/appleauth/auth/oauth2/v2/authorize?client_id=k8pehdkbjdfms5zvaavpjtmxj2d5nh&redirect_uri=https%3A//people.apple.com/idms/oidc-authorize&response_type=code&state=/careers&scope=openid%20offline_access%20profile%20email%20roles%20api%20extended_profile",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "AppleConnect Sign In"
+  },
+  "netflix": {
+    "tried": 2,
+    "page": "https://jobs.netflix.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join Us | Careers at Netflix"
+  },
+  "booking-holdings": {
+    "tried": 3,
+    "page": "https://www.bookingholdings.com/careers/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Booking Holdings"
+  },
+  "uber": {
+    "tried": 3,
+    "page": "https://jobs.uber.com/en/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UberCareers/my-profile/sign-in",
+    "title": "Uber Careers"
+  },
+  "ebay": {
+    "tried": 1,
+    "page": "https://careers.ebayinc.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - eBay Inc."
+  },
+  "tencent": {
+    "tried": 1,
+    "page": "https://careers.tencent.com/",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://careers.tencent.com/",
+        "portal": "tencent",
+        "sample": [
+          "《怪物猎人：旅人》-特效设计师",
+          "ima-数据分析师",
+          "腾讯云-MaaS可用性高级研发工程师(北/杭/深/成)"
+        ]
+      }
+    ]
+  },
+  "snap": {
+    "tried": 1,
+    "page": "https://careers.snap.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Snap Inc. Careers"
+  },
+  "zalando": {
+    "tried": 1,
+    "page": "https://jobs.zalando.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Zalando Jobs"
+  },
+  "amazon": {
+    "tried": 3,
+    "page": "https://amazon.jobs/en/",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://amazon.jobs/en/",
+        "portal": "amazon",
+        "sample": [
+          "Sr. Operations Manager",
+          "Corporate Human Resources Partner Working Student (12 Months) - 2027",
+          "Sr. Solutions Architect – Data, AI, and Analytics Specialist, ASPI HCLS Specialist"
+        ]
+      }
+    ]
+  },
+  "mistral-ai": {
+    "tried": 3,
+    "page": "https://mistral.ai/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Mistral | #1 in Sovereign AI: Frontier Open Models You Own"
+  },
+  "hugging-face": {
+    "tried": 3,
+    "page": "https://apply.workable.com/huggingface",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://apply.workable.com/huggingface",
+        "portal": "workable",
+        "sample": [
+          "Open-Source Machine Learning Engineer - EMEA Remote",
+          "Open-Source Machine Learning Engineer - US Remote",
+          "Senior Open-Source Python Engineer, ML Developer Tools - US Remote"
+        ]
+      }
+    ]
+  },
+  "alibaba": {
+    "tried": 1,
+    "page": "https://talent.alibaba.com/en/home",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Alibaba Group Careers"
+  },
+  "qualcomm": {
+    "tried": 1,
+    "page": "https://careers.qualcomm.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Qualcomm | Qualcomm"
+  },
+  "amd": {
+    "tried": 1,
+    "page": "https://careers.amd.com/careers-home/jobs",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://cdn13.icims.com/icims-translations/latest/locales/en-US/acs.json",
+    "title": "AMD Jobs and Career Opportunities | Search Open Roles"
+  },
+  "palantir": {
+    "tried": 3,
+    "page": "https://www.palantir.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "glean": {
+    "tried": 3,
+    "page": "https://www.glean.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://job-boards.greenhouse.io/gleanwork",
+        "portal": "greenhouse",
+        "sample": ["Accountant", "AI Data Analyst", "AI Engineer - Data and Evals"]
+      },
+      {
+        "url": "https://boards-api.greenhouse.io/v1/boards/gleanwork/jobs?content=true",
+        "portal": "greenhouse",
+        "sample": ["Accountant", "AI Data Analyst", "AI Engineer - Data and Evals"]
+      }
+    ]
+  },
+  "tsmc": {
+    "tried": 2,
+    "page": "https://jobs.tsmc.com/zh-TW",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Applicant Calendar"
+  },
+  "bytedance": {
+    "tried": 2,
+    "page": "https://jobs.bytedance.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "字节跳动招聘官网｜字节跳动社招"
+  },
+  "applied-materials": {
+    "tried": 1,
+    "page": "https://careers.appliedmaterials.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Applied Materials | Applied Materials"
+  },
+  "lam-research": {
+    "tried": 1,
+    "page": "https://careers.lamresearch.com/careers",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://app.eightfold.ai/careerhub/explore/jobs",
+    "title": "Careers at Lam Research | Lam Research"
+  },
+  "arm": {
+    "tried": 1,
+    "page": "https://careers.arm.com/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://earlycareers-arm.icims.com/jobs/login?loginOnly=1&redirect=dashboard",
+    "title": "Working at Arm | Jobs & Careers"
+  },
+  "tcs": {
+    "tried": 1,
+    "page": "https://www.tcs.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "foxconn": {
+    "tried": 3,
+    "page": "https://www.foxconn.com/zh-tw",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "首頁 - 鴻海科技集團"
+  },
+  "infosys": {
+    "tried": 1,
+    "page": "https://careers.infosys.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "cognizant": {
+    "tried": 3,
+    "page": "https://careers.cognizant.com/global-en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "The future is yours to build | Cognizant Careers | Cognizant Careers"
+  },
+  "wipro": {
+    "tried": 1,
+    "page": "https://careers.wipro.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Wipro Careers | Reinvent Your World"
+  },
+  "hcltech": {
+    "tried": 1,
+    "page": "https://careers.hcltech.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "capgemini": {
+    "tried": 1,
+    "page": "https://careers.capgemini.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "sony": {
+    "tried": 3,
+    "page": "https://www.sony.com/en_us/SCA/careers/overview.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "ntt-data": {
+    "tried": 1,
+    "page": "https://careers.nttdata.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "genpact": {
+    "tried": 1,
+    "page": "https://www.genpact.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://genpact.wd108.myworkdayjobs.com/External_Careers",
+        "portal": "workday",
+        "sample": [
+          "Lead Analyst - Technical Writing 4C",
+          "Solution Architect - Data and Analytics 4C",
+          "Tech Lead - Test Automation P 4C"
+        ]
+      }
+    ]
+  },
+  "ltimindtree": {
+    "tried": 3,
+    "page": "https://www.ltm.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join LTM - Be an Outcreator | LTM Careers"
+  },
+  "epam": {
+    "tried": 1,
+    "page": "https://careers.epam.com/en/jobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Discover Exciting Job Opportunities | EPAM Careers"
+  },
+  "tech-mahindra": {
+    "tried": 1,
+    "page": "https://careers.techmahindra.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers & Job Opportunities with Tech Mahindra"
+  },
+  "endava": {
+    "tried": 1,
+    "page": "https://www.endava.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Take your career to the next level at Endava"
+  },
+  "check-point": {
+    "tried": 1,
+    "page": "https://careers.checkpoint.com/jobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Career Opportunities at Check Point Software"
+  },
+  "fortinet": {
+    "tried": 2,
+    "page": "https://www.fortinet.com/corporate/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001",
+    "title": "Fortinet Careers and Job Opportunities"
+  },
+  "palo-alto-networks": {
+    "tried": 2,
+    "page": "https://jobs.paloaltonetworks.com/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers",
+        "portal": "workday",
+        "sample": [
+          "Principal Software Automation/Test Engineer",
+          "Senior Principal Software Engineer – GlobalProtect (Windows & macOS Internals)",
+          "Regional Sales Account Manager"
+        ]
+      }
+    ]
+  },
+  "rapid7": {
+    "tried": 1,
+    "page": "https://careers.rapid7.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers Home"
+  },
+  "cgi": {
+    "tried": 2,
+    "page": "https://www.cgi.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | CGI.com"
+  },
+  "deutsche-telekom": {
+    "tried": 5,
+    "page": "https://www.telekom.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Deutsche Telekom"
+  },
+  "vodafone": {
+    "tried": 1,
+    "page": "https://careers.vodafone.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Vodafone Careers · Together we can"
+  },
+  "telefonica": {
+    "tried": 2,
+    "page": "https://jobs.telefonica.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at Telefónica Global"
+  },
+  "ericsson": {
+    "tried": 2,
+    "page": "https://jobs.ericsson.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Ericsson | Ericsson"
+  },
+  "comcast": {
+    "tried": 2,
+    "page": "https://jobs.comcast.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://comcast.wd115.myworkdayjobs.com/Comcast_Careers",
+        "portal": "workday",
+        "sample": [
+          "Xfinity Mobile Retail Service Associate-Part Time",
+          "Xfinity Retail Sales Consultant",
+          "Xfinity Retail Service Associate"
+        ]
+      }
+    ]
+  },
+  "nokia": {
+    "tried": 1,
+    "page": "https://jobs.nokia.com/en/sites/CX_1",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandExpStatic/js/ce-custom.js?themeNumber=3&themeVersion=5&brandVersion=98",
+    "title": "Nokia Careers"
+  },
+  "mtn-group": {
+    "tried": 24,
+    "page": "https://www.mtn.co.za/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Site is down for maintenence - MTN"
+  },
+  "huawei": {
+    "tried": 10,
+    "page": "https://www.huawei.com/cn/?redir=huawei_cn",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "华为 - 构建万物互联的智能世界"
+  },
+  "e-and": {
+    "tried": 3,
+    "page": "https://careers.etisalat.ae/en/index.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Etisalat Careers | Etisalat Careers"
+  },
+  "bank-of-america": {
+    "tried": 1,
+    "page": "https://careers.bankofamerica.com/en-us",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Bank of America Careers Site - Apply at Bank of America"
+  },
+  "jpmorgan-chase": {
+    "tried": 1,
+    "page": "https://www.jpmorganchase.com/careers?redirect=careers_jpm",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions",
+    "title": "Careers | JPMorganChase"
+  },
+  "wells-fargo": {
+    "tried": 3,
+    "page": "https://www.wellsfargojobs.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Wells Fargo"
+  },
+  "hsbc": {
+    "tried": 3,
+    "page": "https://www.hsbc.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers: Discover opportunities | HSBC Holdings plc"
+  },
+  "bnp-paribas": {
+    "tried": 3,
+    "page": "https://group.bnpparibas/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "standard-chartered": {
+    "tried": 2,
+    "page": "https://jobs.standardchartered.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home Page"
+  },
+  "rogers": {
+    "tried": 2,
+    "page": "https://jobs.rogers.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://rogers.valhalla.stage.jobs2web.com/content/What-We-Bring-Transcript/?locale=en_US",
+        "portal": "successfactors",
+        "sample": ["General Test Requisition", "Humanly Pipeline", "Humanly Scheduler General"]
+      }
+    ]
+  },
+  "standard-bank": {
+    "tried": 1,
+    "page": "https://www.standardbank.com/sbg/standard-bank-group/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Standard Bank Group | Standard Bank"
+  },
+  "td-bank": {
+    "tried": 2,
+    "page": "https://careers.td.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "TD Careers - Join a collaborative workplace that values you for who you are."
+  },
+  "jpmorgan": {
+    "tried": 1,
+    "page": "https://www.jpmorganchase.com/careers?redirect=careers_jpm",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions",
+    "title": "Careers | JPMorganChase"
+  },
+  "goldman-sachs": {
+    "tried": 3,
+    "page": "https://www.goldmansachs.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Goldman Sachs Careers | Goldman Sachs"
+  },
+  "ubs": {
+    "tried": 1,
+    "page": "https://careers.ubs.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Sign in to your account"
+  },
+  "evercore": {
+    "tried": 3,
+    "page": "https://www.evercore.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Evercore"
+  },
+  "deutsche-bank": {
+    "tried": 10,
+    "page": "https://careers.db.com/index?kid=careers-index-html.redirect-en.shortcut&language_id=3",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Ihre Karrieremöglichkeiten bei der Deutschen Bank – Deutsche Bank Careers"
+  },
+  "lazard": {
+    "tried": 3,
+    "page": "https://www.lazard.com/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://icbpjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LazardProfessionalCareers/jobs",
+    "title": "Careers | Lazard"
+  },
+  "jefferies": {
+    "tried": 3,
+    "page": "https://www.jefferies.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Jefferies | Global Opportunities & Professional Growth"
+  },
+  "kkr": {
+    "tried": 3,
+    "page": "https://www.kkr.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join Us for Engaging Work with Purpose and a Sense of Community | KKR"
+  },
+  "schroders": {
+    "tried": 3,
+    "page": "https://www.schroders.com/en/global/individual/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ekbq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/",
+    "title": "Schroders global | Active Investment Management"
+  },
+  "klarna": {
+    "tried": 3,
+    "page": "https://www.klarna.com/international/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Step into your stretch zone | Klarna Careers"
+  },
+  "wise": {
+    "tried": 3,
+    "page": "https://wise.jobs/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "MAKE A WISE MOVE"
+  },
+  "state-street": {
+    "tried": 1,
+    "page": "https://careers.statestreet.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "flutterwave": {
+    "tried": 3,
+    "page": "https://www.flutterwave.com/us/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Flutterwave Careers"
+  },
+  "paystack": {
+    "tried": 1,
+    "page": "https://careers.paystack.com/jobs",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://app.teamtailor.com/companies/wZnA9fvqbfU@eu/dashboard",
+        "portal": "teamtailor",
+        "sample": []
+      }
+    ]
+  },
+  "kraken": {
+    "tried": 1,
+    "page": "https://www.kraken.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": null
+  },
+  "kry": {
+    "tried": 10,
+    "page": "https://kryhealthcare.teamtailor.com/en-GB?/=",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://kryhealthcare.teamtailor.com/en-GB?/=",
+        "portal": "teamtailor",
+        "sample": [
+          "Médecins généralistes et spécialistes en téléconsultation et en présentiel (H/F)",
+          "Marketing & Growth Manager – France (H/F)",
+          "Account Executive - Partnerships & Growth F/H"
+        ]
+      }
+    ]
+  },
+  "rheinmetall": {
+    "tried": 6,
+    "page": "https://www.rheinmetall.com/en/career/vacancies",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://www.rheinmetall.com/en/career/vacancies",
+        "portal": "rheinmetall",
+        "sample": [
+          "Strategischer Einkäufer Elektrische Baugruppen und Kabel (m/w/d)",
+          "Prozessingenieur Elektrotechnik / Prozessleittechnik (m/w/d)",
+          "Elektrotechniker Inbetriebnahme Flugabwehrsysteme (m/w/d)"
+        ]
+      }
+    ]
+  },
+  "morgan-stanley": {
+    "tried": 7,
+    "page": "https://www.morganstanley.com/people",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "nubank": {
+    "tried": 14,
+    "page": "https://nu.com/en/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/nubank",
+        "portal": "ashby",
+        "sample": [
+          "Lead Business Analyst",
+          "Staff Software Engineer (Crypto, SV) - US - IC7 - 2026",
+          "Senior Staff Software Engineer (Crypto, SV) - IC8+ - US - 2026"
+        ]
+      }
+    ]
+  },
+  "razorpay": {
+    "tried": 21,
+    "page": "https://razorpay.com/careers/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited",
+        "portal": "greenhouse",
+        "sample": [
+          "AI Builder (Senior Product Designer)",
+          "Analyst, Banking Alliances",
+          "Associate Manager, Banking Alliances"
+        ]
+      }
+    ]
+  },
+  "revolut": {
+    "tried": 14,
+    "page": "https://revolut.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home - Revolut.co.uk"
+  },
+  "dell-technologies": {
+    "tried": 14,
+    "page": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/pages/software-engineering",
+    "title": "Dell Careers"
+  },
+  "axa": {
+    "tried": 14,
+    "page": "https://careers.axa.com/careers-home/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://cookie-policy-scripts.icims.com/axa/careers.axa.com/script.js",
+    "title": "Careers Home"
+  },
+  "legal-and-general": {
+    "tried": 14,
+    "page": "https://careers.legalandgeneral.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Legal & General Careers"
+  },
+  "allianz": {
+    "tried": 14,
+    "page": "https://careers.allianz.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/AISAIPGB/files/trackingV16-1793256621171.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod-ir/prod-ir.js?v=1793822996802",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/1749810627131-phw-px-hadlr.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "state-farm": {
+    "tried": 7,
+    "page": "https://www.statefarm.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "liberty-mutual": {
+    "tried": 7,
+    "page": "https://www.libertymutualgroup.com/about-lm/careers/overview",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Liberty Mutual"
+  },
+  "chubb": {
+    "tried": 14,
+    "page": "https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001",
+    "title": "Chubb External Careers"
+  },
+  "swiss-re": {
+    "tried": 14,
+    "page": "https://careers.swissre.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs and Careers at Swiss Re"
+  },
+  "munich-re": {
+    "tried": 14,
+    "page": "https://careers.munichre.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at ERGO | Munich Re | MEAG"
+  },
+  "deloitte": {
+    "tried": 14,
+    "page": "https://www.deloitte.com/global/en.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Deloitte Global | Together makes progress"
+  },
+  "aon": {
+    "tried": 21,
+    "page": "https://jobs.aon.com/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://cookie-policy-scripts.icims.com/aon/jobs.aon.com/script.js",
+    "title": "Aon Careers"
+  },
+  "kpmg": {
+    "tried": 21,
+    "page": "https://kpmg.com/xx/en/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "grant-thornton": {
+    "tried": 14,
+    "page": "https://www.grantthornton.com/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ehzq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/",
+    "title": "Career opportunities | Grant Thornton"
+  },
+  "forvis-mazars": {
+    "tried": 14,
+    "page": "https://careers.forvismazars.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Forvis Mazars Careers | Find Jobs in 100+ Countries"
+  },
+  "azets": {
+    "tried": 14,
+    "page": "https://www.azets.com/en-uk/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Azets | United Kingdom | Azets"
+  },
+  "cherry-bekaert": {
+    "tried": 7,
+    "page": "https://www.cbh.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Cherry Bekaert: Accounting Firm | Tax, Audit, and Advisory"
+  },
+  "mckinsey": {
+    "tried": 7,
+    "page": "https://jobs.mckinsey.com/en_US/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Login – McKinsey & Company"
+  },
+  "moss-adams": {
+    "tried": 7,
+    "page": "https://www.bakertilly.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://bakertilly.wd5.myworkdayjobs.com/BTCareers",
+        "portal": "workday",
+        "sample": [
+          "Temporary Tax Preparer - BT Prep",
+          "Managing Director, Managed Services Delivery",
+          "HR Consultant (Generalist)"
+        ]
+      }
+    ]
+  },
+  "cliftonlarsonallen": {
+    "tried": 7,
+    "page": "https://www.claconnect.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "CLA (CliftonLarsonAllen) | CPAs, Consultants, Wealth Advisors"
+  },
+  "deloitte-consulting": {
+    "tried": 14,
+    "page": "https://www.deloitte.com/uk/en.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Deloitte UK | Audit, Consulting, Financial, Risk Management, Tax Services"
+  },
+  "oliver-wyman": {
+    "tried": 7,
+    "page": "https://www.oliverwyman.com/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers In Management Consulting At Oliver Wyman"
+  },
+  "bain": {
+    "tried": 7,
+    "page": "https://careers.bain.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Recruits Portal"
+  },
+  "accenture-strategy": {
+    "tried": 14,
+    "page": "https://www.accenture.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Reinvented with Accenture"
+  },
+  "l-e-k": {
+    "tried": 14,
+    "page": "https://www.lek.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | L.E.K. Consulting"
+  },
+  "fti-consulting": {
+    "tried": 7,
+    "page": "https://www.fticonsulting.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://fticonsulting.wd108.myworkdayjobs.com/FTIConsultingCareers",
+        "portal": "workday",
+        "sample": [
+          "Senior Data Engineer, HR Data & Analytics",
+          "Managing Director, Telecom, Media & Technology | Corporate Finance",
+          "Managing Director - People & Transformation"
+        ]
+      }
+    ]
+  },
+  "kearney": {
+    "tried": 7,
+    "page": "https://www.kearney.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers – Be a Kearney Original | Kearney"
+  },
+  "west-monroe": {
+    "tried": 7,
+    "page": "https://www.westmonroe.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Consulting Careers & Jobs | West Monroe"
+  },
+  "clifford-chance": {
+    "tried": 14,
+    "page": "https://www.cliffordchance.com/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "slalom": {
+    "tried": 7,
+    "page": "https://jobs.slalom.com/en_US/careersmarketplace",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Find Jobs - Careers Marketplace"
+  },
+  "slaughter-and-may": {
+    "tried": 14,
+    "page": "https://careers.slaughterandmay.com/V2/Vacancy",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Vacancies"
+  },
+  "baker-mckenzie": {
+    "tried": 7,
+    "page": "https://careers.bakermckenzie.com/en_US/opportunities",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Job Search | Baker McKenzie"
+  },
+  "mercer": {
+    "tried": 7,
+    "page": "https://careers.marsh.com/global/en/people-and-investments",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "norton-rose-fulbright": {
+    "tried": 14,
+    "page": "https://www.nortonrosefulbright.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Global law firm | Norton Rose Fulbright"
+  },
+  "pinsent-masons": {
+    "tried": 14,
+    "page": "https://www.pinsentmasons.com/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ehpy.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?lastSelectedFacet=CATEGORIES&selectedCategoriesFacet=300000002420780%3B300000096905636",
+    "title": "Careers"
+  },
+  "lexisnexis": {
+    "tried": 14,
+    "page": "https://www.lexisnexis.co.uk/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://relx.wd3.myworkdayjobs.com/LexisNexisLegal",
+        "portal": "workday",
+        "sample": [
+          "Client Manager - Legal & Professional",
+          "Sales Development Representative - Legal & Professional",
+          "Retention Sales Development Representative"
+        ]
+      }
+    ]
+  },
+  "cleveland-clinic": {
+    "tried": 7,
+    "page": "https://jobs.clevelandclinic.org/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://ccf.wd1.myworkdayjobs.com/ClevelandClinicCareers",
+        "portal": "workday",
+        "sample": [
+          "New Grad RN Resident - Med/Surg and Cardiac Care",
+          "RN - Med/Surg and Cardiac Care",
+          "RN - Med/Surg and Cardiac Care"
+        ]
+      }
+    ]
+  },
+  "spire-healthcare": {
+    "tried": 14,
+    "page": "https://elij.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://connect.facebook.net/signals/config/2141163422793868?v=2.9.435&r=stable&domain=elij.fa.em2.oraclecloud.com&hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189",
+    "title": "Candidate Experience site Careers"
+  },
+  "fresenius": {
+    "tried": 14,
+    "page": "https://careers.fresenius.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Fresenius | Join our Global Healthcare Group | Global Fresenius Group Career Site"
+  },
+  "mediclinic": {
+    "tried": 21,
+    "page": "https://careers.mediclinic.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs and Careers | Group"
+  },
+  "abbvie": {
+    "tried": 7,
+    "page": "https://careers.abbvie.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Difference makers wanted | AbbVie"
+  },
+  "novo-nordisk": {
+    "tried": 14,
+    "page": "https://careers.novonordisk.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Novo Nordisk"
+  },
+  "bayer": {
+    "tried": 14,
+    "page": "https://nordiccareers.bayer.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://app.teamtailor.com/companies/MetyNGWPS7s@eu/dashboard",
+        "portal": "teamtailor",
+        "sample": []
+      }
+    ]
+  },
+  "takeda": {
+    "tried": 14,
+    "page": "https://jobs.takeda.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at Takeda Pharmaceutical"
+  },
+  "vertex": {
+    "tried": 7,
+    "page": "https://www.vertex.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Innovative Digital Solutions and IT Transformation | Vertex"
+  },
+  "sun-pharma": {
+    "tried": 21,
+    "page": "https://careers.sunpharma.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "biontech": {
+    "tried": 14,
+    "page": "https://jobs.biontech.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "medpace": {
+    "tried": 7,
+    "page": "https://careers.medpace.com/jobs",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://uscareers-medpace.icims.com/jobs/login?loginOnly=1",
+    "title": "Medpace Careers"
+  },
+  "genentech": {
+    "tried": 7,
+    "page": "https://www.gene.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Genentech"
+  },
+  "wuxi-apptec": {
+    "tried": 14,
+    "page": "https://www.wuxiapptec.com/careers/talent",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Our Talent Outlook | WuXi AppTec"
+  },
+  "ge-healthcare": {
+    "tried": 7,
+    "page": "https://careers.gehealthcare.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "boston-scientific": {
+    "tried": 7,
+    "page": "https://jobs.bostonscientific.com/",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://bostonscientific.eightfold.ai/careers",
+    "title": "Jobs at Boston Scientific"
+  },
+  "olympus": {
+    "tried": 14,
+    "page": "https://www.olympus-global.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Olympus Global Homepage"
+  },
+  "zimmer-biomet": {
+    "tried": 7,
+    "page": "https://careers.zimmerbiomet.com/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "unitedhealth-group": {
+    "tried": 14,
+    "page": "https://careers.unitedhealthgroup.com/search-jobs",
+    "status": "unsupported",
+    "platform": "taleo",
+    "platformUrl": "https://uhg.taleo.net/careersection/10000/mysubmissions.ftl?lang=en",
+    "title": "Search our Job Opportunities at UnitedHealth Group"
+  },
+  "huma": {
+    "tried": 21,
+    "page": "https://careers.huma.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Huma careers"
+  },
+  "hologic": {
+    "tried": 7,
+    "page": "https://careers.hologic.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home - Map | Hologic"
+  },
+  "paramount": {
+    "tried": 7,
+    "page": "https://careers.paramount.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Paramount"
+  },
+  "oscar-health": {
+    "tried": 7,
+    "page": "https://oscarhealth.com/careers",
+    "status": "unsupported",
+    "platform": "paycom",
+    "platformUrl": "https://www.paycomonline.net/v4/ats/web.php/portal/2CF04B0FCE679EC453D428900E1C10BA/career-page",
+    "title": "Careers"
+  },
+  "bbc": {
+    "tried": 14,
+    "page": "https://www.bbc.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "BBC Careers"
+  },
+  "warner-bros-discovery": {
+    "tried": 7,
+    "page": "https://careers.wbd.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "sony-group": {
+    "tried": 28,
+    "page": "https://www.sony.com/en_us/SCA/careers/overview.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "itv": {
+    "tried": 14,
+    "page": "https://careers.itv.com/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-euup-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/my-profile/sign-in",
+    "title": "ITV Careers"
+  },
+  "penguin-random-house": {
+    "tried": 7,
+    "page": "https://careers.penguinrandomhouse.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Penguin RandomHouse – Careers"
+  },
+  "news-corp": {
+    "tried": 14,
+    "page": "https://careers.newscorp.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | News Corp"
+  },
+  "pearson": {
+    "tried": 14,
+    "page": "https://pearson.jobs/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/my-profile/sign-in",
+    "title": "Home | Pearson"
+  },
+  "universal-music-group": {
+    "tried": 28,
+    "page": "https://www.universalmusic.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at UMG - UMG"
+  },
+  "harpercollins": {
+    "tried": 7,
+    "page": "https://www.harpercollins.com/pages/careers",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://careers-hub-harpercollins.icims.com/jobs/intro",
+    "title": "Careers - HarperCollins Publishers"
+  },
+  "electronic-arts": {
+    "tried": 7,
+    "page": "https://www.ea.com/",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "sony-interactive": {
+    "tried": 14,
+    "page": "https://careers.playstation.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Sony Interactive Entertainment"
+  },
+  "nintendo": {
+    "tried": 14,
+    "page": "https://careers.nintendo.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Nintendo - Join Our Team"
+  },
+  "cd-projekt": {
+    "tried": 14,
+    "page": "https://www.cdprojekt.com/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - CD PROJEKT RED"
+  },
+  "ubisoft": {
+    "tried": 14,
+    "page": "https://www.ubisoft.com/en-us/company/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Job Openings | Ubisoft Careers"
+  },
+  "unity": {
+    "tried": 7,
+    "page": "https://unity.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "supercell": {
+    "tried": 14,
+    "page": "https://supercell.com/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers × Supercell"
+  },
+  "bandai-namco": {
+    "tried": 14,
+    "page": "https://bandainamco.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - BANDAI NAMCO Holdings USA Inc."
+  },
+  "king-s-college-london": {
+    "tried": 14,
+    "page": "https://www.hugedomains.com/domain_profile.cfm?d=kingscollegelondon.com",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "KingsCollegeLondon.com is for sale | HugeDomains"
+  },
+  "university-of-edinburgh": {
+    "tried": 14,
+    "page": "https://universityofedinburgh.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "University of Edinburgh | App Development Edinburgh | App Developers Edinburgh"
+  },
+  "eth-zurich": {
+    "tried": 14,
+    "page": "https://www.hugedomains.com/domain_profile.cfm?d=ethzurich.com",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "EthZurich.com is for sale | HugeDomains"
+  },
+  "chegg": {
+    "tried": 7,
+    "page": "https://careers.chegg.com/app/auth/sign-in",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Chegg · Career Services Platform"
+  },
+  "byju-s": {
+    "tried": 7,
+    "page": "https://byjus.com/careers-at-byjus/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "e Learning for Online Courses like UPSC, K3, K10, K12, CBSE NCERT, ICSE, NEET & JEE"
+  },
+  "bpp": {
+    "tried": 14,
+    "page": "https://www.bpp.com/about-bpp/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at BPP - BPP"
+  },
+  "teach-first": {
+    "tried": 14,
+    "page": "https://www.teachfirst.org.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Rewrite the future | Teach First"
+  },
+  "kaplan": {
+    "tried": 7,
+    "page": "https://kaplan.com/about/work-with-us",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://ghc.wd1.myworkdayjobs.com/Kaplan_International_Careers",
+        "portal": "workday",
+        "sample": [
+          "Student Success Manager",
+          "Executivo(a) de Contas Júnior",
+          "Asesor de ventas LATAM"
+        ]
+      },
+      {
+        "url": "https://ghc.wd1.myworkdayjobs.com/Kaplan_Careers",
+        "portal": "workday",
+        "sample": [
+          "Financial Aid Officer",
+          "Instructor, FE & PE Engineering Exam Prep (PPI)",
+          "Insurance Instructor, San Antonio, TX (in person)"
+        ]
+      }
+    ]
+  },
+  "mercy-corps": {
+    "tried": 7,
+    "page": "https://www.prosperglobal.org/careers",
+    "status": "unsupported",
+    "platform": "jobvite",
+    "platformUrl": "https://jobs.jobvite.com/prosperglobal/jobs?t=Part-Time-%7C-Full-Time-%7C-Temp-%7C-Pipeline&r=Field-%7C-Administrative%20Offices",
+    "title": "Careers | Prosper Global"
+  },
+  "plan-international": {
+    "tried": 28,
+    "page": "https://www.plan.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Join the Future of Mobile Connectivity | plan.com"
+  },
+  "care": {
+    "tried": 14,
+    "page": "https://www.care.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Care.com Careers"
+  },
+  "actionaid": {
+    "tried": 14,
+    "page": "https://careers.actionaid.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "actionaid.co.uk"
+  },
+  "norwegian-refugee-council": {
+    "tried": 14,
+    "page": "https://www.nrc.no/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ekum.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2019",
+    "title": "Work with us | NRC"
+  },
+  "fhi-360": {
+    "tried": 7,
+    "page": "https://www.fhi360.org/join-our-team/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://fhi.wd1.myworkdayjobs.com/FHI_360_External_Career_Portal",
+        "portal": "workday",
+        "sample": ["Travel Administrator", "Travel Administrator", "Oficial Técnico Clínico III"]
+      }
+    ]
+  },
+  "oak-foundation": {
+    "tried": 14,
+    "page": "https://www.hugedomains.com/domain_profile.cfm?d=oakfoundation.com",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "OakFoundation.com is for sale | HugeDomains"
+  },
+  "dai-global": {
+    "tried": 14,
+    "page": "https://www.dai.com/careers/working-at-dai",
+    "status": "unsupported",
+    "platform": "adp",
+    "platformUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5745ed7b-7f8d-47a9-9161-d975aa7f3314&ccId=19000101_000001&lang=en_US&selectedMenuKey=CareerCenter",
+    "title": "Working at DAI · DAI: International Development"
+  },
+  "british-heart-foundation": {
+    "tried": 14,
+    "page": "https://www.hugedomains.com/domain_profile.cfm?d=britishheartfoundation.com",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "BritishHeartFoundation.com is for sale | HugeDomains"
+  },
+  "chemonics": {
+    "tried": 7,
+    "page": "https://www.chemonics.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Chemonics International"
+  },
+  "age-uk": {
+    "tried": 14,
+    "page": "https://www.ageuk.org.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Age UK | Let's change how we age"
+  },
+  "novo-nordisk-foundation": {
+    "tried": 14,
+    "page": "https://novonordiskfonden.dk/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Frontpage - Novo Nordisk Fonden"
+  },
+  "rspb": {
+    "tried": 14,
+    "page": "https://www.rspb.org.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "RSPB - A Conservation Charity for Birds and Wildlife"
+  },
+  "ilo": {
+    "tried": 14,
+    "page": "https://www.ilo.org/about-ilo/employment-opportunities",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Employment opportunities | International Labour Organization"
+  },
+  "unfpa": {
+    "tried": 7,
+    "page": "https://www.unfpa.org/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "United Nations Population Fund"
+  },
+  "oecd": {
+    "tried": 14,
+    "page": "https://careers.oecd.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "oecd.com"
+  },
+  "unesco": {
+    "tried": 14,
+    "page": "https://onu.diplomatie.gouv.fr/fr",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Accueil | La France à l'ONU"
+  },
+  "wto": {
+    "tried": 14,
+    "page": "https://www.wto.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "WTO — Global Freight & Logistics Excellence"
+  },
+  "general-dynamics": {
+    "tried": 7,
+    "page": "https://www.gd.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "General Dynamics | Home"
+  },
+  "lockheed-martin": {
+    "tried": 7,
+    "page": "https://www.lockheedmartin.com/en-us/careers/index.html",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://lockheedmartin.eightfold.ai/careers",
+    "title": "Lockheed Martin Careers | Lockheed Martin"
+  },
+  "rtx": {
+    "tried": 7,
+    "page": "https://careers.rtx.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "l3harris": {
+    "tried": 7,
+    "page": "https://careers.l3harris.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at L3Harris Technologies"
+  },
+  "safran": {
+    "tried": 14,
+    "page": "https://www.safran.com/en-gb/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Safran"
+  },
+  "bae-systems": {
+    "tried": 14,
+    "page": "https://jobs.baesystems.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "babcock-international": {
+    "tried": 28,
+    "page": "https://careers.babcockinternational.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Babcock Careers · Creating a safe and secure world, together"
+  },
+  "leonardo": {
+    "tried": 14,
+    "page": "https://www.leonardo.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Work with us: careers at Leonardo"
+  },
+  "qinetiq": {
+    "tried": 14,
+    "page": "https://careers.qinetiq.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - QinetiQ"
+  },
+  "delta": {
+    "tried": 7,
+    "page": "https://www.delta.com/us/en/careers/overview",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "american-airlines": {
+    "tried": 7,
+    "page": "https://jobs.aa.com/?utm_source=careersite",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "united-airlines": {
+    "tried": 7,
+    "page": "https://www.united.com/",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "anduril": {
+    "tried": 7,
+    "page": "https://www.anduril.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Anduril"
+  },
+  "honeywell-aerospace": {
+    "tried": 7,
+    "page": "https://www.honeywellaerospace.com/us/en/company/careers",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "southwest": {
+    "tried": 7,
+    "page": "https://careers.southwestair.com/us/en/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "qatar-airways": {
+    "tried": 7,
+    "page": "https://careers.qatarairways.com/",
+    "status": "unsupported",
+    "platform": "taleo",
+    "platformUrl": "https://aa115.taleo.net/careersection/qa_external_cs/jobsearch.ftl",
+    "title": "Find Jobs - Qatar Airways Careers"
+  },
+  "emirates-group": {
+    "tried": 28,
+    "page": "https://www.theemiratesgroup.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Emirates Group Brands"
+  },
+  "ryanair": {
+    "tried": 14,
+    "page": "https://careers.ryanair.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers – Ryanair Careers"
+  },
+  "easyjet": {
+    "tried": 14,
+    "page": "https://careers.easyjet.com/fr",
+    "status": "unsupported",
+    "platform": "taleo",
+    "platformUrl": "https://easyjet.taleo.net/careersection/2/jobsearch.ftl?ftlcompclass=LoginComponent",
+    "title": "Carrières easyJet | Rejoindre notre équipe"
+  },
+  "singapore-airlines": {
+    "tried": 14,
+    "page": "https://www.singaporeair.com/en_UK/gb/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "SIA-Maintenance Page"
+  },
+  "turkish-airlines": {
+    "tried": 7,
+    "page": "https://careers.turkishairlines.com/tr-TR/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Kariyer | Türk Hava Yolları ®"
+  },
+  "etihad": {
+    "tried": 14,
+    "page": "https://careers.etihad.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://careers.smartrecruiters.com/EtihadAirways5",
+        "portal": "smartrecruiters",
+        "sample": [
+          "Fleet Support Officer",
+          "Data Analyst – Databricks AI/BI & FinOps",
+          "Technical Delivery Manager – PROS Revenue Management"
+        ]
+      },
+      {
+        "url": "https://jobs.smartrecruiters.com/EtihadAirways5",
+        "portal": "smartrecruiters",
+        "sample": [
+          "Fleet Support Officer",
+          "Data Analyst – Databricks AI/BI & FinOps",
+          "Technical Delivery Manager – PROS Revenue Management"
+        ]
+      },
+      {
+        "url": "https://jobs.smartrecruiters.com/my-applications",
+        "portal": "smartrecruiters",
+        "sample": []
+      },
+      {
+        "url": "https://jobs.smartrecruiters.com/ni",
+        "portal": "smartrecruiters",
+        "sample": []
+      }
+    ]
+  },
+  "qantas": {
+    "tried": 14,
+    "page": "https://careers.qantas.com/",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "ethiopian-airlines": {
+    "tried": 7,
+    "page": "https://www.ethiopianairlines.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Page Not Found | Ethiopian Airlines"
+  },
+  "indigo": {
+    "tried": 21,
+    "page": "https://www.indigo.ca/?fdtcm=1",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Indigo - Chapters - Coles | Canada's Biggest Bookstore"
+  },
+  "air-canada": {
+    "tried": 14,
+    "page": "https://careers.aircanada.com/ca/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/dayjs/locale/en-ca.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/phw-px-hadlr-1759419021369.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod/prod.js?v=1793823309306",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "heathrow-airport": {
+    "tried": 14,
+    "page": "https://www.heathrow.com/company/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://encd.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3001",
+    "title": "Careers | Heathrow"
+  },
+  "stellantis": {
+    "tried": 14,
+    "page": "https://careers.stellantis.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Stellantis | Explore global opportunities"
+  },
+  "volkswagen-group": {
+    "tried": 28,
+    "page": "https://www.volkswagen.co.uk/en.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Volkswagen UK | The official Volkswagen website"
+  },
+  "ford": {
+    "tried": 7,
+    "page": "https://www.careers.ford.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at Ford Motor Company"
+  },
+  "bmw": {
+    "tried": 14,
+    "page": "https://www.bmw.co.uk/en/index.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "BMW UK Official Website - The Ultimate Driving Machine"
+  },
+  "tata-motors": {
+    "tried": 28,
+    "page": "https://careers.tatamotors.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Tata Motors Careers"
+  },
+  "byd": {
+    "tried": 14,
+    "page": "https://careers.byd.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "BYD Career"
+  },
+  "honda": {
+    "tried": 14,
+    "page": "https://careers.honda.com/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/phw-px-hadlr-1759419021369.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod/prod.js?v=1793823332091",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/dayjs/locale/en.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "renault": {
+    "tried": 14,
+    "page": "https://www.renaultgroup.com/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Renault Group"
+  },
+  "bosch": {
+    "tried": 14,
+    "page": "https://jobs.bosch.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Bosch"
+  },
+  "jaguar-land-rover": {
+    "tried": 28,
+    "page": "https://careers.jaguarlandrover.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home :: JLR Careers"
+  },
+  "continental": {
+    "tried": 14,
+    "page": "https://jobs.continental.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs | Continental"
+  },
+  "rivian": {
+    "tried": 7,
+    "page": "https://careers.rivian.com/careers-home/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://us-careers-rivian.icims.com/jobs/login?loginOnly=1",
+    "title": "Rivian Automotive"
+  },
+  "magna": {
+    "tried": 14,
+    "page": "https://wd3.myworkdaysite.com/en-US/recruiting/magna/Magna",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search for Jobs"
+  },
+  "mahindra": {
+    "tried": 21,
+    "page": "https://www.mahindra.com/career",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Mahindra Careers | Mahindra Job Vacancy | Mahindra Group"
+  },
+  "totalenergies": {
+    "tried": 14,
+    "page": "https://careers.totalenergies.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Build your career with us | careers.totalenergies.com"
+  },
+  "saudi-aramco": {
+    "tried": 7,
+    "page": "https://www.aramco.com/careers",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "exxonmobil": {
+    "tried": 7,
+    "page": "https://jobs.exxonmobil.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at ExxonMobil"
+  },
+  "adnoc": {
+    "tried": 14,
+    "page": "https://jobs.adnoc.ae/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/require-4.2.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/ph-basic-4.38.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/common/ph-common-bundle-part2-4.118.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/vendor-bundle-part2-4.1.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/vendor-bundle-part1-4.1.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/common/ph-common-bundle-part1-4.118.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/AGLAGPAE/en_us/desktop/page8/ph-page-page8-1752475173291.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/ph-loader-4.36.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "eni": {
+    "tried": 14,
+    "page": "https://www.eni.com/en-IT/careers/job-opportunities/employee-value-proposition.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Hear from our global team | Eni"
+  },
+  "conocophillips": {
+    "tried": 7,
+    "page": "https://careers.conocophillips.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://conocophillips.wd1.myworkdayjobs.com/External",
+        "portal": "workday",
+        "sample": ["3rd Mate - Marine", "Able Bodied Seaman (AB) - Marine", "Oiler - Marine"]
+      }
+    ]
+  },
+  "slb": {
+    "tried": 7,
+    "page": "https://careers.slb.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | SLB Careers 2026"
+  },
+  "halliburton": {
+    "tried": 7,
+    "page": "https://careers.halliburton.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Halliburton"
+  },
+  "denso": {
+    "tried": 14,
+    "page": "https://careers.denso.com/",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "phillips-66": {
+    "tried": 7,
+    "page": "https://careers.phillips66.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Phillips 66 Careers"
+  },
+  "woodside": {
+    "tried": 14,
+    "page": "https://careers.woodside.com.au/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "nextera-energy": {
+    "tried": 7,
+    "page": "https://jobs.nexteraenergy.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "NextEra Energy Careers | Home"
+  },
+  "enel": {
+    "tried": 14,
+    "page": "https://jobs.enel.com/en_US/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "national-grid": {
+    "tried": 14,
+    "page": "https://careers.nationalgrid.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "National Grid Careers - Home"
+  },
+  "siemens-gamesa": {
+    "tried": 14,
+    "page": "https://www.siemensgamesa.com/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Siemens Gamesa wind energy"
+  },
+  "vestas": {
+    "tried": 14,
+    "page": "https://careers.vestas.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at Vestas"
+  },
+  "first-solar": {
+    "tried": 7,
+    "page": "https://www.firstsolar.com/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-esbv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+    "title": "Careers | First Solar"
+  },
+  "rwe": {
+    "tried": 14,
+    "page": "https://jobs.rwe.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "RWE I Find Jobs"
+  },
+  "octopus-energy": {
+    "tried": 14,
+    "page": "https://octopusenergy.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Octopus Energy US"
+  },
+  "scottishpower": {
+    "tried": 14,
+    "page": "https://www.scottishpower.co.uk/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "duke-energy": {
+    "tried": 7,
+    "page": "https://www.duke-energy.com/home",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Duke Energy - Home"
+  },
+  "southern-company": {
+    "tried": 14,
+    "page": "https://southerncompany.jobs/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers Home | Southern Company"
+  },
+  "tata-power": {
+    "tried": 21,
+    "page": "https://careers.tatapower.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://tatapowert1.valhalla44.stage.jobs2web.com/search",
+        "portal": "successfactors",
+        "sample": ["T&D Others", "Lead - Solar Rooftop", "AzureAD Test 1"]
+      }
+    ]
+  },
+  "general-electric": {
+    "tried": 7,
+    "page": "https://www.ge.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "GE Companies: Next Generation and Future | General Electric"
+  },
+  "siemens": {
+    "tried": 14,
+    "page": "https://jobs.siemens.com/en_US/externaljobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at Siemens"
+  },
+  "deere": {
+    "tried": 7,
+    "page": "https://careers.deere.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at John Deere | John Deere"
+  },
+  "emerson": {
+    "tried": 7,
+    "page": "https://www.emerson.com/en/corporate/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs",
+    "title": "Your Career at Emerson Starts Here"
+  },
+  "honeywell": {
+    "tried": 7,
+    "page": "https://careers.honeywell.com/en/sites/Honeywell",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmRestApi/CandidateExperience/en/siteSettings/CX_1",
+    "title": "Honeywell Careers"
+  },
+  "eaton": {
+    "tried": 14,
+    "page": "https://eaton.eightfold.ai/careers",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://api.themartec.com/v1/delivery/get-init-setting?widgetId=s8JUd0D&url=https:%2F%2Featon.eightfold.ai%2Fcareers&meta=%7B%22description%22:%22Careers+at+Eaton%22,%22og:image%22:%22https:%2F%2Fstatic.vscdn.net%2Fimages%2Fcareers%2Fdemo%2Featon%2F1707496622::EatonLinkedInImage.jpeg%22,%22og:description%22:%22Careers+at+Eaton%22,%22og:title%22:%22Careers+at+Eaton%22,%22og:url%22:%22https:%2F%2Featon.eightfold.ai%2Fcareers%22,%22title%22:%22Careers+at+Eaton+Corporation+%7C+Eaton+Corporation%22,%22canonical%22:%22https:%2F%2Featon.eightfold.ai%2Fcareers%22%7D",
+    "title": "Careers at Eaton Corporation | Eaton Corporation"
+  },
+  "caterpillar": {
+    "tried": 7,
+    "page": "https://www.caterpillar.com/en/careers.html",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "mitsubishi-heavy-industries": {
+    "tried": 14,
+    "page": "https://jobs.mitsubishiheavyindustries.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "johnson-controls": {
+    "tried": 14,
+    "page": "https://jobs.johnsoncontrols.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://jci.wd5.myworkdayjobs.com/JCI",
+        "portal": "workday",
+        "sample": [
+          "Fire Project Manager",
+          "HVAC Controls Systems Technician",
+          "Commercial Security Major Account Sales Exec"
+        ]
+      }
+    ]
+  },
+  "cummins": {
+    "tried": 7,
+    "page": "https://cummins.jobs/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-espx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/my-profile/sign-in",
+    "title": "Home - Cummins"
+  },
+  "whirlpool": {
+    "tried": 7,
+    "page": "https://www.whirlpoolcareers.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Whirlpool Corporation Careers - Whirlpool Corporation Careers"
+  },
+  "bechtel": {
+    "tried": 7,
+    "page": "https://jobs.bechtel.com/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/dayjs/locale/en.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/1749810627131-phw-px-hadlr.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod-ir/prod-ir.js?v=1793823472574",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "vinci": {
+    "tried": 14,
+    "page": "https://jobs.vinci.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Vinci Jobs | Homepage"
+  },
+  "hochtief": {
+    "tried": 21,
+    "page": "https://www.hochtief.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at HOCHTIEF"
+  },
+  "tata-steel": {
+    "tried": 21,
+    "page": "https://www.tatasteel.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Job Vacancies for Freshers and Laterals | Tata Steel"
+  },
+  "skanska": {
+    "tried": 14,
+    "page": "https://www.skanska.com/uk/en-gb/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://skanska.avature.net/talentcommunity",
+        "portal": "avature",
+        "sample": [
+          "Traffic Safety Control Officer",
+          "Temporary Works Coordinator - HS2 Main Works",
+          "Sub Agent - Highways"
+        ]
+      }
+    ]
+  },
+  "acs": {
+    "tried": 21,
+    "page": "https://acs.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at ACS Services | Brockton MA IT Jobs"
+  },
+  "balfour-beatty": {
+    "tried": 14,
+    "page": "https://www.balfourbeatty.com/careers/careers-at-balfour-beatty",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Balfour Beatty"
+  },
+  "kier": {
+    "tried": 14,
+    "page": "https://jobs.kier.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Kier Careers | Careers Home"
+  },
+  "jacobs": {
+    "tried": 7,
+    "page": "https://www.jacobs.com/careers-jacobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Jacobs | Jacobs"
+  },
+  "laing-o-rourke": {
+    "tried": 14,
+    "page": "https://careers.laingorourke.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "aecom": {
+    "tried": 7,
+    "page": "https://aecom.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "atkins-realis": {
+    "tried": 21,
+    "page": "https://careers.atkinsrealis.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "AtkinsRéalis Careers – Careers at AtkinsRéalis"
+  },
+  "arup": {
+    "tried": 14,
+    "page": "https://careers.arup.com/earlycareers/events/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | ARUP"
+  },
+  "fluor": {
+    "tried": 7,
+    "page": "https://careers.fluor.com/careers",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://fluor.eightfold.ai/careers?hl=en",
+    "title": "Fluor Careers"
+  },
+  "stantec": {
+    "tried": 14,
+    "page": "https://www.stantec.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "network-rail": {
+    "tried": 14,
+    "page": "https://www.networkrail.co.uk/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Network Rail"
+  },
+  "turner-construction": {
+    "tried": 7,
+    "page": "https://www.turnerconstruction.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://turnerconstruction.csod.com/ux/ats/careersite/3/home?c=turnerconstruction#/",
+        "portal": "csod",
+        "sample": [
+          "SPO Senior Superintendent - Concrete",
+          "FEC Support System Senior Analyst",
+          "Financial Manager - Finance Reporting HQ"
+        ]
+      },
+      {
+        "url": "https://turnerconstruction.csod.com/ux/ats/careersite/4/home?c=turnerconstruction#/",
+        "portal": "csod",
+        "sample": [
+          "FEC Support System Senior Analyst",
+          "XPL Integrator",
+          "FEC Equipment Specialist"
+        ]
+      },
+      {
+        "url": "https://turnerconstruction.csod.com/ux/ats/careersite/1/home?c=turnerconstruction#/",
+        "portal": "csod",
+        "sample": [
+          "SPO Senior Superintendent - Concrete",
+          "xPL Procurement Agent",
+          "FEC Support System Senior Analyst"
+        ]
+      },
+      {
+        "url": "https://turnerconstruction.csod.com/ux/ats/careersite/2/home?c=turnerconstruction#/",
+        "portal": "csod",
+        "sample": [
+          "SB Supply Chain Intern - Summer 2027 (Cincinnati)",
+          "Traveling MEP Superintendent - Data Centers",
+          "Summer 2027 SB Supply Chain Intern - Boston"
+        ]
+      }
+    ]
+  },
+  "wsp": {
+    "tried": 14,
+    "page": "https://www.wsp.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Contribute to the change the world needs | WSP"
+  },
+  "savills": {
+    "tried": 14,
+    "page": "https://careers.savills.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://app.teamtailor.com/companies/9OxPwH4PkW0@eu/dashboard",
+        "portal": "teamtailor",
+        "sample": []
+      }
+    ]
+  },
+  "compass": {
+    "tried": 7,
+    "page": "https://www.compass.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Compass"
+  },
+  "rightmove": {
+    "tried": 14,
+    "page": "https://www.rightmove.co.uk/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Rightmove - We couldn’t find the place you were looking for."
+  },
+  "barratt-redrow": {
+    "tried": 14,
+    "page": "https://www.barrattredrow.co.uk/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers – Barratt Redrow plc"
+  },
+  "taylor-wimpey": {
+    "tried": 14,
+    "page": "https://jobs.taylorwimpey.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "d-r-horton": {
+    "tried": 7,
+    "page": "https://www.drhorton.com/careers",
+    "status": "unsupported",
+    "platform": "taleo",
+    "platformUrl": "https://drhorton.taleo.net/careersection/2/jobsearch.ftl?lang=en",
+    "title": "Careers | D.R. Horton"
+  },
+  "knight-frank": {
+    "tried": 14,
+    "page": "https://www.knightfrank.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://knightfrank.wd103.myworkdayjobs.com/KF",
+        "portal": "workday",
+        "sample": [
+          "Property Manager",
+          "Building Surveyor | Glasgow",
+          "Occupier Strategy and Solutions (OSS) Sales Professionals (Executive to Manager Level)"
+        ]
+      }
+    ]
+  },
+  "emaar": {
+    "tried": 14,
+    "page": "https://www.emaar.com/en/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://emhm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/",
+    "title": "Careers | Emaar Properties"
+  },
+  "british-land": {
+    "tried": 14,
+    "page": "https://www.britishland.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "British Land Careers & Opportunities | British Land"
+  },
+  "walmart": {
+    "tried": 7,
+    "page": "https://careers.walmart.com/us/en/home",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Walmart Careers"
+  },
+  "costco": {
+    "tried": 7,
+    "page": "https://careers.costco.com/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://careers-costco.icims.com/",
+    "title": "Costco Careers"
+  },
+  "tesco": {
+    "tried": 14,
+    "page": "https://careers.tesco.com/en_GB/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Job Search | Tesco Careers"
+  },
+  "schwarz-group": {
+    "tried": 28,
+    "page": "https://ts.domainname.de/schwarzgroup.de",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Der Domainname schwarzgroup.de steht zum Verkauf"
+  },
+  "kroger": {
+    "tried": 7,
+    "page": "https://www.krogerfamilycareers.com/en/sites/CX_2001",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://eluq.fa.us2.oraclecloud.com/hcmUI/CandExpStatic/js/ce-custom.js?themeNumber=2003&themeVersion=3&brandVersion=12",
+    "title": "The Kroger Co. Careers"
+  },
+  "marks-and-spencer": {
+    "tried": 14,
+    "page": "https://jobs.marksandspencer.com/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-eqid-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/my-profile/sign-in",
+    "title": "Home | M&S Careers"
+  },
+  "carrefour": {
+    "tried": 14,
+    "page": "https://www.carrefour.com/en/hr-work-carrefour",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "HR work at Carrefour | Carrefour Group"
+  },
+  "ikea": {
+    "tried": 21,
+    "page": "https://jobs.ikea.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "IKEA Jobs | See all job openings"
+  },
+  "pepsico": {
+    "tried": 7,
+    "page": "https://www.pepsicojobs.com/main/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "PepsiCo Careers"
+  },
+  "l-oreal": {
+    "tried": 14,
+    "page": "https://careers.loreal.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "L'Oréal Careers | Jobs & Career Opportunities - L'Oréal Groupe"
+  },
+  "ahold-delhaize": {
+    "tried": 14,
+    "page": "https://careers.aholddelhaize.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Homepage | Ahold Delhaize Careers | Ahold Delhaize"
+  },
+  "mondelez": {
+    "tried": 7,
+    "page": "https://www.mondelezinternational.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Mondelēz International, Inc."
+  },
+  "reckitt": {
+    "tried": 14,
+    "page": "https://careers.reckitt.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Reckitt"
+  },
+  "danone": {
+    "tried": 14,
+    "page": "https://careers.danone.com/en-global/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Danone Careers"
+  },
+  "haleon": {
+    "tried": 14,
+    "page": "https://careers.haleon.com/careers",
+    "status": "unsupported",
+    "platform": "eightfold",
+    "platformUrl": "https://federation.corpnet4.com/idp/startSSO.ping?PartnerSpId=https%3A%2F%2Fhaleon.eightfold.ai&SAMLRequest=fVJLb6MwEL7nVyCkHgPmkVSxQiq2aXeR0gSV7B72Ujl4aCyBzXpMH%2F9%2BjdtuW6kb5AMefw%2FPN14i69qe5oM5ylv4MwCaiec9da1E6o4yf9CSKoYCqWQdIDU1rfKbDY0DQnutjKpV638ineYwRNBGKDmSinXm77ZXm933YnvHYJbM54ekmccRzOLmwEh9nhK%2BOMyahHCSNk2SJEBG4i%2FQaDUy30qOe88rtXoQHPTWOmb%2Blbg%2Fmka13LkgDlBINEwayyDxfBpFU5LuY0KjBU0Xv0fU2jYvJDNO9mhMjzQMG7CSrhbUSvcSTGp%2FulDwPrR62lTVLuiFvL8o7UaCrvqCZ459luRn8bVdR9aC5cPblQImRr%2FyNbxvQnIrcDq1wwsI6Y%2F9vpyWu2o%2FSuRvWV4qiUNn3UE%2FiBp%2B3m7eW%2FjCPkRUd8wO%2FYLVmL0CbFv%2BykW5HKdIXWp6dUJmGX4EvlN7Og6hWJeqFfWzq4%2FftdIdM%2F%2FvMwoiVxF82jgoHST2UItGAPf%2FyeRtqx4vNTBj52z0AL4XriaTl8t8fsurvw%3D%3D&RelayState=https%3A%2F%2Fcareers.haleon.com%2Fapi%2Fpcsx%2Fnotifications_boot_data",
+    "title": "Careers at Haleon | Haleon"
+  },
+  "estee-lauder": {
+    "tried": 7,
+    "page": "https://www.esteelauder.com/customer-service/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "colgate-palmolive": {
+    "tried": 7,
+    "page": "https://jobs.colgate.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search for a Job with a Consumer Products Leader | Colgate"
+  },
+  "kraft-heinz": {
+    "tried": 7,
+    "page": "https://careers.kraftheinzcompany.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Kraft Heinz Careers – Explore Careers. We’re growing greatness."
+  },
+  "beiersdorf": {
+    "tried": 14,
+    "page": "https://www.beiersdorf.com/career/overview",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Overview | Career - Beiersdorf"
+  },
+  "dangote-group": {
+    "tried": 28,
+    "page": "https://careers.dangote.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Dangote Careers"
+  },
+  "kenvue": {
+    "tried": 7,
+    "page": "https://jobs.kenvue.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://kenvue.wd5.myworkdayjobs.com/kenvue",
+        "portal": "workday",
+        "sample": [
+          "Product Quality Complaint Manager",
+          "Quality Systems and Performance Analyst",
+          "Senior Scientist, Research & Development [Self Care]"
+        ]
+      }
+    ]
+  },
+  "jbs": {
+    "tried": 14,
+    "page": "https://www.jbs.com.br/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - JBS Brasil"
+  },
+  "henkel": {
+    "tried": 14,
+    "page": "https://www.henkel.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "adm": {
+    "tried": 7,
+    "page": "https://www.e-adm.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "e-ADM"
+  },
+  "general-mills": {
+    "tried": 7,
+    "page": "https://www.careers.generalmills.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://genmills.wd1.myworkdayjobs.com/GMI_External_Careers",
+        "portal": "workday",
+        "sample": [
+          "Sanitation Line Lead",
+          "Food Safety and Quality Lab Technician - 2nd Shift - Cedar Rapids Plant",
+          "Threat Intelligence Analyst - Minneapolis, MN"
+        ]
+      }
+    ]
+  },
+  "cargill": {
+    "tried": 7,
+    "page": "https://careers.cargill.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search Jobs and Careers at Cargill | Working at Cargill"
+  },
+  "bunge": {
+    "tried": 7,
+    "page": "https://jobs.bunge.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at Bunge"
+  },
+  "heineken": {
+    "tried": 14,
+    "page": "https://www.heineken.com/gb/en/agegateway/?returnUrl=%2fcareers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "AgeGateway"
+  },
+  "kellanova": {
+    "tried": 7,
+    "page": "https://jobs.kellanova.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "hilton": {
+    "tried": 7,
+    "page": "https://jobs.hilton.com/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://efet.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=IRC_RECRUITING&action=ICE_JOB_SEARCH_RESP",
+    "title": "Careers at Hilton | Home"
+  },
+  "syngenta": {
+    "tried": 14,
+    "page": "https://jobs.syngenta.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://jobs.smartrecruiters.com/oneclick-ui",
+        "portal": "smartrecruiters",
+        "sample": []
+      }
+    ]
+  },
+  "marriott": {
+    "tried": 7,
+    "page": "https://careers.marriott.com/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ejwl.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/my-profile/sign-in",
+    "title": "Marriott International Careers | Find Job & Career Opportunities"
+  },
+  "ihg": {
+    "tried": 14,
+    "page": "https://careers.ihg.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "hyatt": {
+    "tried": 7,
+    "page": "https://careers.hyatt.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Hyatt - Careers"
+  },
+  "mcdonald-s": {
+    "tried": 7,
+    "page": "https://careers.mcdonalds.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "wyndham": {
+    "tried": 7,
+    "page": "https://www.wyndhamhotels.com/de-de",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Wyndham Hotel & Resorts | Suche nach Preisen für Hotelzimmer, Angeboten und Urlaubsmöglichkeiten"
+  },
+  "accor": {
+    "tried": 14,
+    "page": "https://careers.accor.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Hospitality is a work of heart | Accor"
+  },
+  "starbucks": {
+    "tried": 7,
+    "page": "https://careers.starbucks.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Starbucks Careers - Starbucks Careers"
+  },
+  "compass-group": {
+    "tried": 28,
+    "page": "https://www.compass.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - Compass"
+  },
+  "royal-caribbean": {
+    "tried": 7,
+    "page": "https://careers.royalcaribbeangroup.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Royal Caribbean Group Careers – Royal Caribbean Group owns four global cruise vacation brands — Royal Caribbean International, Celebrity Cruises, Silversea and Azamara — and 50% of a joint venture that operates TUI Cruises and Hapag-Lloyd Cruises."
+  },
+  "carnival": {
+    "tried": 7,
+    "page": "https://jobs.carnival.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at Carnival"
+  },
+  "las-vegas-sands": {
+    "tried": 7,
+    "page": "https://www.sands.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Invalid URL"
+  },
+  "amazon-logistics": {
+    "tried": 7,
+    "page": "https://www.amazonlogistics.com/ap/signin?openid.pape.max_auth_age=43200&openid.return_to=https%3A%2F%2Fwww.amazonlogistics.com%2Fcareers&suppressChangeEmailLink=1&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amazonlogistics_na&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&suppressSignInRadioButtons=1",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Amazon Sign-In"
+  },
+  "merlin-entertainments": {
+    "tried": 14,
+    "page": "https://www.merlincareers.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Merlin Careers | Home"
+  },
+  "ups": {
+    "tried": 7,
+    "page": "https://www.ups.com/us/en/error",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "dsv": {
+    "tried": 14,
+    "page": "https://jobs.dsv.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Work for DSV and forward your career | DSV"
+  },
+  "dhl-group": {
+    "tried": 28,
+    "page": "https://careers.dhl.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "disney-parks": {
+    "tried": 7,
+    "page": "https://disneyparks.disney.go.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Family Vacations at Disney Parks & Resorts"
+  },
+  "gxo": {
+    "tried": 7,
+    "page": "https://jobs.gxo.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "xpo": {
+    "tried": 7,
+    "page": "https://jobs.xpo.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join the XPO Team - Search for Jobs"
+  },
+  "msc": {
+    "tried": 14,
+    "page": "https://www.msc.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "evri": {
+    "tried": 14,
+    "page": "https://www.evri.com/404-not-found",
+    "status": "unsupported",
+    "platform": "dayforce",
+    "platformUrl": "https://jobs.dayforcehcm.com/en-GB/evri/CANDIDATEPORTAL",
+    "title": "Evri | Cheap Parcel Delivery & Courier Service"
+  },
+  "dp-world": {
+    "tried": 14,
+    "page": "https://www.dpworld.com/en/careers",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs",
+    "title": "DP World Careers & Jobs | DP World Recruitment | DP World"
+  },
+  "royal-mail": {
+    "tried": 14,
+    "page": "https://careers.royalmailgroup.com/gb/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/1749810627131-phw-px-hadlr.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/dayjs/locale/en-gb.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod-ir/prod-ir.js?v=1793823698875",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "aramark": {
+    "tried": 7,
+    "page": "https://careers.aramark.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Aramark"
+  },
+  "expeditors": {
+    "tried": 7,
+    "page": "https://www.expeditors.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "ocado": {
+    "tried": 14,
+    "page": "https://careers.ocadoretail.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://ocadoretail.teamtailor.com/connect",
+        "portal": "teamtailor",
+        "sample": [
+          "Social Executive (12 Month FTC)",
+          "Senior Demand Planning Manager",
+          "Chief Information Security Officer"
+        ]
+      },
+      {
+        "url": "https://ocadoretail.teamtailor.com/connect/login",
+        "portal": "teamtailor",
+        "sample": [
+          "Social Executive (12 Month FTC)",
+          "Senior Demand Planning Manager",
+          "Chief Information Security Officer"
+        ]
+      }
+    ]
+  },
+  "iss": {
+    "tried": 14,
+    "page": "https://iss.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | ISS"
+  },
+  "serco": {
+    "tried": 14,
+    "page": "https://careers.serco.com/gb/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/1749810627131-phw-px-hadlr.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/SGJSGZGB/customScripts/customscript_1754475948.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn-bot.phenompeople.com/txm-bot/prod-ir/prod-ir.js?v=1793823720297",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "securitas": {
+    "tried": 14,
+    "page": "https://www.securitas.com/en/careers/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://securitas.teamtailor.com/",
+        "portal": "teamtailor",
+        "sample": [
+          "BIM Technician - Global Clients",
+          "HR Director, Securitas Technology Belgium",
+          "Global Employee Insights and Engagement Lead"
+        ]
+      }
+    ]
+  },
+  "experian": {
+    "tried": 14,
+    "page": "https://jobs.experian.com/jobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search Jobs | Experian"
+  },
+  "concentrix": {
+    "tried": 7,
+    "page": "https://jobs.concentrix.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Work with Concentrix - Game Changing Customer Support Jobs"
+  },
+  "mitie": {
+    "tried": 14,
+    "page": "https://careers.mitie.com/jobs/home/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs home | Mitie"
+  },
+  "cintas": {
+    "tried": 7,
+    "page": "https://careers.cintas.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Cintas - Home"
+  },
+  "adp": {
+    "tried": 7,
+    "page": "https://jobs.adp.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs at ADP - Careers at ADP - ADP Jobs - ADP Careers - Apply Online at ADP | ADP Careers"
+  },
+  "paychex": {
+    "tried": 7,
+    "page": "https://careers.paychex.com/careers",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://cdn13.icims.com/icims-translations/latest/locales/en-US/acs.json",
+    "title": "Paychex Careers and Job Openings | Paychex Apply"
+  },
+  "meta": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "doordash": {
+    "tried": 9,
+    "page": "https://job-boards.greenhouse.io/doordashusa",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://job-boards.greenhouse.io/doordashusa",
+        "portal": "greenhouse",
+        "sample": ["Account Executive", "Account Executive", "Account Executive - CPG Ads"]
+      }
+    ]
+  },
+  "vmware-by-broadcom": {
+    "tried": 8,
+    "page": "https://broadcom.wd1.myworkdayjobs.com/external_career",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://broadcom.wd1.myworkdayjobs.com/external_career",
+        "portal": "workday",
+        "sample": [
+          "Software Engineer (ICB 3)",
+          "R&D Fab Process Engineer",
+          "Staff Memory Circuit Design Engineer"
+        ]
+      }
+    ]
+  },
+  "character-ai": {
+    "tried": 9,
+    "page": "https://jobs.ashbyhq.com/character",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/character",
+        "portal": "ashby",
+        "sample": [
+          "Machine Learning Infrastructure Engineer",
+          "Research Engineer, Post-Training (All Industry Levels)",
+          "Software Engineer, Core Product"
+        ]
+      }
+    ]
+  },
+  "safe-superintelligence": {
+    "tried": 8,
+    "page": "https://ssi.inc/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/ssi",
+        "portal": "ashby",
+        "sample": []
+      }
+    ]
+  },
+  "google-deepmind": {
+    "tried": 16,
+    "page": "https://deepmind.google/careers/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://www.google.com/about/careers/applications/jobs/results?company=DeepMind&utm_source=deepmind&utm_medium=partner-site&src=Online/Google%20Website/deepmind",
+        "portal": "google",
+        "sample": [
+          "Research Engineer, Responsibility, DeepMind",
+          "Product Manager, Deep Zoom, DeepMind",
+          "Technical Program Manager, Cross-Product Execution and Model Feedback Operations, DeepMind"
+        ]
+      }
+    ]
+  },
+  "samsung-electronics": {
+    "tried": 15,
+    "page": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://sec.wd3.myworkdayjobs.com/Samsung_Careers",
+        "portal": "workday",
+        "sample": [
+          "AI Transformation Specialist (Onsite - Plano, TX)",
+          "AI Transformation Lead",
+          "Team Lead, Electrical Engineering"
+        ]
+      }
+    ]
+  },
+  "microsoft-ai": {
+    "tried": 15,
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Microsoft Careers"
+  },
+  "texas-instruments": {
+    "tried": 8,
+    "page": "https://careers.ti.com/en/sites/CX",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandExpStatic/js/ce-custom.js?themeNumber=default_minimal_theme_CX&themeVersion=4&brandVersion=31",
+    "title": "Texas Instruments Careers"
+  },
+  "sentinelone": {
+    "tried": 9,
+    "page": null,
+    "status": "no-page"
+  },
+  "fujitsu": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "mandiant-google-cloud": {
+    "tried": 8,
+    "page": "https://www.google.com/about/careers/applications/jobs/results/?q=mandiant",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://www.google.com/about/careers/applications/jobs/results/?q=mandiant",
+        "portal": "google",
+        "sample": [
+          "Senior Remediation Advisor, Mandiant STS",
+          "Senior Strategic Security Consultant, Mandiant, Google Cloud",
+          "Mission Manager, National Security, Mandiant"
+        ]
+      }
+    ]
+  },
+  "ibm-consulting": {
+    "tried": 8,
+    "page": "https://www.ibm.com/careers/search",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search jobs | IBM Careers"
+  },
+  "at-and-t": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "microsoft-security": {
+    "tried": 8,
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Microsoft Careers"
+  },
+  "wiz-google": {
+    "tried": 9,
+    "page": "https://www.wiz.io/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Wiz"
+  },
+  "cyberark": {
+    "tried": 8,
+    "page": "https://www.paloaltonetworks.com/idira",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Idira | The Identity Security Platform - Palo Alto Networks"
+  },
+  "bt-group": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "charter": {
+    "tried": 8,
+    "page": "https://jobs.spectrum.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join Spectrum | Explore Jobs in Tech, Sales, Customer Service & More"
+  },
+  "bharti-airtel": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "natwest-group": {
+    "tried": 29,
+    "page": null,
+    "status": "no-page"
+  },
+  "hdfc-bank": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "singtel": {
+    "tried": 16,
+    "page": "https://groupcareers.singtel.com/",
+    "status": "unsupported",
+    "platform": "jobvite",
+    "platformUrl": "https://jobs.jobvite.com/trustwave",
+    "title": "Jobs at Singtel Group"
+  },
+  "reliance-jio": {
+    "tried": 22,
+    "page": "https://careers.jio.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Reliance Jio Careers"
+  },
+  "carlyle": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "access-bank": {
+    "tried": 16,
+    "page": "https://www.accessbankplc.com/notfound?aspxerrorpath=/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "notfound | Access Bank"
+  },
+  "fidelity-investments": {
+    "tried": 8,
+    "page": "https://jobs.fidelity.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Find a meaningful career at Fidelity | Fidelity Careers"
+  },
+  "icici-bank": {
+    "tried": 22,
+    "page": "https://www.icicicareers.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "ICICI Careers - Explore Dream Job with a Career in ICICI Bank Ltd"
+  },
+  "metlife": {
+    "tried": 9,
+    "page": "https://www.metlifecareers.com/en_US/ml",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "prudential-financial": {
+    "tried": 8,
+    "page": "https://jobs.prudential.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://pru.wd5.myworkdayjobs.com/Careers",
+        "portal": "workday",
+        "sample": [
+          "PGIM - Senior Analyst, North America Distribution",
+          "Lead, Application Support Engineer | PGIM Ireland",
+          "Public and Private Credit Fixed Income Intern – 9-month placement  | PGIM Ireland"
+        ]
+      }
+    ]
+  },
+  "progressive": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "ey": {
+    "tried": 1,
+    "page": "https://careers.ey.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at EY: search jobs"
+  },
+  "generali": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "h-and-r-block": {
+    "tried": 8,
+    "page": "https://careers.hrblock.com/careers-home",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://cdn13.icims.com/icims-translations/latest/locales/en-US/acs.json",
+    "title": "H&R Block Careers"
+  },
+  "ey-parthenon": {
+    "tried": 15,
+    "page": "https://careers.ey.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at EY: search jobs"
+  },
+  "pwc-strategy-and": {
+    "tried": 16,
+    "page": "https://www.pwc.co.uk/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers with PwC | PwC UK Careers"
+  },
+  "zurich": {
+    "tried": 15,
+    "page": "https://www.zurich.com/careers",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  },
+  "roland-berger": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "alvarez-and-marsal": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "boston-consulting-group": {
+    "tried": 15,
+    "page": "https://careers.bcg.com/global/en/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "kpmg-advisory": {
+    "tried": 15,
+    "page": "https://www.kpmgcareers.co.uk/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "capgemini-invent": {
+    "tried": 15,
+    "page": "https://www.capgemini.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Capgemini Career Paths | Career Growth & Progression | Capgemini"
+  },
+  "kirkland-and-ellis": {
+    "tried": 8,
+    "page": "https://www.kirkland.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Kirkland & Ellis LLP"
+  },
+  "willis-towers-watson": {
+    "tried": 15,
+    "page": "https://careers.wtwco.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Homepage"
+  },
+  "latham-and-watkins": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "white-and-case": {
+    "tried": 8,
+    "page": "https://www.whitecase.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "allen-and-overy-shearman": {
+    "tried": 15,
+    "page": "https://careers.aoshearman.com/en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Working at A&O Shearman | A&O Shearman careers"
+  },
+  "hogan-lovells": {
+    "tried": 15,
+    "page": "https://www.hlc.com/en/-sxa/hoganlovells/home/global-careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Error Page"
+  },
+  "ashurst": {
+    "tried": 15,
+    "page": "https://www.ashurstperkinscoie.com/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Ashurst Perkins Coie"
+  },
+  "hca-healthcare": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "nhs-england-trusts-via-nhs-jobs": {
+    "tried": 15,
+    "page": "https://www.jobs.nhs.uk/candidate/search",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search for jobs in the NHS"
+  },
+  "addleshaw-goddard": {
+    "tried": 15,
+    "page": "https://joinus.addleshawgoddard.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Join Us"
+  },
+  "commonspirit-health": {
+    "tried": 8,
+    "page": "https://www.commonspirit.careers/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://careers-commonspirit.icims.com/connect",
+    "title": "Working at CommonSpirit Health"
+  },
+  "herbert-smith-freehills-kramer": {
+    "tried": 16,
+    "page": "https://careers.hsfkramer.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "eversheds-sutherland": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "kaiser-permanente": {
+    "tried": 8,
+    "page": "https://www.kaiserpermanentejobs.org/",
+    "status": "unsupported",
+    "platform": "taleo",
+    "platformUrl": "https://kp.taleo.net/careersection/external/mysubmissions.ftl?lang=en",
+    "title": "Working at Kaiser Permanente"
+  },
+  "mayo-clinic": {
+    "tried": 8,
+    "page": "https://jobs.mayoclinic.org/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Mayo-US",
+    "title": "Working at Mayo Clinic"
+  },
+  "universal-health-services": {
+    "tried": 9,
+    "page": "https://jobs.uhsinc.com/careers/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://careers-uhsinc.icims.com/jobs/login?loginOnly=1&redirect=&hashed=-626005006",
+    "title": "UHS Careers"
+  },
+  "ascension": {
+    "tried": 8,
+    "page": "https://jobs.ascension.org/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "tenet": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "community-health-systems": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "johnson-and-johnson": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "merck-and-co": {
+    "tried": 15,
+    "page": "https://jobs.merck.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "providence": {
+    "tried": 8,
+    "page": "https://providence.jobs/",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://evac.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search?optyType=JOB",
+    "title": "Home - Providence"
+  },
+  "boehringer-ingelheim": {
+    "tried": 15,
+    "page": "https://www.boehringer-ingelheim.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "apollo-hospitals": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "eli-lilly": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "teva": {
+    "tried": 8,
+    "page": "https://www.careers.teva/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at Teva Pharmaceutical"
+  },
+  "veterans-health-administration": {
+    "tried": 8,
+    "page": "https://vacareers.va.gov/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "VA Careers"
+  },
+  "ppd-thermo": {
+    "tried": 8,
+    "page": "https://jobs.thermofisher.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "johnson-and-johnson-medtech": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "charles-river-laboratories": {
+    "tried": 8,
+    "page": "https://jobs.criver.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Charles River Careers – United Kingdom Home"
+  },
+  "moderna": {
+    "tried": 9,
+    "page": "https://www.modernatx.com/careers/life-at-moderna?",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://modernatx.wd1.myworkdayjobs.com/M_tx",
+        "portal": "workday",
+        "sample": [
+          "Senior Engineer I, CQV & Drug Product Engineering",
+          "Director, Analytical Technical Operations",
+          "2027 Co-Op, mRNA Design Engineering"
+        ]
+      }
+    ]
+  },
+  "intuitive-surgical": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "edwards-lifesciences": {
+    "tried": 8,
+    "page": "https://edwards.wd5.myworkdayjobs.com/edwardscareers",
+    "status": "supported",
+    "how": "direct",
+    "matches": [
+      {
+        "url": "https://edwards.wd5.myworkdayjobs.com/edwardscareers",
+        "portal": "workday",
+        "sample": [
+          "Director, Engineering",
+          "Group Product Marketing Manager, Commercial Strategy",
+          "First Shift Associate Inspector"
+        ]
+      }
+    ]
+  },
+  "axa-health": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "siemens-healthineers": {
+    "tried": 15,
+    "page": "https://www.siemens-healthineers.com/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://onehealthineers.wd3.myworkdayjobs.com/SHSJB",
+        "portal": "workday",
+        "sample": [
+          "Sales Representative",
+          "Senior Electrical Engineer",
+          "Key Account Leader - Customer Support"
+        ]
+      }
+    ]
+  },
+  "vitality": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "epic-systems": {
+    "tried": 8,
+    "page": "https://careers.epic.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://epic.avature.net/Careers/Login",
+        "portal": "avature",
+        "sample": []
+      }
+    ]
+  },
+  "oracle-health-cerner": {
+    "tried": 8,
+    "page": "https://careers.oracle.com/en/sites/jobsearch",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandExpStatic/js/ce-custom.js?themeNumber=default_minimal_theme_CX_45001&themeVersion=10&brandVersion=82",
+    "title": "Oracle Careers"
+  },
+  "becton-dickinson": {
+    "tried": 8,
+    "page": "https://jobs.bd.com/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://bdx.wd1.myworkdayjobs.com/EXTERNAL_CAREER_SITE_USA",
+        "portal": "workday",
+        "sample": [
+          "Director, Clinical Partnerships & Solutions",
+          "Supervisor Manufacturing Operations",
+          "Injection Molding Technician"
+        ]
+      }
+    ]
+  },
+  "financial-times": {
+    "tried": 15,
+    "page": "https://aboutus.ft.com/careers/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://job-boards.eu.greenhouse.io/financialtimes33",
+        "portal": "greenhouse",
+        "sample": ["Analytics Engineer", "Application Security Engineer", "Asia News Editor"]
+      }
+    ]
+  },
+  "ro": {
+    "tried": 2,
+    "page": null,
+    "status": "no-page"
+  },
+  "microsoft-gaming": {
+    "tried": 8,
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Microsoft Careers"
+  },
+  "activision-blizzard-microsoft": {
+    "tried": 8,
+    "page": "https://careers.microsoft.com/v2/global/en/home.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home | Microsoft Careers"
+  },
+  "square-enix": {
+    "tried": 15,
+    "page": "https://www.jp.square-enix.com/recruit/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "SQUARE ENIX -RECRUITING-"
+  },
+  "king-microsoft": {
+    "tried": 22,
+    "page": "https://careers.king.com/us/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/common/phw-common-1793085641904.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/vue3_1719567713796.min.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1793085641771.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/canvas/common/widgets/scripts/1791443188579_phw-language-selector-default-default-v1.umd.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/phw-px-hadlr-1759419021369.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/vendor/dayjs.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/vendor/dayjs/locale/en.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/bootstrap/phw-runner-1793085641841.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "university-of-oxford": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "ucl": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "university-of-cambridge": {
+    "tried": 15,
+    "page": "https://www.cam.ac.uk/jobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs | University of Cambridge"
+  },
+  "valve": {
+    "tried": 8,
+    "page": "https://www.valvesoftware.com/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Valve Corporation"
+  },
+  "embracer-group": {
+    "tried": 29,
+    "page": null,
+    "status": "no-page"
+  },
+  "harvard": {
+    "tried": 8,
+    "page": "https://hr.harvard.edu/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "imperial-college-london": {
+    "tried": 15,
+    "page": "https://www.imperial.ac.uk/jobs/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs | Imperial College London"
+  },
+  "mit": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "stanford": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "johns-hopkins": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "university-of-california-system": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "state-university-of-new-york": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "university-of-manchester": {
+    "tried": 15,
+    "page": "https://www.jobs.manchester.ac.uk/Home/Job",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "The University of Manchester - Jobs Page"
+  },
+  "university-of-melbourne": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "university-of-toronto": {
+    "tried": 15,
+    "page": "https://jobs.utoronto.ca/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at U of T"
+  },
+  "physicswallah": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "mcgraw-hill": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "university-of-texas-system": {
+    "tried": 8,
+    "page": "https://www.utsystem.edu/offices/human-resources/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://utaustin.wd1.myworkdayjobs.com/UTstaff",
+        "portal": "workday",
+        "sample": [
+          "Research Scientist, Laser-Plasma Accelerators and X-ray Sources",
+          "Senior Procurement and Contracts Manager",
+          "Research Engineering/Scientist Associate II, Center of"
+        ]
+      }
+    ]
+  },
+  "brac": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "2u": {
+    "tried": 1,
+    "page": "https://2u.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Mission-Driven EdTech Job Opportunities | Careers | 2U"
+  },
+  "save-the-children": {
+    "tried": 30,
+    "page": "https://jobs.savethechildren.org.uk/jobs/home/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Save the Children | Careers"
+  },
+  "medecins-sans-frontieres": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "catholic-relief-services": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "national-university-of-singapore": {
+    "tried": 15,
+    "page": "https://www.nus.edu.sg/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "ifrc": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "christian-aid": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "oxfam": {
+    "tried": 16,
+    "page": "https://jobs.oxfam.org.uk/jobs/home/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Oxfam | Careers"
+  },
+  "abt-associates": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "international-committee-of-the-red-cross": {
+    "tried": 29,
+    "page": "https://careers.icrc.org/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": ""
+  },
+  "wellcome-trust": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "international-rescue-committee": {
+    "tried": 15,
+    "page": "https://careers.rescue.org/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/pcs/common/1755880496065-ph-px-hadlr-1.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "open-society-foundations": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "rockefeller-foundation": {
+    "tried": 8,
+    "page": "https://www.rockefellerfoundation.org/about-us/careers/",
+    "status": "unsupported",
+    "platform": "adp",
+    "platformUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=24726181-f57f-46a1-824d-3c8a89c3328a&ccId=19000101_000001&type=MP&lang=en_US",
+    "title": "Careers | RF"
+  },
+  "palladium": {
+    "tried": 15,
+    "page": "https://thepalladiumgroup.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Palladium - Career"
+  },
+  "rspca": {
+    "tried": 15,
+    "page": "https://www.rspca.org.uk/utilities/jobs",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs | RSPCA - RSPCA - rspca.org.uk"
+  },
+  "barnardo-s": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "bloomberg-philanthropies": {
+    "tried": 8,
+    "page": "https://www.bloomberg.org/about/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access to this page has been denied"
+  },
+  "macmillan-cancer-support": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "american-cancer-society": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "unicef": {
+    "tried": 8,
+    "page": "https://www.unicef.org/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "UNICEF Careers | UNICEF Careers"
+  },
+  "united-way-worldwide": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "undp": {
+    "tried": 8,
+    "page": "https://www.undp.org/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "world-food-programme": {
+    "tried": 15,
+    "page": "https://www.wfp.org/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at the World Food Programme"
+  },
+  "habitat-for-humanity": {
+    "tried": 8,
+    "page": "https://www.habitat.org/about/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://habitat.wd12.myworkdayjobs.com/External",
+        "portal": "workday",
+        "sample": [
+          "Senior Specialist, MEAL – TCIS",
+          "Climate Resilience and Adaptation Advisor",
+          "Senior Corporate Development Officer"
+        ]
+      },
+      {
+        "url": "https://habitat.wd12.myworkdayjobs.com/Consultants",
+        "portal": "workday",
+        "sample": []
+      }
+    ]
+  },
+  "who": {
+    "tried": 15,
+    "page": "https://www.who.int/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at WHO"
+  },
+  "iom": {
+    "tried": 15,
+    "page": "https://www.iom.int/iom-career-gateways",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "national-trust": {
+    "tried": 16,
+    "page": "https://www.nationaltrust.org.uk/who-we-are/about-us",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "About us: what is the National Trust? | National Trust"
+  },
+  "un-secretariat": {
+    "tried": 8,
+    "page": "https://careers.un.org/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "UN Careers"
+  },
+  "unops": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "african-development-bank": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "fao": {
+    "tried": 15,
+    "page": "https://jobs.fao.org/careersection/fao_external/jobsearch.ftl?lang=en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Job Search"
+  },
+  "un-women": {
+    "tried": 8,
+    "page": "https://www.unwomen.org/en/about-us/employment",
+    "status": "unsupported",
+    "platform": "oracle-recruiting",
+    "platformUrl": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001",
+    "title": "Careers at UN Women | UN Women – Headquarters"
+  },
+  "european-commission": {
+    "tried": 15,
+    "page": "https://eu-careers.europa.eu/index_en",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "EU Careers - European Union"
+  },
+  "wipo": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "asian-development-bank": {
+    "tried": 8,
+    "page": "https://www.adb.org/work-with-us/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at ADB | Asian Development Bank"
+  },
+  "uk-civil-service-jobs": {
+    "tried": 15,
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Quick Check Needed"
+  },
+  "nhs-jobs": {
+    "tried": 15,
+    "page": "https://www.jobs.nhs.uk/candidate/search",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Search for jobs in the NHS"
+  },
+  "ministry-of-defence": {
+    "tried": 15,
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Quick Check Needed"
+  },
+  "world-bank-group": {
+    "tried": 15,
+    "page": "https://www.worldbank.org/ext/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | World Bank Group"
+  },
+  "hmrc": {
+    "tried": 15,
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Quick Check Needed"
+  },
+  "metropolitan-police": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "department-for-work-and-pensions": {
+    "tried": 15,
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Quick Check Needed"
+  },
+  "transport-for-london": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "usajobs-federal": {
+    "tried": 8,
+    "page": "https://www.usajobs.gov/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "USAJOBS - The Federal Government's official employment site"
+  },
+  "airbus": {
+    "tried": 22,
+    "page": "https://www.airbus.com/en/careers",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://ag.wd3.myworkdayjobs.com/Airbus",
+        "portal": "workday",
+        "sample": [
+          "Design Aérostructure / Airframe Design",
+          "Professionnel en Ingénierie de Fabrication de Faisceaux Électriques / Harness Manufacturing Engineering Professional",
+          "Tooling Maintenance Technician"
+        ]
+      }
+    ]
+  },
+  "home-office": {
+    "tried": 15,
+    "page": "https://www.civilservicejobs.service.gov.uk/csr/index.cgi",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Quick Check Needed"
+  },
+  "air-france-klm": {
+    "tried": 22,
+    "page": null,
+    "status": "no-page"
+  },
+  "nasa": {
+    "tried": 8,
+    "page": "https://www.usajobs.gov/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "USAJOBS - The Federal Government's official employment site"
+  },
+  "hyundai-motor-group": {
+    "tried": 29,
+    "page": null,
+    "status": "no-page"
+  },
+  "tesla": {
+    "tried": 8,
+    "page": null,
+    "status": "no-page"
+  },
+  "lufthansa-group": {
+    "tried": 29,
+    "page": "https://www.lufthansagroup.careers/de/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Lufthansa Group Careers"
+  },
+  "mercedes-benz": {
+    "tried": 15,
+    "page": "https://group.mercedes-benz.com/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "petrobras": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "nnpc-ltd": {
+    "tried": 29,
+    "page": "https://nnpcgroup.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "NNPC LTD | Careers"
+  },
+  "nissan": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "international-airlines-group": {
+    "tried": 43,
+    "page": null,
+    "status": "no-page"
+  },
+  "cnpc": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "seplat": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "bp": {
+    "tried": 1,
+    "page": "https://careers.bp.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://bpinternational.wd3.myworkdayjobs.com/bpCareers",
+        "portal": "workday",
+        "sample": [
+          "Senior Software Engineer (iOS)",
+          "Staff Software Engineer",
+          "Franchise Development Advisor - Site Openings & Activation"
+        ]
+      }
+    ]
+  },
+  "occidental": {
+    "tried": 8,
+    "page": "https://www.oxy.com/careers/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://oxy.wd5.myworkdayjobs.com/UniversityRelations",
+        "portal": "workday",
+        "sample": [
+          "HR Business Partner",
+          "Environmental Engineer",
+          "Environmental Engineering Intern"
+        ]
+      },
+      {
+        "url": "https://oxy.wd5.myworkdayjobs.com/Corporate",
+        "portal": "workday",
+        "sample": [
+          "Offshore Shut-In / Turnaround Lead",
+          "Offshore Operations Engineer",
+          "GOA Reliability Engineer"
+        ]
+      }
+    ]
+  },
+  "rsted": {
+    "tried": 15,
+    "page": "https://orsted.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs in Renewable Energy | Ørsted Careers"
+  },
+  "edf": {
+    "tried": 15,
+    "page": "https://careers.edfenergy.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Jobs and Careers at EDF UK"
+  },
+  "adani-green": {
+    "tried": 22,
+    "page": "https://www.adanigreenenergy.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Adani Green Energy Limited"
+  },
+  "sse": {
+    "tried": 15,
+    "page": "https://careers.sse.com/homepage",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers at SSE | The UK and Ireland's clean energy champion"
+  },
+  "3m": {
+    "tried": 1,
+    "page": "https://www.3m.com/3M/en_US/careers-us/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "sinopec": {
+    "tried": 15,
+    "page": "http://www.sinopecgroup.com/group/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "China Sinopec"
+  },
+  "brookfield-renewable": {
+    "tried": 15,
+    "page": "https://bep.brookfield.com/page-not-found",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Page Not Found | Brookfield Renewable Partners"
+  },
+  "parker-hannifin": {
+    "tried": 8,
+    "page": "https://www.parker.com/us/en/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Access Denied"
+  },
+  "schneider-electric": {
+    "tried": 15,
+    "page": "https://www.se.com/ww/en/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Schneider Electric Global | Your Energy Technology Partner"
+  },
+  "hs2-ltd": {
+    "tried": 29,
+    "page": "https://www.hs2.org.uk/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers - HS2"
+  },
+  "mott-macdonald": {
+    "tried": 15,
+    "page": "https://www.mottmac.com/en/careers/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Just a moment..."
+  },
+  "zoopla": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "persimmon": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "cbre": {
+    "tried": 8,
+    "page": "https://careers.cbre.com/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Home"
+  },
+  "larsen-and-toubro": {
+    "tried": 22,
+    "page": "https://www.larsentoubro.com/corporate/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | L&T Corporate"
+  },
+  "cushman-and-wakefield": {
+    "tried": 8,
+    "page": "https://www.cushmanwakefield.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers | Cushman & Wakefield"
+  },
+  "jd-com": {
+    "tried": 15,
+    "page": "https://zhaopin.jd.com/home;jsessionid=8BF87846170885084303F4269C38F195.s1",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "京东招聘-首页"
+  },
+  "sainsbury-s": {
+    "tried": 15,
+    "page": "https://www.sainsburys.jobs/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Sainsburys Careers: Join Our Team & Grow"
+  },
+  "aldi": {
+    "tried": 16,
+    "page": "https://careers.aldi.us/",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Discover More Ways to Grow in a Job and Career at ALDI Grocery Stores"
+  },
+  "nestle": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "bayer-crop-science": {
+    "tried": 15,
+    "page": "https://www.bayer.com/en/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Site Maintenance"
+  },
+  "procter-and-gamble": {
+    "tried": 8,
+    "page": "https://www.pgcareers.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "tui": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "olam": {
+    "tried": 15,
+    "page": "https://www.olamgroup.com/careers.html",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "expedia": {
+    "tried": 8,
+    "page": "https://careers.expediagroup.com/",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://expedia.wd108.myworkdayjobs.com/search",
+        "portal": "workday",
+        "sample": [
+          "Senior Inventory Fulfillment Coordinator",
+          "Senior Technical Integration Consultant",
+          "Data Scientist II, Product & Technology Analytics"
+        ]
+      }
+    ]
+  },
+  "whitbread": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "wilmar": {
+    "tried": 15,
+    "page": "https://www.wilmar-international.com/careers",
+    "status": "unsupported",
+    "platform": "own-site-or-unrecognised",
+    "platformUrl": null,
+    "title": "Careers"
+  },
+  "sodexo": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "cma-cgm": {
+    "tried": 15,
+    "page": null,
+    "status": "no-page"
+  },
+  "allied-universal": {
+    "tried": 8,
+    "page": "https://jobs.aus.com/",
+    "status": "unsupported",
+    "platform": "icims",
+    "platformUrl": "https://securitycareers-aus.icims.com/jobs/login?mobile=false&width=1100&height=500&bga=true&needsRedirect=false&jan1offset=-360&jun1offset=-300",
+    "title": "Careers at Allied Universal | Security Jobs Nationwide"
+  },
+  "kuehne-nagel": {
+    "tried": 15,
+    "page": "https://jobs.kuehne-nagel.com/global/en",
+    "status": "supported",
+    "how": "page",
+    "matches": [
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1785942565044_require-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477678823_ph-basic-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477715895_vendor-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790781001727_ph-common-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/canvas/launchScript/launch-script-1791443697713.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1790780983181_ph-common-bundle-part2-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477705359_vendor-bundle-part1-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      },
+      {
+        "url": "https://cdn.phenompeople.com/CareerConnectResources/common/js/globalplatform/1766477744200_ph-loader-5.0.js",
+        "portal": "phenom",
+        "sample": []
+      }
+    ]
+  },
+  "yum-brands": {
+    "tried": 8,
+    "page": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/careers",
+    "status": "unsupported",
+    "platform": "unknown",
+    "note": "page would not load in browser"
+  }
+}

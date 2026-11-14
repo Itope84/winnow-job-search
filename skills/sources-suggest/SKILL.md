@@ -48,6 +48,8 @@ and the provider's fields:
 | `freehire` | Postings from about 50 job systems (Greenhouse, Ashby, Workday and others) in one search, with full text; tech roles are its strength | `keywords` (`OR` between alternatives, at most 5; `title:` to match titles only, e.g. `title:product designer OR title:ux designer`), `countries` (ISO codes, lower case, e.g. `gb`), `cities`, `seniority` (`junior`, `middle`, `senior`, `staff`, `principal`, `lead`), `work_mode` (`remote`, `hybrid`, `onsite`), `posted_within_days`, `max_pages` (1–5, 100 jobs each) |
 | `remotive`, `remoteok`, `himalayas`, `weworkremotely`, `jobicy`, `workingnomads` | Remote jobs, mostly tech, product, marketing and operations | none |
 | `themuse`, `arbeitnow`, `4dayweek` | General feeds (US-heavy, EU-heavy, four-day weeks) | none |
+| `nhs-jobs` | NHS trusts and GP practices (England and Wales); health, admin and management roles near a place | `keywords` (a list: one search each, at most 5), `location` (a town, city or postcode), `distance` (miles, 20), `max_pages` (1–10, 10 jobs each) |
+| `jobs-ac-uk` | University, research and academic jobs, mostly UK; also university admin, fundraising and professional services | `keywords` (a list), `locations` (`united-kingdom`, `london`, `scotland`…), `max_pages` (1–8, 25 jobs each) |
 
 Pick keyword searches built from the target roles and places first. Add a remote feed only when the person
 wants remote work and their field is one those feeds carry.

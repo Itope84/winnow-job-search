@@ -35,6 +35,10 @@ export const keys = {
   people: ['people'] as const,
   jack: ['jack'] as const,
   jackOverview: ['jack', 'overview'] as const,
+  study: ['study'] as const,
+  coverage: ['coverage'] as const,
+  catalogue: ['catalogue'] as const,
+  referees: ['referees'] as const,
 };
 
 const ACTIVE = new Set(['queued', 'running', 'needs_input']);

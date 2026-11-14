@@ -1,0 +1,77 @@
+{
+  "moss-adams": {
+    "status": "unresolved",
+    "portal": null,
+    "careersUrl": null,
+    "platform": null,
+    "jobs": null,
+    "sample": [],
+    "source": null,
+    "note": "directory matched Baker Tilly's Workday by mistake; Moss Adams merged into Baker Tilly in 2025"
+  },
+  "ashurst": {
+    "status": "unresolved",
+    "portal": null,
+    "careersUrl": "https://www.ashurst.com/en/careers/",
+    "platform": null,
+    "jobs": null,
+    "sample": [],
+    "source": null,
+    "note": "mined link was Perkins Coie's Workday, not Ashurst"
+  },
+  "rti-international": {
+    "status": "unresolved",
+    "portal": null,
+    "careersUrl": null,
+    "platform": null,
+    "jobs": null,
+    "sample": [],
+    "source": null,
+    "note": "greenhouse slug 'rti' belongs to a different company"
+  },
+  "occidental": {
+    "status": "unresolved",
+    "portal": null,
+    "careersUrl": "https://www.oxy.com/careers/",
+    "platform": null,
+    "jobs": null,
+    "sample": [],
+    "source": null,
+    "note": "only a university-relations Workday site matched; main site not found"
+  },
+  "apple": {
+    "status": "supported",
+    "jobs": null,
+    "alternatives": [],
+    "source": "known-provider",
+    "portal": "apple",
+    "platform": "apple",
+    "careersUrl": "https://jobs.apple.com/en-gb/search",
+    "sample": ["UK - Specialist: Seasonal, Part-time"],
+    "note": "Winnow's own Apple reader; narrow the search with the link's location and key"
+  },
+  "ibm": {
+    "status": "supported",
+    "jobs": null,
+    "alternatives": [],
+    "source": "known-provider",
+    "portal": "ibm",
+    "platform": "ibm",
+    "careersUrl": "https://www.ibm.com/careers/search",
+    "sample": ["Data Engineer-Data Modeling"],
+    "providerHint": true,
+    "note": "needs provider: ibm; the page is not auto-detected"
+  },
+  "ibm-consulting": {
+    "status": "supported",
+    "jobs": null,
+    "alternatives": [],
+    "source": "known-provider",
+    "portal": "ibm",
+    "platform": "ibm",
+    "careersUrl": "https://www.ibm.com/careers/search",
+    "sample": ["Data Engineer-Data Modeling"],
+    "providerHint": true,
+    "note": "needs provider: ibm; the page is not auto-detected"
+  }
+}

@@ -6,10 +6,12 @@ import type {
   SetupSuggestions,
   SourceEntry,
 } from '@winnow/api';
-import { SETUP_QUESTIONS } from '@winnow/api';
+import { questionsFor } from '@winnow/api';
 import type { RunCtx, RunOutput } from '../runs/runner.ts';
 import { pageAnswers, probeEntry, resolveEntry } from '../scan/providers.ts';
 import { cleanAbout, cleanRoles, cleanWorkTypes, getSetup, saveSetup } from '../setup.ts';
+import { getMode } from '../study/mode.ts';
+import { studySourcesSuggest } from '../study/suggest.ts';
 import { clip } from '../util.ts';
 import { runSkill } from './run-skill.ts';
 
@@ -28,6 +30,8 @@ export const SUGGESTABLE_BOARDS = [
   'themuse',
   'arbeitnow',
   '4dayweek',
+  'nhs-jobs',
+  'jobs-ac-uk',
 ];
 
 const s = (v: unknown, max = 200) => (typeof v === 'string' ? clip(v.trim(), max) : '');
@@ -44,10 +48,21 @@ function needCv(ctx: RunCtx) {
 export async function profilePrefill(ctx: RunCtx): Promise<RunOutput> {
   const cv = needCv(ctx);
   ctx.step('Reading your CV for the forms');
+  const mode = getMode(ctx.space.db);
+  const statement = ctx.space.profile.get().statement;
   const { value } = await runSkill(ctx, {
     skill: 'profile-prefill',
-    input: { cvFile: 'cv.md' },
-    files: { 'cv.md': cv.slice(0, 40_000) },
+    input: {
+      mode,
+      cvFile: 'cv.md',
+      statementFile: mode === 'scholarships' && statement.trim() ? 'statement.md' : null,
+    },
+    files: {
+      'cv.md': cv.slice(0, 40_000),
+      ...(mode === 'scholarships' && statement.trim()
+        ? { 'statement.md': statement.slice(0, 20_000) }
+        : {}),
+    },
     task: 'Suggest the setup form answers from the CV in input.json.',
     model: ctx.settings.models.default,
     timeoutMs: 4 * 60_000,
@@ -58,6 +73,7 @@ export async function profilePrefill(ctx: RunCtx): Promise<RunOutput> {
       const about = cleanAbout(o.about);
       delete about.workRight;
       delete about.timezone;
+      if (mode !== 'scholarships') delete about.nationality;
       return {
         about,
         roles: cleanRoles(o.roles).slice(0, 6),
@@ -80,12 +96,13 @@ export async function setupFollowup(ctx: RunCtx): Promise<RunOutput> {
   const params = ctx.runs.params(ctx.run.id);
   const key = String(params.question ?? '') as SetupQuestionKey;
   const asked = String(params.answer ?? '');
-  const question = SETUP_QUESTIONS.find((q) => q.key === key);
+  const mode = getMode(ctx.space.db);
+  const question = questionsFor(mode).find((q) => q.key === key);
   if (!question || !asked.trim()) throw new Error('There is no answer to follow up on.');
   ctx.step('Reading your answer');
   const { value } = await runSkill(ctx, {
     skill: 'setup-followup',
-    input: { question: question.text, answer: asked, cvFile: 'cv.md' },
+    input: { mode, question: question.text, answer: asked, cvFile: 'cv.md' },
     files: { 'cv.md': needCv(ctx).slice(0, 6000) },
     task: 'Decide whether this answer needs one follow-up question.',
     model: ctx.settings.models.default,
@@ -114,15 +131,24 @@ export async function profileDraft(ctx: RunCtx): Promise<RunOutput> {
   const cv = needCv(ctx);
   const state = getSetup(ctx.space);
   const roles = state.want.roles ?? [];
-  if (!roles.length) throw new Error('Add at least one target role first.');
+  const mode = getMode(ctx.space.db);
+  if (!roles.length)
+    throw new Error(
+      mode === 'scholarships'
+        ? 'Add at least one programme or subject first.'
+        : 'Add at least one target role first.',
+    );
   ctx.step('Writing your profile');
+  const statement = ctx.space.profile.get().statement;
   const { value } = await runSkill(ctx, {
     skill: 'profile-draft',
     input: {
+      mode,
       cvFile: 'cv.md',
+      statementFile: statement.trim() ? 'statement.md' : null,
       about: state.about,
       want: state.want,
-      answers: SETUP_QUESTIONS.map((q) => {
+      answers: questionsFor(mode).map((q) => {
         const a = state.answers.find((x) => x.key === q.key);
         return {
           question: q.text,
@@ -132,7 +158,10 @@ export async function profileDraft(ctx: RunCtx): Promise<RunOutput> {
         };
       }),
     },
-    files: { 'cv.md': cv.slice(0, 40_000) },
+    files: {
+      'cv.md': cv.slice(0, 40_000),
+      ...(statement.trim() ? { 'statement.md': statement.slice(0, 20_000) } : {}),
+    },
     task: 'Draft this person’s profile from input.json.',
     model: ctx.settings.models.default,
     timeoutMs: 6 * 60_000,
@@ -176,6 +205,7 @@ async function eachLimit<T>(items: T[], limit: number, fn: (item: T) => Promise<
 
 /** Suggest sources: employers, board searches, web queries and title words for this person. */
 export async function sourcesSuggest(ctx: RunCtx): Promise<RunOutput> {
+  if (getMode(ctx.space.db) === 'scholarships') return studySourcesSuggest(ctx);
   const cv = needCv(ctx);
   const state = getSetup(ctx.space);
   const w = state.want;

@@ -1,0 +1,17 @@
+{
+  "steps": [
+    {
+      "event": {
+        "type": "text",
+        "text": "[winnow] 2/4 Looking"
+      }
+    },
+    {
+      "delay": 20,
+      "write": {
+        "path": "result.json",
+        "content": "{\"scholarships\": [{\"title\": \"Replay Global Scholarship\", \"provider\": \"University of Replay\", \"url\": \"https://replay.example/global-scholarship\", \"funding\": \"tuition\", \"covers\": \"\\u00a35,000 off tuition\", \"shape\": \"one_school\", \"deadline\": \"2099-04-01\", \"why\": \"Replay\"}], \"tuitionFree\": false, \"note\": \"Replay\"}"
+      }
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const strs = (v: unknown, max = 8) =>
     .slice(0, max)
     .map((s) => clip(s.trim(), 300));
 
-function validate(value: unknown): Omit<ScoreResult, 'verdict' | 'at' | 'runId'> {
+export function validate(value: unknown): Omit<ScoreResult, 'verdict' | 'at' | 'runId'> {
   const r = (value ?? {}) as Raw;
   const score = Number(r.score);
   if (!Number.isFinite(score) || score < 0 || score > 5)
@@ -59,7 +59,7 @@ export async function readPosting(ctx: RunCtx, id: string): Promise<string | nul
   if (!jd) {
     ctx.step('Reading the posting');
     try {
-      const got = await captureJd(job.url);
+      const got = await captureJd(job.url, { lenient: job.kind !== 'job' });
       if (got && got.text.length >= 120) {
         saveCapture(jobs, id, got);
         jd = got.text;

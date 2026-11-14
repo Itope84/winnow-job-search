@@ -22,7 +22,8 @@ On this Mac it runs as a login item: `scripts/install-launchd.sh` (`--uninstall`
 Add people (nothing is emailed: copy the link and send it yourself):
 
 ```bash
-pnpm users add <username> <email> [name] [--admin]   # prints an invite link; sign in with username or email
+pnpm users add <username> <email> [name] [--admin] [--mode=scholarships]   # prints an invite link; sign in with username or email
+pnpm users mode <id> jobs|scholarships         # what the account looks for
 pnpm users invite <id>                         # a new link; also resets a forgotten password
 pnpm users email <id> <new email>
 pnpm users list

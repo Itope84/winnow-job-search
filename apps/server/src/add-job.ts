@@ -3,6 +3,8 @@ import { sourceFromUrl } from './import/parse.ts';
 import type { Runner } from './runs/runner.ts';
 import { captureJd, cleanPosting } from './scan/capture.ts';
 import type { Space } from './space.ts';
+import { getMode } from './study/mode.ts';
+import { guessKind, seedOpportunity } from './study/opportunity.ts';
 import { badRequest, nowIso, sha1 } from './util.ts';
 
 const LOGIN_WALLS = /linkedin\.com|indeed\.|glassdoor\./i;
@@ -15,7 +17,11 @@ export async function addJob(
 ): Promise<AddJobResult> {
   const url = req.url?.trim();
   const text = req.text?.trim();
-  if (!url && !text) throw badRequest('Paste a link or the job description.');
+  const study = getMode(space.db) === 'scholarships';
+  if (!url && !text)
+    throw badRequest(
+      study ? 'Paste a link or the page’s text.' : 'Paste a link or the job description.',
+    );
   if (url && !/^https?:\/\/\S+$/.test(url)) throw badRequest('That link doesn’t look right.');
 
   if (url) {
@@ -35,7 +41,7 @@ export async function addJob(
   if (url && !text) {
     let got = null;
     try {
-      got = await captureJd(url);
+      got = await captureJd(url, { lenient: study });
     } catch {
       got = null;
     }
@@ -65,8 +71,9 @@ export async function addJob(
       deadline = got.deadline ?? null;
     }
   }
-  if (!role) role = firstLine(jd) ?? 'Untitled role';
+  if (!role) role = firstLine(jd) ?? (study ? 'Untitled' : 'Untitled role');
   if (!company) company = '?';
+  const kind = study ? (req.kind ?? guessKind(role)) : 'job';
 
   const twin = space.jobs.byFingerprint(company, role, location);
   if (twin) {
@@ -85,9 +92,16 @@ export async function addJob(
     movedBy: 'you',
     addedBy: 'you',
     jd,
+    kind,
+    opportunity: kind === 'job' ? null : seedOpportunity(kind),
   });
   if (warnings.length || deadline) space.jobs.setPosting(job.id, { warnings, deadline });
   let runId: string | null = null;
+  // A scholarship or programme gets read by triage straight away: it fills in the card's facts.
+  if (study)
+    try {
+      runId = runner.enqueue({ kind: 'triage', jobIds: [job.id] })[0]?.id ?? null;
+    } catch {}
   // Scoring refuses until there is a CV and profile; the job is still added.
   if (req.then === 'score')
     try {

@@ -101,6 +101,35 @@ export function openDb(dir: string, file = 'winnow.db'): Db {
   `);
   addColumn(db, 'jobs', 'posting', 'TEXT');
   addColumn(db, 'jobs', 'application', 'TEXT');
+  // Scholarships mode: what an item is, what it offers, the person's plan, and its next deadline.
+  addColumn(db, 'jobs', 'kind', "TEXT NOT NULL DEFAULT 'job'");
+  addColumn(db, 'jobs', 'opp', 'TEXT');
+  addColumn(db, 'jobs', 'plan', 'TEXT');
+  addColumn(db, 'jobs', 'due', 'TEXT');
+  // Jobs from before `due` existed: their posting's deadline.
+  db.exec(
+    "UPDATE jobs SET due = json_extract(posting, '$.deadline') WHERE due IS NULL AND kind = 'job' AND posting IS NOT NULL AND json_extract(posting, '$.deadline') IS NOT NULL",
+  );
+  db.exec(`
+    CREATE INDEX IF NOT EXISTS jobs_due ON jobs(due);
+    CREATE TABLE IF NOT EXISTS opp_links (
+      scholarship_id TEXT NOT NULL REFERENCES jobs(id) ON DELETE CASCADE,
+      programme_id TEXT NOT NULL REFERENCES jobs(id) ON DELETE CASCADE,
+      relation TEXT NOT NULL,
+      created TEXT NOT NULL,
+      PRIMARY KEY (scholarship_id, programme_id)
+    );
+    CREATE INDEX IF NOT EXISTS opp_links_programme ON opp_links(programme_id);
+    CREATE TABLE IF NOT EXISTS coverage (
+      layer TEXT NOT NULL,
+      target TEXT NOT NULL,
+      checked_at TEXT,
+      found INTEGER NOT NULL DEFAULT 0,
+      added INTEGER NOT NULL DEFAULT 0,
+      note TEXT NOT NULL DEFAULT '',
+      PRIMARY KEY (layer, target)
+    );
+  `);
   return db;
 }
 

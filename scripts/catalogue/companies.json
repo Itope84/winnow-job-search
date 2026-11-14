@@ -1,0 +1,5658 @@
+{
+  "sectors": [
+    {
+      "id": "software-and-cloud",
+      "name": "Software & Cloud",
+      "companies": [
+        "microsoft",
+        "oracle",
+        "sap",
+        "salesforce",
+        "adobe",
+        "ibm",
+        "servicenow",
+        "workday",
+        "intuit",
+        "atlassian",
+        "snowflake",
+        "databricks",
+        "datadog",
+        "shopify",
+        "autodesk",
+        "vmware-by-broadcom",
+        "cisco",
+        "palantir",
+        "stripe",
+        "twilio"
+      ]
+    },
+    {
+      "id": "internet-social-and-consumer-tech",
+      "name": "Internet, Social & Consumer Tech",
+      "companies": [
+        "amazon",
+        "google",
+        "meta",
+        "apple",
+        "netflix",
+        "uber",
+        "airbnb",
+        "booking-holdings",
+        "ebay",
+        "spotify",
+        "pinterest",
+        "snap",
+        "reddit",
+        "doordash",
+        "instacart",
+        "bytedance",
+        "tencent",
+        "alibaba",
+        "zalando",
+        "rakuten"
+      ]
+    },
+    {
+      "id": "ai-and-machine-learning",
+      "name": "AI & Machine Learning",
+      "companies": [
+        "openai",
+        "anthropic",
+        "google-deepmind",
+        "meta",
+        "microsoft-ai",
+        "nvidia",
+        "xai",
+        "mistral-ai",
+        "cohere",
+        "scale-ai",
+        "hugging-face",
+        "perplexity",
+        "databricks",
+        "safe-superintelligence",
+        "stability-ai",
+        "elevenlabs",
+        "runway",
+        "glean",
+        "character-ai",
+        "palantir"
+      ]
+    },
+    {
+      "id": "semiconductors-and-hardware",
+      "name": "Semiconductors & Hardware",
+      "companies": [
+        "apple",
+        "nvidia",
+        "intel",
+        "amd",
+        "qualcomm",
+        "broadcom",
+        "tsmc",
+        "samsung-electronics",
+        "asml",
+        "micron",
+        "texas-instruments",
+        "applied-materials",
+        "lam-research",
+        "arm",
+        "dell-technologies",
+        "hp-inc",
+        "hpe",
+        "cisco",
+        "foxconn",
+        "sony"
+      ]
+    },
+    {
+      "id": "it-services-and-outsourcing",
+      "name": "IT Services & Outsourcing",
+      "companies": [
+        "accenture",
+        "tcs",
+        "infosys",
+        "cognizant",
+        "wipro",
+        "hcltech",
+        "ibm-consulting",
+        "capgemini",
+        "tech-mahindra",
+        "dxc-technology",
+        "ntt-data",
+        "fujitsu",
+        "ltimindtree",
+        "genpact",
+        "epam",
+        "cgi",
+        "kyndryl",
+        "capita",
+        "endava"
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "companies": [
+        "microsoft-security",
+        "palo-alto-networks",
+        "crowdstrike",
+        "cisco",
+        "fortinet",
+        "zscaler",
+        "okta",
+        "check-point",
+        "cloudflare",
+        "sentinelone",
+        "broadcom",
+        "trend-micro",
+        "mandiant-google-cloud",
+        "rapid7",
+        "proofpoint",
+        "cyberark",
+        "darktrace",
+        "wiz-google",
+        "booz-allen-hamilton",
+        "leidos"
+      ]
+    },
+    {
+      "id": "telecoms",
+      "name": "Telecoms",
+      "companies": [
+        "at-and-t",
+        "verizon",
+        "t-mobile-us",
+        "comcast",
+        "charter",
+        "deutsche-telekom",
+        "vodafone",
+        "bt-group",
+        "orange",
+        "telefonica",
+        "ericsson",
+        "nokia",
+        "huawei",
+        "mtn-group",
+        "bharti-airtel",
+        "reliance-jio",
+        "singtel",
+        "telstra",
+        "rogers",
+        "e-and"
+      ]
+    },
+    {
+      "id": "retail-and-commercial-banking",
+      "name": "Retail & Commercial Banking",
+      "companies": [
+        "jpmorgan-chase",
+        "bank-of-america",
+        "wells-fargo",
+        "citigroup",
+        "hsbc",
+        "barclays",
+        "lloyds-banking-group",
+        "natwest-group",
+        "santander",
+        "bnp-paribas",
+        "standard-chartered",
+        "royal-bank-of-canada",
+        "td-bank",
+        "commonwealth-bank",
+        "icici-bank",
+        "hdfc-bank",
+        "standard-bank",
+        "access-bank",
+        "capital-one",
+        "us-bancorp"
+      ]
+    },
+    {
+      "id": "investment-banking-and-asset-management",
+      "name": "Investment Banking & Asset Management",
+      "companies": [
+        "goldman-sachs",
+        "morgan-stanley",
+        "jpmorgan",
+        "blackrock",
+        "citi",
+        "ubs",
+        "barclays",
+        "deutsche-bank",
+        "lazard",
+        "rothschild-and-co",
+        "evercore",
+        "jefferies",
+        "vanguard",
+        "fidelity-investments",
+        "state-street",
+        "schroders",
+        "blackstone",
+        "kkr",
+        "carlyle",
+        "pimco"
+      ]
+    },
+    {
+      "id": "fintech-payments-and-crypto",
+      "name": "Fintech, Payments & Crypto",
+      "companies": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "stripe",
+        "block",
+        "adyen",
+        "revolut",
+        "monzo",
+        "wise",
+        "klarna",
+        "chime",
+        "robinhood",
+        "coinbase",
+        "binance",
+        "kraken",
+        "flutterwave",
+        "paystack",
+        "moniepoint",
+        "nubank",
+        "razorpay"
+      ]
+    },
+    {
+      "id": "insurance",
+      "name": "Insurance",
+      "companies": [
+        "axa",
+        "allianz",
+        "zurich",
+        "aviva",
+        "legal-and-general",
+        "prudential-plc",
+        "aig",
+        "metlife",
+        "prudential-financial",
+        "chubb",
+        "travelers",
+        "progressive",
+        "state-farm",
+        "allstate",
+        "liberty-mutual",
+        "generali",
+        "munich-re",
+        "swiss-re",
+        "marsh-mclennan",
+        "aon"
+      ]
+    },
+    {
+      "id": "accounting-audit-and-tax",
+      "name": "Accounting, Audit & Tax",
+      "companies": [
+        "pwc",
+        "deloitte",
+        "ey",
+        "kpmg",
+        "bdo",
+        "grant-thornton",
+        "rsm",
+        "forvis-mazars",
+        "baker-tilly",
+        "crowe",
+        "azets",
+        "cherry-bekaert",
+        "cliftonlarsonallen",
+        "moss-adams",
+        "h-and-r-block",
+        "intuit",
+        "xero"
+      ]
+    },
+    {
+      "id": "management-consulting-and-strategy",
+      "name": "Management Consulting & Strategy",
+      "companies": [
+        "mckinsey",
+        "boston-consulting-group",
+        "bain",
+        "deloitte-consulting",
+        "accenture-strategy",
+        "pwc-strategy-and",
+        "ey-parthenon",
+        "kpmg-advisory",
+        "oliver-wyman",
+        "kearney",
+        "l-e-k",
+        "roland-berger",
+        "capgemini-invent",
+        "fti-consulting",
+        "alvarez-and-marsal",
+        "huron",
+        "west-monroe",
+        "slalom",
+        "mercer",
+        "willis-towers-watson"
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "Legal",
+      "companies": [
+        "clifford-chance",
+        "linklaters",
+        "allen-and-overy-shearman",
+        "freshfields",
+        "slaughter-and-may",
+        "dla-piper",
+        "baker-mckenzie",
+        "kirkland-and-ellis",
+        "latham-and-watkins",
+        "skadden",
+        "white-and-case",
+        "norton-rose-fulbright",
+        "herbert-smith-freehills-kramer",
+        "hogan-lovells",
+        "ashurst",
+        "addleshaw-goddard",
+        "eversheds-sutherland",
+        "pinsent-masons",
+        "thomson-reuters",
+        "lexisnexis"
+      ]
+    },
+    {
+      "id": "healthcare-providers",
+      "name": "Healthcare Providers",
+      "companies": [
+        "hca-healthcare",
+        "nhs-england-trusts-via-nhs-jobs",
+        "kaiser-permanente",
+        "commonspirit-health",
+        "ascension",
+        "providence",
+        "mayo-clinic",
+        "cleveland-clinic",
+        "mass-general-brigham",
+        "universal-health-services",
+        "community-health-systems",
+        "tenet",
+        "veterans-health-administration",
+        "bupa",
+        "spire-healthcare",
+        "ramsay-health-care",
+        "fresenius",
+        "apollo-hospitals",
+        "mediclinic",
+        "davita"
+      ]
+    },
+    {
+      "id": "pharmaceuticals",
+      "name": "Pharmaceuticals",
+      "companies": [
+        "johnson-and-johnson",
+        "roche",
+        "pfizer",
+        "novartis",
+        "merck-and-co",
+        "abbvie",
+        "astrazeneca",
+        "eli-lilly",
+        "novo-nordisk",
+        "sanofi",
+        "gsk",
+        "bristol-myers-squibb",
+        "bayer",
+        "takeda",
+        "boehringer-ingelheim",
+        "amgen",
+        "gilead",
+        "teva",
+        "sun-pharma",
+        "viatris"
+      ]
+    },
+    {
+      "id": "biotech-life-science-tools-and-cros",
+      "name": "Biotech, Life-science Tools & CROs",
+      "companies": [
+        "thermo-fisher",
+        "iqvia",
+        "danaher",
+        "labcorp",
+        "syneos-health",
+        "ppd-thermo",
+        "icon-plc",
+        "parexel",
+        "charles-river-laboratories",
+        "medpace",
+        "illumina",
+        "moderna",
+        "regeneron",
+        "vertex",
+        "biontech",
+        "lonza",
+        "agilent",
+        "wuxi-apptec",
+        "catalent",
+        "genentech"
+      ]
+    },
+    {
+      "id": "medical-devices",
+      "name": "Medical Devices",
+      "companies": [
+        "medtronic",
+        "abbott",
+        "siemens-healthineers",
+        "ge-healthcare",
+        "philips",
+        "johnson-and-johnson-medtech",
+        "boston-scientific",
+        "stryker",
+        "becton-dickinson",
+        "baxter",
+        "zimmer-biomet",
+        "edwards-lifesciences",
+        "intuitive-surgical",
+        "smith-nephew",
+        "olympus",
+        "fresenius-medical-care",
+        "cardinal-health",
+        "dexcom",
+        "resmed",
+        "hologic"
+      ]
+    },
+    {
+      "id": "health-insurance-and-digital-health",
+      "name": "Health Insurance & Digital Health",
+      "companies": [
+        "unitedhealth-group",
+        "cvs-health",
+        "elevance-health",
+        "cigna",
+        "humana",
+        "centene",
+        "kaiser-permanente",
+        "bupa",
+        "axa-health",
+        "vitality",
+        "teladoc",
+        "oscar-health",
+        "epic-systems",
+        "oracle-health-cerner",
+        "hims-and-hers",
+        "doximity",
+        "zocdoc",
+        "ro",
+        "huma",
+        "kry"
+      ]
+    },
+    {
+      "id": "media-publishing-and-entertainment",
+      "name": "Media, Publishing & Entertainment",
+      "companies": [
+        "walt-disney",
+        "comcast",
+        "warner-bros-discovery",
+        "netflix",
+        "paramount",
+        "sony-group",
+        "bbc",
+        "itv",
+        "sky",
+        "news-corp",
+        "thomson-reuters",
+        "relx",
+        "pearson",
+        "penguin-random-house",
+        "harpercollins",
+        "universal-music-group",
+        "spotify",
+        "live-nation",
+        "bloomberg",
+        "financial-times"
+      ]
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "companies": [
+        "microsoft-gaming",
+        "sony-interactive",
+        "nintendo",
+        "tencent-games",
+        "electronic-arts",
+        "take-two-interactive",
+        "ubisoft",
+        "activision-blizzard-microsoft",
+        "epic-games",
+        "roblox",
+        "riot-games",
+        "supercell",
+        "king-microsoft",
+        "embracer-group",
+        "cd-projekt",
+        "bandai-namco",
+        "square-enix",
+        "unity",
+        "valve"
+      ]
+    },
+    {
+      "id": "higher-education",
+      "name": "Higher Education",
+      "companies": [
+        "university-of-oxford",
+        "university-of-cambridge",
+        "ucl",
+        "imperial-college-london",
+        "king-s-college-london",
+        "university-of-manchester",
+        "university-of-edinburgh",
+        "harvard",
+        "mit",
+        "stanford",
+        "johns-hopkins",
+        "university-of-california-system",
+        "university-of-texas-system",
+        "state-university-of-new-york",
+        "university-of-toronto",
+        "university-of-melbourne",
+        "national-university-of-singapore",
+        "eth-zurich"
+      ]
+    },
+    {
+      "id": "edtech-training-and-k-12-services",
+      "name": "EdTech, Training & K-12 Services",
+      "companies": [
+        "pearson",
+        "coursera",
+        "duolingo",
+        "chegg",
+        "instructure",
+        "2u",
+        "byju-s",
+        "physicswallah",
+        "udemy",
+        "khan-academy",
+        "gostudent",
+        "multiverse",
+        "bpp",
+        "kaplan",
+        "mcgraw-hill",
+        "cengage",
+        "teach-first",
+        "teach-for-america"
+      ]
+    },
+    {
+      "id": "international-development-and-humanitarian-ngos",
+      "name": "International Development & Humanitarian NGOs",
+      "companies": [
+        "brac",
+        "international-rescue-committee",
+        "save-the-children",
+        "oxfam",
+        "medecins-sans-frontieres",
+        "mercy-corps",
+        "world-vision",
+        "care",
+        "plan-international",
+        "catholic-relief-services",
+        "norwegian-refugee-council",
+        "international-committee-of-the-red-cross",
+        "ifrc",
+        "actionaid",
+        "christian-aid",
+        "fhi-360",
+        "chemonics",
+        "dai-global",
+        "palladium",
+        "abt-associates",
+        "rti-international"
+      ]
+    },
+    {
+      "id": "charities-fundraising-and-grant-making-third-sector",
+      "name": "Charities, Fundraising & Grant-making (Third Sector)",
+      "companies": [
+        "wellcome-trust",
+        "gates-foundation",
+        "ford-foundation",
+        "open-society-foundations",
+        "rockefeller-foundation",
+        "bloomberg-philanthropies",
+        "oak-foundation",
+        "novo-nordisk-foundation",
+        "cancer-research-uk",
+        "british-heart-foundation",
+        "macmillan-cancer-support",
+        "age-uk",
+        "rspca",
+        "rspb",
+        "national-trust",
+        "barnardo-s",
+        "salvation-army",
+        "american-cancer-society",
+        "united-way-worldwide",
+        "habitat-for-humanity"
+      ]
+    },
+    {
+      "id": "un-and-multilateral-organisations",
+      "name": "UN & Multilateral Organisations",
+      "companies": [
+        "unhcr",
+        "unicef",
+        "world-food-programme",
+        "undp",
+        "who",
+        "un-secretariat",
+        "world-bank-group",
+        "imf",
+        "iom",
+        "fao",
+        "unfpa",
+        "un-women",
+        "unops",
+        "ilo",
+        "unesco",
+        "african-development-bank",
+        "asian-development-bank",
+        "european-commission",
+        "oecd",
+        "wto",
+        "wipo"
+      ]
+    },
+    {
+      "id": "government-and-public-sector",
+      "name": "Government & Public Sector",
+      "companies": [
+        "uk-civil-service-jobs",
+        "nhs-jobs",
+        "usajobs-federal",
+        "ministry-of-defence",
+        "hmrc",
+        "department-for-work-and-pensions",
+        "home-office",
+        "metropolitan-police",
+        "transport-for-london",
+        "european-commission",
+        "nasa"
+      ]
+    },
+    {
+      "id": "defence-and-aerospace",
+      "name": "Defence & Aerospace",
+      "companies": [
+        "lockheed-martin",
+        "rtx",
+        "boeing",
+        "northrop-grumman",
+        "general-dynamics",
+        "bae-systems",
+        "airbus",
+        "l3harris",
+        "rolls-royce",
+        "leonardo",
+        "thales",
+        "safran",
+        "ge-aerospace",
+        "honeywell-aerospace",
+        "babcock-international",
+        "qinetiq",
+        "leidos",
+        "spacex",
+        "anduril",
+        "rheinmetall"
+      ]
+    },
+    {
+      "id": "airlines-and-aviation",
+      "name": "Airlines & Aviation",
+      "companies": [
+        "delta",
+        "american-airlines",
+        "united-airlines",
+        "southwest",
+        "emirates-group",
+        "qatar-airways",
+        "lufthansa-group",
+        "air-france-klm",
+        "international-airlines-group",
+        "ryanair",
+        "easyjet",
+        "turkish-airlines",
+        "singapore-airlines",
+        "etihad",
+        "ethiopian-airlines",
+        "air-canada",
+        "qantas",
+        "indigo",
+        "heathrow-airport"
+      ]
+    },
+    {
+      "id": "automotive-and-ev",
+      "name": "Automotive & EV",
+      "companies": [
+        "toyota",
+        "volkswagen-group",
+        "stellantis",
+        "ford",
+        "general-motors",
+        "hyundai-motor-group",
+        "mercedes-benz",
+        "bmw",
+        "honda",
+        "tesla",
+        "byd",
+        "nissan",
+        "tata-motors",
+        "jaguar-land-rover",
+        "renault",
+        "rivian",
+        "bosch",
+        "continental",
+        "magna",
+        "denso",
+        "mahindra"
+      ]
+    },
+    {
+      "id": "oil-gas-and-energy-majors",
+      "name": "Oil, Gas & Energy Majors",
+      "companies": [
+        "exxonmobil",
+        "shell",
+        "chevron",
+        "bp",
+        "totalenergies",
+        "saudi-aramco",
+        "adnoc",
+        "conocophillips",
+        "eni",
+        "equinor",
+        "slb",
+        "halliburton",
+        "baker-hughes",
+        "petrobras",
+        "nnpc-ltd",
+        "sinopec",
+        "cnpc",
+        "occidental",
+        "phillips-66",
+        "seplat",
+        "woodside"
+      ]
+    },
+    {
+      "id": "renewables-utilities-and-climate",
+      "name": "Renewables, Utilities & Climate",
+      "companies": [
+        "nextera-energy",
+        "rsted",
+        "iberdrola",
+        "enel",
+        "edf",
+        "national-grid",
+        "sse",
+        "octopus-energy",
+        "vestas",
+        "siemens-gamesa",
+        "first-solar",
+        "ge-vernova",
+        "rwe",
+        "duke-energy",
+        "southern-company",
+        "centrica",
+        "scottishpower",
+        "adani-green",
+        "tata-power",
+        "brookfield-renewable",
+        "schneider-electric"
+      ]
+    },
+    {
+      "id": "industrial-manufacturing",
+      "name": "Industrial Manufacturing",
+      "companies": [
+        "siemens",
+        "general-electric",
+        "honeywell",
+        "3m",
+        "abb",
+        "caterpillar",
+        "deere",
+        "emerson",
+        "schneider-electric",
+        "eaton",
+        "johnson-controls",
+        "hitachi",
+        "mitsubishi-heavy-industries",
+        "rockwell-automation",
+        "parker-hannifin",
+        "danaher",
+        "cummins",
+        "tata-steel",
+        "dyson",
+        "whirlpool"
+      ]
+    },
+    {
+      "id": "construction-engineering-and-infrastructure",
+      "name": "Construction, Engineering & Infrastructure",
+      "companies": [
+        "bechtel",
+        "vinci",
+        "acs",
+        "hochtief",
+        "skanska",
+        "balfour-beatty",
+        "kier",
+        "laing-o-rourke",
+        "aecom",
+        "jacobs",
+        "fluor",
+        "arup",
+        "atkins-realis",
+        "wsp",
+        "mott-macdonald",
+        "stantec",
+        "larsen-and-toubro",
+        "turner-construction",
+        "network-rail",
+        "hs2-ltd"
+      ]
+    },
+    {
+      "id": "real-estate-and-proptech",
+      "name": "Real Estate & PropTech",
+      "companies": [
+        "cbre",
+        "jll",
+        "cushman-and-wakefield",
+        "savills",
+        "knight-frank",
+        "colliers",
+        "zillow",
+        "compass",
+        "rightmove",
+        "zoopla",
+        "barratt-redrow",
+        "persimmon",
+        "taylor-wimpey",
+        "lennar",
+        "d-r-horton",
+        "prologis",
+        "emaar",
+        "land-securities",
+        "british-land"
+      ]
+    },
+    {
+      "id": "retail-and-e-commerce",
+      "name": "Retail & E-commerce",
+      "companies": [
+        "walmart",
+        "amazon",
+        "costco",
+        "tesco",
+        "target",
+        "home-depot",
+        "lowe-s",
+        "kroger",
+        "schwarz-group",
+        "aldi",
+        "carrefour",
+        "sainsbury-s",
+        "marks-and-spencer",
+        "ikea",
+        "ahold-delhaize",
+        "alibaba",
+        "jd-com",
+        "shopify",
+        "zalando",
+        "jumia"
+      ]
+    },
+    {
+      "id": "consumer-goods-fmcg",
+      "name": "Consumer Goods (FMCG)",
+      "companies": [
+        "unilever",
+        "procter-and-gamble",
+        "nestle",
+        "pepsico",
+        "coca-cola",
+        "l-oreal",
+        "mondelez",
+        "reckitt",
+        "colgate-palmolive",
+        "kimberly-clark",
+        "danone",
+        "diageo",
+        "haleon",
+        "kraft-heinz",
+        "mars",
+        "estee-lauder",
+        "henkel",
+        "beiersdorf",
+        "kenvue",
+        "dangote-group"
+      ]
+    },
+    {
+      "id": "food-beverage-and-agriculture",
+      "name": "Food, Beverage & Agriculture",
+      "companies": [
+        "nestle",
+        "pepsico",
+        "coca-cola",
+        "tyson-foods",
+        "jbs",
+        "cargill",
+        "adm",
+        "bunge",
+        "danone",
+        "kraft-heinz",
+        "general-mills",
+        "kellanova",
+        "heineken",
+        "ab-inbev",
+        "diageo",
+        "bayer-crop-science",
+        "syngenta",
+        "corteva",
+        "olam",
+        "wilmar"
+      ]
+    },
+    {
+      "id": "hospitality-travel-and-leisure",
+      "name": "Hospitality, Travel & Leisure",
+      "companies": [
+        "marriott",
+        "hilton",
+        "ihg",
+        "accor",
+        "hyatt",
+        "wyndham",
+        "mcdonald-s",
+        "starbucks",
+        "yum-brands",
+        "compass-group",
+        "tui",
+        "carnival",
+        "royal-caribbean",
+        "expedia",
+        "booking-holdings",
+        "airbnb",
+        "whitbread",
+        "merlin-entertainments",
+        "disney-parks",
+        "las-vegas-sands",
+        "mgm-resorts"
+      ]
+    },
+    {
+      "id": "logistics-shipping-and-supply-chain",
+      "name": "Logistics, Shipping & Supply Chain",
+      "companies": [
+        "amazon-logistics",
+        "dhl-group",
+        "ups",
+        "fedex",
+        "maersk",
+        "dsv",
+        "kuehne-nagel",
+        "xpo",
+        "gxo",
+        "cma-cgm",
+        "msc",
+        "royal-mail",
+        "evri",
+        "dp-world",
+        "j-b-hunt",
+        "c-h-robinson",
+        "expeditors",
+        "ocado",
+        "flexport"
+      ]
+    },
+    {
+      "id": "business-services-facilities-and-outsourcing",
+      "name": "Business Services, Facilities & Outsourcing",
+      "companies": [
+        "compass-group",
+        "sodexo",
+        "aramark",
+        "iss",
+        "serco",
+        "capita",
+        "allied-universal",
+        "securitas",
+        "mitie",
+        "teleperformance",
+        "concentrix",
+        "taskus",
+        "genpact",
+        "experian",
+        "equifax",
+        "gartner",
+        "cintas",
+        "adp",
+        "paychex"
+      ]
+    }
+  ],
+  "companies": [
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "sap",
+      "name": "SAP",
+      "hq": "Germany",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "servicenow",
+      "name": "ServiceNow",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "workday",
+      "name": "Workday",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "intuit",
+      "name": "Intuit",
+      "hq": "US",
+      "sectors": ["software-and-cloud", "accounting-audit-and-tax"]
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "hq": "Australia",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "hq": "US",
+      "sectors": ["software-and-cloud", "ai-and-machine-learning"]
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "hq": "Canada",
+      "sectors": ["software-and-cloud", "retail-and-e-commerce"]
+    },
+    {
+      "id": "autodesk",
+      "name": "Autodesk",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "vmware-by-broadcom",
+      "name": "VMware by Broadcom",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "cisco",
+      "name": "Cisco",
+      "hq": "US",
+      "sectors": ["software-and-cloud", "semiconductors-and-hardware", "cybersecurity"]
+    },
+    {
+      "id": "palantir",
+      "name": "Palantir",
+      "hq": "US",
+      "sectors": ["software-and-cloud", "ai-and-machine-learning"]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "hq": "US/Ireland",
+      "sectors": ["software-and-cloud", "fintech-payments-and-crypto"]
+    },
+    {
+      "id": "twilio",
+      "name": "Twilio",
+      "hq": "US",
+      "sectors": ["software-and-cloud"]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech", "retail-and-e-commerce"]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech", "ai-and-machine-learning"]
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech", "semiconductors-and-hardware"]
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech", "media-publishing-and-entertainment"]
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "airbnb",
+      "name": "Airbnb",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech", "hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "booking-holdings",
+      "name": "Booking Holdings",
+      "hq": "US/NL",
+      "sectors": ["internet-social-and-consumer-tech", "hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "ebay",
+      "name": "eBay",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "hq": "Sweden",
+      "sectors": ["internet-social-and-consumer-tech", "media-publishing-and-entertainment"]
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "snap",
+      "name": "Snap",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "doordash",
+      "name": "DoorDash",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "instacart",
+      "name": "Instacart",
+      "hq": "US",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "bytedance",
+      "name": "ByteDance",
+      "hq": "Singapore/China",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent",
+      "hq": "China",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "alibaba",
+      "name": "Alibaba",
+      "hq": "China",
+      "sectors": ["internet-social-and-consumer-tech", "retail-and-e-commerce"]
+    },
+    {
+      "id": "zalando",
+      "name": "Zalando",
+      "hq": "Germany",
+      "sectors": ["internet-social-and-consumer-tech", "retail-and-e-commerce"]
+    },
+    {
+      "id": "rakuten",
+      "name": "Rakuten",
+      "hq": "Japan",
+      "sectors": ["internet-social-and-consumer-tech"]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "hq": "UK/US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "microsoft-ai",
+      "name": "Microsoft AI",
+      "hq": "US/UK",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning", "semiconductors-and-hardware"]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "mistral-ai",
+      "name": "Mistral AI",
+      "hq": "France",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "hq": "Canada",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "scale-ai",
+      "name": "Scale AI",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "hq": "US/France",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "safe-superintelligence",
+      "name": "Safe Superintelligence",
+      "hq": "US/Israel",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "stability-ai",
+      "name": "Stability AI",
+      "hq": "UK",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "hq": "UK/US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "glean",
+      "name": "Glean",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "character-ai",
+      "name": "Character.AI",
+      "hq": "US",
+      "sectors": ["ai-and-machine-learning"]
+    },
+    {
+      "id": "intel",
+      "name": "Intel",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "qualcomm",
+      "name": "Qualcomm",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "broadcom",
+      "name": "Broadcom",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware", "cybersecurity"]
+    },
+    {
+      "id": "tsmc",
+      "name": "TSMC",
+      "hq": "Taiwan",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "samsung-electronics",
+      "name": "Samsung Electronics",
+      "hq": "S. Korea",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "asml",
+      "name": "ASML",
+      "hq": "NL",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "micron",
+      "name": "Micron",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "texas-instruments",
+      "name": "Texas Instruments",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "applied-materials",
+      "name": "Applied Materials",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "lam-research",
+      "name": "Lam Research",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "arm",
+      "name": "Arm",
+      "hq": "UK",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "dell-technologies",
+      "name": "Dell Technologies",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "hp-inc",
+      "name": "HP Inc.",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "hpe",
+      "name": "HPE",
+      "hq": "US",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "foxconn",
+      "name": "Foxconn",
+      "hq": "Taiwan",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "sony",
+      "name": "Sony",
+      "hq": "Japan",
+      "sectors": ["semiconductors-and-hardware"]
+    },
+    {
+      "id": "accenture",
+      "name": "Accenture",
+      "hq": "Ireland",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "tcs",
+      "name": "TCS",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "infosys",
+      "name": "Infosys",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "cognizant",
+      "name": "Cognizant",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "wipro",
+      "name": "Wipro",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "hcltech",
+      "name": "HCLTech",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "ibm-consulting",
+      "name": "IBM Consulting",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "capgemini",
+      "name": "Capgemini",
+      "hq": "France",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "tech-mahindra",
+      "name": "Tech Mahindra",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "dxc-technology",
+      "name": "DXC Technology",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "ntt-data",
+      "name": "NTT Data",
+      "hq": "Japan",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "fujitsu",
+      "name": "Fujitsu",
+      "hq": "Japan",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "ltimindtree",
+      "name": "LTIMindtree",
+      "hq": "India",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "genpact",
+      "name": "Genpact",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing", "business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "epam",
+      "name": "EPAM",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "cgi",
+      "name": "CGI",
+      "hq": "Canada",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "kyndryl",
+      "name": "Kyndryl",
+      "hq": "US",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "capita",
+      "name": "Capita",
+      "hq": "UK",
+      "sectors": ["it-services-and-outsourcing", "business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "endava",
+      "name": "Endava",
+      "hq": "UK",
+      "sectors": ["it-services-and-outsourcing"]
+    },
+    {
+      "id": "microsoft-security",
+      "name": "Microsoft Security",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "palo-alto-networks",
+      "name": "Palo Alto Networks",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "crowdstrike",
+      "name": "CrowdStrike",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "fortinet",
+      "name": "Fortinet",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "zscaler",
+      "name": "Zscaler",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "okta",
+      "name": "Okta",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "check-point",
+      "name": "Check Point",
+      "hq": "Israel",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "sentinelone",
+      "name": "SentinelOne",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "trend-micro",
+      "name": "Trend Micro",
+      "hq": "Japan",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "mandiant-google-cloud",
+      "name": "Mandiant (Google Cloud)",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "rapid7",
+      "name": "Rapid7",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "proofpoint",
+      "name": "Proofpoint",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "cyberark",
+      "name": "CyberArk",
+      "hq": "Israel",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "darktrace",
+      "name": "Darktrace",
+      "hq": "UK",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "wiz-google",
+      "name": "Wiz (Google)",
+      "hq": "US/Israel",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "booz-allen-hamilton",
+      "name": "Booz Allen Hamilton",
+      "hq": "US",
+      "sectors": ["cybersecurity"]
+    },
+    {
+      "id": "leidos",
+      "name": "Leidos",
+      "hq": "US",
+      "sectors": ["cybersecurity", "defence-and-aerospace"]
+    },
+    {
+      "id": "at-and-t",
+      "name": "AT&T",
+      "hq": "US",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "verizon",
+      "name": "Verizon",
+      "hq": "US",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "t-mobile-us",
+      "name": "T-Mobile US",
+      "hq": "US",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "comcast",
+      "name": "Comcast",
+      "hq": "US",
+      "sectors": ["telecoms", "media-publishing-and-entertainment"]
+    },
+    {
+      "id": "charter",
+      "name": "Charter",
+      "hq": "US",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "deutsche-telekom",
+      "name": "Deutsche Telekom",
+      "hq": "Germany",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "vodafone",
+      "name": "Vodafone",
+      "hq": "UK",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "bt-group",
+      "name": "BT Group",
+      "hq": "UK",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "hq": "France",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "telefonica",
+      "name": "Telefónica",
+      "hq": "Spain",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "ericsson",
+      "name": "Ericsson",
+      "hq": "Sweden",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "nokia",
+      "name": "Nokia",
+      "hq": "Finland",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "huawei",
+      "name": "Huawei",
+      "hq": "China",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "mtn-group",
+      "name": "MTN Group",
+      "hq": "S. Africa",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "bharti-airtel",
+      "name": "Bharti Airtel",
+      "hq": "India",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "reliance-jio",
+      "name": "Reliance Jio",
+      "hq": "India",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "singtel",
+      "name": "Singtel",
+      "hq": "Singapore",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "telstra",
+      "name": "Telstra",
+      "hq": "Australia",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "rogers",
+      "name": "Rogers",
+      "hq": "Canada",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "e-and",
+      "name": "e&",
+      "hq": "UAE",
+      "sectors": ["telecoms"]
+    },
+    {
+      "id": "jpmorgan-chase",
+      "name": "JPMorgan Chase",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "bank-of-america",
+      "name": "Bank of America",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "wells-fargo",
+      "name": "Wells Fargo",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "citigroup",
+      "name": "Citigroup",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "hsbc",
+      "name": "HSBC",
+      "hq": "UK",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "barclays",
+      "name": "Barclays",
+      "hq": "UK",
+      "sectors": ["retail-and-commercial-banking", "investment-banking-and-asset-management"]
+    },
+    {
+      "id": "lloyds-banking-group",
+      "name": "Lloyds Banking Group",
+      "hq": "UK",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "natwest-group",
+      "name": "NatWest Group",
+      "hq": "UK",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "santander",
+      "name": "Santander",
+      "hq": "Spain",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "bnp-paribas",
+      "name": "BNP Paribas",
+      "hq": "France",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "standard-chartered",
+      "name": "Standard Chartered",
+      "hq": "UK",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "royal-bank-of-canada",
+      "name": "Royal Bank of Canada",
+      "hq": "Canada",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "td-bank",
+      "name": "TD Bank",
+      "hq": "Canada",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "commonwealth-bank",
+      "name": "Commonwealth Bank",
+      "hq": "Australia",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "icici-bank",
+      "name": "ICICI Bank",
+      "hq": "India",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "hdfc-bank",
+      "name": "HDFC Bank",
+      "hq": "India",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "standard-bank",
+      "name": "Standard Bank",
+      "hq": "S. Africa",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "access-bank",
+      "name": "Access Bank",
+      "hq": "Nigeria",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "capital-one",
+      "name": "Capital One",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "us-bancorp",
+      "name": "US Bancorp",
+      "hq": "US",
+      "sectors": ["retail-and-commercial-banking"]
+    },
+    {
+      "id": "goldman-sachs",
+      "name": "Goldman Sachs",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "morgan-stanley",
+      "name": "Morgan Stanley",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "jpmorgan",
+      "name": "JPMorgan",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "blackrock",
+      "name": "BlackRock",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "citi",
+      "name": "Citi",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "ubs",
+      "name": "UBS",
+      "hq": "Switzerland",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "deutsche-bank",
+      "name": "Deutsche Bank",
+      "hq": "Germany",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "lazard",
+      "name": "Lazard",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "rothschild-and-co",
+      "name": "Rothschild & Co",
+      "hq": "UK/France",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "evercore",
+      "name": "Evercore",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "jefferies",
+      "name": "Jefferies",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "fidelity-investments",
+      "name": "Fidelity Investments",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "state-street",
+      "name": "State Street",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "schroders",
+      "name": "Schroders",
+      "hq": "UK",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "kkr",
+      "name": "KKR",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "carlyle",
+      "name": "Carlyle",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "pimco",
+      "name": "PIMCO",
+      "hq": "US",
+      "sectors": ["investment-banking-and-asset-management"]
+    },
+    {
+      "id": "visa",
+      "name": "Visa",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "mastercard",
+      "name": "Mastercard",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "block",
+      "name": "Block",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "adyen",
+      "name": "Adyen",
+      "hq": "NL",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "revolut",
+      "name": "Revolut",
+      "hq": "UK",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "monzo",
+      "name": "Monzo",
+      "hq": "UK",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "wise",
+      "name": "Wise",
+      "hq": "UK",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "klarna",
+      "name": "Klarna",
+      "hq": "Sweden",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "chime",
+      "name": "Chime",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "robinhood",
+      "name": "Robinhood",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "binance",
+      "name": "Binance",
+      "hq": "global",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "hq": "US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "flutterwave",
+      "name": "Flutterwave",
+      "hq": "Nigeria/US",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "paystack",
+      "name": "Paystack",
+      "hq": "Nigeria, Stripe",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "moniepoint",
+      "name": "Moniepoint",
+      "hq": "Nigeria",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "nubank",
+      "name": "Nubank",
+      "hq": "Brazil",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "hq": "India",
+      "sectors": ["fintech-payments-and-crypto"]
+    },
+    {
+      "id": "axa",
+      "name": "AXA",
+      "hq": "France",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "allianz",
+      "name": "Allianz",
+      "hq": "Germany",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich",
+      "hq": "Switzerland",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "aviva",
+      "name": "Aviva",
+      "hq": "UK",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "legal-and-general",
+      "name": "Legal & General",
+      "hq": "UK",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "prudential-plc",
+      "name": "Prudential plc",
+      "hq": "UK",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "aig",
+      "name": "AIG",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "metlife",
+      "name": "MetLife",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "prudential-financial",
+      "name": "Prudential Financial",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "chubb",
+      "name": "Chubb",
+      "hq": "Switzerland",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "travelers",
+      "name": "Travelers",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "progressive",
+      "name": "Progressive",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "state-farm",
+      "name": "State Farm",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "allstate",
+      "name": "Allstate",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "liberty-mutual",
+      "name": "Liberty Mutual",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "generali",
+      "name": "Generali",
+      "hq": "Italy",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "munich-re",
+      "name": "Munich Re",
+      "hq": "Germany",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "swiss-re",
+      "name": "Swiss Re",
+      "hq": "Switzerland",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "marsh-mclennan",
+      "name": "Marsh McLennan",
+      "hq": "US",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "aon",
+      "name": "Aon",
+      "hq": "UK/Ireland",
+      "sectors": ["insurance"]
+    },
+    {
+      "id": "pwc",
+      "name": "PwC",
+      "hq": "UK",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "deloitte",
+      "name": "Deloitte",
+      "hq": "UK",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "ey",
+      "name": "EY",
+      "hq": "UK",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "kpmg",
+      "name": "KPMG",
+      "hq": "UK/NL",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "bdo",
+      "name": "BDO",
+      "hq": "Belgium",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "grant-thornton",
+      "name": "Grant Thornton",
+      "hq": "UK/US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "rsm",
+      "name": "RSM",
+      "hq": "UK/US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "forvis-mazars",
+      "name": "Forvis Mazars",
+      "hq": "France",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "baker-tilly",
+      "name": "Baker Tilly",
+      "hq": "UK/US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "crowe",
+      "name": "Crowe",
+      "hq": "US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "azets",
+      "name": "Azets",
+      "hq": "UK",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "cherry-bekaert",
+      "name": "Cherry Bekaert",
+      "hq": "US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "cliftonlarsonallen",
+      "name": "CliftonLarsonAllen",
+      "hq": "US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "moss-adams",
+      "name": "Moss Adams",
+      "hq": "US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "h-and-r-block",
+      "name": "H&R Block",
+      "hq": "US",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "xero",
+      "name": "Xero",
+      "hq": "NZ",
+      "sectors": ["accounting-audit-and-tax"]
+    },
+    {
+      "id": "mckinsey",
+      "name": "McKinsey",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "boston-consulting-group",
+      "name": "Boston Consulting Group",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "bain",
+      "name": "Bain",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "deloitte-consulting",
+      "name": "Deloitte Consulting",
+      "hq": "US/UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "accenture-strategy",
+      "name": "Accenture Strategy",
+      "hq": "Ireland",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "pwc-strategy-and",
+      "name": "PwC Strategy&",
+      "hq": "UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "ey-parthenon",
+      "name": "EY-Parthenon",
+      "hq": "UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "kpmg-advisory",
+      "name": "KPMG Advisory",
+      "hq": "UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "oliver-wyman",
+      "name": "Oliver Wyman",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "kearney",
+      "name": "Kearney",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "l-e-k",
+      "name": "L.E.K.",
+      "hq": "UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "roland-berger",
+      "name": "Roland Berger",
+      "hq": "Germany",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "capgemini-invent",
+      "name": "Capgemini Invent",
+      "hq": "France",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "fti-consulting",
+      "name": "FTI Consulting",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "alvarez-and-marsal",
+      "name": "Alvarez & Marsal",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "huron",
+      "name": "Huron",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "west-monroe",
+      "name": "West Monroe",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "slalom",
+      "name": "Slalom",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "mercer",
+      "name": "Mercer",
+      "hq": "US",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "willis-towers-watson",
+      "name": "Willis Towers Watson",
+      "hq": "UK",
+      "sectors": ["management-consulting-and-strategy"]
+    },
+    {
+      "id": "clifford-chance",
+      "name": "Clifford Chance",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "linklaters",
+      "name": "Linklaters",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "allen-and-overy-shearman",
+      "name": "Allen & Overy Shearman",
+      "hq": "UK/US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "freshfields",
+      "name": "Freshfields",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "slaughter-and-may",
+      "name": "Slaughter and May",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "dla-piper",
+      "name": "DLA Piper",
+      "hq": "UK/US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "baker-mckenzie",
+      "name": "Baker McKenzie",
+      "hq": "US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "kirkland-and-ellis",
+      "name": "Kirkland & Ellis",
+      "hq": "US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "latham-and-watkins",
+      "name": "Latham & Watkins",
+      "hq": "US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "skadden",
+      "name": "Skadden",
+      "hq": "US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "white-and-case",
+      "name": "White & Case",
+      "hq": "US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "norton-rose-fulbright",
+      "name": "Norton Rose Fulbright",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "herbert-smith-freehills-kramer",
+      "name": "Herbert Smith Freehills Kramer",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "hogan-lovells",
+      "name": "Hogan Lovells",
+      "hq": "UK/US",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "ashurst",
+      "name": "Ashurst",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "addleshaw-goddard",
+      "name": "Addleshaw Goddard",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "eversheds-sutherland",
+      "name": "Eversheds Sutherland",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "pinsent-masons",
+      "name": "Pinsent Masons",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "thomson-reuters",
+      "name": "Thomson Reuters",
+      "hq": "Canada, legal-tech",
+      "sectors": ["legal", "media-publishing-and-entertainment"]
+    },
+    {
+      "id": "lexisnexis",
+      "name": "LexisNexis",
+      "hq": "UK",
+      "sectors": ["legal"]
+    },
+    {
+      "id": "hca-healthcare",
+      "name": "HCA Healthcare",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "nhs-england-trusts-via-nhs-jobs",
+      "name": "NHS England trusts via NHS Jobs",
+      "hq": "UK",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "kaiser-permanente",
+      "name": "Kaiser Permanente",
+      "hq": "US",
+      "sectors": ["healthcare-providers", "health-insurance-and-digital-health"]
+    },
+    {
+      "id": "commonspirit-health",
+      "name": "CommonSpirit Health",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "ascension",
+      "name": "Ascension",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "providence",
+      "name": "Providence",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "mayo-clinic",
+      "name": "Mayo Clinic",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "cleveland-clinic",
+      "name": "Cleveland Clinic",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "mass-general-brigham",
+      "name": "Mass General Brigham",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "universal-health-services",
+      "name": "Universal Health Services",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "community-health-systems",
+      "name": "Community Health Systems",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "tenet",
+      "name": "Tenet",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "veterans-health-administration",
+      "name": "Veterans Health Administration",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "bupa",
+      "name": "Bupa",
+      "hq": "UK",
+      "sectors": ["healthcare-providers", "health-insurance-and-digital-health"]
+    },
+    {
+      "id": "spire-healthcare",
+      "name": "Spire Healthcare",
+      "hq": "UK",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "ramsay-health-care",
+      "name": "Ramsay Health Care",
+      "hq": "Australia",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "fresenius",
+      "name": "Fresenius",
+      "hq": "Germany",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "apollo-hospitals",
+      "name": "Apollo Hospitals",
+      "hq": "India",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "mediclinic",
+      "name": "Mediclinic",
+      "hq": "UAE/S. Africa",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "davita",
+      "name": "DaVita",
+      "hq": "US",
+      "sectors": ["healthcare-providers"]
+    },
+    {
+      "id": "johnson-and-johnson",
+      "name": "Johnson & Johnson",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "roche",
+      "name": "Roche",
+      "hq": "Switzerland",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "pfizer",
+      "name": "Pfizer",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "novartis",
+      "name": "Novartis",
+      "hq": "Switzerland",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "merck-and-co",
+      "name": "Merck & Co.",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "abbvie",
+      "name": "AbbVie",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "astrazeneca",
+      "name": "AstraZeneca",
+      "hq": "UK",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "eli-lilly",
+      "name": "Eli Lilly",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "novo-nordisk",
+      "name": "Novo Nordisk",
+      "hq": "Denmark",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "sanofi",
+      "name": "Sanofi",
+      "hq": "France",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "gsk",
+      "name": "GSK",
+      "hq": "UK",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "bristol-myers-squibb",
+      "name": "Bristol Myers Squibb",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "bayer",
+      "name": "Bayer",
+      "hq": "Germany",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "takeda",
+      "name": "Takeda",
+      "hq": "Japan",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "boehringer-ingelheim",
+      "name": "Boehringer Ingelheim",
+      "hq": "Germany",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "amgen",
+      "name": "Amgen",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "gilead",
+      "name": "Gilead",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "teva",
+      "name": "Teva",
+      "hq": "Israel",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "sun-pharma",
+      "name": "Sun Pharma",
+      "hq": "India",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "viatris",
+      "name": "Viatris",
+      "hq": "US",
+      "sectors": ["pharmaceuticals"]
+    },
+    {
+      "id": "thermo-fisher",
+      "name": "Thermo Fisher",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "iqvia",
+      "name": "IQVIA",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "danaher",
+      "name": "Danaher",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros", "industrial-manufacturing"]
+    },
+    {
+      "id": "labcorp",
+      "name": "Labcorp",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "syneos-health",
+      "name": "Syneos Health",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "ppd-thermo",
+      "name": "PPD (Thermo)",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "icon-plc",
+      "name": "ICON plc",
+      "hq": "Ireland",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "parexel",
+      "name": "Parexel",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "charles-river-laboratories",
+      "name": "Charles River Laboratories",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "medpace",
+      "name": "Medpace",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "illumina",
+      "name": "Illumina",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "moderna",
+      "name": "Moderna",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "regeneron",
+      "name": "Regeneron",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "vertex",
+      "name": "Vertex",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "biontech",
+      "name": "BioNTech",
+      "hq": "Germany",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "lonza",
+      "name": "Lonza",
+      "hq": "Switzerland",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "agilent",
+      "name": "Agilent",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "wuxi-apptec",
+      "name": "WuXi AppTec",
+      "hq": "China",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "catalent",
+      "name": "Catalent",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "genentech",
+      "name": "Genentech",
+      "hq": "US",
+      "sectors": ["biotech-life-science-tools-and-cros"]
+    },
+    {
+      "id": "medtronic",
+      "name": "Medtronic",
+      "hq": "Ireland",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "abbott",
+      "name": "Abbott",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "siemens-healthineers",
+      "name": "Siemens Healthineers",
+      "hq": "Germany",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "ge-healthcare",
+      "name": "GE HealthCare",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "philips",
+      "name": "Philips",
+      "hq": "NL",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "johnson-and-johnson-medtech",
+      "name": "Johnson & Johnson MedTech",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "boston-scientific",
+      "name": "Boston Scientific",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "stryker",
+      "name": "Stryker",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "becton-dickinson",
+      "name": "Becton Dickinson",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "baxter",
+      "name": "Baxter",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "zimmer-biomet",
+      "name": "Zimmer Biomet",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "edwards-lifesciences",
+      "name": "Edwards Lifesciences",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "intuitive-surgical",
+      "name": "Intuitive Surgical",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "smith-nephew",
+      "name": "Smith+Nephew",
+      "hq": "UK",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "olympus",
+      "name": "Olympus",
+      "hq": "Japan",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "fresenius-medical-care",
+      "name": "Fresenius Medical Care",
+      "hq": "Germany",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "cardinal-health",
+      "name": "Cardinal Health",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "dexcom",
+      "name": "Dexcom",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "resmed",
+      "name": "ResMed",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "hologic",
+      "name": "Hologic",
+      "hq": "US",
+      "sectors": ["medical-devices"]
+    },
+    {
+      "id": "unitedhealth-group",
+      "name": "UnitedHealth Group",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "cvs-health",
+      "name": "CVS Health",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "elevance-health",
+      "name": "Elevance Health",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "cigna",
+      "name": "Cigna",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "humana",
+      "name": "Humana",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "centene",
+      "name": "Centene",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "axa-health",
+      "name": "AXA Health",
+      "hq": "UK",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "vitality",
+      "name": "Vitality",
+      "hq": "UK/S. Africa",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "teladoc",
+      "name": "Teladoc",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "oscar-health",
+      "name": "Oscar Health",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "epic-systems",
+      "name": "Epic Systems",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "oracle-health-cerner",
+      "name": "Oracle Health (Cerner)",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "hims-and-hers",
+      "name": "Hims & Hers",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "doximity",
+      "name": "Doximity",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "zocdoc",
+      "name": "Zocdoc",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "ro",
+      "name": "Ro",
+      "hq": "US",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "huma",
+      "name": "Huma",
+      "hq": "UK/Sweden",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "kry",
+      "name": "Kry",
+      "hq": "UK/Sweden",
+      "sectors": ["health-insurance-and-digital-health"]
+    },
+    {
+      "id": "walt-disney",
+      "name": "Walt Disney",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "warner-bros-discovery",
+      "name": "Warner Bros. Discovery",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "paramount",
+      "name": "Paramount",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "sony-group",
+      "name": "Sony Group",
+      "hq": "Japan",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "bbc",
+      "name": "BBC",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "itv",
+      "name": "ITV",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "sky",
+      "name": "Sky",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "news-corp",
+      "name": "News Corp",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "relx",
+      "name": "RELX",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "pearson",
+      "name": "Pearson",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment", "edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "penguin-random-house",
+      "name": "Penguin Random House",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "harpercollins",
+      "name": "HarperCollins",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "universal-music-group",
+      "name": "Universal Music Group",
+      "hq": "NL/US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "live-nation",
+      "name": "Live Nation",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "hq": "US",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "financial-times",
+      "name": "Financial Times",
+      "hq": "UK",
+      "sectors": ["media-publishing-and-entertainment"]
+    },
+    {
+      "id": "microsoft-gaming",
+      "name": "Microsoft Gaming",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "sony-interactive",
+      "name": "Sony Interactive",
+      "hq": "US/Japan",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "nintendo",
+      "name": "Nintendo",
+      "hq": "Japan",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "tencent-games",
+      "name": "Tencent Games",
+      "hq": "China",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "electronic-arts",
+      "name": "Electronic Arts",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "take-two-interactive",
+      "name": "Take-Two Interactive",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "ubisoft",
+      "name": "Ubisoft",
+      "hq": "France",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "activision-blizzard-microsoft",
+      "name": "Activision Blizzard (Microsoft)",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "epic-games",
+      "name": "Epic Games",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "riot-games",
+      "name": "Riot Games",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "supercell",
+      "name": "Supercell",
+      "hq": "Finland",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "king-microsoft",
+      "name": "King (Microsoft)",
+      "hq": "UK/Sweden",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "embracer-group",
+      "name": "Embracer Group",
+      "hq": "Sweden",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "cd-projekt",
+      "name": "CD Projekt",
+      "hq": "Poland",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "bandai-namco",
+      "name": "Bandai Namco",
+      "hq": "Japan",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "square-enix",
+      "name": "Square Enix",
+      "hq": "Japan",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "valve",
+      "name": "Valve",
+      "hq": "US",
+      "sectors": ["gaming"]
+    },
+    {
+      "id": "university-of-oxford",
+      "name": "University of Oxford",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-cambridge",
+      "name": "University of Cambridge",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "ucl",
+      "name": "UCL",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "imperial-college-london",
+      "name": "Imperial College London",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "king-s-college-london",
+      "name": "King's College London",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-manchester",
+      "name": "University of Manchester",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-edinburgh",
+      "name": "University of Edinburgh",
+      "hq": "UK",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "harvard",
+      "name": "Harvard",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "mit",
+      "name": "MIT",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "johns-hopkins",
+      "name": "Johns Hopkins",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-california-system",
+      "name": "University of California system",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-texas-system",
+      "name": "University of Texas system",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "state-university-of-new-york",
+      "name": "State University of New York",
+      "hq": "US",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-toronto",
+      "name": "University of Toronto",
+      "hq": "Canada",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "university-of-melbourne",
+      "name": "University of Melbourne",
+      "hq": "Australia",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "national-university-of-singapore",
+      "name": "National University of Singapore",
+      "hq": "Singapore",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "eth-zurich",
+      "name": "ETH Zurich",
+      "hq": "Switzerland",
+      "sectors": ["higher-education"]
+    },
+    {
+      "id": "coursera",
+      "name": "Coursera",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "chegg",
+      "name": "Chegg",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "instructure",
+      "name": "Instructure",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "2u",
+      "name": "2U",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "byju-s",
+      "name": "Byju's",
+      "hq": "India, distressed",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "physicswallah",
+      "name": "PhysicsWallah",
+      "hq": "India",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "udemy",
+      "name": "Udemy",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "khan-academy",
+      "name": "Khan Academy",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "gostudent",
+      "name": "GoStudent",
+      "hq": "Austria",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "multiverse",
+      "name": "Multiverse",
+      "hq": "UK",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "bpp",
+      "name": "BPP",
+      "hq": "UK",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "kaplan",
+      "name": "Kaplan",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "mcgraw-hill",
+      "name": "McGraw Hill",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "cengage",
+      "name": "Cengage",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "teach-first",
+      "name": "Teach First",
+      "hq": "UK",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "teach-for-america",
+      "name": "Teach For America",
+      "hq": "US",
+      "sectors": ["edtech-training-and-k-12-services"]
+    },
+    {
+      "id": "brac",
+      "name": "BRAC",
+      "hq": "Bangladesh",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "international-rescue-committee",
+      "name": "International Rescue Committee",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "save-the-children",
+      "name": "Save the Children",
+      "hq": "UK/US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "oxfam",
+      "name": "Oxfam",
+      "hq": "UK",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "medecins-sans-frontieres",
+      "name": "Médecins Sans Frontières",
+      "hq": "Switzerland",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "mercy-corps",
+      "name": "Mercy Corps",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "world-vision",
+      "name": "World Vision",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "care",
+      "name": "CARE",
+      "hq": "US/Switzerland",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "plan-international",
+      "name": "Plan International",
+      "hq": "UK",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "catholic-relief-services",
+      "name": "Catholic Relief Services",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "norwegian-refugee-council",
+      "name": "Norwegian Refugee Council",
+      "hq": "Norway",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "international-committee-of-the-red-cross",
+      "name": "International Committee of the Red Cross",
+      "hq": "Switzerland",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "ifrc",
+      "name": "IFRC",
+      "hq": "Switzerland",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "actionaid",
+      "name": "ActionAid",
+      "hq": "UK/SA",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "christian-aid",
+      "name": "Christian Aid",
+      "hq": "UK",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "fhi-360",
+      "name": "FHI 360",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "chemonics",
+      "name": "Chemonics",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "dai-global",
+      "name": "DAI Global",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "palladium",
+      "name": "Palladium",
+      "hq": "UK",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "abt-associates",
+      "name": "Abt Associates",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "rti-international",
+      "name": "RTI International",
+      "hq": "US",
+      "sectors": ["international-development-and-humanitarian-ngos"]
+    },
+    {
+      "id": "wellcome-trust",
+      "name": "Wellcome Trust",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "gates-foundation",
+      "name": "Gates Foundation",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "ford-foundation",
+      "name": "Ford Foundation",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "open-society-foundations",
+      "name": "Open Society Foundations",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "rockefeller-foundation",
+      "name": "Rockefeller Foundation",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "bloomberg-philanthropies",
+      "name": "Bloomberg Philanthropies",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "oak-foundation",
+      "name": "Oak Foundation",
+      "hq": "Switzerland",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "novo-nordisk-foundation",
+      "name": "Novo Nordisk Foundation",
+      "hq": "Denmark",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "cancer-research-uk",
+      "name": "Cancer Research UK",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "british-heart-foundation",
+      "name": "British Heart Foundation",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "macmillan-cancer-support",
+      "name": "Macmillan Cancer Support",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "age-uk",
+      "name": "Age UK",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "rspca",
+      "name": "RSPCA",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "rspb",
+      "name": "RSPB",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "national-trust",
+      "name": "National Trust",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "barnardo-s",
+      "name": "Barnardo's",
+      "hq": "UK",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "salvation-army",
+      "name": "Salvation Army",
+      "hq": "UK/US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "american-cancer-society",
+      "name": "American Cancer Society",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "united-way-worldwide",
+      "name": "United Way Worldwide",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "habitat-for-humanity",
+      "name": "Habitat for Humanity",
+      "hq": "US",
+      "sectors": ["charities-fundraising-and-grant-making-third-sector"]
+    },
+    {
+      "id": "unhcr",
+      "name": "UNHCR",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "unicef",
+      "name": "UNICEF",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "world-food-programme",
+      "name": "World Food Programme",
+      "hq": "Italy",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "undp",
+      "name": "UNDP",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "who",
+      "name": "WHO",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "un-secretariat",
+      "name": "UN Secretariat",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "world-bank-group",
+      "name": "World Bank Group",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "imf",
+      "name": "IMF",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "iom",
+      "name": "IOM",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "fao",
+      "name": "FAO",
+      "hq": "Italy",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "unfpa",
+      "name": "UNFPA",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "un-women",
+      "name": "UN Women",
+      "hq": "US",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "unops",
+      "name": "UNOPS",
+      "hq": "Denmark",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "ilo",
+      "name": "ILO",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "unesco",
+      "name": "UNESCO",
+      "hq": "France",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "african-development-bank",
+      "name": "African Development Bank",
+      "hq": "Côte d'Ivoire",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "asian-development-bank",
+      "name": "Asian Development Bank",
+      "hq": "Philippines",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "european-commission",
+      "name": "European Commission",
+      "hq": "Belgium",
+      "sectors": ["un-and-multilateral-organisations", "government-and-public-sector"]
+    },
+    {
+      "id": "oecd",
+      "name": "OECD",
+      "hq": "France",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "wto",
+      "name": "WTO",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "wipo",
+      "name": "WIPO",
+      "hq": "Switzerland",
+      "sectors": ["un-and-multilateral-organisations"]
+    },
+    {
+      "id": "uk-civil-service-jobs",
+      "name": "UK Civil Service Jobs",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "nhs-jobs",
+      "name": "NHS Jobs",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "usajobs-federal",
+      "name": "USAJOBS federal",
+      "hq": "US",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "ministry-of-defence",
+      "name": "Ministry of Defence",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "hmrc",
+      "name": "HMRC",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "department-for-work-and-pensions",
+      "name": "Department for Work and Pensions",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "home-office",
+      "name": "Home Office",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "metropolitan-police",
+      "name": "Metropolitan Police",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "transport-for-london",
+      "name": "Transport for London",
+      "hq": "UK",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "nasa",
+      "name": "NASA",
+      "hq": "US",
+      "sectors": ["government-and-public-sector"]
+    },
+    {
+      "id": "lockheed-martin",
+      "name": "Lockheed Martin",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "rtx",
+      "name": "RTX",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "boeing",
+      "name": "Boeing",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "northrop-grumman",
+      "name": "Northrop Grumman",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "general-dynamics",
+      "name": "General Dynamics",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "bae-systems",
+      "name": "BAE Systems",
+      "hq": "UK",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "airbus",
+      "name": "Airbus",
+      "hq": "NL/France",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "l3harris",
+      "name": "L3Harris",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "rolls-royce",
+      "name": "Rolls-Royce",
+      "hq": "UK",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo",
+      "hq": "Italy",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "thales",
+      "name": "Thales",
+      "hq": "France",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "safran",
+      "name": "Safran",
+      "hq": "France",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "ge-aerospace",
+      "name": "GE Aerospace",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "honeywell-aerospace",
+      "name": "Honeywell Aerospace",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "babcock-international",
+      "name": "Babcock International",
+      "hq": "UK",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "qinetiq",
+      "name": "QinetiQ",
+      "hq": "UK",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "anduril",
+      "name": "Anduril",
+      "hq": "US",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "rheinmetall",
+      "name": "Rheinmetall",
+      "hq": "Germany",
+      "sectors": ["defence-and-aerospace"]
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "hq": "US",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "american-airlines",
+      "name": "American Airlines",
+      "hq": "US",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "united-airlines",
+      "name": "United Airlines",
+      "hq": "US",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "southwest",
+      "name": "Southwest",
+      "hq": "US",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "emirates-group",
+      "name": "Emirates Group",
+      "hq": "UAE",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "qatar-airways",
+      "name": "Qatar Airways",
+      "hq": "Qatar",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "lufthansa-group",
+      "name": "Lufthansa Group",
+      "hq": "Germany",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "air-france-klm",
+      "name": "Air France-KLM",
+      "hq": "France/NL",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "international-airlines-group",
+      "name": "International Airlines Group",
+      "hq": "UK/Spain",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "ryanair",
+      "name": "Ryanair",
+      "hq": "Ireland",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "easyjet",
+      "name": "easyJet",
+      "hq": "UK",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "turkish-airlines",
+      "name": "Turkish Airlines",
+      "hq": "Turkey",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "singapore-airlines",
+      "name": "Singapore Airlines",
+      "hq": "Singapore",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "etihad",
+      "name": "Etihad",
+      "hq": "UAE",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "ethiopian-airlines",
+      "name": "Ethiopian Airlines",
+      "hq": "Ethiopia",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "air-canada",
+      "name": "Air Canada",
+      "hq": "Canada",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "qantas",
+      "name": "Qantas",
+      "hq": "Australia",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "indigo",
+      "name": "IndiGo",
+      "hq": "India",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "heathrow-airport",
+      "name": "Heathrow Airport",
+      "hq": "UK",
+      "sectors": ["airlines-and-aviation"]
+    },
+    {
+      "id": "toyota",
+      "name": "Toyota",
+      "hq": "Japan",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "volkswagen-group",
+      "name": "Volkswagen Group",
+      "hq": "Germany",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "stellantis",
+      "name": "Stellantis",
+      "hq": "NL",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "ford",
+      "name": "Ford",
+      "hq": "US",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "general-motors",
+      "name": "General Motors",
+      "hq": "US",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "hyundai-motor-group",
+      "name": "Hyundai Motor Group",
+      "hq": "S. Korea",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "mercedes-benz",
+      "name": "Mercedes-Benz",
+      "hq": "Germany",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "bmw",
+      "name": "BMW",
+      "hq": "Germany",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "honda",
+      "name": "Honda",
+      "hq": "Japan",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "hq": "US",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "byd",
+      "name": "BYD",
+      "hq": "China",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "nissan",
+      "name": "Nissan",
+      "hq": "Japan",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "tata-motors",
+      "name": "Tata Motors",
+      "hq": "India/UK",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "jaguar-land-rover",
+      "name": "Jaguar Land Rover",
+      "hq": "India/UK",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "renault",
+      "name": "Renault",
+      "hq": "France",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "rivian",
+      "name": "Rivian",
+      "hq": "US",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "bosch",
+      "name": "Bosch",
+      "hq": "Germany",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "continental",
+      "name": "Continental",
+      "hq": "Germany",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "magna",
+      "name": "Magna",
+      "hq": "Canada",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "denso",
+      "name": "Denso",
+      "hq": "Japan",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "mahindra",
+      "name": "Mahindra",
+      "hq": "India",
+      "sectors": ["automotive-and-ev"]
+    },
+    {
+      "id": "exxonmobil",
+      "name": "ExxonMobil",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "shell",
+      "name": "Shell",
+      "hq": "UK",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "chevron",
+      "name": "Chevron",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "bp",
+      "name": "BP",
+      "hq": "UK",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "totalenergies",
+      "name": "TotalEnergies",
+      "hq": "France",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "saudi-aramco",
+      "name": "Saudi Aramco",
+      "hq": "Saudi Arabia",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "adnoc",
+      "name": "ADNOC",
+      "hq": "UAE",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "conocophillips",
+      "name": "ConocoPhillips",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "eni",
+      "name": "Eni",
+      "hq": "Italy",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "equinor",
+      "name": "Equinor",
+      "hq": "Norway",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "slb",
+      "name": "SLB",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "halliburton",
+      "name": "Halliburton",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "baker-hughes",
+      "name": "Baker Hughes",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "petrobras",
+      "name": "Petrobras",
+      "hq": "Brazil",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "nnpc-ltd",
+      "name": "NNPC Ltd",
+      "hq": "Nigeria",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "sinopec",
+      "name": "Sinopec",
+      "hq": "China",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "cnpc",
+      "name": "CNPC",
+      "hq": "China",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "occidental",
+      "name": "Occidental",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "phillips-66",
+      "name": "Phillips 66",
+      "hq": "US",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "seplat",
+      "name": "Seplat",
+      "hq": "Nigeria",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "woodside",
+      "name": "Woodside",
+      "hq": "Australia",
+      "sectors": ["oil-gas-and-energy-majors"]
+    },
+    {
+      "id": "nextera-energy",
+      "name": "NextEra Energy",
+      "hq": "US",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "rsted",
+      "name": "Ørsted",
+      "hq": "Denmark",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "iberdrola",
+      "name": "Iberdrola",
+      "hq": "Spain",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "enel",
+      "name": "Enel",
+      "hq": "Italy",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "edf",
+      "name": "EDF",
+      "hq": "France",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "national-grid",
+      "name": "National Grid",
+      "hq": "UK",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "sse",
+      "name": "SSE",
+      "hq": "UK",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "octopus-energy",
+      "name": "Octopus Energy",
+      "hq": "UK",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "vestas",
+      "name": "Vestas",
+      "hq": "Denmark",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "siemens-gamesa",
+      "name": "Siemens Gamesa",
+      "hq": "Spain",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "first-solar",
+      "name": "First Solar",
+      "hq": "US",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "ge-vernova",
+      "name": "GE Vernova",
+      "hq": "US",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "rwe",
+      "name": "RWE",
+      "hq": "Germany",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "duke-energy",
+      "name": "Duke Energy",
+      "hq": "US",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "southern-company",
+      "name": "Southern Company",
+      "hq": "US",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "centrica",
+      "name": "Centrica",
+      "hq": "UK",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "scottishpower",
+      "name": "ScottishPower",
+      "hq": "UK",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "adani-green",
+      "name": "Adani Green",
+      "hq": "India",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "tata-power",
+      "name": "Tata Power",
+      "hq": "India",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "brookfield-renewable",
+      "name": "Brookfield Renewable",
+      "hq": "Canada",
+      "sectors": ["renewables-utilities-and-climate"]
+    },
+    {
+      "id": "schneider-electric",
+      "name": "Schneider Electric",
+      "hq": "France",
+      "sectors": ["renewables-utilities-and-climate", "industrial-manufacturing"]
+    },
+    {
+      "id": "siemens",
+      "name": "Siemens",
+      "hq": "Germany",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "general-electric",
+      "name": "General Electric",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "honeywell",
+      "name": "Honeywell",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "3m",
+      "name": "3M",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "abb",
+      "name": "ABB",
+      "hq": "Switzerland",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "caterpillar",
+      "name": "Caterpillar",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "deere",
+      "name": "Deere",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "emerson",
+      "name": "Emerson",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "eaton",
+      "name": "Eaton",
+      "hq": "Ireland",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "johnson-controls",
+      "name": "Johnson Controls",
+      "hq": "Ireland",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "hitachi",
+      "name": "Hitachi",
+      "hq": "Japan",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "mitsubishi-heavy-industries",
+      "name": "Mitsubishi Heavy Industries",
+      "hq": "Japan",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "rockwell-automation",
+      "name": "Rockwell Automation",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "parker-hannifin",
+      "name": "Parker Hannifin",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "cummins",
+      "name": "Cummins",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "tata-steel",
+      "name": "Tata Steel",
+      "hq": "India",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "dyson",
+      "name": "Dyson",
+      "hq": "UK/Singapore",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "whirlpool",
+      "name": "Whirlpool",
+      "hq": "US",
+      "sectors": ["industrial-manufacturing"]
+    },
+    {
+      "id": "bechtel",
+      "name": "Bechtel",
+      "hq": "US",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "vinci",
+      "name": "Vinci",
+      "hq": "France",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "acs",
+      "name": "ACS",
+      "hq": "Spain/Germany",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "hochtief",
+      "name": "Hochtief",
+      "hq": "Spain/Germany",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "skanska",
+      "name": "Skanska",
+      "hq": "Sweden",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "balfour-beatty",
+      "name": "Balfour Beatty",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "kier",
+      "name": "Kier",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "laing-o-rourke",
+      "name": "Laing O'Rourke",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "aecom",
+      "name": "AECOM",
+      "hq": "US",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "jacobs",
+      "name": "Jacobs",
+      "hq": "US",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "fluor",
+      "name": "Fluor",
+      "hq": "US",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "arup",
+      "name": "Arup",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "atkins-realis",
+      "name": "Atkins Réalis",
+      "hq": "Canada/UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "wsp",
+      "name": "WSP",
+      "hq": "Canada",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "mott-macdonald",
+      "name": "Mott MacDonald",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "stantec",
+      "name": "Stantec",
+      "hq": "Canada",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "larsen-and-toubro",
+      "name": "Larsen & Toubro",
+      "hq": "India",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "turner-construction",
+      "name": "Turner Construction",
+      "hq": "US",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "network-rail",
+      "name": "Network Rail",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "hs2-ltd",
+      "name": "HS2 Ltd",
+      "hq": "UK",
+      "sectors": ["construction-engineering-and-infrastructure"]
+    },
+    {
+      "id": "cbre",
+      "name": "CBRE",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "jll",
+      "name": "JLL",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "cushman-and-wakefield",
+      "name": "Cushman & Wakefield",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "savills",
+      "name": "Savills",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "knight-frank",
+      "name": "Knight Frank",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "colliers",
+      "name": "Colliers",
+      "hq": "Canada",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "zillow",
+      "name": "Zillow",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "compass",
+      "name": "Compass",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "rightmove",
+      "name": "Rightmove",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "zoopla",
+      "name": "Zoopla",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "barratt-redrow",
+      "name": "Barratt Redrow",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "persimmon",
+      "name": "Persimmon",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "taylor-wimpey",
+      "name": "Taylor Wimpey",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "lennar",
+      "name": "Lennar",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "d-r-horton",
+      "name": "D.R. Horton",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "prologis",
+      "name": "Prologis",
+      "hq": "US",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "emaar",
+      "name": "Emaar",
+      "hq": "UAE",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "land-securities",
+      "name": "Land Securities",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "british-land",
+      "name": "British Land",
+      "hq": "UK",
+      "sectors": ["real-estate-and-proptech"]
+    },
+    {
+      "id": "walmart",
+      "name": "Walmart",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "costco",
+      "name": "Costco",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "tesco",
+      "name": "Tesco",
+      "hq": "UK",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "target",
+      "name": "Target",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "home-depot",
+      "name": "Home Depot",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "lowe-s",
+      "name": "Lowe's",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "kroger",
+      "name": "Kroger",
+      "hq": "US",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "schwarz-group",
+      "name": "Schwarz Group",
+      "hq": "Germany",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "aldi",
+      "name": "Aldi",
+      "hq": "Germany",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "carrefour",
+      "name": "Carrefour",
+      "hq": "France",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "sainsbury-s",
+      "name": "Sainsbury's",
+      "hq": "UK",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "marks-and-spencer",
+      "name": "Marks & Spencer",
+      "hq": "UK",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "ikea",
+      "name": "IKEA",
+      "hq": "Sweden/NL",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "ahold-delhaize",
+      "name": "Ahold Delhaize",
+      "hq": "NL",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "jd-com",
+      "name": "JD.com",
+      "hq": "China",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "jumia",
+      "name": "Jumia",
+      "hq": "Nigeria/Germany",
+      "sectors": ["retail-and-e-commerce"]
+    },
+    {
+      "id": "unilever",
+      "name": "Unilever",
+      "hq": "UK",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "procter-and-gamble",
+      "name": "Procter & Gamble",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "nestle",
+      "name": "Nestlé",
+      "hq": "Switzerland",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "pepsico",
+      "name": "PepsiCo",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "coca-cola",
+      "name": "Coca-Cola",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "l-oreal",
+      "name": "L'Oréal",
+      "hq": "France",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "mondelez",
+      "name": "Mondelez",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "reckitt",
+      "name": "Reckitt",
+      "hq": "UK",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "colgate-palmolive",
+      "name": "Colgate-Palmolive",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "kimberly-clark",
+      "name": "Kimberly-Clark",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "danone",
+      "name": "Danone",
+      "hq": "France",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "diageo",
+      "name": "Diageo",
+      "hq": "UK",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "haleon",
+      "name": "Haleon",
+      "hq": "UK",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "kraft-heinz",
+      "name": "Kraft Heinz",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg", "food-beverage-and-agriculture"]
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "estee-lauder",
+      "name": "Estée Lauder",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "henkel",
+      "name": "Henkel",
+      "hq": "Germany",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "beiersdorf",
+      "name": "Beiersdorf",
+      "hq": "Germany",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "kenvue",
+      "name": "Kenvue",
+      "hq": "US",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "dangote-group",
+      "name": "Dangote Group",
+      "hq": "Nigeria",
+      "sectors": ["consumer-goods-fmcg"]
+    },
+    {
+      "id": "tyson-foods",
+      "name": "Tyson Foods",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "jbs",
+      "name": "JBS",
+      "hq": "Brazil",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "cargill",
+      "name": "Cargill",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "adm",
+      "name": "ADM",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "bunge",
+      "name": "Bunge",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "general-mills",
+      "name": "General Mills",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "kellanova",
+      "name": "Kellanova",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "heineken",
+      "name": "Heineken",
+      "hq": "NL",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "ab-inbev",
+      "name": "AB InBev",
+      "hq": "Belgium",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "bayer-crop-science",
+      "name": "Bayer Crop Science",
+      "hq": "Germany",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "syngenta",
+      "name": "Syngenta",
+      "hq": "Switzerland",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "corteva",
+      "name": "Corteva",
+      "hq": "US",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "olam",
+      "name": "Olam",
+      "hq": "Singapore",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "wilmar",
+      "name": "Wilmar",
+      "hq": "Singapore",
+      "sectors": ["food-beverage-and-agriculture"]
+    },
+    {
+      "id": "marriott",
+      "name": "Marriott",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "hilton",
+      "name": "Hilton",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "ihg",
+      "name": "IHG",
+      "hq": "UK",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "accor",
+      "name": "Accor",
+      "hq": "France",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "hyatt",
+      "name": "Hyatt",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "wyndham",
+      "name": "Wyndham",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "mcdonald-s",
+      "name": "McDonald's",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "starbucks",
+      "name": "Starbucks",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "yum-brands",
+      "name": "Yum! Brands",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "compass-group",
+      "name": "Compass Group",
+      "hq": "UK",
+      "sectors": ["hospitality-travel-and-leisure", "business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "tui",
+      "name": "TUI",
+      "hq": "Germany",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "carnival",
+      "name": "Carnival",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "royal-caribbean",
+      "name": "Royal Caribbean",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "expedia",
+      "name": "Expedia",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "whitbread",
+      "name": "Whitbread",
+      "hq": "UK",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "merlin-entertainments",
+      "name": "Merlin Entertainments",
+      "hq": "UK",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "disney-parks",
+      "name": "Disney Parks",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "las-vegas-sands",
+      "name": "Las Vegas Sands",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "mgm-resorts",
+      "name": "MGM Resorts",
+      "hq": "US",
+      "sectors": ["hospitality-travel-and-leisure"]
+    },
+    {
+      "id": "amazon-logistics",
+      "name": "Amazon Logistics",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "dhl-group",
+      "name": "DHL Group",
+      "hq": "Germany",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "ups",
+      "name": "UPS",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "fedex",
+      "name": "FedEx",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "maersk",
+      "name": "Maersk",
+      "hq": "Denmark",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "dsv",
+      "name": "DSV",
+      "hq": "Denmark",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "kuehne-nagel",
+      "name": "Kuehne+Nagel",
+      "hq": "Switzerland",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "xpo",
+      "name": "XPO",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "gxo",
+      "name": "GXO",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "cma-cgm",
+      "name": "CMA CGM",
+      "hq": "France",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "msc",
+      "name": "MSC",
+      "hq": "Switzerland",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "royal-mail",
+      "name": "Royal Mail",
+      "hq": "UK",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "evri",
+      "name": "Evri",
+      "hq": "UK",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "dp-world",
+      "name": "DP World",
+      "hq": "UAE",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "j-b-hunt",
+      "name": "J.B. Hunt",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "c-h-robinson",
+      "name": "C.H. Robinson",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "expeditors",
+      "name": "Expeditors",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "ocado",
+      "name": "Ocado",
+      "hq": "UK",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "flexport",
+      "name": "Flexport",
+      "hq": "US",
+      "sectors": ["logistics-shipping-and-supply-chain"]
+    },
+    {
+      "id": "sodexo",
+      "name": "Sodexo",
+      "hq": "France",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "aramark",
+      "name": "Aramark",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "iss",
+      "name": "ISS",
+      "hq": "Denmark",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "serco",
+      "name": "Serco",
+      "hq": "UK",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "allied-universal",
+      "name": "Allied Universal",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "securitas",
+      "name": "Securitas",
+      "hq": "Sweden",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "mitie",
+      "name": "Mitie",
+      "hq": "UK",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "teleperformance",
+      "name": "Teleperformance",
+      "hq": "France",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "concentrix",
+      "name": "Concentrix",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "taskus",
+      "name": "TaskUs",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "experian",
+      "name": "Experian",
+      "hq": "Ireland",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "equifax",
+      "name": "Equifax",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "gartner",
+      "name": "Gartner",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "cintas",
+      "name": "Cintas",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    },
+    {
+      "id": "paychex",
+      "name": "Paychex",
+      "hq": "US",
+      "sectors": ["business-services-facilities-and-outsourcing"]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { copyFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type {
+  Mode,
   Rules,
   SetupAbout,
   SetupAnswer,
@@ -12,19 +13,23 @@ import type {
   SetupStep,
   SetupWant,
   Sources,
+  StudyPrefs,
   WorkType,
 } from '@winnow/api';
-import { ROLE_FIT_LABELS, SETUP_QUESTIONS, SETUP_STEPS, WORK_TYPE_LABELS } from '@winnow/api';
+import { questionsFor, ROLE_FIT_LABELS, SETUP_STEPS, WORK_TYPE_LABELS } from '@winnow/api';
 import { stringify } from 'yaml';
 import { kvGet, kvSet } from './db.ts';
 import { getSources, libraryPaths, setSources } from './library.ts';
 import type { Space } from './space.ts';
+import { cleanStudy, getMode, getStudy, setStudy } from './study/mode.ts';
+import { composeStudyProfileYaml } from './study/profile.ts';
 import { badRequest, clip, nowIso } from './util.ts';
 
 const KEY = 'setup';
 
-const fresh = (status: SetupStatus): SetupState => ({
+const fresh = (status: SetupStatus, mode: Mode = 'jobs'): SetupState => ({
   status,
+  mode,
   step: 'start',
   about: {},
   want: {},
@@ -44,14 +49,16 @@ const fresh = (status: SetupStatus): SetupState => ({
  */
 export function getSetup(space: Space): SetupState {
   const stored = kvGet<SetupState | null>(space.db, KEY, null);
+  const mode = getMode(space.db);
   if (stored)
     return {
       ...fresh(stored.status),
       ...stored,
+      mode,
       runs: { ...fresh('needed').runs, ...stored.runs },
     };
   const ready = space.profile.ready();
-  return fresh(ready.cv && ready.profile ? 'done' : 'needed');
+  return fresh(ready.cv && ready.profile ? 'done' : 'needed', mode);
 }
 
 export function saveSetup(space: Space, patch: Partial<SetupState>): SetupState {
@@ -77,6 +84,7 @@ const ABOUT_KEYS: (keyof SetupAbout)[] = [
   'portfolio',
   'workRight',
   'languages',
+  'nationality',
 ];
 
 export function cleanAbout(v: unknown): Partial<SetupAbout> {
@@ -112,13 +120,20 @@ export function cleanWant(v: unknown): Partial<SetupWant> {
   if ('dealBreakers' in o) out.dealBreakers = strs(o.dealBreakers, 20, 200);
   for (const k of ['level', 'currency', 'salaryTarget', 'salaryMin'] as const)
     if (typeof o[k] === 'string') out[k] = str(o[k], 100);
+  if (o.study && typeof o.study === 'object') {
+    const { subjects: _s, nationality: _n, ...rest } = cleanStudy(o.study);
+    // Only the fields sent, so a partial save doesn't reset the others.
+    out.study = Object.fromEntries(
+      Object.entries(rest).filter(([k]) => k in (o.study as object)),
+    ) as SetupWant['study'];
+  }
   return out;
 }
 
 /** Answers from the app. Follow-up questions and their runs belong to the server and are kept. */
-export function mergeAnswers(old: SetupAnswer[], v: unknown): SetupAnswer[] {
+export function mergeAnswers(old: SetupAnswer[], v: unknown, mode: Mode = 'jobs'): SetupAnswer[] {
   if (!Array.isArray(v)) return old;
-  return SETUP_QUESTIONS.flatMap((q): SetupAnswer[] => {
+  return questionsFor(mode).flatMap((q): SetupAnswer[] => {
     const prev = old.find((a) => a.key === q.key);
     const got = (v as Record<string, unknown>[]).find((a) => a?.key === q.key);
     if (!got) return prev ? [prev] : [];
@@ -144,8 +159,15 @@ export function updateSetup(space: Space, body: Record<string, unknown>): SetupS
   if (typeof body.step === 'string' && (SETUP_STEPS as readonly string[]).includes(body.step))
     patch.step = body.step as SetupStep;
   if (body.about) patch.about = { ...cur.about, ...cleanAbout(body.about) };
-  if (body.want) patch.want = { ...cur.want, ...cleanWant(body.want) };
-  if (body.answers) patch.answers = mergeAnswers(cur.answers, body.answers);
+  if (body.want) {
+    const next = cleanWant(body.want);
+    patch.want = {
+      ...cur.want,
+      ...next,
+      ...(next.study ? { study: { ...(cur.want.study ?? {}), ...next.study } } : {}),
+    };
+  }
+  if (body.answers) patch.answers = mergeAnswers(cur.answers, body.answers, cur.mode);
   // Edits made on Review, kept so a reload doesn't lose them.
   if (body.draft) patch.draft = cleanDraft(body.draft);
   return saveSetup(space, patch);
@@ -159,8 +181,14 @@ export function startSetup(space: Space, redo: boolean): SetupState {
   // Already setting up again: carry on rather than start over.
   if (cur.redo && cur.status === 'in_progress') return cur;
   const now = fromProfile(space.profile.parsed());
+  if (cur.mode === 'scholarships') {
+    const study = getStudy(space.db);
+    const { subjects, nationality, ...rest } = study;
+    now.about.nationality = nationality;
+    now.want = { ...now.want, roles: subjects, study: rest };
+  }
   return saveSetup(space, {
-    ...fresh('in_progress'),
+    ...fresh('in_progress', cur.mode),
     about: now.about,
     want: now.want,
     redo: true,
@@ -370,7 +398,11 @@ export function confirmProfile(space: Space, body: unknown, email: string): Setu
   if (state.status === 'done') throw badRequest('Setup is already finished.');
   const draft = cleanDraft((body as { draft?: unknown } | null)?.draft);
   if (!space.profile.ready().cv) throw badRequest('Add your CV first.');
-  if (!(state.want.roles ?? []).length) throw badRequest('Add at least one target role.');
+  const study = state.mode === 'scholarships';
+  if (!(state.want.roles ?? []).length)
+    throw badRequest(
+      study ? 'Add at least one programme or subject.' : 'Add at least one target role.',
+    );
   const p = libraryPaths(space.library);
   const backups = join(p.profileDir, 'uploads');
   mkdirSync(backups, { recursive: true });
@@ -385,7 +417,14 @@ export function confirmProfile(space: Space, body: unknown, email: string): Setu
         join(backups, `${name}-before-${stamp}${file.slice(file.lastIndexOf('.'))}`),
       );
   space.profile.set({
-    profileYaml: composeProfileYaml(state, draft, email),
+    profileYaml: study
+      ? composeStudyProfileYaml(
+          state,
+          draft,
+          setStudy(space.db, studyFromSetup(state), space.events),
+          email,
+        )
+      : composeProfileYaml(state, draft, email),
     narrative: `${draft.narrative}\n`,
   });
   return saveSetup(space, { draft, step: 'sources', status: 'in_progress' });
@@ -404,6 +443,54 @@ export function finishSetup(space: Space, body: unknown): SetupState {
     queries: names(b.queries),
     scan: b.scan === true,
   };
-  setSources(space.db, mergeSources(getSources(space.db), state, req), space.events);
+  setSources(
+    space.db,
+    state.mode === 'scholarships'
+      ? mergeStudySources(getSources(space.db), state, req)
+      : mergeSources(getSources(space.db), state, req),
+    space.events,
+  );
   return saveSetup(space, { status: 'done', doneAt: nowIso(), redo: false });
+}
+
+/** What setup's forms say about study, as the preferences the scans and skills use. */
+export function studyFromSetup(state: SetupState): StudyPrefs {
+  return cleanStudy({
+    ...(state.want.study ?? {}),
+    subjects: state.want.roles ?? [],
+    nationality: state.about.nationality ?? '',
+  });
+}
+
+/**
+ * The ticked suggestions become Find's sources in scholarships mode: watched pages (schemes and
+ * universities), feeds and AI queries. Rules come from the study preferences, not from here.
+ */
+export function mergeStudySources(
+  cur: Sources,
+  state: SetupState,
+  req: SetupFinishRequest,
+): Sources {
+  const s = state.suggestions;
+  const keyOf = (e: { careers_url?: unknown; api?: unknown; name: string }) =>
+    String(e.careers_url ?? e.api ?? e.name).toLowerCase();
+  const pick = <T extends { name: string }>(all: T[] | undefined, names: string[], have: T[]) => {
+    const keep = new Set(names);
+    const had = new Set(have.map((x) => keyOf(x as never)));
+    return (all ?? []).filter((x) => keep.has(x.name) && !had.has(keyOf(x as never)));
+  };
+  return {
+    ...cur,
+    companies: [
+      ...cur.companies,
+      ...pick([...(s?.companies ?? []), ...(s?.careerSites ?? [])], req.companies, cur.companies),
+    ],
+    boards: [...cur.boards, ...pick(s?.boards, req.boards, cur.boards)],
+    queries: [
+      ...cur.queries,
+      ...(s?.queries ?? []).filter(
+        (q) => req.queries.includes(q.name) && !cur.queries.some((x) => x.query === q.query),
+      ),
+    ],
+  };
 }
