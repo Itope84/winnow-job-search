@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Chevening Scholarships",
+    "url": "https://www.chevening.org/scholarships/",
+    "kind": "scheme",
+    "countries": ["United Kingdom"],
+    "who": "Citizens of Chevening countries with 2 years' work experience",
+    "level": "Master's",
+    "note": "Fully funded one-year master's at any UK university."
+  },
+  {
+    "name": "Commonwealth Scholarships (CSC)",
+    "url": "https://cscuk.fcdo.gov.uk/scholarships/",
+    "kind": "scheme",
+    "countries": ["United Kingdom"],
+    "who": "Citizens of eligible Commonwealth countries",
+    "level": "Master's, PhD",
+    "note": "Master's and Shared Scholarships; some go through universities."
+  },
+  {
+    "name": "Mastercard Foundation Scholars Program",
+    "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/",
+    "kind": "scheme",
+    "countries": ["United Kingdom", "Canada"],
+    "who": "Young Africans, often with financial need",
+    "level": "Undergraduate, Master's",
+    "note": "Runs through partner universities, each with its own call."
+  },
+  {
+    "name": "Gates Cambridge",
+    "url": "https://www.gatescambridge.org/",
+    "kind": "scheme",
+    "countries": ["United Kingdom"],
+    "who": "Anyone outside the UK",
+    "level": "Master's, PhD",
+    "note": "Full cost at Cambridge; very competitive."
+  },
+  {
+    "name": "Rhodes Scholarships",
+    "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/",
+    "kind": "scheme",
+    "countries": ["United Kingdom"],
+    "who": "Citizens of listed constituencies",
+    "level": "Master's, PhD",
+    "note": "Full cost at Oxford; age limits apply."
+  },
+  {
+    "name": "DAAD scholarship database",
+    "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/",
+    "kind": "scheme",
+    "countries": ["Germany"],
+    "who": "Depends on the scholarship",
+    "level": "Master's, PhD",
+    "note": "DAAD's search of every German scholarship."
+  },
+  {
+    "name": "Deutschlandstipendium",
+    "url": "https://www.deutschlandstipendium.de/deutschlandstipendium/en/",
+    "kind": "scheme",
+    "countries": ["Germany"],
+    "who": "Students at German universities, any nationality",
+    "level": "Bachelor's, Master's",
+    "note": "€300 a month; apply through your university once admitted."
+  },
+  {
+    "name": "Holland Scholarship",
+    "url": "https://www.studyinnl.org/finances/holland-scholarship",
+    "kind": "scheme",
+    "countries": ["Netherlands"],
+    "who": "Students from outside the EEA",
+    "level": "Bachelor's, Master's",
+    "note": "€5,000 in the first year; through each university."
+  },
+  {
+    "name": "Swedish Institute Scholarships for Global Professionals",
+    "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+    "kind": "scheme",
+    "countries": ["Sweden"],
+    "who": "Citizens of listed countries with work and leadership experience",
+    "level": "Master's",
+    "note": "Tuition, living costs and travel."
+  },
+  {
+    "name": "Stipendium Hungaricum",
+    "url": "https://stipendiumhungaricum.hu/",
+    "kind": "scheme",
+    "countries": ["Hungary"],
+    "who": "Citizens of partner countries",
+    "level": "Bachelor's, Master's, PhD",
+    "note": "Tuition, monthly stipend and housing."
+  },
+  {
+    "name": "Eiffel Excellence Scholarship",
+    "url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+    "kind": "scheme",
+    "countries": ["France"],
+    "who": "Non-French applicants nominated by a French institution",
+    "level": "Master's, PhD",
+    "note": "Monthly allowance plus travel; the university applies for you."
+  },
+  {
+    "name": "Government of Ireland International Education Scholarships",
+    "url": "https://hea.ie/policy/internationalisation/goi-ies/",
+    "kind": "scheme",
+    "countries": ["Ireland"],
+    "who": "Non-EU students admitted to an Irish institution",
+    "level": "Master's, PhD",
+    "note": "€10,000 stipend and a fee waiver."
+  },
+  {
+    "name": "Finland Scholarship",
+    "url": "https://www.studyinfinland.fi/scholarships/finland-scholarship",
+    "kind": "scheme",
+    "countries": ["Finland"],
+    "who": "Non-EU students admitted to a Finnish master's",
+    "level": "Bachelor's, Master's",
+    "note": "First-year tuition and a relocation grant."
+  },
+  {
+    "name": "VLIR-UOS scholarships",
+    "url": "https://www.vliruos.be/en/scholarships",
+    "kind": "scheme",
+    "countries": ["Belgium"],
+    "who": "Citizens of listed countries",
+    "level": "Master's, training",
+    "note": "Full scholarships for selected Flemish master's."
+  },
+  {
+    "name": "Master Mind and Flanders scholarships",
+    "url": "https://www.studyinflanders.be/scholarships",
+    "kind": "scheme",
+    "countries": ["Belgium"],
+    "who": "International students",
+    "level": "Master's",
+    "note": "Up to €8,200 plus a tuition waiver."
+  },
+  {
+    "name": "Erasmus Mundus Joint Masters",
+    "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+    "kind": "erasmus",
+    "countries": ["Europe"],
+    "who": "Anyone; most places go to students from outside Europe",
+    "level": "Master's",
+    "note": "Full scholarships built into each programme: tuition, €1,400 a month, travel."
+  },
+  {
+    "name": "EduCanada scholarships",
+    "url": "https://www.educanada.ca/scholarships-bourses/non_can/index.aspx?lang=eng",
+    "kind": "scheme",
+    "countries": ["Canada"],
+    "who": "Depends on the scholarship",
+    "level": "Master's, PhD",
+    "note": "Canada's list of awards open to international students."
+  },
+  {
+    "name": "Fulbright Foreign Student Program",
+    "url": "https://foreign.fulbrightonline.org/",
+    "kind": "scheme",
+    "countries": ["United States"],
+    "who": "Citizens of participating countries",
+    "level": "Master's, PhD",
+    "note": "Full funding in the US."
+  },
+  {
+    "name": "ETH Zurich Excellence Scholarship (ESOP)",
+    "url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "kind": "university",
+    "countries": ["Switzerland"],
+    "who": "Outstanding master's applicants to ETH",
+    "level": "Master's",
+    "note": "Living costs and tuition; apply with the master's application."
+  },
+  {
+    "name": "Geneva Excellence Master Fellowships",
+    "url": "https://www.unige.ch/sciences/en/enseignements/formations/masters/excellencemasterfellowships/",
+    "kind": "university",
+    "countries": ["Switzerland"],
+    "who": "Strong graduates applying to the Faculty of Science",
+    "level": "Master's",
+    "note": "CHF 10,000–15,000 a year."
+  },
+  {
+    "name": "Leiden Excellence Scholarship",
+    "url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-excellence-scholarship-les",
+    "kind": "university",
+    "countries": ["Netherlands"],
+    "who": "Non-EEA master's applicants with top grades",
+    "level": "Master's",
+    "note": "€10,000, €15,000 or full tuition."
+  },
+  {
+    "name": "Utrecht Excellence Scholarships",
+    "url": "https://www.uu.nl/en/masters/general-information/international-students/financial-matters/grants-and-scholarships/utrecht-excellence-scholarships",
+    "kind": "university",
+    "countries": ["Netherlands"],
+    "who": "Non-EEA master's applicants with top grades",
+    "level": "Master's",
+    "note": "Tuition and possibly living costs."
+  },
+  {
+    "name": "University of Amsterdam scholarships",
+    "url": "https://www.uva.nl/en/education/fees-and-funding/masters-scholarships-and-loans/scholarships-and-loans.html",
+    "kind": "university",
+    "countries": ["Netherlands"],
+    "who": "International master's applicants",
+    "level": "Master's",
+    "note": "Amsterdam Excellence Scholarships and others."
+  },
+  {
+    "name": "University of Groningen scholarships",
+    "url": "https://www.rug.nl/education/scholarships/",
+    "kind": "university",
+    "countries": ["Netherlands"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "Maastricht University scholarships",
+    "url": "https://www.maastrichtuniversity.nl/support/your-studies-begin/coming-maastricht-university-abroad/scholarships",
+    "kind": "university",
+    "countries": ["Netherlands"],
+    "who": "Non-EEA students",
+    "level": "Master's",
+    "note": "UM High Potential Scholarships and others."
+  },
+  {
+    "name": "University of Antwerp scholarships",
+    "url": "https://www.uantwerpen.be/en/study/scholarships/",
+    "kind": "university",
+    "countries": ["Belgium"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "Lund University Global Scholarship",
+    "url": "https://www.lunduniversity.lu.se/admissions/bachelors-and-masters-studies/scholarships-and-awards/lund-university-global-scholarship",
+    "kind": "university",
+    "countries": ["Sweden"],
+    "who": "Fee-paying applicants from outside the EU",
+    "level": "Bachelor's, Master's",
+    "note": "Covers part or all of tuition."
+  },
+  {
+    "name": "Uppsala University scholarships",
+    "url": "https://www.uu.se/en/study/masters-studies/scholarships",
+    "kind": "university",
+    "countries": ["Sweden"],
+    "who": "Fee-paying applicants",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "Karolinska Institutet scholarships",
+    "url": "https://education.ki.se/scholarships",
+    "kind": "university",
+    "countries": ["Sweden"],
+    "who": "Fee-paying applicants to KI's master's programmes",
+    "level": "Master's",
+    "note": "Medical university: biomedicine, molecular techniques and more."
+  },
+  {
+    "name": "University of Copenhagen scholarships",
+    "url": "https://studies.ku.dk/masters/tuition-fees-scholarships/",
+    "kind": "university",
+    "countries": ["Denmark"],
+    "who": "Non-EU master's applicants",
+    "level": "Master's",
+    "note": "Danish Government tuition waivers and grants."
+  },
+  {
+    "name": "University of Edinburgh international scholarships",
+    "url": "https://www.ed.ac.uk/student-funding/postgraduate/international",
+    "kind": "university",
+    "countries": ["United Kingdom"],
+    "who": "International postgraduates",
+    "level": "Master's",
+    "note": "Includes Edinburgh's Mastercard Foundation scholarships."
+  },
+  {
+    "name": "University of Glasgow scholarships",
+    "url": "https://www.gla.ac.uk/scholarships/",
+    "kind": "university",
+    "countries": ["United Kingdom"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "King's College London funding",
+    "url": "https://www.kcl.ac.uk/study/funding",
+    "kind": "university",
+    "countries": ["United Kingdom"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "Imperial College London scholarships",
+    "url": "https://www.imperial.ac.uk/study/fees-and-funding/scholarships/",
+    "kind": "university",
+    "countries": ["United Kingdom"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "University of Manchester master's funding",
+    "url": "https://www.manchester.ac.uk/study/masters/funding/",
+    "kind": "university",
+    "countries": ["United Kingdom"],
+    "who": "International students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "Trinity College Dublin international scholarships",
+    "url": "https://www.tcd.ie/study/international/scholarships/",
+    "kind": "university",
+    "countries": ["Ireland"],
+    "who": "Non-EU students",
+    "level": "Master's",
+    "note": ""
+  },
+  {
+    "name": "University of Padua scholarships",
+    "url": "https://www.unipd.it/en/scholarships-international-students",
+    "kind": "university",
+    "countries": ["Italy"],
+    "who": "International students",
+    "level": "Bachelor's, Master's",
+    "note": "Padua International Excellence Scholarships and others."
+  },
+  {
+    "name": "University of Toronto graduate awards",
+    "url": "https://www.sgs.utoronto.ca/awards-funding/",
+    "kind": "university",
+    "countries": ["Canada"],
+    "who": "Graduate students",
+    "level": "Master's, PhD",
+    "note": ""
+  },
+  {
+    "name": "McGill graduate funding",
+    "url": "https://www.mcgill.ca/gps/funding",
+    "kind": "university",
+    "countries": ["Canada"],
+    "who": "Graduate students",
+    "level": "Master's, PhD",
+    "note": ""
+  },
+  {
+    "name": "Scholars4Dev: master's scholarships",
+    "url": "https://www.scholars4dev.com/category/level-of-study/masters-scholarships/feed/",
+    "kind": "feed",
+    "countries": [],
+    "who": "Students from developing countries",
+    "level": "Master's",
+    "note": "New calls as they are announced."
+  },
+  {
+    "name": "Opportunities for Africans",
+    "url": "https://www.opportunitiesforafricans.com/feed/",
+    "kind": "feed",
+    "countries": [],
+    "who": "African applicants",
+    "level": "Any",
+    "note": "Scholarships, fellowships and more."
+  },
+  {
+    "name": "Opportunity Desk",
+    "url": "https://opportunitydesk.org/feed/",
+    "kind": "feed",
+    "countries": [],
+    "who": "International",
+    "level": "Any",
+    "note": "Scholarships, fellowships and more."
+  }
+]

@@ -244,7 +244,7 @@ apps/app/            Expo Router app (web for now): Jobs, Find, Activity, You
 skills/              what the AI tool follows: triage, score, tailor, ai-search, scholarship-*, profile-*, …
 fixtures/replay/     scripted AI runs for tests
 design/              brand (icon, wordmark) and reference screens
-docs/                plan.md (what's built), adapters-to-write.md (job systems still to support)
+docs/                adapters-to-write.md (job systems still to support), the company catalogue
 ```
 
 ## Troubleshooting
@@ -272,10 +272,6 @@ node scripts/shot.mjs <url> <email> <password file> <out dir> phone|desktop <pat
 - The app is Expo SDK 57. Read `apps/app/AGENTS.md` and install packages with `npx expo install`.
 - Playwright stays on 1.63, to match the installed browsers.
 - To add a job board, see `docs/adapters-to-write.md` and `BOARD_CATALOGUE` in `packages/api`.
-
-## Roadmap
-
-Next, from `docs/plan.md`: CV upload from Word, push notifications when long runs finish, tapping a count in Find history to see those jobs, AI limits per person, and an OpenAPI contract. Codex support is also on the way. Later: scheduled scans, the CV version on each score, and analytics.
 
 ## Contributing
 

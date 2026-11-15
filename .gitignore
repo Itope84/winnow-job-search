@@ -20,7 +20,7 @@ test-results/
 playwright-report/
 
 # A vendored provider (careerjet) keeps its seen-list relative to the server folder.
-apps/server/data/
+apps/server/data/careerjet-seen.tsv
 
 # The build plan stays local.
 docs/plan.md
