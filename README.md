@@ -20,7 +20,7 @@ You give Winnow your CV and tell it what you want: the roles, the places, the pa
 
 Winnow never applies for you. You read the drafts, change what you want, and send them yourself.
 
-It runs on a Mac or Linux computer that stays on, and you open it in a browser or on your phone. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Several people can share one server, each with their own jobs, CV and settings.
+You install Winnow on your own computer and use it whenever that computer is on. To use it from your phone or away from home, the computer has to stay on and connected, because it acts as the server the app talks to. You don't need a separate server machine to get started. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Other people can use your server too, each with their own jobs, CV and settings.
 
 An AI assistant can do the setup with you. The prompt is in [Quick start](#quick-start). Winnow is free and open source, and your data stays on your computer.
 
