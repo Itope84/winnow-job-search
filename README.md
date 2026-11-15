@@ -20,17 +20,18 @@ You give Winnow your CV and tell it what you want: the roles, the places, the pa
 
 Winnow never applies for you. You read the drafts, change what you want, and send them yourself.
 
-You install Winnow on your own computer and use it whenever that computer is on. To use it from your phone or away from home, the computer has to stay on and connected, because it acts as the server the app talks to. You don't need a separate server machine to get started. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Other people can use your server too, each with their own jobs, CV and settings.
+You can install Winnow on your own computer and use it whenever that computer is on. To use it from your phone or away from home, the computer has to stay on and connected, because it acts as the server the app talks to. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Other people can use your server too, each with their own jobs, CV and settings, so if someone in your family is job hunting, you can set it up for them on the same computer.
 
 An AI assistant can do the setup with you. The prompt is in [Quick start](#quick-start). Winnow is free and open source, and your data stays on your computer.
 
 ### Scholarships (beta)
 
-An account can look for scholarships and funded master's programmes instead of jobs. It works the same way: Winnow finds schemes and programmes, checks whether you're eligible, scores them against your profile, and drafts your essays and motivation letter. This mode is new and hasn't been tested much, so expect rough edges. The details are in [Scholarships mode](#scholarships-mode-beta).
+You can set up an account to look for scholarships and funded master's programmes instead of jobs. It works the same way: Winnow finds schemes and programmes, checks whether you're eligible, scores them against your profile, and drafts your essays and motivation letter. This mode is new and hasn't been tested much, so expect rough edges. The details are in [Scholarships mode](#scholarships-mode-beta).
 
 ## What you need
 
-- A Mac or Linux computer that can stay on while it works. The server runs on Windows, but it won't restart itself there yet.
+- A computer to run it on. Winnow has been tested on a Mac. It should run on Linux and Windows too, but it hasn't been tested there yet; if something breaks, your AI assistant can usually fix it.
+- If you want to use it from your phone or away from home, that computer has to stay on. On a Mac, Winnow can start itself again after a restart; on other systems you set that up yourself.
 - Node 22 or newer, and pnpm.
 - One AI command-line tool, signed in: [OpenCode](https://opencode.ai) or [Claude Code](https://claude.com/claude-code). Winnow does no AI itself; it hands the work to one of these.
 - Tectonic and Poppler, if you want tailored CVs and cover letters as PDFs (`brew install tectonic poppler` on a Mac).
@@ -70,11 +71,11 @@ What to expect:
 
 From then on you just open the app.
 
-To keep costs down, point triage and the setup questions at the cheapest model you have, since they run most often. Save the stronger model for scoring and tailored CVs. Plain board scans use no AI and cost nothing.
+To keep costs down, point triage and the setup questions at the cheapest model you have, since they run most often. Save the stronger model for scoring and tailored CVs. Board scans themselves use no AI.
 
 ### The technical bit
 
-One script does everything and is safe to run twice. `--check` only reports what's missing, and `--yes` installs missing Homebrew packages and Chromium for you.
+One script checks what's missing, installs Winnow's packages, builds the app and checks the server starts. It's safe to run twice. `--check` only reports what's missing, and `--yes` installs missing Homebrew packages and Chromium for you. It's a Mac and Linux script; on Windows, ask your assistant to run the steps by hand instead.
 
 ```bash
 git clone https://github.com/Itope84/winnow-job-search.git
@@ -102,7 +103,7 @@ scripts/install-launchd.sh --uninstall   # remove it
 # logs: library/_winnow/server.log
 ```
 
-On Linux there's no service file yet. Run the start command under systemd or your own process manager, and set `WINNOW_SECURE_COOKIES=1` if it sits behind HTTPS. There's no Docker image yet either.
+On Linux and Windows there's no service file yet. Run the start command under systemd, Task Scheduler or your own process manager, and set `WINNOW_SECURE_COOKIES=1` if it sits behind HTTPS. There's no Docker image yet either.
 
 ### Adding people
 
