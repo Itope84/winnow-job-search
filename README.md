@@ -281,6 +281,24 @@ Use issues for bugs you can reproduce and for work that's been agreed, and Discu
 
 Winnow is licensed under the [GNU Affero General Public License v3.0](LICENSE). The career-ops code in `apps/server/vendor/career-ops/` keeps its MIT license, and the fonts keep the OFL.
 
+## Winnow and career-ops
+
+I built Winnow on [career-ops](https://github.com/career-ops-hq/career-ops) because some of my family were job hunting and needed an app on their phone instead of a terminal. Some of Winnow's job-board scanners are career-ops' own, kept unchanged in `apps/server/vendor/career-ops/`, and its scoring builds on career-ops' 1 to 5 evaluation. Winnow also reads career-ops' `profile.yml` and `portals.yml`, so you can import your career-ops profile with `pnpm import:career-ops`.
+
+Winnow adds a server that several people can share, an app for your phone, runs that carry on after a restart, triage you review with Undo, more sources (Jack & Jill, Apple, Google, Jobberman and job feeds) and scholarships mode.
+
+career-ops does a lot that Winnow doesn't yet:
+
+- interview prep, practice interviews and debriefs
+- finding the hiring manager or recruiter and drafting a message to them
+- application emails, and filling in application forms with you
+- salary negotiation scripts and help reading an offer
+- follow-up reminders, and patterns across your rejections
+- deeper research on a company
+- running inside Codex and other AI command-line tools, or as a Claude Code plugin
+
+If you're happy working in a terminal with one AI tool, career-ops may suit you better.
+
 ## Acknowledgements
 
-Built on [career-ops](https://github.com/career-ops-hq/career-ops) (MIT) for the scanners and the triage and scoring method, and on [ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) (MIT) for sector boards, the posting check and the starting point for LaTeX tailoring. Fonts are Montserrat and Open Sans (OFL), in `skills/tailor/fonts/`.
+Built on [career-ops](https://github.com/career-ops-hq/career-ops) (MIT), for some of Winnow's job-board scanners and its scoring method, and on [ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) (MIT) for sector boards, the posting check and the starting point for LaTeX tailoring. Fonts are Montserrat and Open Sans (OFL), in `skills/tailor/fonts/`.
