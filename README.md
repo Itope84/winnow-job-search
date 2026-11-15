@@ -2,6 +2,8 @@
 
 Winnow finds jobs that fit you, scores them against your CV and drafts your applications. It runs on your own computer, and you send every application yourself.
 
+It can also find scholarships and funded master's programmes for you. That mode is in beta.
+
 ![Winnow on a phone](design/stitch/jobs-phone/screen.png)
 
 <!-- Badges go here once public: stars, release, license -->
@@ -18,15 +20,19 @@ You give Winnow your CV and tell it what you want: the roles, the places, the pa
 
 Winnow never applies for you. You read the drafts, change what you want, and send them yourself.
 
-It runs on a Mac or Linux computer that stays on, and you open it in a browser or on your phone. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Several people can share one server, each with their own jobs, CV and settings. There's also a [scholarships mode](#scholarships-mode) for people looking for a funded master's place.
+It runs on a Mac or Linux computer that stays on, and you open it in a browser or on your phone. The AI work goes through OpenCode or Claude Code, so you need one of them and a subscription or credits for the model it uses. Scanning job boards is free; reading, scoring and drafting use AI. Several people can share one server, each with their own jobs, CV and settings.
 
 An AI assistant can do the setup with you. The prompt is in [Quick start](#quick-start). Winnow is free and open source, and your data stays on your computer.
+
+### Scholarships (beta)
+
+An account can look for scholarships and funded master's programmes instead of jobs. It works the same way: Winnow finds schemes and programmes, checks whether you're eligible, scores them against your profile, and drafts your essays and motivation letter. This mode is new and hasn't been tested much, so expect rough edges. The details are in [Scholarships mode](#scholarships-mode-beta).
 
 ## What you need
 
 - A Mac or Linux computer that can stay on while it works. The server runs on Windows, but it won't restart itself there yet.
 - Node 22 or newer, and pnpm.
-- One AI command-line tool, signed in: [OpenCode](https://opencode.ai) or [Claude Code](https://claude.com/claude-code). Winnow does no AI itself; it hands the work to one of these. Codex can help you install Winnow, but Winnow can't run its AI work through Codex yet.
+- One AI command-line tool, signed in: [OpenCode](https://opencode.ai) or [Claude Code](https://claude.com/claude-code). Winnow does no AI itself; it hands the work to one of these.
 - Tectonic and Poppler, if you want tailored CVs and cover letters as PDFs (`brew install tectonic poppler` on a Mac).
 - Optionally, headless Chromium (about 170 MB, downloaded once) to read job pages that won't load any other way.
 
@@ -169,9 +175,9 @@ Paste a job link, or let a scan find jobs, and Winnow works out whether it's wor
 
 Copies of the same job from different sources merge, so each job appears once. Winnow also learns the careers feeds of companies it keeps seeing and offers to track them.
 
-## Scholarships mode
+## Scholarships mode (beta)
 
-An account can look for scholarships and master's programmes instead of jobs. Pick the mode on the invite (`--mode=scholarships`) and confirm it on the first setup screen.
+An account can look for scholarships and master's programmes instead of jobs. Pick the mode on the invite (`--mode=scholarships`) and confirm it on the first setup screen. The mode is new and hasn't been tested much yet, so expect rough edges and tell us what breaks.
 
 - You set your nationality, subjects, funding need, English test, work years, and which countries to prefer, allow or exclude.
 - Sources include a catalogue of checked scholarship schemes and university pages, country fact cards, RSS feeds, the Erasmus Mundus catalogue, pages Winnow watches for a new round, and an AI search for each place.
