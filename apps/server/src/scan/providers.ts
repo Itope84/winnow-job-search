@@ -4,9 +4,11 @@ import type { SourceEntry } from '@winnow/api';
 import { apple } from './boards/apple.ts';
 import { freehire } from './boards/freehire.ts';
 import { google } from './boards/google.ts';
+import { jobberman } from './boards/jobberman.ts';
 import { jobsAcUk } from './boards/jobs-ac-uk.ts';
 import { deeperLinkedIn, type LinkedInModule } from './boards/linkedin.ts';
 import { nhsJobs } from './boards/nhs-jobs.ts';
+import { rssJobs } from './boards/rss.ts';
 import type { Offer } from './intake.ts';
 
 /** The career-ops provider plugins, vendored unchanged under `vendor/career-ops/providers`. */
@@ -65,6 +67,8 @@ export function loadProviders() {
     providers.set('google', google);
     providers.set('nhs-jobs', nhsJobs);
     providers.set('jobs-ac-uk', jobsAcUk);
+    providers.set('rss', rssJobs);
+    providers.set('jobberman', jobberman);
     return { providers, registry, makeHttpCtx: http.makeHttpCtx };
   })();
   return cache;

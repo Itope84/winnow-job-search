@@ -846,6 +846,12 @@ export const BOARD_CATALOGUE: BoardInfo[] = [
     blurb: 'University, research and academic jobs, mostly UK.',
     defaults: { locations: ['united-kingdom'] },
   },
+  {
+    provider: 'jobberman',
+    name: 'Jobberman',
+    blurb: 'Nigeria’s largest job board, searched in your city.',
+    takesPlace: true,
+  },
 ];
 
 /** The saved search that switching a catalogue board on adds: the person's own title words and place. */
